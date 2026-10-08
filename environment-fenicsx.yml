@@ -1,0 +1,21 @@
+# Separate conda environment for the Navier-Stokes velocity-field solves
+# (Applications/*/Navier Stokes Solve/) and for rebuilding the DC mesh.
+# Create with:  mamba env create -f environment-fenicsx.yml
+# Verify with:  conda run -n fenicsx-env python tools/check_fenicsx_conda_env.py
+name: fenicsx-env
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.11
+  - fenics-dolfinx>=0.10
+  - mpich
+  - numpy
+  - scipy
+  - matplotlib
+  - meshio
+  - h5py
+  - gmsh
+  - python-gmsh
+  - pyvista
+  - geopandas
+  - shapely

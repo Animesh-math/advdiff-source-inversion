@@ -1,0 +1,62 @@
+# Local editor/runtime
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ParaView / VTK output
+*.vtk
+*.vtu
+*.pvd
+*.pvtu
+*.vti
+*.vtp
+*.vts
+*.vtr
+*.xdmf
+*.h5
+
+# Generated result folders
+visuals/
+*_output/
+forward_output/
+adjoint_output/
+results/
+outputs/
+Applications/Test Application3/output/
+Applications/Test Application4/output/
+
+# Numeric run artifacts
+*.npy
+*.npz
+*.log
+*.dat
+
+# Generated application summaries/traces
+optimization_history.*
+optimization_summary.txt
+optimized_state.*
+
+# Folder-scoped generated visualization traces
+Applications/*/visuals/**/*.csv
+Applications/*/visuals/**/*.json
+Applications/*/visuals/**/*.npy
+
+# Internal development notes (kept locally, not published)
+AUDIT_HANDOFF_PROMPT.md
+REPOSITORY_PAPER_READINESS_AUDIT.md
+docs/current_status.md

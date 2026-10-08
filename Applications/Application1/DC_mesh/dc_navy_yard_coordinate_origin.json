@@ -1,0 +1,15 @@
+{
+  "description": "Local coordinate origin for the DC Navy Yard mesh. The mesh nodes were translated once so the south-west corner of the outer rectangular computational domain is the local origin (0, 0). global = local + origin. This file is reference-only; the entire numerical pipeline runs in local meters.",
+  "origin_x": 400032.9721875289,
+  "origin_y": 133918.0828324356,
+  "origin_units": "meters (projected, UTM-like)",
+  "translation_vector_applied": [-400032.9721875289, -133918.0828324356],
+  "local_bounding_box": {
+    "x_min": 0.0,
+    "x_max": 301.98544034478255,
+    "y_min": 0.0,
+    "y_max": 700.4646734384005
+  },
+  "scaling_applied": false,
+  "rotation_applied": false
+}
