@@ -37,8 +37,7 @@ forward_output/
 adjoint_output/
 results/
 outputs/
-Applications/Test Application3/output/
-Applications/Test Application4/output/
+Applications/*/output/
 
 # Numeric run artifacts
 *.npy
@@ -60,3 +59,7 @@ Applications/*/visuals/**/*.npy
 AUDIT_HANDOFF_PROMPT.md
 REPOSITORY_PAPER_READINESS_AUDIT.md
 docs/current_status.md
+
+# Supplied input assets (meshes, velocity fields) are tracked despite the
+# generic *.npz rule above; see supplied_assets_manifest.json.
+!Applications/*/supplied/**

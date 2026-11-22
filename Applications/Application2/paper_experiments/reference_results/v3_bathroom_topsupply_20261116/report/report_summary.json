@@ -1,0 +1,1522 @@
+{
+  "generated_utc": "2026-11-16T21:48:51.325701+00:00",
+  "out_root": "Applications/Application2/output/v3_bathroom_topsupply_20261116",
+  "parameters": {
+    "inlet_mean_speed_m_per_s": 0.1,
+    "inlet_peak_speed_m_per_s": 0.15000000000000002,
+    "inlet_speed_convention": "INLET_MEAN_SPEED is the mean over each inlet; peak = 1.5 * mean",
+    "inlet_profile": "parabolic: v_y = -peak * 4 s (1 - s) (downward), v_x = 0, s in [0,1] along each top-wall supply",
+    "nu_m2_per_s": 0.0023244,
+    "nu_kind": "spatially constant effective kinematic viscosity (modelling parameter of an idealized 2D experiment); not molecular air viscosity, not a tracer diffusivity",
+    "rho_kg_per_m3_informational": 1.2,
+    "max_picard_iter": 100,
+    "picard_tol_relative_L2_update": 1e-08,
+    "reynolds_numbers": {
+      "Re_slot_mean_speed_vent_width": 25.81311306143521,
+      "Re_room_mean_speed_room_depth": 258.1311306143521,
+      "Re_slot_if_molecular_air": 3999.9999999999995,
+      "characteristic_lengths_m": {
+        "slot": 0.6,
+        "room": 6.0
+      }
+    },
+    "approx_ach_full_height_openings": 12.710867006669284,
+    "approx_ach_area_basis_m2": 50.980000000000004,
+    "approx_ach_gross_room_area": 11.17241379310345,
+    "approx_ach_assumptions": "plan-view field = height average; each opening spans the full room height; uniform supply/extract over the height; all air enters via the three inlets",
+    "model_statement": "The room experiment uses a steady, two-dimensional airflow with a spatially constant effective viscosity. It provides an idealized setting for evaluating source identification rather than a validated prediction of hospital ventilation.",
+    "layout_attribution": "Ventilation arrangement inspired by Fig. 24 and Sec. 7.1 of Lohner et al., arXiv:2006.13792; this three-bed room is an adaptation, not a reproduction, and the paper's bathroom ceiling exhaust is represented by a 2D boundary outlet. Not clinically validated.",
+    "outlet_condition": "natural (nu grad v - p I) n = 0 on outlet_door and outlet_exhaust; split not prescribed"
+  },
+  "geometry_sha256": "4956131d35d27a7410be58ba3fe5c2af10e6c96e5656cec69974e8fb86b710ec",
+  "weak_flow_threshold_m_per_s": 0.010000000000000002,
+  "levels": {
+    "coarse": {
+      "mesh": {
+        "n_vertices": 4381,
+        "n_triangles": 7887,
+        "taylor_hood_velocity_dofs_P2_vector": 33302,
+        "taylor_hood_pressure_dofs_P1": 4381,
+        "taylor_hood_total_dofs": 37683,
+        "sizes_m": {
+          "lc_bulk": 0.2,
+          "lc_vent": 0.05,
+          "lc_wall": 0.07,
+          "lc_corner": 0.025
+        },
+        "min_angle_deg": {
+          "min": 28.45743298329085,
+          "p01": 37.8892911315142,
+          "median": 53.32988738031014
+        },
+        "h_max_edge_m": {
+          "min": 0.020986028897905115,
+          "median": 0.09551980243654724,
+          "max": 0.2670242000403634
+        },
+        "edges_across_each_opening": {
+          "inlet_1": 14,
+          "inlet_2": 14,
+          "inlet_3": 14,
+          "outlet_door": 22,
+          "outlet_exhaust": 14
+        },
+        "msh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+        "msh_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.msh",
+        "bed_edges_per_bed": {
+          "bed_1": 104,
+          "bed_2": 104,
+          "bed_3": 104
+        },
+        "topology_and_solids": {
+          "edge_connected_components": 1,
+          "boundary_loops": 4,
+          "boundary_loop_tags": [
+            [
+              "bath_bottom",
+              "bath_right",
+              "bath_top",
+              "bath_wall_lower",
+              "bath_wall_upper",
+              "inlet_1",
+              "inlet_2",
+              "inlet_3",
+              "outlet_door",
+              "outlet_exhaust",
+              "partition_1",
+              "partition_2",
+              "wall_bottom",
+              "wall_left",
+              "wall_right",
+              "wall_top"
+            ],
+            [
+              "bed_1"
+            ],
+            [
+              "bed_2"
+            ],
+            [
+              "bed_3"
+            ]
+          ],
+          "triangle_centroids_inside_solids": 0,
+          "triangle_centroids_outside_union": 0,
+          "solid_interior_sampling": {
+            "partition_1": {
+              "interior_samples": 441,
+              "samples_inside_triangles": 0
+            },
+            "partition_2": {
+              "interior_samples": 441,
+              "samples_inside_triangles": 0
+            },
+            "bed_1": {
+              "interior_samples": 1681,
+              "samples_inside_triangles": 0
+            },
+            "bed_2": {
+              "interior_samples": 1681,
+              "samples_inside_triangles": 0
+            },
+            "bed_3": {
+              "interior_samples": 1681,
+              "samples_inside_triangles": 0
+            },
+            "bath_wall_lower": {
+              "interior_samples": 1681,
+              "samples_inside_triangles": 0
+            },
+            "bath_wall_upper": {
+              "interior_samples": 1681,
+              "samples_inside_triangles": 0
+            }
+          },
+          "exterior_region_sampling": {
+            "beyond_annex_above_bathroom": {
+              "samples": 1681,
+              "samples_inside_triangles": 0
+            }
+          },
+          "passages": {
+            "bed_1_left": {
+              "rect": [
+                0.0,
+                1.0,
+                3.5,
+                5.6
+              ],
+              "clear_width_m": 1.0,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 333,
+              "h_max_edge_median_m": 0.10184375932929268,
+              "approx_elements_across": 9.818961972590659
+            },
+            "bed_1_right": {
+              "rect": [
+                2.0,
+                2.95,
+                3.5,
+                5.6
+              ],
+              "clear_width_m": 0.9500000000000002,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 488,
+              "h_max_edge_median_m": 0.08215749692767876,
+              "approx_elements_across": 11.56315656544724
+            },
+            "bed_1_head": {
+              "rect": [
+                1.0,
+                2.0,
+                5.6,
+                6.0
+              ],
+              "clear_width_m": 0.40000000000000036,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 249,
+              "h_max_edge_median_m": 0.06489388307321481,
+              "approx_elements_across": 6.163909155331496
+            },
+            "bed_1_foot": {
+              "rect": [
+                1.0,
+                2.0,
+                3.0,
+                3.5
+              ],
+              "clear_width_m": 0.5,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 144,
+              "h_max_edge_median_m": 0.07598011653192743,
+              "approx_elements_across": 6.580669033192337
+            },
+            "bed_2_left": {
+              "rect": [
+                3.05,
+                4.0,
+                3.5,
+                5.6
+              ],
+              "clear_width_m": 0.9500000000000002,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 490,
+              "h_max_edge_median_m": 0.08153375275078047,
+              "approx_elements_across": 11.65161626871034
+            },
+            "bed_2_right": {
+              "rect": [
+                5.0,
+                5.95,
+                3.5,
+                5.6
+              ],
+              "clear_width_m": 0.9500000000000002,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 489,
+              "h_max_edge_median_m": 0.08208611699143718,
+              "approx_elements_across": 11.573211583380164
+            },
+            "bed_2_head": {
+              "rect": [
+                4.0,
+                5.0,
+                5.6,
+                6.0
+              ],
+              "clear_width_m": 0.40000000000000036,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 253,
+              "h_max_edge_median_m": 0.06522668031856084,
+              "approx_elements_across": 6.1324598775599
+            },
+            "bed_2_foot": {
+              "rect": [
+                4.0,
+                5.0,
+                3.0,
+                3.5
+              ],
+              "clear_width_m": 0.5,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 134,
+              "h_max_edge_median_m": 0.07749662524224608,
+              "approx_elements_across": 6.4518938526297624
+            },
+            "bed_3_left": {
+              "rect": [
+                6.05,
+                7.0,
+                3.5,
+                5.6
+              ],
+              "clear_width_m": 0.9500000000000002,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 493,
+              "h_max_edge_median_m": 0.08215262783280278,
+              "approx_elements_across": 11.563841900875556
+            },
+            "bed_3_right": {
+              "rect": [
+                8.0,
+                9.0,
+                3.5,
+                5.6
+              ],
+              "clear_width_m": 1.0,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 325,
+              "h_max_edge_median_m": 0.10058121055339478,
+              "approx_elements_across": 9.942214798350808
+            },
+            "bed_3_head": {
+              "rect": [
+                7.0,
+                8.0,
+                5.6,
+                6.0
+              ],
+              "clear_width_m": 0.40000000000000036,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 248,
+              "h_max_edge_median_m": 0.06421224765578873,
+              "approx_elements_across": 6.22934120207425
+            },
+            "bed_3_foot": {
+              "rect": [
+                7.0,
+                8.0,
+                3.0,
+                3.5
+              ],
+              "clear_width_m": 0.5,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 137,
+              "h_max_edge_median_m": 0.07830927954219373,
+              "approx_elements_across": 6.384939344648109
+            },
+            "bathroom_doorway": {
+              "rect": [
+                8.95,
+                9.05,
+                0.6,
+                1.4
+              ],
+              "clear_width_m": 0.7999999999999999,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 57,
+              "h_max_edge_median_m": 0.03685154277405927,
+              "approx_elements_across": 21.708724785414958
+            },
+            "bathroom_interior": {
+              "rect": [
+                9.05,
+                11.0,
+                0.0,
+                2.0
+              ],
+              "clear_width_m": 1.9499999999999993,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 644,
+              "h_max_edge_median_m": 0.10223257589729956,
+              "approx_elements_across": 19.074155012575673
+            },
+            "aisle": {
+              "rect": [
+                0.0,
+                8.95,
+                0.0,
+                3.0
+              ],
+              "clear_width_m": 3.0,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 2274,
+              "h_max_edge_median_m": 0.19885620157363604,
+              "approx_elements_across": 15.08627830693581
+            },
+            "aisle_to_bay3_beside_bathroom": {
+              "rect": [
+                8.0,
+                9.0,
+                2.0,
+                3.0
+              ],
+              "clear_width_m": 1.0,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 110,
+              "h_max_edge_median_m": 0.16688266453140926,
+              "approx_elements_across": 5.99223414132262
+            }
+          }
+        },
+        "tag_transfer_gmsh_to_dolfinx": {
+          "ok": true,
+          "per_tag": {
+            "inlet_1": {
+              "tag": 21,
+              "gmsh_lines": 14,
+              "dolfinx_facets": 14
+            },
+            "inlet_2": {
+              "tag": 22,
+              "gmsh_lines": 14,
+              "dolfinx_facets": 14
+            },
+            "inlet_3": {
+              "tag": 23,
+              "gmsh_lines": 14,
+              "dolfinx_facets": 14
+            },
+            "outlet_door": {
+              "tag": 31,
+              "gmsh_lines": 22,
+              "dolfinx_facets": 22
+            },
+            "outlet_exhaust": {
+              "tag": 32,
+              "gmsh_lines": 14,
+              "dolfinx_facets": 14
+            },
+            "wall_bottom": {
+              "tag": 41,
+              "gmsh_lines": 54,
+              "dolfinx_facets": 54
+            },
+            "wall_right": {
+              "tag": 42,
+              "gmsh_lines": 25,
+              "dolfinx_facets": 25
+            },
+            "wall_top": {
+              "tag": 43,
+              "gmsh_lines": 82,
+              "dolfinx_facets": 82
+            },
+            "wall_left": {
+              "tag": 44,
+              "gmsh_lines": 30,
+              "dolfinx_facets": 30
+            },
+            "bath_bottom": {
+              "tag": 45,
+              "gmsh_lines": 14,
+              "dolfinx_facets": 14
+            },
+            "bath_right": {
+              "tag": 46,
+              "gmsh_lines": 16,
+              "dolfinx_facets": 16
+            },
+            "bath_top": {
+              "tag": 47,
+              "gmsh_lines": 14,
+              "dolfinx_facets": 14
+            },
+            "partition_1": {
+              "tag": 51,
+              "gmsh_lines": 98,
+              "dolfinx_facets": 98
+            },
+            "partition_2": {
+              "tag": 52,
+              "gmsh_lines": 98,
+              "dolfinx_facets": 98
+            },
+            "bed_1": {
+              "tag": 61,
+              "gmsh_lines": 104,
+              "dolfinx_facets": 104
+            },
+            "bed_2": {
+              "tag": 62,
+              "gmsh_lines": 104,
+              "dolfinx_facets": 104
+            },
+            "bed_3": {
+              "tag": 63,
+              "gmsh_lines": 104,
+              "dolfinx_facets": 104
+            },
+            "bath_wall_lower": {
+              "tag": 71,
+              "gmsh_lines": 28,
+              "dolfinx_facets": 28
+            },
+            "bath_wall_upper": {
+              "tag": 72,
+              "gmsh_lines": 30,
+              "dolfinx_facets": 30
+            }
+          },
+          "cell_tags": [
+            1
+          ],
+          "unexpected_facet_tags": []
+        },
+        "vtu_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.vtu",
+        "xdmf_files": [
+          "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.xdmf",
+          "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse_facets.xdmf"
+        ]
+      },
+      "status": "converged",
+      "picard": {
+        "converged": true,
+        "iterations": 52,
+        "final_relative_update": 9.803450360979917e-09,
+        "tolerance": 1e-08,
+        "max_iter": 100,
+        "seconds": 3.511093389708549,
+        "finite": true
+      },
+      "linear_system": {
+        "size": [
+          37683,
+          37683
+        ],
+        "last_relative_residual": 3.132737771048937e-16,
+        "mumps_INFOG1": 0,
+        "mumps_null_pivots_INFOG28": 0,
+        "velocity_dirichlet_dofs": 3388,
+        "pressure_dirichlet_dofs": 0
+      },
+      "natural_outflow_check": {
+        "momentum_max_abs_on_outlet_dofs": 1.7672023698865396e-13,
+        "momentum_max_abs_on_interior_free_dofs": 1.5294766321505282e-12,
+        "momentum_max_abs_on_dirichlet_dofs_reaction": 0.0020205722025984666,
+        "continuity_max_abs": 5.59818633219148e-17,
+        "n_outlet_velocity_blocks_free": 70,
+        "note": "R(w) = int nu grad u:grad w + ((grad u) u).w - p div w for every P2 basis w at the final iterate. Natural outflow <=> R = 0 on the free outlet dofs (same level as interior dofs: Picard lag + round-off); inlet/wall rows hold the boundary reaction (traction) and are O(reaction).",
+        "outlet_over_reaction": 8.74604910239737e-11
+      },
+      "taylor_hood": {
+        "flux_by_tag": {
+          "inlet_1": -0.06,
+          "inlet_2": -0.05999999999999996,
+          "inlet_3": -0.05999999999999997,
+          "outlet_door": 0.11873054596979676,
+          "outlet_exhaust": 0.061269454030203,
+          "wall_bottom": 0.0,
+          "wall_right": 0.0,
+          "wall_top": 0.0,
+          "wall_left": 0.0,
+          "bath_bottom": 0.0,
+          "bath_right": 0.0,
+          "bath_top": 0.0,
+          "partition_1": 0.0,
+          "partition_2": 0.0,
+          "bed_1": 0.0,
+          "bed_2": 0.0,
+          "bed_3": 0.0,
+          "bath_wall_lower": 0.0,
+          "bath_wall_upper": 0.0
+        },
+        "inflow_total": -0.17999999999999994,
+        "outflow_total": 0.17999999999999977,
+        "net_boundary_flux": -1.6653345369377348e-16,
+        "normalized_imbalance_abs_net_over_abs_inflow": 9.251858538542974e-16,
+        "prescribed_inflow_per_inlet": -0.06,
+        "inlet_flux_error_vs_prescribed": {
+          "inlet_1": 0.0,
+          "inlet_2": 3.469446951953614e-17,
+          "inlet_3": 2.7755575615628914e-17
+        },
+        "wall_flux_total": 0.0,
+        "div_L2": 0.06838048311009942,
+        "grad_L2": 1.2082260196020214,
+        "div_L2_over_grad_L2": 0.056595770990450385,
+        "integral_div": -8.39773874896331e-17,
+        "velocity_L2": 0.26057454851835465,
+        "fluid_area_m2": 50.980000000000224,
+        "pressure_min": -0.0021647684145007025,
+        "pressure_max": 0.03347084125944305,
+        "outlets": {
+          "outlet_door": {
+            "length_m": 1.0,
+            "flux": 0.11873054596979676,
+            "share_of_total_inflow": 0.6596141442766489,
+            "share_of_total_outflow": 0.6596141442766495,
+            "mean_normal_velocity": 0.11873054596979676,
+            "mean_pressure": 0.00018407202169413084,
+            "mean_normal_traction": -6.727335938023842e-05,
+            "mean_abs_normal_traction": 7.179006858484169e-05,
+            "backflow_flux_inward": 0.0,
+            "backflow_length_m": 0.0,
+            "backflow_length_fraction": 0.0,
+            "min_normal_velocity_at_P2_dofs": 0.0,
+            "max_normal_velocity_at_P2_dofs": 0.15154475774224652,
+            "n_P2_dofs_with_inflow": 0
+          },
+          "outlet_exhaust": {
+            "length_m": 0.6000000000000001,
+            "flux": 0.061269454030203,
+            "share_of_total_inflow": 0.3403858557233501,
+            "share_of_total_outflow": 0.34038585572335045,
+            "mean_normal_velocity": 0.10211575671700499,
+            "mean_pressure": 0.00032821899473875997,
+            "mean_normal_traction": -0.00014624596783963974,
+            "mean_abs_normal_traction": 0.00015735642977160932,
+            "backflow_flux_inward": 0.0,
+            "backflow_length_m": 0.0,
+            "backflow_length_fraction": 0.0,
+            "min_normal_velocity_at_P2_dofs": 0.0,
+            "max_normal_velocity_at_P2_dofs": 0.12864573284639996,
+            "n_P2_dofs_with_inflow": 0
+          }
+        },
+        "sign_convention": "flux = int u.n ds with outward n: inflow negative, outflow positive"
+      },
+      "transport_P1": {
+        "flux_by_tag": {
+          "inlet_1": -0.05965172652244993,
+          "inlet_2": -0.05965172652245078,
+          "inlet_3": -0.05965172652245081,
+          "outlet_door": 0.11820252719692921,
+          "outlet_exhaust": 0.06066264276859483,
+          "wall_bottom": -4.443231113946299e-19,
+          "wall_right": -4.8547565042531736e-20,
+          "wall_top": 1.0097868554987901e-18,
+          "wall_left": -3.264372952237819e-20,
+          "bath_bottom": -4.049871250481035e-20,
+          "bath_right": -1.2867594409806255e-19,
+          "bath_top": -5.541593557261059e-21,
+          "partition_1": -3.451738688242848e-20,
+          "partition_2": -1.6969759871316853e-20,
+          "bed_1": -2.555423179309913e-19,
+          "bed_2": -2.823756936870177e-19,
+          "bed_3": -4.419576533082079e-19,
+          "bath_wall_lower": 5.4928757822091624e-21,
+          "bath_wall_upper": 9.465270502414017e-21
+        },
+        "inflow_total": -0.17895517956735152,
+        "outflow_total": 0.17886516996552404,
+        "net_boundary_flux": -9.000960182747945e-05,
+        "integral_div": -9.000960182745446e-05,
+        "normalized_imbalance_abs_net_over_abs_inflow": 0.0005029728787123676,
+        "div_L2": 0.1423268374140445,
+        "grad_L2": 1.19078381553569,
+        "div_L2_over_grad_L2": 0.11952365791100114,
+        "div_abs_max": 1.3568685770085038,
+        "wall_node_max_speed": 5.2332102906453656e-18,
+        "dof_to_node_map_max_distance": 1.9860273225978185e-15,
+        "note": "continuous P1 interpolant of the P2 field at mesh vertices; not exactly divergence-free"
+      },
+      "bay_flux_y3": {
+        "1": {
+          "x_range": [
+            0.0,
+            2.95
+          ],
+          "net_upward_flux_across_y3": -0.059983325109217216,
+          "upward_part": 0.0,
+          "downward_part": -0.059983325109217216,
+          "note": "per metre depth [m^2/s]; trapezoid on 5 mm samples of the P2 field; negative = net flow from the bay down into the aisle"
+        },
+        "2": {
+          "x_range": [
+            3.05,
+            5.95
+          ],
+          "net_upward_flux_across_y3": -0.059969314548408224,
+          "upward_part": 0.0,
+          "downward_part": -0.059969314548408224,
+          "note": "per metre depth [m^2/s]; trapezoid on 5 mm samples of the P2 field; negative = net flow from the bay down into the aisle"
+        },
+        "3": {
+          "x_range": [
+            6.05,
+            9.0
+          ],
+          "net_upward_flux_across_y3": -0.05998443905739617,
+          "upward_part": 0.0,
+          "downward_part": -0.05998443905739617,
+          "note": "per metre depth [m^2/s]; trapezoid on 5 mm samples of the P2 field; negative = net flow from the bay down into the aisle"
+        }
+      },
+      "regions": {
+        "bay_1": {
+          "area_m2_probe": 6.750000000000003,
+          "mean_speed": 0.032932635215713255,
+          "median_speed": 0.03306554777226822,
+          "max_speed": 0.14789044062574136,
+          "area_fraction_weak": 0.20592592592592593,
+          "area_fraction_downward_vy_lt_0": 0.9485185185185185
+        },
+        "bay_2": {
+          "area_m2_probe": 6.600000000000002,
+          "mean_speed": 0.03351750990966906,
+          "median_speed": 0.033669709938226704,
+          "max_speed": 0.14792898129318194,
+          "area_fraction_weak": 0.20492424242424243,
+          "area_fraction_downward_vy_lt_0": 0.9428030303030303
+        },
+        "bay_3": {
+          "area_m2_probe": 6.750000000000003,
+          "mean_speed": 0.032903437206932167,
+          "median_speed": 0.03297256059399957,
+          "max_speed": 0.1479222926140697,
+          "area_fraction_weak": 0.2051851851851852,
+          "area_fraction_downward_vy_lt_0": 0.9448148148148148
+        },
+        "aisle": {
+          "area_m2_probe": 26.85000000000001,
+          "mean_speed": 0.024269300997303962,
+          "median_speed": 0.021026164749161642,
+          "max_speed": 0.1478672735509988,
+          "area_fraction_weak": 0.17243947858473,
+          "area_fraction_downward_vy_lt_0": 0.9777467411545624
+        },
+        "bathroom": {
+          "area_m2_probe": 3.9000000000000012,
+          "mean_speed": 0.033059507663476484,
+          "median_speed": 0.01688697570407944,
+          "max_speed": 0.12347109611081816,
+          "area_fraction_weak": 0.4403846153846154,
+          "area_fraction_downward_vy_lt_0": 0.4673076923076923
+        }
+      },
+      "doorway_flux": {
+        "y_range": [
+          0.6,
+          1.4
+        ],
+        "net_flux_into_bathroom_+x": 0.06126971435083586,
+        "into_bathroom_part": 0.06126971435083586,
+        "back_into_room_part": 0.0,
+        "note": "flux of the P2 field across x = 9, 0.6 < y < 1.4 (interior doorway), trapezoid on 1 mm samples"
+      },
+      "files": {
+        "velocity_nodes_npz": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+        "full_fields_npz": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_full_fields_coarse.npz",
+        "picard_history_csv": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_picard_history_coarse.csv",
+        "visualization": [
+          "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_velocity_P2_coarse.bp",
+          "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_pressure_P1_coarse.bp",
+          "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_velocity_pressure_P1_coarse.vtu",
+          "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_velocity_pressure_P1_coarse.xdmf"
+        ]
+      },
+      "provenance": {
+        "git_commit": "b22a05a9353538d941d92d399942bc5c3580c910",
+        "git_branch": "app1-osqp-amplitude-solver",
+        "git_dirty_paths": "M \"Applications/Application2/Navier Stokes Solve/solve_application2_navier_stokes.py\"\n M Applications/Application2/README.md\n M Applications/Application2/Room_mesh/build_room_mesh.py\n M Applications/Application2/mesh_data_config.py\n M Applications/Application2/navier_stokes_config.py\n M Applications/Application2/report_application2_flow.py\n M Applications/Application2/room_geometry_config.py\n M Applications/Application2/run_application2_setup.sh\n M \"Applications/Application2/test scripts/diagnose_ns_newton_stability.py\"\n?? Applications/Application2/room_layout_reference.png",
+        "python": "3.14.6 | packaged by conda-forge | (main, Jul 24 2026, 16:09:24) [GCC 14.3.0]",
+        "platform": "Linux-6.12.111+deb13-amd64-x86_64-with-glibc2.41",
+        "dolfinx": "0.11.0",
+        "basix": "0.11.0",
+        "petsc4py": [
+          3,
+          25,
+          6
+        ],
+        "numpy": "2.5.3",
+        "scipy": "1.18.1"
+      },
+      "command": "<fenicsx-env python> Applications/Application2/Navier Stokes Solve/solve_application2_navier_stokes.py --level coarse --out-root Applications/Application2/output/v3_bathroom_topsupply_20261116"
+    },
+    "fine": {
+      "mesh": {
+        "n_vertices": 15231,
+        "n_triangles": 28772,
+        "taylor_hood_velocity_dofs_P2_vector": 118472,
+        "taylor_hood_pressure_dofs_P1": 15231,
+        "taylor_hood_total_dofs": 133703,
+        "sizes_m": {
+          "lc_bulk": 0.1,
+          "lc_vent": 0.025,
+          "lc_wall": 0.035,
+          "lc_corner": 0.0125
+        },
+        "min_angle_deg": {
+          "min": 33.192037364432515,
+          "p01": 40.450842886242704,
+          "median": 54.89924701309472
+        },
+        "h_max_edge_m": {
+          "min": 0.01018040927656636,
+          "median": 0.05247487333557137,
+          "max": 0.13467975806153865
+        },
+        "edges_across_each_opening": {
+          "inlet_1": 28,
+          "inlet_2": 28,
+          "inlet_3": 28,
+          "outlet_door": 44,
+          "outlet_exhaust": 28
+        },
+        "msh_sha256": "5309186742fc17e1627e169edb7d241568f4dced6f8055b5d0a1453642ed66b5",
+        "msh_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/mesh/application2_room_fine.msh",
+        "bed_edges_per_bed": {
+          "bed_1": 200,
+          "bed_2": 200,
+          "bed_3": 200
+        },
+        "topology_and_solids": {
+          "edge_connected_components": 1,
+          "boundary_loops": 4,
+          "boundary_loop_tags": [
+            [
+              "bath_bottom",
+              "bath_right",
+              "bath_top",
+              "bath_wall_lower",
+              "bath_wall_upper",
+              "inlet_1",
+              "inlet_2",
+              "inlet_3",
+              "outlet_door",
+              "outlet_exhaust",
+              "partition_1",
+              "partition_2",
+              "wall_bottom",
+              "wall_left",
+              "wall_right",
+              "wall_top"
+            ],
+            [
+              "bed_1"
+            ],
+            [
+              "bed_2"
+            ],
+            [
+              "bed_3"
+            ]
+          ],
+          "triangle_centroids_inside_solids": 0,
+          "triangle_centroids_outside_union": 0,
+          "solid_interior_sampling": {
+            "partition_1": {
+              "interior_samples": 441,
+              "samples_inside_triangles": 0
+            },
+            "partition_2": {
+              "interior_samples": 441,
+              "samples_inside_triangles": 0
+            },
+            "bed_1": {
+              "interior_samples": 1681,
+              "samples_inside_triangles": 0
+            },
+            "bed_2": {
+              "interior_samples": 1681,
+              "samples_inside_triangles": 0
+            },
+            "bed_3": {
+              "interior_samples": 1681,
+              "samples_inside_triangles": 0
+            },
+            "bath_wall_lower": {
+              "interior_samples": 1681,
+              "samples_inside_triangles": 0
+            },
+            "bath_wall_upper": {
+              "interior_samples": 1681,
+              "samples_inside_triangles": 0
+            }
+          },
+          "exterior_region_sampling": {
+            "beyond_annex_above_bathroom": {
+              "samples": 1681,
+              "samples_inside_triangles": 0
+            }
+          },
+          "passages": {
+            "bed_1_left": {
+              "rect": [
+                0.0,
+                1.0,
+                3.5,
+                5.6
+              ],
+              "clear_width_m": 1.0,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 1206,
+              "h_max_edge_median_m": 0.05334933841959251,
+              "approx_elements_across": 18.74437489992848
+            },
+            "bed_1_right": {
+              "rect": [
+                2.0,
+                2.95,
+                3.5,
+                5.6
+              ],
+              "clear_width_m": 0.9500000000000002,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 1767,
+              "h_max_edge_median_m": 0.047306482973788436,
+              "approx_elements_across": 20.08181416755027
+            },
+            "bed_1_head": {
+              "rect": [
+                1.0,
+                2.0,
+                5.6,
+                6.0
+              ],
+              "clear_width_m": 0.40000000000000036,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 908,
+              "h_max_edge_median_m": 0.03339771058966484,
+              "approx_elements_across": 11.976868861298032
+            },
+            "bed_1_foot": {
+              "rect": [
+                1.0,
+                2.0,
+                3.0,
+                3.5
+              ],
+              "clear_width_m": 0.5,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 481,
+              "h_max_edge_median_m": 0.04327710331119786,
+              "approx_elements_across": 11.553453483348688
+            },
+            "bed_2_left": {
+              "rect": [
+                3.05,
+                4.0,
+                3.5,
+                5.6
+              ],
+              "clear_width_m": 0.9500000000000002,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 1796,
+              "h_max_edge_median_m": 0.04732752661952649,
+              "approx_elements_across": 20.072885017575526
+            },
+            "bed_2_right": {
+              "rect": [
+                5.0,
+                5.95,
+                3.5,
+                5.6
+              ],
+              "clear_width_m": 0.9500000000000002,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 1765,
+              "h_max_edge_median_m": 0.04765089038308159,
+              "approx_elements_across": 19.936668388830295
+            },
+            "bed_2_head": {
+              "rect": [
+                4.0,
+                5.0,
+                5.6,
+                6.0
+              ],
+              "clear_width_m": 0.40000000000000036,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 900,
+              "h_max_edge_median_m": 0.033423364956372985,
+              "approx_elements_across": 11.967675921383568
+            },
+            "bed_2_foot": {
+              "rect": [
+                4.0,
+                5.0,
+                3.0,
+                3.5
+              ],
+              "clear_width_m": 0.5,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 485,
+              "h_max_edge_median_m": 0.04328778757524549,
+              "approx_elements_across": 11.550601867348135
+            },
+            "bed_3_left": {
+              "rect": [
+                6.05,
+                7.0,
+                3.5,
+                5.6
+              ],
+              "clear_width_m": 0.9500000000000002,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 1794,
+              "h_max_edge_median_m": 0.047421687221471456,
+              "approx_elements_across": 20.033028254841636
+            },
+            "bed_3_right": {
+              "rect": [
+                8.0,
+                9.0,
+                3.5,
+                5.6
+              ],
+              "clear_width_m": 1.0,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 1204,
+              "h_max_edge_median_m": 0.05369144328195544,
+              "approx_elements_across": 18.624941682953025
+            },
+            "bed_3_head": {
+              "rect": [
+                7.0,
+                8.0,
+                5.6,
+                6.0
+              ],
+              "clear_width_m": 0.40000000000000036,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 907,
+              "h_max_edge_median_m": 0.03256087761227748,
+              "approx_elements_across": 12.284681167474902
+            },
+            "bed_3_foot": {
+              "rect": [
+                7.0,
+                8.0,
+                3.0,
+                3.5
+              ],
+              "clear_width_m": 0.5,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 478,
+              "h_max_edge_median_m": 0.04448063322308664,
+              "approx_elements_across": 11.240847168076884
+            },
+            "bathroom_doorway": {
+              "rect": [
+                8.95,
+                9.05,
+                0.6,
+                1.4
+              ],
+              "clear_width_m": 0.7999999999999999,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 198,
+              "h_max_edge_median_m": 0.02099704730405135,
+              "approx_elements_across": 38.100595213006024
+            },
+            "bathroom_interior": {
+              "rect": [
+                9.05,
+                11.0,
+                0.0,
+                2.0
+              ],
+              "clear_width_m": 1.9499999999999993,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 2324,
+              "h_max_edge_median_m": 0.05067747833006792,
+              "approx_elements_across": 38.47863122350795
+            },
+            "aisle": {
+              "rect": [
+                0.0,
+                8.95,
+                0.0,
+                3.0
+              ],
+              "clear_width_m": 3.0,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 8623,
+              "h_max_edge_median_m": 0.09999984099196343,
+              "approx_elements_across": 30.00004770248682
+            },
+            "aisle_to_bay3_beside_bathroom": {
+              "rect": [
+                8.0,
+                9.0,
+                2.0,
+                3.0
+              ],
+              "clear_width_m": 1.0,
+              "samples": 1681,
+              "samples_missing": 0,
+              "triangles": 384,
+              "h_max_edge_median_m": 0.09157825364963475,
+              "approx_elements_across": 10.91962294701378
+            }
+          }
+        },
+        "tag_transfer_gmsh_to_dolfinx": {
+          "ok": true,
+          "per_tag": {
+            "inlet_1": {
+              "tag": 21,
+              "gmsh_lines": 28,
+              "dolfinx_facets": 28
+            },
+            "inlet_2": {
+              "tag": 22,
+              "gmsh_lines": 28,
+              "dolfinx_facets": 28
+            },
+            "inlet_3": {
+              "tag": 23,
+              "gmsh_lines": 28,
+              "dolfinx_facets": 28
+            },
+            "outlet_door": {
+              "tag": 31,
+              "gmsh_lines": 44,
+              "dolfinx_facets": 44
+            },
+            "outlet_exhaust": {
+              "tag": 32,
+              "gmsh_lines": 28,
+              "dolfinx_facets": 28
+            },
+            "wall_bottom": {
+              "tag": 41,
+              "gmsh_lines": 103,
+              "dolfinx_facets": 103
+            },
+            "wall_right": {
+              "tag": 42,
+              "gmsh_lines": 47,
+              "dolfinx_facets": 47
+            },
+            "wall_top": {
+              "tag": 43,
+              "gmsh_lines": 148,
+              "dolfinx_facets": 148
+            },
+            "wall_left": {
+              "tag": 44,
+              "gmsh_lines": 60,
+              "dolfinx_facets": 60
+            },
+            "bath_bottom": {
+              "tag": 45,
+              "gmsh_lines": 27,
+              "dolfinx_facets": 27
+            },
+            "bath_right": {
+              "tag": 46,
+              "gmsh_lines": 30,
+              "dolfinx_facets": 30
+            },
+            "bath_top": {
+              "tag": 47,
+              "gmsh_lines": 27,
+              "dolfinx_facets": 27
+            },
+            "partition_1": {
+              "tag": 51,
+              "gmsh_lines": 192,
+              "dolfinx_facets": 192
+            },
+            "partition_2": {
+              "tag": 52,
+              "gmsh_lines": 192,
+              "dolfinx_facets": 192
+            },
+            "bed_1": {
+              "tag": 61,
+              "gmsh_lines": 200,
+              "dolfinx_facets": 200
+            },
+            "bed_2": {
+              "tag": 62,
+              "gmsh_lines": 200,
+              "dolfinx_facets": 200
+            },
+            "bed_3": {
+              "tag": 63,
+              "gmsh_lines": 200,
+              "dolfinx_facets": 200
+            },
+            "bath_wall_lower": {
+              "tag": 71,
+              "gmsh_lines": 54,
+              "dolfinx_facets": 54
+            },
+            "bath_wall_upper": {
+              "tag": 72,
+              "gmsh_lines": 58,
+              "dolfinx_facets": 58
+            }
+          },
+          "cell_tags": [
+            1
+          ],
+          "unexpected_facet_tags": []
+        },
+        "vtu_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/mesh/application2_room_fine.vtu",
+        "xdmf_files": [
+          "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/mesh/application2_room_fine.xdmf",
+          "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/mesh/application2_room_fine_facets.xdmf"
+        ]
+      },
+      "status": "converged",
+      "picard": {
+        "converged": true,
+        "iterations": 52,
+        "final_relative_update": 9.644595886687681e-09,
+        "tolerance": 1e-08,
+        "max_iter": 100,
+        "seconds": 12.08569476986304,
+        "finite": true
+      },
+      "linear_system": {
+        "size": [
+          133703,
+          133703
+        ],
+        "last_relative_residual": 1.4914855520876497e-16,
+        "mumps_INFOG1": 0,
+        "mumps_null_pivots_INFOG28": 0,
+        "velocity_dirichlet_dofs": 6504,
+        "pressure_dirichlet_dofs": 0
+      },
+      "natural_outflow_check": {
+        "momentum_max_abs_on_outlet_dofs": 4.7029961314023366e-14,
+        "momentum_max_abs_on_interior_free_dofs": 4.4324738107323625e-13,
+        "momentum_max_abs_on_dirichlet_dofs_reaction": 0.0010414242959772412,
+        "continuity_max_abs": 1.6137381370693924e-17,
+        "n_outlet_velocity_blocks_free": 142,
+        "note": "R(w) = int nu grad u:grad w + ((grad u) u).w - p div w for every P2 basis w at the final iterate. Natural outflow <=> R = 0 on the free outlet dofs (same level as interior dofs: Picard lag + round-off); inlet/wall rows hold the boundary reaction (traction) and are O(reaction).",
+        "outlet_over_reaction": 4.515927033360775e-11
+      },
+      "taylor_hood": {
+        "flux_by_tag": {
+          "inlet_1": -0.06,
+          "inlet_2": -0.059999999999999956,
+          "inlet_3": -0.05999999999999995,
+          "outlet_door": 0.11871410681832298,
+          "outlet_exhaust": 0.061285893181676876,
+          "wall_bottom": 0.0,
+          "wall_right": 0.0,
+          "wall_top": 0.0,
+          "wall_left": 0.0,
+          "bath_bottom": 0.0,
+          "bath_right": 0.0,
+          "bath_top": 0.0,
+          "partition_1": 0.0,
+          "partition_2": 0.0,
+          "bed_1": 0.0,
+          "bed_2": 0.0,
+          "bed_3": 0.0,
+          "bath_wall_lower": 0.0,
+          "bath_wall_upper": 0.0
+        },
+        "inflow_total": -0.1799999999999999,
+        "outflow_total": 0.17999999999999985,
+        "net_boundary_flux": -4.85722573273506e-17,
+        "normalized_imbalance_abs_net_over_abs_inflow": 2.698458740408368e-16,
+        "prescribed_inflow_per_inlet": -0.06,
+        "inlet_flux_error_vs_prescribed": {
+          "inlet_1": 0.0,
+          "inlet_2": 4.163336342344337e-17,
+          "inlet_3": 4.85722573273506e-17
+        },
+        "wall_flux_total": 0.0,
+        "div_L2": 0.04492614047689133,
+        "grad_L2": 1.2087671012498717,
+        "div_L2_over_grad_L2": 0.03716691199689126,
+        "integral_div": -2.72873781540341e-17,
+        "velocity_L2": 0.2606697408321841,
+        "fluid_area_m2": 50.979999999999905,
+        "pressure_min": -0.00466607608996314,
+        "pressure_max": 0.03348683159105864,
+        "outlets": {
+          "outlet_door": {
+            "length_m": 1.0,
+            "flux": 0.11871410681832298,
+            "share_of_total_inflow": 0.6595228156573502,
+            "share_of_total_outflow": 0.6595228156573504,
+            "mean_normal_velocity": 0.11871410681832298,
+            "mean_pressure": 0.00011457231141279558,
+            "mean_normal_traction": -2.8100406017152108e-05,
+            "mean_abs_normal_traction": 2.8100406017152108e-05,
+            "backflow_flux_inward": 0.0,
+            "backflow_length_m": 0.0,
+            "backflow_length_fraction": 0.0,
+            "min_normal_velocity_at_P2_dofs": 0.0,
+            "max_normal_velocity_at_P2_dofs": 0.15150812374922035,
+            "n_P2_dofs_with_inflow": 0
+          },
+          "outlet_exhaust": {
+            "length_m": 0.6000000000000001,
+            "flux": 0.061285893181676876,
+            "share_of_total_inflow": 0.3404771843426495,
+            "share_of_total_outflow": 0.34047718434264956,
+            "mean_normal_velocity": 0.10214315530279477,
+            "mean_pressure": 0.0002106776909904998,
+            "mean_normal_traction": -7.081304977496964e-05,
+            "mean_abs_normal_traction": 7.414454407893407e-05,
+            "backflow_flux_inward": 0.0,
+            "backflow_length_m": 0.0,
+            "backflow_length_fraction": 0.0,
+            "min_normal_velocity_at_P2_dofs": 0.0,
+            "max_normal_velocity_at_P2_dofs": 0.12856985073039232,
+            "n_P2_dofs_with_inflow": 0
+          }
+        },
+        "sign_convention": "flux = int u.n ds with outward n: inflow negative, outflow positive"
+      },
+      "transport_P1": {
+        "flux_by_tag": {
+          "inlet_1": -0.059913662985829536,
+          "inlet_2": -0.05991366298582971,
+          "inlet_3": -0.05991366298582971,
+          "outlet_door": 0.11856758275797305,
+          "outlet_exhaust": 0.06110315671926144,
+          "wall_bottom": -1.68634173344735e-19,
+          "wall_right": -1.0237081269424501e-20,
+          "wall_top": 3.0878740512077472e-19,
+          "wall_left": -9.498610498578386e-21,
+          "bath_bottom": -5.4545813552251354e-21,
+          "bath_right": -6.708653841649024e-20,
+          "bath_top": -1.044327046960326e-20,
+          "partition_1": -9.146426659350807e-21,
+          "partition_2": -6.008996361899926e-21,
+          "bed_1": -8.821092331744233e-20,
+          "bed_2": -8.53621832357715e-20,
+          "bed_3": -1.184191530115695e-19,
+          "bath_wall_lower": -7.580711311995027e-21,
+          "bath_wall_upper": -3.255337850095555e-20
+        },
+        "inflow_total": -0.17974098895748897,
+        "outflow_total": 0.1796707394772345,
+        "net_boundary_flux": -7.02494802544629e-05,
+        "integral_div": -7.024948025448547e-05,
+        "normalized_imbalance_abs_net_over_abs_inflow": 0.00039083728570714495,
+        "div_L2": 0.08280177870938968,
+        "grad_L2": 1.2044574707768587,
+        "div_L2_over_grad_L2": 0.06874612073764934,
+        "div_abs_max": 2.1352038880328434,
+        "wall_node_max_speed": 3.2906968520830884e-18,
+        "dof_to_node_map_max_distance": 1.9860273225978185e-15,
+        "note": "continuous P1 interpolant of the P2 field at mesh vertices; not exactly divergence-free"
+      },
+      "bay_flux_y3": {
+        "1": {
+          "x_range": [
+            0.0,
+            2.95
+          ],
+          "net_upward_flux_across_y3": -0.05999262419205717,
+          "upward_part": 0.0,
+          "downward_part": -0.05999262419205717,
+          "note": "per metre depth [m^2/s]; trapezoid on 5 mm samples of the P2 field; negative = net flow from the bay down into the aisle"
+        },
+        "2": {
+          "x_range": [
+            3.05,
+            5.95
+          ],
+          "net_upward_flux_across_y3": -0.05998098153278185,
+          "upward_part": 0.0,
+          "downward_part": -0.05998098153278185,
+          "note": "per metre depth [m^2/s]; trapezoid on 5 mm samples of the P2 field; negative = net flow from the bay down into the aisle"
+        },
+        "3": {
+          "x_range": [
+            6.05,
+            9.0
+          ],
+          "net_upward_flux_across_y3": -0.05999090291545109,
+          "upward_part": 0.0,
+          "downward_part": -0.05999090291545109,
+          "note": "per metre depth [m^2/s]; trapezoid on 5 mm samples of the P2 field; negative = net flow from the bay down into the aisle"
+        }
+      },
+      "regions": {
+        "bay_1": {
+          "area_m2_probe": 6.750000000000003,
+          "mean_speed": 0.03294653732058152,
+          "median_speed": 0.033075311402766,
+          "max_speed": 0.14792434472753468,
+          "area_fraction_weak": 0.20629629629629628,
+          "area_fraction_downward_vy_lt_0": 0.9485185185185185
+        },
+        "bay_2": {
+          "area_m2_probe": 6.600000000000002,
+          "mean_speed": 0.033528237481202365,
+          "median_speed": 0.03365394370712425,
+          "max_speed": 0.14792218932506399,
+          "area_fraction_weak": 0.2056818181818182,
+          "area_fraction_downward_vy_lt_0": 0.9435606060606061
+        },
+        "bay_3": {
+          "area_m2_probe": 6.750000000000003,
+          "mean_speed": 0.03291630714859151,
+          "median_speed": 0.03300599700173151,
+          "max_speed": 0.1479266955952734,
+          "area_fraction_weak": 0.20592592592592593,
+          "area_fraction_downward_vy_lt_0": 0.9448148148148148
+        },
+        "aisle": {
+          "area_m2_probe": 26.85000000000001,
+          "mean_speed": 0.024269502567585397,
+          "median_speed": 0.02102802418686816,
+          "max_speed": 0.14780167028704563,
+          "area_fraction_weak": 0.17253258845437616,
+          "area_fraction_downward_vy_lt_0": 0.9778398510242086
+        },
+        "bathroom": {
+          "area_m2_probe": 3.9000000000000012,
+          "mean_speed": 0.0330735893561813,
+          "median_speed": 0.01688542806508842,
+          "max_speed": 0.12337207775676677,
+          "area_fraction_weak": 0.441025641025641,
+          "area_fraction_downward_vy_lt_0": 0.4685897435897436
+        }
+      },
+      "doorway_flux": {
+        "y_range": [
+          0.6,
+          1.4
+        ],
+        "net_flux_into_bathroom_+x": 0.061286461060287754,
+        "into_bathroom_part": 0.061286461060287754,
+        "back_into_room_part": 0.0,
+        "note": "flux of the P2 field across x = 9, 0.6 < y < 1.4 (interior doorway), trapezoid on 1 mm samples"
+      },
+      "files": {
+        "velocity_nodes_npz": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_navier_stokes_velocity_nodes_fine.npz",
+        "full_fields_npz": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_navier_stokes_full_fields_fine.npz",
+        "picard_history_csv": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_picard_history_fine.csv",
+        "visualization": [
+          "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_velocity_P2_fine.bp",
+          "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_pressure_P1_fine.bp",
+          "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_velocity_pressure_P1_fine.vtu",
+          "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_velocity_pressure_P1_fine.xdmf"
+        ]
+      },
+      "provenance": {
+        "git_commit": "b22a05a9353538d941d92d399942bc5c3580c910",
+        "git_branch": "app1-osqp-amplitude-solver",
+        "git_dirty_paths": "M \"Applications/Application2/Navier Stokes Solve/solve_application2_navier_stokes.py\"\n M Applications/Application2/README.md\n M Applications/Application2/Room_mesh/build_room_mesh.py\n M Applications/Application2/mesh_data_config.py\n M Applications/Application2/navier_stokes_config.py\n M Applications/Application2/report_application2_flow.py\n M Applications/Application2/room_geometry_config.py\n M Applications/Application2/run_application2_setup.sh\n M \"Applications/Application2/test scripts/diagnose_ns_newton_stability.py\"\n?? Applications/Application2/room_layout_reference.png",
+        "python": "3.14.6 | packaged by conda-forge | (main, Jul 24 2026, 16:09:24) [GCC 14.3.0]",
+        "platform": "Linux-6.12.111+deb13-amd64-x86_64-with-glibc2.41",
+        "dolfinx": "0.11.0",
+        "basix": "0.11.0",
+        "petsc4py": [
+          3,
+          25,
+          6
+        ],
+        "numpy": "2.5.3",
+        "scipy": "1.18.1"
+      },
+      "command": "<fenicsx-env python> Applications/Application2/Navier Stokes Solve/solve_application2_navier_stokes.py --level fine --out-root Applications/Application2/output/v3_bathroom_topsupply_20261116"
+    }
+  },
+  "shared_color_scales": {
+    "speed_m_per_s": [
+      0.0,
+      0.1529006883178455
+    ],
+    "pressure": [
+      -0.00466607608996314,
+      0.03348683159105864
+    ]
+  },
+  "coarse_vs_fine": {
+    "grid_points": 20392,
+    "velocity_rel_l2_diff_grid": 0.002555860559299468,
+    "velocity_max_abs_diff": 0.0009432303272474439,
+    "velocity_max_abs_diff_location": [
+      6.575000000000002,
+      5.575000000000001
+    ],
+    "velocity_p95_abs_diff": 0.00020092809218027802,
+    "velocity_median_abs_diff": 1.5438617584007904e-05,
+    "pressure_rel_l2_diff_grid": 0.001329675070565727,
+    "pressure_max_abs_diff": 0.00022964222375495072,
+    "lines": {
+      "h_y1": {
+        "rel_l2_diff": 0.00115432375884229,
+        "max_abs_diff": 0.00029723257123511176
+      },
+      "h_y1.5": {
+        "rel_l2_diff": 0.0011568352499172934,
+        "max_abs_diff": 0.00016233353298526488
+      },
+      "h_y3": {
+        "rel_l2_diff": 0.0015093854560858553,
+        "max_abs_diff": 0.00039970328759632333
+      },
+      "h_y4.5": {
+        "rel_l2_diff": 0.0011339361637840342,
+        "max_abs_diff": 9.88057155106561e-05
+      },
+      "v_x1.5": {
+        "rel_l2_diff": 0.0016127272533554482,
+        "max_abs_diff": 0.000610418893994762
+      },
+      "v_x4.5": {
+        "rel_l2_diff": 0.0024320340508620277,
+        "max_abs_diff": 0.0005484426678889891
+      },
+      "v_x7.5": {
+        "rel_l2_diff": 0.001770161753288919,
+        "max_abs_diff": 0.00044075948364240367
+      },
+      "v_x10": {
+        "rel_l2_diff": 0.001315941159405907,
+        "max_abs_diff": 0.00016541508437631532
+      },
+      "doorway_x9": {
+        "rel_l2_diff": 0.0024232432497137365,
+        "max_abs_diff": 0.0004884415256242606
+      }
+    },
+    "definition": "coarse minus fine P2/P1 fields evaluated at identical physical points (0.05 m cell-centred grid, solids and exterior excluded; 5 mm line samples); rel_l2 = ||dv|| / ||v_fine|| over the points"
+  },
+  "figures": {
+    "geometry": "fig_geometry_boundary_tags.png",
+    "geometry_vs_reference": "fig_geometry_vs_reference.png",
+    "mesh_coarse": "fig_mesh_coarse.png",
+    "mesh_bed_holes_coarse": "fig_mesh_bed_holes_coarse.png",
+    "mesh_fine": "fig_mesh_fine.png",
+    "mesh_bed_holes_fine": "fig_mesh_bed_holes_fine.png",
+    "velocity_coarse": "fig_velocity_coarse.png",
+    "velocity_arrows_coarse": "fig_velocity_arrows_coarse.png",
+    "velocity_fine": "fig_velocity_fine.png",
+    "velocity_arrows_fine": "fig_velocity_arrows_fine.png",
+    "velocity_pair": "fig_velocity_coarse_vs_fine.png",
+    "pressure": "fig_pressure_coarse_vs_fine.png",
+    "picard": "fig_picard_convergence.png",
+    "comparison": "fig_coarse_fine_comparison.png"
+  },
+  "env_files": [
+    "Applications/Application2/output/v3_bathroom_topsupply_20261116/env/conda_meta_fenicsx_env.txt",
+    "Applications/Application2/output/v3_bathroom_topsupply_20261116/env/git_branch.txt",
+    "Applications/Application2/output/v3_bathroom_topsupply_20261116/env/git_commit.txt",
+    "Applications/Application2/output/v3_bathroom_topsupply_20261116/env/git_diff_tracked.patch",
+    "Applications/Application2/output/v3_bathroom_topsupply_20261116/env/git_status.txt",
+    "Applications/Application2/output/v3_bathroom_topsupply_20261116/env/host.txt",
+    "Applications/Application2/output/v3_bathroom_topsupply_20261116/env/pip_list_fenicsx_env.txt",
+    "Applications/Application2/output/v3_bathroom_topsupply_20261116/env/python_fenicsx_env.txt",
+    "Applications/Application2/output/v3_bathroom_topsupply_20261116/env/sha256_application2_sources.txt"
+  ]
+}

@@ -1,18 +1,18 @@
 """Application-local utilities for Application1 multi-source Gaussian controls.
 
-This mirrors ``Test Application4/multi_source_utils.py`` but is adapted to the
+This mirrors App4's ``multi_source_utils.py`` but is adapted to the
 DC Navy Yard domain, whose coordinates are in LOCAL METERS with the south-west
 corner of the outer domain at the origin (x in [0, ~302], y in [0, ~700]).  All
 geometry-dependent defaults here are therefore expressed in meters / square
-meters, not in the normalized [0, 1.4] x [0, 1.0] units of Test Application4.
+meters, not in the normalized [0, 1.4] x [0, 1.0] units of App4.
 (The mesh was translated once from projected GIS coordinates; global = local +
 origin, with the origin recorded in DC_mesh/dc_navy_yard_coordinate_origin.json.)
 
 The Gaussian source model, control ordering ``[x1, y1, A1, x2, y2, A2, ...]``,
-packing/unpacking, and mode helpers are identical to Test Application4; only the
+packing/unpacking, and mode helpers are identical to App4; only the
 numeric geometry constants differ.  Source-center admissibility against the 21
 DC building holes is handled by mesh point-location in ``mesh_admissibility.py``;
-the analytic building-exclusion helpers used for Test Application4's *curved*
+the analytic building-exclusion helpers used for App4's *curved*
 buildings are not needed here because the DC buildings are exact polygonal mesh
 holes.
 """
@@ -40,7 +40,7 @@ NUM_SOURCES = 2
 MESH_DOMAIN_BOUND_CASE = "mesh_domain"
 
 # Two admissible source centers in the DC fluid/street region (LOCAL meters),
-# with amplitudes analogous to Test Application4 (dimensionless emission
+# with amplitudes analogous to App4 (dimensionless emission
 # strength).  Source 1 sits upstream in the western street corridor so its plume
 # advects east/south toward the outflow (right/bottom) observation boundaries;
 # source 2 sits in the south-eastern corridor.  Both centers were verified
@@ -71,7 +71,7 @@ INITIAL_CONTROL = np.array(
 )
 
 # Deprecated legacy source-label boxes retained only for CLI compatibility with
-# the Test Application4 driver.  Unlike App4 (normalized units), these are
+# the App4 driver.  Unlike App4 (normalized units), these are
 # derived from the DC fluid-domain bounding box in meters.  New Application1
 # experiments should use the default mesh_domain workflow, which uses the full
 # mesh bounding box plus mesh admissibility.
@@ -452,7 +452,7 @@ def mode_fixed_values(
 def is_inside_excluded_geometry(x: float, y: float) -> bool:
     """Coarse bounding-box exclusion for the DC domain (meters).
 
-    Unlike Test Application4, Application1 has no analytic building footprints in
+    Unlike App4, Application1 has no analytic building footprints in
     this module: the 21 DC building holes are represented exactly by the mesh and
     excluded via mesh point-location in ``mesh_admissibility.py``.  This helper
     only rejects points outside the DC fluid-domain bounding box and is used by

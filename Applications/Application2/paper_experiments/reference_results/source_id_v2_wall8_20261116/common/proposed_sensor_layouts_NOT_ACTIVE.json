@@ -1,0 +1,381 @@
+{
+  "note": "recorded for a possible later extension; NOT used by this dataset or by the inversion",
+  "layouts": {
+    "wall_10": {
+      "layout": "wall_10",
+      "active_layout": false,
+      "selection_rule": "PROPOSED, NOT ACTIVE: wall_8 plus two sensors evenly spaced on the bottom aisle wall between S7 and the bathroom wall.",
+      "num_sensors": 10,
+      "snap_tolerance_m": 0.15,
+      "coarse_mesh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+      "sensors": [
+        {
+          "label": "S1",
+          "name": "bay1_left_wall_upper",
+          "description": "left exterior wall of Bay 1, beside the upper portion of the bed",
+          "wall": "wall_left",
+          "wall_point": [
+            0.0,
+            5.075
+          ],
+          "inward_normal": [
+            1.0,
+            0.0
+          ],
+          "intended_xy": [
+            0.1,
+            5.075
+          ],
+          "region": "bay_1",
+          "coarse_node_id": 1331,
+          "xy": [
+            0.1591379370343268,
+            5.100000000005242
+          ],
+          "snap_distance_m": 0.06420510569213382,
+          "distance_to_boundary_m": 0.1591379370343268,
+          "on_boundary": false,
+          "wall_offset_m": 0.1591379370343268,
+          "intended_wall_offset_m": 0.1,
+          "along_wall_shift_m": 0.025000000005241496
+        },
+        {
+          "label": "S2",
+          "name": "bay1_partition1_lower",
+          "description": "Bay 1 face of the first partition, beside the lower portion of the bed",
+          "wall": "partition_1",
+          "wall_point": [
+            2.95,
+            4.025
+          ],
+          "inward_normal": [
+            -1.0,
+            0.0
+          ],
+          "intended_xy": [
+            2.85,
+            4.025
+          ],
+          "region": "bay_1",
+          "coarse_node_id": 3741,
+          "xy": [
+            2.830827318273924,
+            4.053130069092704
+          ],
+          "snap_distance_m": 0.03404251036174796,
+          "distance_to_boundary_m": 0.11917268172607631,
+          "on_boundary": false,
+          "wall_offset_m": 0.11917268172607631,
+          "intended_wall_offset_m": 0.1,
+          "along_wall_shift_m": 0.02813006909270399
+        },
+        {
+          "label": "S3",
+          "name": "bay2_partition1_upper",
+          "description": "Bay 2 face of the first partition, upper position",
+          "wall": "partition_1",
+          "wall_point": [
+            3.05,
+            5.075
+          ],
+          "inward_normal": [
+            1.0,
+            0.0
+          ],
+          "intended_xy": [
+            3.15,
+            5.075
+          ],
+          "region": "bay_2",
+          "coarse_node_id": 4234,
+          "xy": [
+            3.160704287239835,
+            5.084495546739492
+          ],
+          "snap_distance_m": 0.014308989244344834,
+          "distance_to_boundary_m": 0.11070428723983516,
+          "on_boundary": false,
+          "wall_offset_m": 0.11070428723983516,
+          "intended_wall_offset_m": 0.1,
+          "along_wall_shift_m": 0.009495546739492156
+        },
+        {
+          "label": "S4",
+          "name": "bay2_partition2_lower",
+          "description": "Bay 2 face of the second partition, lower position",
+          "wall": "partition_2",
+          "wall_point": [
+            5.95,
+            4.025
+          ],
+          "inward_normal": [
+            -1.0,
+            0.0
+          ],
+          "intended_xy": [
+            5.85,
+            4.025
+          ],
+          "region": "bay_2",
+          "coarse_node_id": 3743,
+          "xy": [
+            5.830827318273931,
+            4.053130069092686
+          ],
+          "snap_distance_m": 0.0340425103617283,
+          "distance_to_boundary_m": 0.11917268172606921,
+          "on_boundary": false,
+          "wall_offset_m": 0.11917268172606921,
+          "intended_wall_offset_m": 0.1,
+          "along_wall_shift_m": 0.02813006909268534
+        },
+        {
+          "label": "S5",
+          "name": "bay3_partition2_upper",
+          "description": "Bay 3 face of the second partition, upper position",
+          "wall": "partition_2",
+          "wall_point": [
+            6.05,
+            5.075
+          ],
+          "inward_normal": [
+            1.0,
+            0.0
+          ],
+          "intended_xy": [
+            6.15,
+            5.075
+          ],
+          "region": "bay_3",
+          "coarse_node_id": 4231,
+          "xy": [
+            6.15578773745208,
+            5.078374589255392
+          ],
+          "snap_distance_m": 0.0066996833848184415,
+          "distance_to_boundary_m": 0.10578773745208014,
+          "on_boundary": false,
+          "wall_offset_m": 0.10578773745208014,
+          "intended_wall_offset_m": 0.1,
+          "along_wall_shift_m": 0.0033745892553920243
+        },
+        {
+          "label": "S6",
+          "name": "bay3_right_wall_lower",
+          "description": "right exterior wall of Bay 3, lower position",
+          "wall": "wall_right",
+          "wall_point": [
+            9.0,
+            4.025
+          ],
+          "inward_normal": [
+            -1.0,
+            0.0
+          ],
+          "intended_xy": [
+            8.9,
+            4.025
+          ],
+          "region": "bay_3",
+          "coarse_node_id": 3833,
+          "xy": [
+            8.84298063082124,
+            3.977251096959357
+          ],
+          "snap_distance_m": 0.0743718105408803,
+          "distance_to_boundary_m": 0.15701936917876047,
+          "on_boundary": false,
+          "wall_offset_m": 0.15701936917876047,
+          "intended_wall_offset_m": 0.1,
+          "along_wall_shift_m": 0.0477489030406435
+        },
+        {
+          "label": "S7",
+          "name": "aisle_bottom_wall_right_of_door",
+          "description": "bottom wall of the shared aisle, immediately to the right of the corridor doorway",
+          "wall": "wall_bottom",
+          "wall_point": [
+            1.9,
+            0.0
+          ],
+          "inward_normal": [
+            0.0,
+            1.0
+          ],
+          "intended_xy": [
+            1.9,
+            0.1
+          ],
+          "region": "aisle",
+          "coarse_node_id": 2663,
+          "xy": [
+            1.907425199890157,
+            0.08974677487999244
+          ],
+          "snap_distance_m": 0.012659471504385294,
+          "distance_to_boundary_m": 0.08974677487999244,
+          "on_boundary": false,
+          "wall_offset_m": 0.08974677487999244,
+          "intended_wall_offset_m": 0.1,
+          "along_wall_shift_m": 0.007425199890157108
+        },
+        {
+          "label": "S8",
+          "name": "bathroom_top_wall_near_exhaust",
+          "description": "bathroom's upper wall, near the exhaust side",
+          "wall": "bath_top",
+          "wall_point": [
+            10.5,
+            2.0
+          ],
+          "inward_normal": [
+            0.0,
+            -1.0
+          ],
+          "intended_xy": [
+            10.5,
+            1.9
+          ],
+          "region": "bathroom",
+          "coarse_node_id": 1382,
+          "xy": [
+            10.50859512247117,
+            1.788664463186837
+          ],
+          "snap_distance_m": 0.11166681641279828,
+          "distance_to_boundary_m": 0.21133553681316308,
+          "on_boundary": false,
+          "wall_offset_m": 0.21133553681316308,
+          "intended_wall_offset_m": 0.1,
+          "along_wall_shift_m": 0.008595122471170669
+        },
+        {
+          "label": "S9",
+          "name": "aisle_bottom_wall_extension_1",
+          "description": "bottom wall of the shared aisle, evenly spaced between S7 and the bathroom wall",
+          "wall": "wall_bottom",
+          "wall_point": [
+            4.25,
+            0.0
+          ],
+          "inward_normal": [
+            0.0,
+            1.0
+          ],
+          "intended_xy": [
+            4.25,
+            0.1
+          ],
+          "region": "aisle",
+          "coarse_node_id": 910,
+          "xy": [
+            4.18652435619554,
+            0.1856214714122136
+          ],
+          "snap_distance_m": 0.10658420953960855,
+          "distance_to_boundary_m": 0.1856214714122136,
+          "on_boundary": false,
+          "wall_offset_m": 0.1856214714122136,
+          "intended_wall_offset_m": 0.1,
+          "along_wall_shift_m": 0.06347564380445991
+        },
+        {
+          "label": "S10",
+          "name": "aisle_bottom_wall_extension_2",
+          "description": "bottom wall of the shared aisle, evenly spaced between S7 and the bathroom wall",
+          "wall": "wall_bottom",
+          "wall_point": [
+            6.6,
+            0.0
+          ],
+          "inward_normal": [
+            0.0,
+            1.0
+          ],
+          "intended_xy": [
+            6.6,
+            0.1
+          ],
+          "region": "aisle",
+          "coarse_node_id": 3112,
+          "xy": [
+            6.541918175715395,
+            0.1520428164648799
+          ],
+          "snap_distance_m": 0.07798687747194949,
+          "distance_to_boundary_m": 0.1520428164648799,
+          "on_boundary": false,
+          "wall_offset_m": 0.1520428164648799,
+          "intended_wall_offset_m": 0.1,
+          "along_wall_shift_m": 0.05808182428460462
+        }
+      ],
+      "labels": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10"
+      ],
+      "node_ids": [
+        1331,
+        3741,
+        4234,
+        3743,
+        4231,
+        3833,
+        2663,
+        1382,
+        910,
+        3112
+      ],
+      "coordinates": [
+        [
+          0.1591379370343268,
+          5.100000000005242
+        ],
+        [
+          2.830827318273924,
+          4.053130069092704
+        ],
+        [
+          3.160704287239835,
+          5.084495546739492
+        ],
+        [
+          5.830827318273931,
+          4.053130069092686
+        ],
+        [
+          6.15578773745208,
+          5.078374589255392
+        ],
+        [
+          8.84298063082124,
+          3.977251096959357
+        ],
+        [
+          1.907425199890157,
+          0.08974677487999244
+        ],
+        [
+          10.50859512247117,
+          1.788664463186837
+        ],
+        [
+          4.18652435619554,
+          0.1856214714122136
+        ],
+        [
+          6.541918175715395,
+          0.1520428164648799
+        ]
+      ]
+    }
+  }
+}

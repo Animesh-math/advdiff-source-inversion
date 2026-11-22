@@ -1,0 +1,193 @@
+{
+  "run_id": "B_L2__r06",
+  "exit_status": 0,
+  "error": null,
+  "start_control_from_argv": [
+    198.75668520279342,
+    1.459716512200568,
+    0.1869210132214068,
+    11.536996585040015,
+    628.967769205599,
+    0.1862070828250184
+  ],
+  "true_control": [
+    100.0,
+    210.0,
+    1.3,
+    270.0,
+    60.0,
+    0.85
+  ],
+  "J0_zero_source": 1090233.8741833554,
+  "initial_control": [
+    198.75668520279342,
+    1.459716512200568,
+    0.1869210132214068,
+    11.536996585040015,
+    628.967769205599,
+    0.1862070828250184
+  ],
+  "start_control_matches_argv": true,
+  "final_control": [
+    193.8529491390732,
+    0.0,
+    0.1,
+    0.0,
+    622.0829586950495,
+    0.1
+  ],
+  "initial_objective": 1101551.6596288825,
+  "final_objective": 1090840.08684099,
+  "final_gradient_norm": 53234.26637181663,
+  "final_over_J0": 1.0005560390958212,
+  "initial_over_J0": 1.0103810620028706,
+  "max_position_error_m": 424.0428809057709,
+  "max_amplitude_error": 1.2,
+  "position_errors_m": [
+    424.0428809057709,
+    96.94520800336949
+  ],
+  "amplitude_errors": [
+    1.2,
+    0.75
+  ],
+  "permutation": [
+    1,
+    0
+  ],
+  "initial_max_position_error_m": 428.2052015171129,
+  "initial_max_amplitude_error": 1.1137929171749816,
+  "success_flag": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "iterations": 10,
+  "n_objective_evaluations": 11,
+  "n_gradient_evaluations": 11,
+  "lbfgsb_maxcor": 10,
+  "scaling": "gn-diag",
+  "gn_condition_unscaled": 1374024470.6816466,
+  "gn_condition_scaled": 3363.057699819968,
+  "gn_n_floored": 0,
+  "feasibility": {
+    "feasibility_mode": "raw",
+    "invalid_evaluations": 0,
+    "projected_evaluations": 0,
+    "penalized_evaluations": 0,
+    "projected_source_events": 0,
+    "max_projection_distance": 0.0,
+    "last_projection_distance": null,
+    "raw_infeasible_evaluations": 0,
+    "raw_infeasible_iterates": 0,
+    "raw_max_outside_distance": 0.0,
+    "raw_infeasible_iterate_log": []
+  },
+  "pde": {
+    "lx": 301.98544034478255,
+    "ly": 700.4646734384005,
+    "k": 10.0,
+    "vx": 2.07,
+    "vy": -0.36,
+    "dt": 0.1,
+    "tfinal": 150.0,
+    "jprint": 1,
+    "ngauss": 3,
+    "sigma2": 400.0,
+    "velocity_field": {
+      "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "coords_shape": [
+        2795,
+        3
+      ],
+      "velocity_nodes_shape": [
+        2795,
+        2
+      ],
+      "velocity_magnitude_min": 2.5643005027931998e-21,
+      "velocity_magnitude_max": 10.580957815647944,
+      "coordinate_validation_passed": true,
+      "coordinate_validation_tolerance": 1e-10,
+      "max_coordinate_difference": 0.0
+    },
+    "velocity_mode": "nodal"
+  },
+  "active_bounds": [
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ],
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ]
+  ],
+  "final_feasibility_check": {
+    "centers_in_fluid_mesh": [
+      true,
+      true
+    ],
+    "all_centers_feasible": true,
+    "signed_clearance_m": [
+      0.0,
+      0.0
+    ],
+    "within_lbfgsb_box": true
+  },
+  "numerical_flags": {
+    "finite_final_values": true,
+    "abnormal_termination": false,
+    "iteration_limit": false,
+    "raw_infeasible_evaluations": 0
+  },
+  "history_rows": 11,
+  "pde_solves": {
+    "data_generation": {
+      "seconds": 21.5209400691092,
+      "forward_solves": 1,
+      "adjoint_solves": 0
+    },
+    "scaling_setup": {
+      "seconds": 469.7998481323011,
+      "forward_solves": 7,
+      "adjoint_solves": 6
+    },
+    "optimization": {
+      "seconds": 759.4761568657123,
+      "forward_solves": 11,
+      "adjoint_solves": 11
+    },
+    "post_init_total": {
+      "seconds": 1229.2760049980134,
+      "forward_solves": 18,
+      "adjoint_solves": 17
+    },
+    "driver_output_overhead": {
+      "seconds": 166.63431646162644,
+      "forward_solves": 4,
+      "adjoint_solves": 2
+    },
+    "between_data_and_optimization": {
+      "seconds": 0.00010619219392538071,
+      "forward_solves": 0,
+      "adjoint_solves": 0
+    },
+    "total_counted": {
+      "forward_solves": 23,
+      "adjoint_solves": 19
+    }
+  }
+}

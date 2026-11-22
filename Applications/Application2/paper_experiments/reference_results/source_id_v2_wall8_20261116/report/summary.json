@@ -1,0 +1,166 @@
+{
+  "dataset_version": "source_id_v2_wall8_20261116",
+  "pipeline_state": "DONE_OK 2026-11-16T20:41:32-05:00",
+  "validation_all_passed": true,
+  "cases": [
+    {
+      "case": "12",
+      "bays": [
+        1,
+        2
+      ],
+      "clean_min": 0.0,
+      "clean_max": 4.12699059469686,
+      "clean_rms": 1.5439307195907606,
+      "s_noise": 0.015439307195907605,
+      "seed": 2026111612,
+      "realized_relative_noise_norm": 0.009984213226296999,
+      "num_observations": 160000,
+      "fine_solve_seconds": 30.88313049497083,
+      "files": {
+        "clean": {
+          "file": "data/observations_clean.npz",
+          "file_sha256": "142c4d34a932710b4a8f32c352a45ef555461035f74cedcfaed036cd248c7ae9",
+          "observations_sha256": "553706243c87151dd29f1be0c90b2ea414960066f54048ca2ff79c475a3330b2"
+        },
+        "noisy": {
+          "file": "data/observations_noisy.npz",
+          "file_sha256": "fb46104e4f4a3e092ae3843b26b9a8c90a494228458fa4586f94c1006b8b78b3",
+          "observations_sha256": "9cb5d4415a8a539dbb10807342dbe795e500a30e2ab4263651b00ebcbce6847f"
+        }
+      }
+    },
+    {
+      "case": "13",
+      "bays": [
+        1,
+        3
+      ],
+      "clean_min": 0.0,
+      "clean_max": 5.311073552785995,
+      "clean_rms": 2.0532304923058136,
+      "s_noise": 0.020532304923058135,
+      "seed": 2026111613,
+      "realized_relative_noise_norm": 0.00997999673127268,
+      "num_observations": 160000,
+      "fine_solve_seconds": 30.884343829005957,
+      "files": {
+        "clean": {
+          "file": "data/observations_clean.npz",
+          "file_sha256": "67243f14a33395089fc9fb1f0bcb277602d5879546f45448f87ca4b34542278c",
+          "observations_sha256": "18fbad6084bd9248df8a44abb3e6015eecdfc866ba86087996164d094c8c1368"
+        },
+        "noisy": {
+          "file": "data/observations_noisy.npz",
+          "file_sha256": "60d5544cb915345519e1d697e956b619ccc7dbe41c6827f3c78d8faa8c994833",
+          "observations_sha256": "01720e95d5301488fde899a31e2361687ba07c616613d42f3d71373f5e0ac654"
+        }
+      }
+    },
+    {
+      "case": "23",
+      "bays": [
+        2,
+        3
+      ],
+      "clean_min": 0.0,
+      "clean_max": 5.314141637552176,
+      "clean_rms": 1.8464187943188193,
+      "s_noise": 0.018464187943188194,
+      "seed": 2026111623,
+      "realized_relative_noise_norm": 0.009996056005214065,
+      "num_observations": 160000,
+      "fine_solve_seconds": 30.83424108987674,
+      "files": {
+        "clean": {
+          "file": "data/observations_clean.npz",
+          "file_sha256": "55409474ed48c7b07c559f9215dff84d18b6704eb8fbb69c92a41fdbd1b253a4",
+          "observations_sha256": "bea130c76860645d2ce5fc750806ab71a1fd45cfc589709595a932092bad445a"
+        },
+        "noisy": {
+          "file": "data/observations_noisy.npz",
+          "file_sha256": "efc8793228df0e21ce337f08f39776cd94763bb88f9b5b3fcb6ee8f4178dfa12",
+          "observations_sha256": "41eb73b9fdd5286acf9160071940e07741ba8a63b5089f2775c756d9351db5d1"
+        }
+      }
+    }
+  ],
+  "mismatch": [
+    {
+      "case": "12",
+      "objective_coarse_at_truth_vs_clean": 0.4886372856669799,
+      "objective_coarse_at_truth_vs_noisy": 0.7730460382951555,
+      "objective_noise_only": 0.28514421017916053,
+      "objective_zero_source_clean": 2860.4664802752523,
+      "relative_misfit_norm_clean": 0.013069978404109795,
+      "nominal_noise_level": 0.01,
+      "mismatch_over_noise_objective_ratio": 1.7136496839966047,
+      "per_sensor_relative_misfit": [
+        0.05876484869374988,
+        0.013116533140138189,
+        0.05373936861982618,
+        0.013116876461194341,
+        0.05628776610989489,
+        0.03349567663971166,
+        0.009453354497591522,
+        0.004909483387719771
+      ],
+      "max_abs_trace_difference": 0.06270006442900122,
+      "state_min": -2.0694014114114918e-64,
+      "state_max": 4.570576299315366
+    },
+    {
+      "case": "13",
+      "objective_coarse_at_truth_vs_clean": 1.521038490763938,
+      "objective_coarse_at_truth_vs_noisy": 2.0246169594366936,
+      "objective_noise_only": 0.503868785426347,
+      "objective_zero_source_clean": 5058.906545441248,
+      "relative_misfit_norm_clean": 0.017339707764926868,
+      "nominal_noise_level": 0.01,
+      "mismatch_over_noise_objective_ratio": 3.018719426084146,
+      "per_sensor_relative_misfit": [
+        0.05876465898838759,
+        0.013100514860783643,
+        0.05630157824623078,
+        0.05223494175271633,
+        0.04478412452268343,
+        0.019749305323521184,
+        0.016683722063538377,
+        0.006971614089448128
+      ],
+      "max_abs_trace_difference": 0.12207821167755295,
+      "state_min": -2.0694014114114918e-64,
+      "state_max": 5.960631307158783
+    },
+    {
+      "case": "23",
+      "objective_coarse_at_truth_vs_clean": 1.3520859915627124,
+      "objective_coarse_at_truth_vs_noisy": 1.7625737440636384,
+      "objective_noise_only": 0.40878884060762966,
+      "objective_zero_source_clean": 4091.1148368165145,
+      "relative_misfit_norm_clean": 0.018179474343418416,
+      "nominal_noise_level": 0.01,
+      "mismatch_over_noise_objective_ratio": 3.307541344702444,
+      "per_sensor_relative_misfit": [
+        0.055400362531582814,
+        0.04646611533772695,
+        0.052975791060767406,
+        0.013137623768090167,
+        0.046856923618082316,
+        0.01975314642654166,
+        0.002869234393015999,
+        0.0068162461411628876
+      ],
+      "max_abs_trace_difference": 0.1221932525837035,
+      "state_min": 0.0,
+      "state_max": 5.960782969967672
+    }
+  ],
+  "figures": {
+    "layout": "fig_sources_sensors_layout.png",
+    "fields": "fig_fine_concentration_final_time.png",
+    "traces_12": "fig_sensor_traces_case_12.png",
+    "traces_13": "fig_sensor_traces_case_13.png",
+    "traces_23": "fig_sensor_traces_case_23.png"
+  }
+}

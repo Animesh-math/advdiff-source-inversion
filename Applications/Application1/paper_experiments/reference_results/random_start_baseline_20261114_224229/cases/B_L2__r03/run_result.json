@@ -1,0 +1,869 @@
+{
+  "run_id": "B_L2__r03",
+  "exit_status": 0,
+  "error": null,
+  "start_control_from_argv": [
+    17.13905331757704,
+    129.60622507895854,
+    0.4366933213198184,
+    286.01939808792105,
+    555.9197738798196,
+    0.5080512076030572
+  ],
+  "true_control": [
+    100.0,
+    210.0,
+    1.3,
+    270.0,
+    60.0,
+    0.85
+  ],
+  "J0_zero_source": 1090233.8741833554,
+  "initial_control": [
+    17.13905331757704,
+    129.60622507895854,
+    0.4366933213198184,
+    286.01939808792105,
+    555.9197738798196,
+    0.5080512076030572
+  ],
+  "start_control_matches_argv": true,
+  "final_control": [
+    100.10675587821014,
+    209.965818855869,
+    1.2981345839751426,
+    56.06084168103959,
+    635.7612047464233,
+    0.1
+  ],
+  "initial_objective": 1649323.6114548603,
+  "final_objective": 167057.01872783058,
+  "final_gradient_norm": 53.987099665481885,
+  "final_over_J0": 0.15323044227823632,
+  "initial_over_J0": 1.5128163328169322,
+  "max_position_error_m": 614.2238422214479,
+  "max_amplitude_error": 0.75,
+  "position_errors_m": [
+    0.1120944608199783,
+    614.2238422214479
+  ],
+  "amplitude_errors": [
+    0.001865416024857458,
+    0.75
+  ],
+  "permutation": [
+    0,
+    1
+  ],
+  "initial_max_position_error_m": 496.17843891095333,
+  "initial_max_amplitude_error": 0.8633066786801816,
+  "success_flag": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "iterations": 63,
+  "n_objective_evaluations": 76,
+  "n_gradient_evaluations": 76,
+  "lbfgsb_maxcor": 10,
+  "scaling": "gn-diag",
+  "gn_condition_unscaled": 15010675746.225159,
+  "gn_condition_scaled": 80953.9720080698,
+  "gn_n_floored": 0,
+  "feasibility": {
+    "feasibility_mode": "raw",
+    "invalid_evaluations": 53,
+    "projected_evaluations": 0,
+    "penalized_evaluations": 0,
+    "projected_source_events": 0,
+    "max_projection_distance": 0.0,
+    "last_projection_distance": null,
+    "raw_infeasible_evaluations": 53,
+    "raw_infeasible_iterates": 45,
+    "raw_max_outside_distance": 27.584265926395137,
+    "raw_infeasible_iterate_log": [
+      {
+        "iteration": 1,
+        "objective": 1086809.3112856837,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              65.97676472183078,
+              171.62555712459488
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 4.994734255410253
+          }
+        ]
+      },
+      {
+        "iteration": 2,
+        "objective": 890932.3696895422,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              76.61761337738491,
+              248.1133055097431
+            ],
+            "amplitude": 0.9710069424573599,
+            "distance_outside_fluid": 2.7505460499957506
+          }
+        ]
+      },
+      {
+        "iteration": 3,
+        "objective": 748822.7039541819,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              86.68940448873384,
+              265.5028637251008
+            ],
+            "amplitude": 1.181064098203492,
+            "distance_outside_fluid": 5.435682098641478
+          }
+        ]
+      },
+      {
+        "iteration": 21,
+        "objective": 169792.0050617996,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              91.73526790865466,
+              212.27916915676673
+            ],
+            "amplitude": 1.5463488008933584,
+            "distance_outside_fluid": 4.301562440284779
+          }
+        ]
+      },
+      {
+        "iteration": 22,
+        "objective": 169607.78653307856,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              92.16330523918383,
+              213.57473807076732
+            ],
+            "amplitude": 1.543976033776135,
+            "distance_outside_fluid": 2.975773413625644
+          }
+        ]
+      },
+      {
+        "iteration": 23,
+        "objective": 169474.85994436918,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              91.70529220569058,
+              213.07098096250877
+            ],
+            "amplitude": 1.5737172369420875,
+            "distance_outside_fluid": 3.5214550365897903
+          }
+        ]
+      },
+      {
+        "iteration": 24,
+        "objective": 169349.6854106995,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              90.67245139300123,
+              213.19001740440174
+            ],
+            "amplitude": 1.6112362477274167,
+            "distance_outside_fluid": 3.713728993607473
+          }
+        ]
+      },
+      {
+        "iteration": 25,
+        "objective": 169218.786771141,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              90.55445937429421,
+              213.3638857778591
+            ],
+            "amplitude": 1.6164661879382953,
+            "distance_outside_fluid": 3.611321208173671
+          }
+        ]
+      },
+      {
+        "iteration": 26,
+        "objective": 168810.20461899127,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              91.47301285471615,
+              213.25713940514513
+            ],
+            "amplitude": 1.5765292140625091,
+            "distance_outside_fluid": 3.383827910540208
+          }
+        ]
+      },
+      {
+        "iteration": 28,
+        "objective": 167720.24714724813,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              70.76430797498246,
+              616.9572499186868
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 11.201484217468405
+          }
+        ]
+      },
+      {
+        "iteration": 29,
+        "objective": 167464.5458642479,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              32.06635630092963,
+              623.5753376978056
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 7.649930296938436
+          }
+        ]
+      },
+      {
+        "iteration": 30,
+        "objective": 167304.92436304005,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              55.01193127022111,
+              619.6468980264264
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 16.74746983969887
+          }
+        ]
+      },
+      {
+        "iteration": 31,
+        "objective": 167247.56342231622,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              52.63533648875249,
+              620.0938211273766
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.047945929739598
+          }
+        ]
+      },
+      {
+        "iteration": 32,
+        "objective": 167192.41669318906,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              49.43172447188055,
+              620.6770714237512
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.94861163695829
+          }
+        ]
+      },
+      {
+        "iteration": 33,
+        "objective": 167131.25137839475,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              47.13294980271225,
+              621.1109042469215
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 18.446155845997186
+          }
+        ]
+      },
+      {
+        "iteration": 34,
+        "objective": 167113.00630680256,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              49.303277435099105,
+              620.7492422247732
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 18.04393283508136
+          }
+        ]
+      },
+      {
+        "iteration": 35,
+        "objective": 167109.52066942092,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              50.09414985198259,
+              620.6318855611362
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.791645626404897
+          }
+        ]
+      },
+      {
+        "iteration": 36,
+        "objective": 167108.81924837985,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              51.05075710178319,
+              620.4652080591272
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.505816373012824
+          }
+        ]
+      },
+      {
+        "iteration": 37,
+        "objective": 167108.6177990768,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              51.951558834876444,
+              620.3111980711697
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.28521690145175
+          }
+        ]
+      },
+      {
+        "iteration": 38,
+        "objective": 167108.47893573655,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              52.87957361463085,
+              620.1543706608246
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.10793820810092
+          }
+        ]
+      },
+      {
+        "iteration": 39,
+        "objective": 167108.4302409593,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              53.19574458288781,
+              620.1033600956662
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.061401528790476
+          }
+        ]
+      },
+      {
+        "iteration": 40,
+        "objective": 167108.385610962,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              53.402761971939896,
+              620.0731359872357
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.03729810558545
+          }
+        ]
+      },
+      {
+        "iteration": 41,
+        "objective": 167108.32766172625,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              53.50351517473109,
+              620.0639534581554
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.03200737883806
+          }
+        ]
+      },
+      {
+        "iteration": 42,
+        "objective": 167108.1675691227,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              53.59918381025607,
+              620.0714552023792
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.043741363973457
+          }
+        ]
+      },
+      {
+        "iteration": 43,
+        "objective": 167107.81663705048,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              53.602896271164795,
+              620.1260355146294
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.098436004770644
+          }
+        ]
+      },
+      {
+        "iteration": 44,
+        "objective": 167107.00661557456,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              53.482984008036766,
+              620.2762509232609
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.243294184262645
+          }
+        ]
+      },
+      {
+        "iteration": 45,
+        "objective": 167105.17765034828,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              53.37234069535453,
+              620.6000882999009
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 17.56290238882147
+          }
+        ]
+      },
+      {
+        "iteration": 46,
+        "objective": 167104.35231170946,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              51.716067510227,
+              621.0854952166139
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 18.071175338114845
+          }
+        ]
+      },
+      {
+        "iteration": 47,
+        "objective": 167100.5267200268,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              52.20175808838891,
+              621.6152925437739
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 18.57817321212584
+          }
+        ]
+      },
+      {
+        "iteration": 48,
+        "objective": 167093.72754813058,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              50.1869954549456,
+              623.1005760988626
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 20.22298257945624
+          }
+        ]
+      },
+      {
+        "iteration": 49,
+        "objective": 167086.92209652884,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              48.39139905840665,
+              624.6191975273578
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 22.017688575693317
+          }
+        ]
+      },
+      {
+        "iteration": 50,
+        "objective": 167079.43708815973,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              47.527047449837596,
+              626.105509541905
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 23.08560663784892
+          }
+        ]
+      },
+      {
+        "iteration": 51,
+        "objective": 167066.94048349126,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              49.279612268896216,
+              628.6106955702695
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 24.49747830870727
+          }
+        ]
+      },
+      {
+        "iteration": 52,
+        "objective": 167061.91194632172,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              50.4913723261811,
+              630.2313702224492
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 25.6425402727995
+          }
+        ]
+      },
+      {
+        "iteration": 53,
+        "objective": 167058.59164572714,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              53.44294334030446,
+              631.9193294648486
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 27.584265926395137
+          }
+        ]
+      },
+      {
+        "iteration": 54,
+        "objective": 167057.6005472372,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              55.23574512631358,
+              632.9720823529535
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 25.842948499855837
+          }
+        ]
+      },
+      {
+        "iteration": 55,
+        "objective": 167057.24487783,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              56.7539968129453,
+              634.0711162037935
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 24.433188079632785
+          }
+        ]
+      },
+      {
+        "iteration": 56,
+        "objective": 167057.12634811204,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              56.863646842951546,
+              634.7420349007295
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 24.412609508521783
+          }
+        ]
+      },
+      {
+        "iteration": 57,
+        "objective": 167057.05701802127,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              56.52413656720813,
+              635.2484826337071
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 24.826135639137863
+          }
+        ]
+      },
+      {
+        "iteration": 58,
+        "objective": 167057.03700460782,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              56.35680035829805,
+              635.4480231820442
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 25.024352133929025
+          }
+        ]
+      },
+      {
+        "iteration": 59,
+        "objective": 167057.01878753808,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              56.03707512020952,
+              635.7584753776015
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 25.393393741037645
+          }
+        ]
+      },
+      {
+        "iteration": 60,
+        "objective": 167057.01874347022,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              56.05053067623589,
+              635.7577555643464
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 25.380027664860894
+          }
+        ]
+      },
+      {
+        "iteration": 61,
+        "objective": 167057.0187278377,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              56.06096932582513,
+              635.76098117049
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 25.370338644718093
+          }
+        ]
+      },
+      {
+        "iteration": 62,
+        "objective": 167057.01872783058,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              56.06085084962757,
+              635.7611947536502
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 25.370493594998393
+          }
+        ]
+      },
+      {
+        "iteration": 63,
+        "objective": 167057.01872783058,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              56.06084168103959,
+              635.7612047464233
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 25.37050441101329
+          }
+        ]
+      }
+    ]
+  },
+  "pde": {
+    "lx": 301.98544034478255,
+    "ly": 700.4646734384005,
+    "k": 10.0,
+    "vx": 2.07,
+    "vy": -0.36,
+    "dt": 0.1,
+    "tfinal": 150.0,
+    "jprint": 1,
+    "ngauss": 3,
+    "sigma2": 400.0,
+    "velocity_field": {
+      "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "coords_shape": [
+        2795,
+        3
+      ],
+      "velocity_nodes_shape": [
+        2795,
+        2
+      ],
+      "velocity_magnitude_min": 2.5643005027931998e-21,
+      "velocity_magnitude_max": 10.580957815647944,
+      "coordinate_validation_passed": true,
+      "coordinate_validation_tolerance": 1e-10,
+      "max_coordinate_difference": 0.0
+    },
+    "velocity_mode": "nodal"
+  },
+  "active_bounds": [
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ],
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ]
+  ],
+  "final_feasibility_check": {
+    "centers_in_fluid_mesh": [
+      true,
+      false
+    ],
+    "all_centers_feasible": false,
+    "signed_clearance_m": [
+      7.854590745162631,
+      -24.958987203329137
+    ],
+    "within_lbfgsb_box": true
+  },
+  "numerical_flags": {
+    "finite_final_values": true,
+    "abnormal_termination": false,
+    "iteration_limit": false,
+    "raw_infeasible_evaluations": 53
+  },
+  "history_rows": 64,
+  "pde_solves": {
+    "data_generation": {
+      "seconds": 21.715883439872414,
+      "forward_solves": 1,
+      "adjoint_solves": 0
+    },
+    "scaling_setup": {
+      "seconds": 479.2611970868893,
+      "forward_solves": 7,
+      "adjoint_solves": 6
+    },
+    "optimization": {
+      "seconds": 5278.0774799361825,
+      "forward_solves": 77,
+      "adjoint_solves": 76
+    },
+    "post_init_total": {
+      "seconds": 5757.338677023072,
+      "forward_solves": 84,
+      "adjoint_solves": 82
+    },
+    "driver_output_overhead": {
+      "seconds": 182.92584285978228,
+      "forward_solves": 4,
+      "adjoint_solves": 2
+    },
+    "between_data_and_optimization": {
+      "seconds": 4.477938637137413e-05,
+      "forward_solves": 0,
+      "adjoint_solves": 0
+    },
+    "total_counted": {
+      "forward_solves": 89,
+      "adjoint_solves": 84
+    }
+  }
+}

@@ -15,8 +15,8 @@ import numpy as np
 
 APP_DIR = Path(__file__).resolve().parents[1]
 PROJECT_ROOT = APP_DIR.parents[1]
-APP2_DIR = PROJECT_ROOT / "Applications" / "Test Application2"
-for p in (str(APP2_DIR), str(APP_DIR)):  # APP_DIR last -> ends up first on sys.path
+OBJECTIVE_DIR = PROJECT_ROOT / "Src" / "Objective"
+for p in (str(OBJECTIVE_DIR), str(APP_DIR)):  # APP_DIR last -> ends up first on sys.path
     if p in sys.path:
         sys.path.remove(p)
     sys.path.insert(0, p)

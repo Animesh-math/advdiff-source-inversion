@@ -10,7 +10,7 @@ hypothetical unit Gaussian inserted at ``q``:
                                                                     evaluated at eps = 0.
 
 Discrete derivation (matches the exact RK4 discrete-adjoint gradient the
-optimizer actually uses -- see ``Test Application2/gradient_test.py``
+optimizer actually uses -- see ``Src/Objective/gradient_test.py``
 ``compute_gradient_parts``).  For control component ``j`` the discrete gradient is
 
     dJ/dz_j = lambda * z_j + < source_adjoint , inv_mass * db_j >           (1)
@@ -69,7 +69,7 @@ from typing import Optional
 
 import numpy as np
 
-import gradient_test as gt  # Test Application2 reduced objective/adjoint (reused as-is)
+import gradient_test as gt  # Src/Objective shared reduced objective/adjoint (reused as-is)
 
 
 # ---------------------------------------------------------------------------

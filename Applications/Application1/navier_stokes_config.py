@@ -31,7 +31,7 @@ WIND_VELOCITY = (2.07, -0.36)
 # This is deliberately NOT the molecular kinematic viscosity of air
 # (~1.5e-5 m^2/s).  On this ~300 m x 700 m urban domain with a ~2 m/s wind, the
 # molecular value gives a Reynolds number of ~4e7, which the unstabilised
-# Taylor-Hood / Picard solver inherited from Test Application4 cannot resolve on
+# Taylor-Hood / Picard solver inherited from App4 cannot resolve on
 # this coarse mesh.  NU here is an urban effective/eddy viscosity chosen for a
 # stable, reproducible, laminar first solve (domain Reynolds number ~O(1e2)).
 # Increase NU for more robustness, decrease it for a sharper (less diffusive)
@@ -57,7 +57,7 @@ FLUX_TOLERANCE = 1.0e-9
 
 
 # --------------------------------------------------------------------------- #
-# Nonlinear solver controls (Picard fixed-point, as in Test Application4)
+# Nonlinear solver controls (Picard fixed-point, as in App4)
 # --------------------------------------------------------------------------- #
 MAX_PICARD_ITER = 50
 PICARD_TOL = 1.0e-8   # relative L2 velocity-update tolerance

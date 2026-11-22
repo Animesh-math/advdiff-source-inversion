@@ -1,0 +1,3 @@
+method,forward,adjoint,total,J_over_J0,max_center_error_m,max_amplitude_error,stop
+Sensitivity init. + L-BFGS-B,3153,94,3247,4.379119310862336e-22,1.9158110510714794e-08,1.9449619692579745e-10,converged
+Best random start (r05; solves of all 10),1629,1612,3241,0.004036027688877681,313.9650774445065,1.0,budget

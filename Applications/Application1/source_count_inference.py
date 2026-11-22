@@ -76,13 +76,13 @@ from typing import Callable, Optional, Sequence
 
 import numpy as np
 
-# ``gradient_test`` lives in Test Application2 and is normally put on the path by
+# ``gradient_test`` lives in Src/Objective and is normally put on the path by
 # run_optimization. Doing it here as well makes this module importable on its own
 # (the test scripts import it directly), and is a no-op when run_optimization has
 # already run.
 _APP_DIR = Path(__file__).resolve().parent
-_APP2_DIR = _APP_DIR.parents[1] / "Applications" / "Test Application2"
-for _path in (str(_APP_DIR), str(_APP2_DIR)):
+_OBJECTIVE_DIR = _APP_DIR.parents[1] / "Src" / "Objective"
+for _path in (str(_APP_DIR), str(_OBJECTIVE_DIR)):
     if _path not in sys.path:
         sys.path.append(_path)
 

@@ -1,0 +1,1189 @@
+{
+  "case_id": "M5_S4",
+  "label": "Five-source case M5_S4 (31 sensors)",
+  "short_label": "M5: 5 sources, 31 sensors",
+  "source_run": "Applications/Application1/output/post_init_scaling_validation_20261004_125952/cases/M5_S4_gndiag",
+  "recovered_settings": {
+    "case_id": "M5_S4",
+    "run_dir": "Applications/Application1/output/post_init_scaling_validation_20261004_125952/cases/M5_S4_gndiag",
+    "driver_args": {
+      "num_sources": 5,
+      "mode": "location_and_intensity",
+      "bound_case": "mesh_domain",
+      "stage": "full",
+      "max_iter": 500,
+      "post_init_method": "lbfgsb",
+      "post_init_scaling": "gn-diag",
+      "post_init_stall_iters": 150,
+      "post_init_scaling_max_ratio": 10000.0,
+      "post_init_lbfgsb_maxcor": null,
+      "infer_num_sources": false,
+      "max_sources": 4,
+      "source_count_discrepancy_tol": 0.0,
+      "source_count_rel_reduction_tol": 0.001,
+      "source_count_abs_reduction_tol": 0.0,
+      "source_count_amp_tol": 0.001,
+      "source_count_top_k": 12,
+      "source_count_polish_method": "lbfgsb",
+      "source_count_polish_max_iter": 60,
+      "max_paraview_frames": 100,
+      "tfinal": 150.0,
+      "amplitude_floor": 0.1,
+      "sigma2_continuation": null,
+      "measurement_boundaries": null,
+      "observation_mode": "nodes",
+      "sensor_node_ids": [
+        "641,644,647,650,653,656,659,662,665,668,671,674,677,582,585,588,591,594,596,693,690,687,684,681,679,928,1506,2478,1438,2680,2244"
+      ],
+      "sensor_coordinates": null,
+      "sensor_snap_tolerance": 20.0,
+      "sensor_weights": "equal",
+      "sensor_equal_weight": 1.0,
+      "true_control": [
+        110.0,
+        660.0,
+        0.9,
+        270.0,
+        600.0,
+        1.35,
+        200.0,
+        425.0,
+        0.7,
+        100.0,
+        210.0,
+        1.6,
+        275.0,
+        120.0,
+        1.1
+      ],
+      "initial_control": null,
+      "init_mode": "sensitivity",
+      "sensitivity_score": "predicted_reduction",
+      "sensitivity_top_k": 24,
+      "sensitivity_beam_width": 3,
+      "sensitivity_min_value_tol": 0.0,
+      "sensitivity_min_separation": null,
+      "sensitivity_refine_centers": true,
+      "sensitivity_refine_max_fev": 60,
+      "sensitivity_coherence_cap": 0.3,
+      "feasibility_mode": "raw",
+      "final_feasibility_polish": false,
+      "final_feasibility_margin": 0.5,
+      "final_feasibility_max_iter": 50,
+      "final_feasibility_method": "slsqp",
+      "sensitivity_refine_pair": true,
+      "sensitivity_pair_refine_max_fev": 60,
+      "sensitivity_reselect_second": true,
+      "sensitivity_reselect_threshold": 0.25,
+      "sensitivity_reselect_max_passes": 2,
+      "sensitivity_reselect_at_target_width": false,
+      "sensitivity_reselect_refine_max_fev": 0,
+      "sensitivity_geometry_aware_branches": true,
+      "sensitivity_obstacle_aware_diversity": true,
+      "sensitivity_branch_multistart": false,
+      "amplitude_solver": "osqp",
+      "sensitivity_save_plots": true,
+      "sensitivity_mask_boundary_buffer": 0.0,
+      "sensitivity_mask_building_buffer": 0.0,
+      "smart_amplitude_low": 0.3,
+      "smart_amplitude_high": 1.3,
+      "adaptive_initial_random_starts": 2,
+      "adaptive_max_starts": 6,
+      "adaptive_success_tol": 1e-08,
+      "adaptive_promising_factor": 0.75,
+      "adaptive_perturb_radius": 15.0,
+      "adaptive_amplitude_perturb": 0.15,
+      "adaptive_exploration_probability": 0.35,
+      "adaptive_stop_on_success": false,
+      "adaptive_reinsert_dead_sources": false,
+      "adaptive_max_reinsertions": 2,
+      "num_starts": 1,
+      "random_seed": 0,
+      "min_source_separation": null,
+      "case_name": "M5_S4_gndiag",
+      "velocity_field_file": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "constant_velocity": false
+    },
+    "summary_pde": {
+      "lx": 301.98544034478255,
+      "ly": 700.4646734384005,
+      "k": 10.0,
+      "vx": 2.07,
+      "vy": -0.36,
+      "dt": 0.1,
+      "tfinal": 150.0,
+      "jprint": 1,
+      "ngauss": 3,
+      "sigma2": 400.0,
+      "velocity_field": {
+        "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+        "coords_shape": [
+          2795,
+          3
+        ],
+        "velocity_nodes_shape": [
+          2795,
+          2
+        ],
+        "velocity_magnitude_min": 2.5643005027931998e-21,
+        "velocity_magnitude_max": 10.580957815647944,
+        "coordinate_validation_passed": true,
+        "coordinate_validation_tolerance": 1e-10,
+        "max_coordinate_difference": 0.0
+      },
+      "velocity_mode": "nodal"
+    },
+    "summary_observation": {
+      "observation_mode": "nodes",
+      "num_sensors": 31,
+      "sensor_node_ids": [
+        641,
+        644,
+        647,
+        650,
+        653,
+        656,
+        659,
+        662,
+        665,
+        668,
+        671,
+        674,
+        677,
+        582,
+        585,
+        588,
+        591,
+        594,
+        596,
+        693,
+        690,
+        687,
+        684,
+        681,
+        679,
+        928,
+        1506,
+        2478,
+        1438,
+        2680,
+        2244
+      ],
+      "weight_kind": "diagonal",
+      "weight_convention": "equal diagonal sensor weights w = 1 (||r||_W^2 = w * sum_s r_s^2)",
+      "selection": "node_ids",
+      "sensor_coordinates": [
+        [
+          301.98544034478255,
+          21.591354933188995
+        ],
+        [
+          301.98544034478255,
+          84.26294090910233
+        ],
+        [
+          301.98544034478255,
+          146.89537197179743
+        ],
+        [
+          301.98544034478255,
+          209.78690056328196
+        ],
+        [
+          301.98544034478255,
+          268.02978988797986
+        ],
+        [
+          301.98544034478255,
+          311.66010967758484
+        ],
+        [
+          301.98544034478255,
+          356.78659384607454
+        ],
+        [
+          301.98544034478255,
+          411.2740488081763
+        ],
+        [
+          301.98544034478255,
+          452.9394430399989
+        ],
+        [
+          301.98544034478255,
+          490.98378297447925
+        ],
+        [
+          301.98544034478255,
+          540.1290389206843
+        ],
+        [
+          301.98544034478255,
+          594.0383510207757
+        ],
+        [
+          301.98544034478255,
+          657.2819635719934
+        ],
+        [
+          21.722438826865982,
+          0.0
+        ],
+        [
+          78.43458346417174,
+          0.0
+        ],
+        [
+          129.7057670445065,
+          0.0
+        ],
+        [
+          179.30520862987032,
+          0.0
+        ],
+        [
+          238.89794434956275,
+          0.0
+        ],
+        [
+          280.26300151791656,
+          0.0
+        ],
+        [
+          16.426677579176612,
+          700.4646734384005
+        ],
+        [
+          60.120140525803436,
+          700.4646734384005
+        ],
+        [
+          111.35106871026801,
+          700.4646734384005
+        ],
+        [
+          174.4698149127653,
+          700.4646734384005
+        ],
+        [
+          238.22762762877392,
+          700.4646734384005
+        ],
+        [
+          280.7328361060936,
+          700.4646734384005
+        ],
+        [
+          114.71198286209255,
+          223.09139214627794
+        ],
+        [
+          125.3649585103849,
+          242.78129529519356
+        ],
+        [
+          143.02422776736785,
+          231.75789212450036
+        ],
+        [
+          120.66158328816528,
+          267.1025345243979
+        ],
+        [
+          112.44092235120479,
+          298.2359076634748
+        ],
+        [
+          129.2576136525604,
+          337.32081495647435
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "weight_mode": "equal"
+    },
+    "initial_control": [
+      99.99951069131538,
+      209.40075475291127,
+      1.6103844492426675,
+      275.299898110353,
+      120.0793408860396,
+      1.092933802266203,
+      267.10945607144106,
+      601.7261338056803,
+      1.434257196395533,
+      117.83643801734337,
+      661.3599711312343,
+      0.7991860920673926,
+      189.5867664420013,
+      426.9347402181811,
+      0.7165201286337174
+    ],
+    "input_initial_control": [
+      99.99951069131538,
+      209.40075475291127,
+      1.6103844492426675,
+      275.299898110353,
+      120.0793408860396,
+      1.092933802266203,
+      267.10945607144106,
+      601.7261338056803,
+      1.434257196395533,
+      117.83643801734337,
+      661.3599711312343,
+      0.7991860920673926,
+      189.5867664420013,
+      426.9347402181811,
+      0.7165201286337174
+    ],
+    "true_control": [
+      110.0,
+      660.0,
+      0.9,
+      270.0,
+      600.0,
+      1.35,
+      200.0,
+      425.0,
+      0.7,
+      100.0,
+      210.0,
+      1.6,
+      275.0,
+      120.0,
+      1.1
+    ],
+    "final_control": [
+      100.00000000048254,
+      209.99999999768733,
+      1.6000000000247645,
+      275.0000000036847,
+      119.99999999966319,
+      1.0999999999153676,
+      269.9999999966208,
+      600.00000000508,
+      1.3500000001944963,
+      109.99999998598473,
+      659.999999998054,
+      0.9000000001109427,
+      200.00000001899159,
+      425.0000000025205,
+      0.6999999999582392
+    ],
+    "recorded_initial_objective": 843.4076596378245,
+    "recorded_history_iter0_objective": 843.4076596378245,
+    "recorded_history_iter0_gradient_norm": 820.1082093696486,
+    "amplitude_floor": 0.1,
+    "measurement_boundaries": [
+      "right"
+    ],
+    "feasibility_mode": "raw",
+    "bound_case": "mesh_domain",
+    "mode": "location_and_intensity",
+    "num_sources": 5,
+    "target_sigma2": 400.0,
+    "sigma2_continuation": null,
+    "building_boundary_condition": "natural no-flux",
+    "instrumentation_argv": [
+      "--mode",
+      "location_and_intensity",
+      "--stage",
+      "full",
+      "--num-sources",
+      "5",
+      "--bound-case",
+      "mesh_domain",
+      "--init-mode",
+      "sensitivity",
+      "--num-starts",
+      "1",
+      "--random-seed",
+      "0",
+      "--sensitivity-score",
+      "predicted_reduction",
+      "--sensitivity-top-k",
+      "24",
+      "--sensitivity-beam-width",
+      "3",
+      "--sensitivity-refine-centers",
+      "--sensitivity-refine-max-fev",
+      "60",
+      "--sensitivity-coherence-cap",
+      "0.3",
+      "--sensitivity-geometry-aware-branches",
+      "--sensitivity-obstacle-aware-diversity",
+      "--sensitivity-refine-pair",
+      "--sensitivity-pair-refine-max-fev",
+      "60",
+      "--sensitivity-reselect-second",
+      "--sensitivity-reselect-threshold",
+      "0.25",
+      "--sensitivity-reselect-max-passes",
+      "2",
+      "--sensitivity-save-plots",
+      "--amplitude-solver",
+      "osqp",
+      "--post-init-method",
+      "lbfgsb",
+      "--feasibility-mode",
+      "raw",
+      "--tfinal",
+      "150",
+      "--amplitude-floor",
+      "0.1",
+      "--max-iter",
+      "500",
+      "--max-paraview-frames",
+      "100",
+      "--observation-mode",
+      "nodes",
+      "--sensor-weights",
+      "equal",
+      "--sensor-equal-weight",
+      "1.0",
+      "--velocity-field-file",
+      "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "--true-control",
+      "110.0",
+      "660.0",
+      "0.9",
+      "270.0",
+      "600.0",
+      "1.35",
+      "200.0",
+      "425.0",
+      "0.7",
+      "100.0",
+      "210.0",
+      "1.6",
+      "275.0",
+      "120.0",
+      "1.1",
+      "--sensor-node-ids",
+      "641,644,647,650,653,656,659,662,665,668,671,674,677,582,585,588,591,594,596,693,690,687,684,681,679,928,1506,2478,1438,2680,2244",
+      "--case-name",
+      "M5_S4_gndiag",
+      "--post-init-scaling",
+      "gn-diag"
+    ]
+  },
+  "checks": {
+    "true_control_matches_brief": true,
+    "num_sensors_matches_brief": true,
+    "sigma2_is_400": true,
+    "no_sigma2_continuation": true,
+    "mode_location_and_intensity": true,
+    "observation_mode_nodes": true,
+    "sensor_weights_equal_1": true,
+    "constant_velocity_false": true,
+    "pde_k_matches_record": true,
+    "pde_dt_matches_record": true,
+    "pde_tfinal_matches_record": true,
+    "pde_jprint_matches_record": true,
+    "pde_ngauss_matches_record": true,
+    "pde_sigma2_matches_record": true,
+    "velocity_mode_matches_record": true,
+    "velocity_shape_matches_record": true,
+    "mesh_nodes_match_record": true,
+    "sensor_ids_match_record": true,
+    "sensor_coords_match_record": true,
+    "sensor_weights_match_record": true
+  },
+  "reproduction": {
+    "J_z_recomputed": 843.4076596378235,
+    "J_z_recorded": 843.4076596378245,
+    "J_z_rel_diff": 1.2131518226119954e-15,
+    "grad_norm_recomputed": 820.1082093696511
+  },
+  "rebuilt_pde": {
+    "lx": 301.98544034478255,
+    "ly": 700.4646734384005,
+    "k": 10.0,
+    "vx": 2.07,
+    "vy": -0.36,
+    "dt": 0.1,
+    "tfinal": 150.0,
+    "jprint": 1,
+    "ngauss": 3,
+    "sigma2": 400.0,
+    "velocity_field": {
+      "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "coords_shape": [
+        2795,
+        3
+      ],
+      "velocity_nodes_shape": [
+        2795,
+        2
+      ],
+      "velocity_magnitude_min": 2.5643005027931998e-21,
+      "velocity_magnitude_max": 10.580957815647944,
+      "coordinate_validation_passed": true,
+      "coordinate_validation_tolerance": 1e-10,
+      "max_coordinate_difference": 0.0
+    },
+    "velocity_mode": "nodal"
+  },
+  "rebuilt_observation": {
+    "observation_mode": "nodes",
+    "num_sensors": 31,
+    "sensor_node_ids": [
+      641,
+      644,
+      647,
+      650,
+      653,
+      656,
+      659,
+      662,
+      665,
+      668,
+      671,
+      674,
+      677,
+      582,
+      585,
+      588,
+      591,
+      594,
+      596,
+      693,
+      690,
+      687,
+      684,
+      681,
+      679,
+      928,
+      1506,
+      2478,
+      1438,
+      2680,
+      2244
+    ],
+    "weight_kind": "diagonal",
+    "weight_convention": "equal diagonal sensor weights w = 1 (||r||_W^2 = w * sum_s r_s^2)",
+    "selection": "node_ids",
+    "sensor_coordinates": [
+      [
+        301.98544034478255,
+        21.591354933188995
+      ],
+      [
+        301.98544034478255,
+        84.26294090910233
+      ],
+      [
+        301.98544034478255,
+        146.89537197179743
+      ],
+      [
+        301.98544034478255,
+        209.78690056328196
+      ],
+      [
+        301.98544034478255,
+        268.02978988797986
+      ],
+      [
+        301.98544034478255,
+        311.66010967758484
+      ],
+      [
+        301.98544034478255,
+        356.78659384607454
+      ],
+      [
+        301.98544034478255,
+        411.2740488081763
+      ],
+      [
+        301.98544034478255,
+        452.9394430399989
+      ],
+      [
+        301.98544034478255,
+        490.98378297447925
+      ],
+      [
+        301.98544034478255,
+        540.1290389206843
+      ],
+      [
+        301.98544034478255,
+        594.0383510207757
+      ],
+      [
+        301.98544034478255,
+        657.2819635719934
+      ],
+      [
+        21.722438826865982,
+        0.0
+      ],
+      [
+        78.43458346417174,
+        0.0
+      ],
+      [
+        129.7057670445065,
+        0.0
+      ],
+      [
+        179.30520862987032,
+        0.0
+      ],
+      [
+        238.89794434956275,
+        0.0
+      ],
+      [
+        280.26300151791656,
+        0.0
+      ],
+      [
+        16.426677579176612,
+        700.4646734384005
+      ],
+      [
+        60.120140525803436,
+        700.4646734384005
+      ],
+      [
+        111.35106871026801,
+        700.4646734384005
+      ],
+      [
+        174.4698149127653,
+        700.4646734384005
+      ],
+      [
+        238.22762762877392,
+        700.4646734384005
+      ],
+      [
+        280.7328361060936,
+        700.4646734384005
+      ],
+      [
+        114.71198286209255,
+        223.09139214627794
+      ],
+      [
+        125.3649585103849,
+        242.78129529519356
+      ],
+      [
+        143.02422776736785,
+        231.75789212450036
+      ],
+      [
+        120.66158328816528,
+        267.1025345243979
+      ],
+      [
+        112.44092235120479,
+        298.2359076634748
+      ],
+      [
+        129.2576136525604,
+        337.32081495647435
+      ]
+    ],
+    "sensor_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "weight_mode": "equal"
+  },
+  "objective": {
+    "eta1": 100.0,
+    "lambda_reg": 0.0,
+    "objective_time_rule": "exclude_first",
+    "gradient_time_rule_arg": "trapezoid",
+    "evaluator": "run_optimization.build_evaluator (production)",
+    "feasibility_mode": "raw",
+    "bound_case": "mesh_domain",
+    "mode": "location_and_intensity"
+  },
+  "control_ordering": "[x1, y1, A1, ..., xM, yM, AM] physical (m, m, amplitude)",
+  "z": [
+    99.99951069131538,
+    209.40075475291127,
+    1.6103844492426675,
+    275.299898110353,
+    120.0793408860396,
+    1.092933802266203,
+    267.10945607144106,
+    601.7261338056803,
+    1.434257196395533,
+    117.83643801734337,
+    661.3599711312343,
+    0.7991860920673926,
+    189.5867664420013,
+    426.9347402181811,
+    0.7165201286337174
+  ],
+  "true_control": [
+    110.0,
+    660.0,
+    0.9,
+    270.0,
+    600.0,
+    1.35,
+    200.0,
+    425.0,
+    0.7,
+    100.0,
+    210.0,
+    1.6,
+    275.0,
+    120.0,
+    1.1
+  ],
+  "J_z": 843.4076596378235,
+  "gradient": [
+    -50.088704091985534,
+    -496.9730115755362,
+    -2.72230458846361e-09,
+    95.28358170249575,
+    582.9936787112448,
+    -2.3857644713916294e-10,
+    -21.870787775179547,
+    210.8337823902464,
+    -1.8904458837959456e-09,
+    37.41296466795075,
+    136.62597099535975,
+    -1.217198561532931e-07,
+    -18.010549203856563,
+    93.83949749927994,
+    -1.539489329596735e-07
+  ],
+  "gradient_norm": 820.1082093696511,
+  "direction": {
+    "q": [
+      0.503943114224571,
+      -1.39344493632782,
+      -0.01101067468112689,
+      -6.508006703783429,
+      4.797323034040258,
+      0.030499031928115268,
+      -0.8674512790787627,
+      2.062668741619741,
+      0.007495987606599507,
+      -1.4762772412134082,
+      2.6058163097185187,
+      -0.008278235056231886,
+      -0.8765172073114412,
+      -2.1115565298610695,
+      0.012127420577597078
+    ],
+    "r_unit": [
+      0.0503943114224571,
+      -0.139344493632782,
+      -0.1101067468112689,
+      -0.6508006703783429,
+      0.4797323034040258,
+      0.30499031928115267,
+      -0.08674512790787628,
+      0.2062668741619741,
+      0.07495987606599507,
+      -0.14762772412134081,
+      0.2605816309718519,
+      -0.08278235056231885,
+      -0.08765172073114412,
+      -0.21115565298610695,
+      0.12127420577597077
+    ],
+    "seed": 2,
+    "rng": "numpy.random.default_rng(seed).normal(size=3M); r /= ||r||_2",
+    "scaling_D": [
+      10.0,
+      10.0,
+      0.1,
+      10.0,
+      10.0,
+      0.1,
+      10.0,
+      10.0,
+      0.1,
+      10.0,
+      10.0,
+      0.1,
+      10.0,
+      10.0,
+      0.1
+    ],
+    "construction": "q = D r",
+    "center_scale": 10.0,
+    "amplitude_scale": 0.1,
+    "min_directional_fraction": 0.1,
+    "rejected_draws": [
+      {
+        "seed": 0,
+        "reason": "small |g.q|",
+        "g_dot_q": -508.1234747719984,
+        "threshold": 820.1082093696513
+      },
+      {
+        "seed": 1,
+        "reason": "small |g.q|",
+        "g_dot_q": 530.3738754838367,
+        "threshold": 820.1082093696513
+      }
+    ],
+    "admissible_set": "centers in fluid mesh; amplitudes in [0.1, 2.0]",
+    "max_center_step_m": 6.508006703783429,
+    "max_amplitude_step": 0.030499031928115268
+  },
+  "g_dot_q": 3416.2470073599648,
+  "g_dot_q_centers": 3416.2470073608156,
+  "g_dot_q_amplitudes": -8.508505766145273e-10,
+  "eps": [
+    1.0,
+    0.31622776601683794,
+    0.1,
+    0.03162277660168379,
+    0.01,
+    0.0031622776601683794,
+    0.001,
+    0.00031622776601683794,
+    0.0001,
+    3.1622776601683795e-05,
+    1e-05,
+    3.162277660168379e-06,
+    1e-06,
+    3.162277660168379e-07,
+    1e-07,
+    3.162277660168379e-08,
+    1e-08
+  ],
+  "rows": [
+    {
+      "eps": 1.0,
+      "J_eps": 75147.5620504485,
+      "J_eps_minus_J": 74304.15439081067,
+      "E0": 74304.15439081067,
+      "E1": 70887.9073834507,
+      "E0_over_J": 88.0999283581541,
+      "E1_over_J": 84.04939956780973,
+      "E0_rate": null,
+      "E1_rate": null
+    },
+    {
+      "eps": 0.31622776601683794,
+      "J_eps": 9391.519029007113,
+      "J_eps_minus_J": 8548.11136936929,
+      "E0": 8548.11136936929,
+      "E1": 7467.799210070139,
+      "E0_over_J": 10.135207182064274,
+      "E1_over_J": 8.85431751150679,
+      "E0_rate": 1.8782858487204885,
+      "E1_rate": 1.9547590475257035
+    },
+    {
+      "eps": 0.1,
+      "J_eps": 1945.9359657062312,
+      "J_eps_minus_J": 1102.5283060684078,
+      "E0": 1102.5283060684078,
+      "E1": 760.9036053324113,
+      "E0_over_J": 1.3072306060652283,
+      "E1_over_J": 0.9021777270307918,
+      "E0_rate": 1.77896084697223,
+      "E1_rate": 1.983725980962211
+    },
+    {
+      "eps": 0.03162277660168379,
+      "J_eps": 1027.984620430518,
+      "J_eps_minus_J": 184.57696079269442,
+      "E0": 184.57696079269442,
+      "E1": 76.54574486277946,
+      "E0_over_J": 0.21884667359074678,
+      "E1_over_J": 0.09075770653499847,
+      "E0_rate": 1.5524245151199116,
+      "E1_rate": 1.9948171767683984
+    },
+    {
+      "eps": 0.01,
+      "J_eps": 885.2391410682726,
+      "J_eps_minus_J": 41.83148143044912,
+      "E0": 41.83148143044912,
+      "E1": 7.669011356849467,
+      "E0_over_J": 0.049598175867186706,
+      "E1_over_J": 0.009092887963743058,
+      "E0_rate": 1.2893484912767208,
+      "E1_rate": 1.9983633452001577
+    },
+    {
+      "eps": 0.0031622776601683794,
+      "J_eps": 854.9781390911386,
+      "J_eps_minus_J": 11.570479453315102,
+      "E0": 11.570479453315102,
+      "E1": 0.7673578603236031,
+      "E0_over_J": 0.01371872702494035,
+      "E1_over_J": 0.0009098303193655157,
+      "E0_rate": 1.1163037792082597,
+      "E1_rate": 1.999482869589312
+    },
+    {
+      "eps": 0.001,
+      "J_eps": 846.9006568754685,
+      "J_eps_minus_J": 3.4929972376449996,
+      "E0": 3.4929972376449996,
+      "E1": 0.07675023028503469,
+      "E0_over_J": 0.00414152894834387,
+      "E1_over_J": 9.100015799950503e-05,
+      "E0_rate": 1.0403062265501504,
+      "E1_rate": 1.999836517764921
+    },
+    {
+      "eps": 0.00031622776601683794,
+      "J_eps": 844.4956472769329,
+      "J_eps_minus_J": 1.0879876391094285,
+      "E0": 1.0879876391094285,
+      "E1": 0.007675479810278718,
+      "E0_over_J": 0.00128999022794817,
+      "E1_over_J": 9.100557390686642e-06,
+      "E0_rate": 1.0131485618411458,
+      "E1_rate": 1.999948307151481
+    },
+    {
+      "eps": 0.0001,
+      "J_eps": 843.7500519010073,
+      "J_eps_minus_J": 0.3423922631837968,
+      "E0": 0.3423922631837968,
+      "E1": 0.0007675624478002963,
+      "E0_over_J": 0.000405962951926269,
+      "E1_over_J": 9.100728918325253e-07,
+      "E0_rate": 1.0042000372414466,
+      "E1_rate": 1.9999836289577166
+    },
+    {
+      "eps": 3.1622776601683795e-05,
+      "J_eps": 843.5157676104607,
+      "J_eps_minus_J": 0.10810797263718541,
+      "E0": 0.10810797263718541,
+      "E1": 7.675670727043393e-05,
+      "E0_over_J": 0.00012817997489329084,
+      "E1_over_J": 9.10078375425175e-08,
+      "E0_rate": 1.0013324392025675,
+      "E1_rate": 1.9999947663821758
+    },
+    {
+      "eps": 1e-05,
+      "J_eps": 843.4418297835851,
+      "J_eps_minus_J": 0.03417014576166366,
+      "E0": 0.03417014576166366,
+      "E1": 7.675688064014141e-06,
+      "E0_over_J": 4.051438870775376e-05,
+      "E1_over_J": 9.100804310112904e-09,
+      "E0_rate": 1.0004217832891174,
+      "E1_rate": 1.999998038127874
+    },
+    {
+      "eps": 3.162277660168379e-06,
+      "J_eps": 843.4184635269927,
+      "J_eps_minus_J": 0.010803889169210379,
+      "E0": 0.010803889169210379,
+      "E1": 7.675762188821128e-07,
+      "E0_over_J": 1.2809806794794572e-05,
+      "E1_over_J": 9.100892197395098e-10,
+      "E0_rate": 1.000133422068466,
+      "E1_rate": 1.9999916119990966
+    },
+    {
+      "eps": 1e-06,
+      "J_eps": 843.4110759615917,
+      "J_eps_minus_J": 0.003416323768192342,
+      "E0": 0.003416323768192342,
+      "E1": 7.67608323774642e-08,
+      "E0_over_J": 4.050619803072907e-06,
+      "E1_over_J": 9.101272854271548e-11,
+      "E0_rate": 1.0000421958079373,
+      "E1_rate": 1.9999636708753061
+    },
+    {
+      "eps": 3.162277660168379e-07,
+      "J_eps": 843.4087399576447,
+      "J_eps_minus_J": 0.0010803198211988274,
+      "E0": 0.0010803198211988274,
+      "E1": 7.661899677647438e-09,
+      "E0_over_J": 1.280898755013369e-06,
+      "E1_over_J": 9.084455885707293e-12,
+      "E0_rate": 1.000013356132701,
+      "E1_rate": 2.0016064286091693
+    },
+    {
+      "eps": 1e-07,
+      "J_eps": 843.408001263311,
+      "J_eps_minus_J": 0.0003416254875219238,
+      "E0": 0.0003416254875219238,
+      "E1": 7.867859273162983e-10,
+      "E0_over_J": 4.050538118999592e-07,
+      "E1_over_J": 9.32865522770045e-13,
+      "E0_rate": 1.0000041598533553,
+      "E1_rate": 1.9769597555583547
+    },
+    {
+      "eps": 3.162277660168379e-08,
+      "J_eps": 843.4077676691275,
+      "J_eps_minus_J": 0.00010803130396652705,
+      "E0": 0.00010803130396652705,
+      "E1": 8.803661207153202e-11,
+      "E0_over_J": 1.2808907143778834e-07,
+      "E1_over_J": 1.0438204000819335e-13,
+      "E0_rate": 1.0000012925909834,
+      "E1_rate": 1.9023865244532459
+    },
+    {
+      "eps": 1e-08,
+      "J_eps": 843.4076938002969,
+      "J_eps_minus_J": 3.416247341192502e-05,
+      "E0": 3.416247341192502e-05,
+      "E1": 3.3383253708043834e-12,
+      "E0_over_J": 4.0505291861583386e-08,
+      "E1_over_J": 3.9581397354607004e-15,
+      "E0_rate": 1.0000006229510152,
+      "E1_rate": 2.842269316267925
+    }
+  ],
+  "analysis": {
+    "E1_resolved_eps_range": [
+      1.0,
+      3.162277660168379e-08
+    ],
+    "E1_resolved_num_points": 16,
+    "E1_fitted_slope_resolved": 1.994842848985958,
+    "E1_points_below_resolved_range": [
+      {
+        "eps": 1e-08,
+        "E1": 3.3383253708043834e-12,
+        "E1_rate": 2.842269316267925
+      }
+    ],
+    "E1_points_above_resolved_range": [],
+    "cancellation_onset_eps": 1e-08,
+    "E0_first_order_eps_range": [
+      0.0031622776601683794,
+      1e-08
+    ],
+    "E0_fitted_slope": 1.0030908869521167,
+    "E0_rate_all": [
+      null,
+      1.8782858487204885,
+      1.77896084697223,
+      1.5524245151199116,
+      1.2893484912767208,
+      1.1163037792082597,
+      1.0403062265501504,
+      1.0131485618411458,
+      1.0042000372414466,
+      1.0013324392025675,
+      1.0004217832891174,
+      1.000133422068466,
+      1.0000421958079373,
+      1.000013356132701,
+      1.0000041598533553,
+      1.0000012925909834,
+      1.0000006229510152
+    ],
+    "E1_rate_all": [
+      null,
+      1.9547590475257035,
+      1.983725980962211,
+      1.9948171767683984,
+      1.9983633452001577,
+      1.999482869589312,
+      1.999836517764921,
+      1.999948307151481,
+      1.9999836289577166,
+      1.9999947663821758,
+      1.999998038127874,
+      1.9999916119990966,
+      1.9999636708753061,
+      2.0016064286091693,
+      1.9769597555583547,
+      1.9023865244532459,
+      2.842269316267925
+    ],
+    "roundoff_floor_estimate": 1.872741205750258e-13,
+    "roundoff_floor_note": "machine eps * |J(z)|; E1 cannot resolve below a small multiple of this",
+    "second_order_observed": true,
+    "first_order_observed": true
+  },
+  "feasibility_stats": {
+    "feasibility_mode": "raw",
+    "invalid_evaluations": 0,
+    "projected_evaluations": 0,
+    "penalized_evaluations": 0,
+    "projected_source_events": 0,
+    "max_projection_distance": 0.0,
+    "last_projection_distance": null,
+    "raw_infeasible_evaluations": 0,
+    "raw_infeasible_iterates": 0,
+    "raw_max_outside_distance": 0.0,
+    "raw_infeasible_iterate_log": []
+  },
+  "elapsed_s": 140.48224401474,
+  "python": "3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0]",
+  "platform": "Linux-6.12.111+deb13-amd64-x86_64-with-glibc2.41"
+}

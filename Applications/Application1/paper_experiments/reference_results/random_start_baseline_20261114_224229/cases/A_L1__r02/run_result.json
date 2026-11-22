@@ -1,0 +1,278 @@
+{
+  "run_id": "A_L1__r02",
+  "exit_status": 0,
+  "error": null,
+  "start_control_from_argv": [
+    35.8271156233355,
+    34.804294968844474,
+    1.04653875319668,
+    79.70150169793705,
+    452.06872015849524,
+    1.1598966417627938
+  ],
+  "true_control": [
+    162.0,
+    300.0,
+    1.4,
+    270.0,
+    600.0,
+    0.95
+  ],
+  "J0_zero_source": 380038.1554853084,
+  "initial_control": [
+    35.8271156233355,
+    34.804294968844474,
+    1.04653875319668,
+    79.70150169793705,
+    452.06872015849524,
+    1.1598966417627938
+  ],
+  "start_control_matches_argv": true,
+  "final_control": [
+    43.44323864210104,
+    0.0,
+    0.1,
+    269.999991037554,
+    599.9999649657934,
+    0.9499993661377845
+  ],
+  "initial_objective": 924226.8429161852,
+  "final_objective": 6887.31987909134,
+  "final_gradient_norm": 15513.030012451734,
+  "final_over_J0": 0.018122706311676097,
+  "initial_over_J0": 2.4319317141615646,
+  "max_position_error_m": 322.5766663348014,
+  "max_amplitude_error": 1.2999999999999998,
+  "position_errors_m": [
+    322.5766663348014,
+    3.6162426194122966e-05
+  ],
+  "amplitude_errors": [
+    1.2999999999999998,
+    6.338622154933304e-07
+  ],
+  "permutation": [
+    0,
+    1
+  ],
+  "initial_max_position_error_m": 293.6807087959623,
+  "initial_max_amplitude_error": 0.3534612468033198,
+  "success_flag": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "iterations": 46,
+  "n_objective_evaluations": 101,
+  "n_gradient_evaluations": 101,
+  "lbfgsb_maxcor": 10,
+  "scaling": "gn-diag",
+  "gn_condition_unscaled": 8016026.788486605,
+  "gn_condition_scaled": 113.58158927328604,
+  "gn_n_floored": 0,
+  "feasibility": {
+    "feasibility_mode": "raw",
+    "invalid_evaluations": 13,
+    "projected_evaluations": 0,
+    "penalized_evaluations": 0,
+    "projected_source_events": 0,
+    "max_projection_distance": 0.0,
+    "last_projection_distance": null,
+    "raw_infeasible_evaluations": 13,
+    "raw_infeasible_iterates": 5,
+    "raw_max_outside_distance": 20.163475246105662,
+    "raw_infeasible_iterate_log": [
+      {
+        "iteration": 1,
+        "objective": 381128.5495717355,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              39.208783684115936,
+              452.60955981608635
+            ],
+            "amplitude": 0.6882711538504649,
+            "distance_outside_fluid": 2.4428513114474657
+          }
+        ]
+      },
+      {
+        "iteration": 4,
+        "objective": 377652.631999877,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              41.85511061972158,
+              466.71189910409277
+            ],
+            "amplitude": 0.7739014228674962,
+            "distance_outside_fluid": 4.131211918341466
+          }
+        ]
+      },
+      {
+        "iteration": 10,
+        "objective": 340444.24700640136,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              87.05153321300351,
+              538.4264607968836
+            ],
+            "amplitude": 0.6406195550556086,
+            "distance_outside_fluid": 1.8773292663809187
+          }
+        ]
+      },
+      {
+        "iteration": 14,
+        "objective": 246518.62326374234,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              101.71450980485929,
+              52.399994973142995
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 10.069338315269494
+          },
+          {
+            "source_id": 2,
+            "center": [
+              45.47842450932915,
+              568.4425650654844
+            ],
+            "amplitude": 1.1872548099454072,
+            "distance_outside_fluid": 5.622723048968548
+          }
+        ]
+      },
+      {
+        "iteration": 15,
+        "objective": 196049.80240618193,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              92.24802842997835,
+              60.206673701666695
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 18.016750108753662
+          }
+        ]
+      }
+    ]
+  },
+  "pde": {
+    "lx": 301.98544034478255,
+    "ly": 700.4646734384005,
+    "k": 10.0,
+    "vx": 2.07,
+    "vy": -0.36,
+    "dt": 0.1,
+    "tfinal": 150.0,
+    "jprint": 1,
+    "ngauss": 3,
+    "sigma2": 400.0,
+    "velocity_field": {
+      "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "coords_shape": [
+        2795,
+        3
+      ],
+      "velocity_nodes_shape": [
+        2795,
+        2
+      ],
+      "velocity_magnitude_min": 2.5643005027931998e-21,
+      "velocity_magnitude_max": 10.580957815647944,
+      "coordinate_validation_passed": true,
+      "coordinate_validation_tolerance": 1e-10,
+      "max_coordinate_difference": 0.0
+    },
+    "velocity_mode": "nodal"
+  },
+  "active_bounds": [
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ],
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ]
+  ],
+  "final_feasibility_check": {
+    "centers_in_fluid_mesh": [
+      true,
+      true
+    ],
+    "all_centers_feasible": true,
+    "signed_clearance_m": [
+      0.0,
+      25.944933487246978
+    ],
+    "within_lbfgsb_box": true
+  },
+  "numerical_flags": {
+    "finite_final_values": true,
+    "abnormal_termination": false,
+    "iteration_limit": false,
+    "raw_infeasible_evaluations": 13
+  },
+  "history_rows": 47,
+  "pde_solves": {
+    "data_generation": {
+      "seconds": 16.995757134165615,
+      "forward_solves": 1,
+      "adjoint_solves": 0
+    },
+    "scaling_setup": {
+      "seconds": 408.30848567187786,
+      "forward_solves": 7,
+      "adjoint_solves": 6
+    },
+    "optimization": {
+      "seconds": 7332.285418916028,
+      "forward_solves": 102,
+      "adjoint_solves": 101
+    },
+    "post_init_total": {
+      "seconds": 7740.593904587906,
+      "forward_solves": 109,
+      "adjoint_solves": 107
+    },
+    "driver_output_overhead": {
+      "seconds": 104.37505754176527,
+      "forward_solves": 4,
+      "adjoint_solves": 2
+    },
+    "between_data_and_optimization": {
+      "seconds": 1.7837155610322952e-05,
+      "forward_solves": 0,
+      "adjoint_solves": 0
+    },
+    "total_counted": {
+      "forward_solves": 114,
+      "adjoint_solves": 109
+    }
+  }
+}

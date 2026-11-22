@@ -1,0 +1,192 @@
+{
+  "case_id": "B_L3_weak",
+  "source_config": "B",
+  "layout": "L3_weak",
+  "true_control": [
+    100.0,
+    210.0,
+    1.3,
+    270.0,
+    60.0,
+    0.85
+  ],
+  "exit_status": 0,
+  "start_time": "2026-10-03T16:41:46-04:00",
+  "end_time": "2026-10-03T16:53:33-04:00",
+  "batch_wall_seconds": 707,
+  "error": null,
+  "log": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L3_weak/run.log",
+  "initialization": {
+    "selected_control": [
+      99.99476083568526,
+      210.00974092827028,
+      1.2997980587532196,
+      250.862201064744,
+      71.65738087155137,
+      0.4265176805807689
+    ],
+    "objective_after_initialization_exact": 1.0782378216137853e-06,
+    "zero_source_objective": 510.2601314905038,
+    "initializer_self_reported_forward_solves": 515,
+    "initializer_self_reported_adjoint_solves": 2,
+    "candidate_traces": 54,
+    "initializer_self_reported_wall_seconds": 526.4556674250052,
+    "amplitude_solver": "osqp"
+  },
+  "optimization": {
+    "objective_after_initialization": 1.0782378216109233e-06,
+    "objective_after_local_optimization": 4.045445278015187e-09,
+    "final_gradient_norm": 3.0911279278284337e-07,
+    "iterations": 35,
+    "objective_evaluations_nfev": 39,
+    "gradient_evaluations_njev": 39,
+    "success_flag": true,
+    "stopping_reason": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "budget_limited": false,
+    "post_init_forward_solves_driver_counter": 39,
+    "post_init_adjoint_solves_driver_counter": 39,
+    "initial_control": [
+      99.99476083568526,
+      210.00974092827028,
+      1.2997980587532196,
+      250.862201064744,
+      71.65738087155137,
+      0.4265176805807689
+    ],
+    "final_control": [
+      100.00002836510666,
+      209.99995447610078,
+      1.300000800873708,
+      250.86251422317295,
+      71.6581246210144,
+      0.44796662922891073
+    ]
+  },
+  "recovery": {
+    "permutation": [
+      0,
+      1
+    ],
+    "position_errors_m": [
+      5.3637716913436326e-05,
+      22.408820395936946
+    ],
+    "amplitude_errors": [
+      8.008737080178463e-07,
+      0.40203337077108925
+    ],
+    "max_position_error_m": 22.408820395936946,
+    "max_amplitude_error": 0.40203337077108925,
+    "init_position_errors_m": [
+      0.011060493943922516,
+      22.4087009188551
+    ],
+    "init_amplitude_errors": [
+      0.0002019412467804127,
+      0.4234823194192311
+    ],
+    "init_max_position_error_m": 22.4087009188551,
+    "terminal_sources": [
+      {
+        "x": 100.00002836510666,
+        "y": 209.99995447610078,
+        "A": 1.300000800873708,
+        "fluid_admissible": true,
+        "wall_clearance_m": 7.7478417128853145
+      },
+      {
+        "x": 250.86251422317295,
+        "y": 71.6581246210144,
+        "A": 0.44796662922891073,
+        "fluid_admissible": true,
+        "wall_clearance_m": 4.641435592571717
+      }
+    ],
+    "terminal_all_fluid_admissible": true,
+    "terminal_amplitude_at_bound": [
+      false,
+      false
+    ],
+    "raw_feasibility_record": {
+      "feasibility_mode": "raw",
+      "invalid_evaluations": 0,
+      "projected_evaluations": 0,
+      "penalized_evaluations": 0,
+      "projected_source_events": 0,
+      "max_projection_distance": 0.0,
+      "last_projection_distance": null,
+      "raw_infeasible_evaluations": 0,
+      "raw_infeasible_iterates": 0,
+      "raw_max_outside_distance": 0.0,
+      "raw_infeasible_iterate_log": []
+    }
+  },
+  "pde_solves": {
+    "synthetic_data_and_setup": {
+      "seconds": 1.470286973984912,
+      "forward_solves": 1,
+      "adjoint_solves": 0
+    },
+    "initialization": {
+      "seconds": 526.4665485490113,
+      "forward_solves": 515,
+      "adjoint_solves": 2
+    },
+    "local_optimization": {
+      "seconds": 165.90419580001617,
+      "forward_solves": 39,
+      "adjoint_solves": 39
+    },
+    "driver_overhead_smoke_export_final_eval": {
+      "seconds": 12.800380357977701,
+      "forward_solves": 4,
+      "adjoint_solves": 2
+    },
+    "total_counted": {
+      "forward_solves": 559,
+      "adjoint_solves": 43
+    },
+    "note": "counts = actual gt.run_forward / gt.rk4_discrete_source_adjoint calls (cached evaluator responses excluded); 'seconds' = wall time of that phase"
+  },
+  "timing_seconds": {
+    "initialization": 526.4665485490113,
+    "local_optimization": 165.90419580001617,
+    "driver_process_total": 706.6422522449866,
+    "batch_wall_total": 707
+  },
+  "observation_signal": {
+    "both_sources": {
+      "J_zero_control": 510.2601314905038,
+      "peak_abs": 0.8533251809030256,
+      "rms_over_sensors_and_time": 0.052149538045928555,
+      "time_integrated_sum_sq": 10.205202629810078,
+      "sensors_above_1e-3": 5,
+      "sensors_above_1e-6": 10
+    },
+    "source_1_only": {
+      "J_zero_control": 510.2528046070825,
+      "peak_abs": 0.8533250496151833,
+      "rms_over_sensors_and_time": 0.05214916363400237,
+      "time_integrated_sum_sq": 10.20505609214165,
+      "sensors_above_1e-3": 5,
+      "sensors_above_1e-6": 10
+    },
+    "source_2_only": {
+      "J_zero_control": 4.084958605183829e-06,
+      "peak_abs": 9.792200011912742e-05,
+      "rms_over_sensors_and_time": 4.666040213442741e-06,
+      "time_integrated_sum_sq": 8.169917210367658e-08,
+      "sensors_above_1e-3": 0,
+      "sensors_above_1e-6": 2
+    }
+  },
+  "figures": {
+    "reconstruction_map": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L3_weak/reconstruction_B_L3_weak.png",
+    "convergence_history": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L3_weak/convergence_B_L3_weak.png",
+    "sensitivity_init": [
+      "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L3_weak/full/sensitivity_init/sensitivity_init_source_01.png",
+      "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L3_weak/full/sensitivity_init/sensitivity_init_source_02.png"
+    ],
+    "layout": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L3_weak/layout_B_L3_weak.png"
+  }
+}

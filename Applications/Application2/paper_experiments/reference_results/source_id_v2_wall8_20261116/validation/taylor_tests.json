@@ -1,0 +1,560 @@
+[
+  {
+    "case": "12",
+    "data": "clean",
+    "control": [
+      0.5,
+      3.6,
+      0.8,
+      6.6,
+      1.2,
+      1.5
+    ],
+    "direction": [
+      -0.44714662806381933,
+      0.31541451384146013,
+      -0.19389356459781698,
+      0.07214165914666804,
+      -0.31768469776008923,
+      0.7462244145707849
+    ],
+    "objective": 2914.5131488266006,
+    "gradient": [
+      -15.603977682195072,
+      -1.0222022604738088,
+      -24.633200579427722,
+      215.74699190062034,
+      0.9373731646210182,
+      141.29804956092846
+    ],
+    "gradient_dot_direction": 132.13767879845994,
+    "steps": [
+      {
+        "h": 0.1,
+        "objective": 2928.1012301829223,
+        "remainder": 0.374313476475713,
+        "rate": null,
+        "fd_slope_relative_error": 0.028327535331283345
+      },
+      {
+        "h": 0.01,
+        "objective": 2915.8382270568013,
+        "remainder": 0.0037014422160888127,
+        "rate": 2.004864489460355,
+        "fd_slope_relative_error": 0.002801201178760196
+      },
+      {
+        "h": 0.001,
+        "objective": 2914.6453234794494,
+        "remainder": 3.697405032931922e-05,
+        "rate": 2.0004739458681784,
+        "fd_slope_relative_error": 0.0002798145893399108
+      },
+      {
+        "h": 0.0001,
+        "objective": 2914.5263629641804,
+        "remainder": 3.6969993407603985e-07,
+        "rate": 2.000047654919238,
+        "fd_slope_relative_error": 2.7978388710868234e-05
+      },
+      {
+        "h": 1e-05,
+        "objective": 2914.5144702070857,
+        "remainder": 3.69703923789981e-09,
+        "rate": 1.999995313222319,
+        "fd_slope_relative_error": 2.797869064833252e-06
+      }
+    ],
+    "best_two_step_rate": 2.0026692176642666,
+    "best_fd_slope_relative_error": 2.797869064833252e-06,
+    "feasibility": [
+      {
+        "source": 1,
+        "center": [
+          0.5,
+          3.6
+        ],
+        "amplitude": 0.8,
+        "in_fluid_mesh": true,
+        "signed_clearance_m": 0.5
+      },
+      {
+        "source": 2,
+        "center": [
+          6.6,
+          1.2
+        ],
+        "amplitude": 1.5,
+        "in_fluid_mesh": true,
+        "signed_clearance_m": 1.2
+      }
+    ],
+    "distance_to_nearest_true_center_m": 2.5417759539345712,
+    "passed": true
+  },
+  {
+    "case": "12",
+    "data": "noisy",
+    "control": [
+      0.5,
+      3.6,
+      0.8,
+      6.6,
+      1.2,
+      1.5
+    ],
+    "direction": [
+      -0.44714662806381933,
+      0.31541451384146013,
+      -0.19389356459781698,
+      0.07214165914666804,
+      -0.31768469776008923,
+      0.7462244145707849
+    ],
+    "objective": 2914.758072330674,
+    "gradient": [
+      -15.603702825658157,
+      -1.0244043447632434,
+      -24.63451357989421,
+      215.73216822522738,
+      0.9370125606195892,
+      141.27873179650345
+    ],
+    "gradient_dot_direction": 132.12174567666827,
+    "steps": [
+      {
+        "h": 0.1,
+        "objective": 2928.344555182354,
+        "remainder": 0.37430828401281957,
+        "rate": null,
+        "fd_slope_relative_error": 0.028330558463013186
+      },
+      {
+        "h": 0.01,
+        "objective": 2916.082991177761,
+        "remainder": 0.003701390320109299,
+        "rate": 2.0048645539591385,
+        "fd_slope_relative_error": 0.002801499708585091
+      },
+      {
+        "h": 0.001,
+        "objective": 2914.890231049883,
+        "remainder": 3.697353207807175e-05,
+        "rate": 2.0004739441941797,
+        "fd_slope_relative_error": 0.0002798444108401916
+      },
+      {
+        "h": 0.0001,
+        "objective": 2914.771284874937,
+        "remainder": 3.6969517530280327e-07,
+        "rate": 2.000047157804935,
+        "fd_slope_relative_error": 2.7981402562416665e-05
+      },
+      {
+        "h": 1e-05,
+        "objective": 2914.7593935518275,
+        "remainder": 3.6966088352245047e-09,
+        "rate": 2.0000402856805315,
+        "fd_slope_relative_error": 2.7978807095098488e-06
+      }
+    ],
+    "best_two_step_rate": 2.002669249076659,
+    "best_fd_slope_relative_error": 2.7978807095098488e-06,
+    "feasibility": [
+      {
+        "source": 1,
+        "center": [
+          0.5,
+          3.6
+        ],
+        "amplitude": 0.8,
+        "in_fluid_mesh": true,
+        "signed_clearance_m": 0.5
+      },
+      {
+        "source": 2,
+        "center": [
+          6.6,
+          1.2
+        ],
+        "amplitude": 1.5,
+        "in_fluid_mesh": true,
+        "signed_clearance_m": 1.2
+      }
+    ],
+    "distance_to_nearest_true_center_m": 2.5417759539345712,
+    "passed": true
+  },
+  {
+    "case": "13",
+    "data": "clean",
+    "control": [
+      3.6,
+      5.0,
+      1.4,
+      8.0,
+      2.6,
+      0.5
+    ],
+    "direction": [
+      0.41402463330712064,
+      0.1370410079644498,
+      -0.015405772362478521,
+      -0.580943390964761,
+      0.25669980991726127,
+      0.637319395132232
+    ],
+    "objective": 6254.486423558157,
+    "gradient": [
+      -3511.341845894014,
+      5453.126951896052,
+      1970.6766516556859,
+      -27.19691596711811,
+      -89.13163721549634,
+      -167.049167357964
+    ],
+    "gradient_dot_direction": -850.3836820547651,
+    "steps": [
+      {
+        "h": 0.1,
+        "objective": 6179.783365048943,
+        "remainder": 10.3353096962622,
+        "rate": null,
+        "fd_slope_relative_error": 0.12153701810562963
+      },
+      {
+        "h": 0.01,
+        "objective": 6246.0976893148945,
+        "remainder": 0.11510257728498985,
+        "rate": 1.9532384466242343,
+        "fd_slope_relative_error": 0.013535369941115311
+      },
+      {
+        "h": 0.001,
+        "objective": 6253.637201819763,
+        "remainder": 0.001161943660175191,
+        "rate": 1.9958999774332424,
+        "fd_slope_relative_error": 0.001366375772131034
+      },
+      {
+        "h": 0.0001,
+        "objective": 6254.40139682022,
+        "remainder": 1.1630268107479247e-05,
+        "rate": 1.9995953442362178,
+        "fd_slope_relative_error": 0.00013676494919771426
+      },
+      {
+        "h": 1e-05,
+        "objective": 6254.477919837649,
+        "remainder": 1.1631245964288661e-07,
+        "rate": 1.9999634866573723,
+        "fd_slope_relative_error": 1.3677644820618704e-05
+      }
+    ],
+    "best_two_step_rate": 1.999779415446795,
+    "best_fd_slope_relative_error": 1.3677644820618704e-05,
+    "feasibility": [
+      {
+        "source": 1,
+        "center": [
+          3.6,
+          5.0
+        ],
+        "amplitude": 1.4,
+        "in_fluid_mesh": true,
+        "signed_clearance_m": 0.3999999999999999
+      },
+      {
+        "source": 2,
+        "center": [
+          8.0,
+          2.6
+        ],
+        "amplitude": 0.5,
+        "in_fluid_mesh": true,
+        "signed_clearance_m": 0.8999999999999999
+      }
+    ],
+    "distance_to_nearest_true_center_m": 1.1426394882026438,
+    "passed": true
+  },
+  {
+    "case": "13",
+    "data": "noisy",
+    "control": [
+      3.6,
+      5.0,
+      1.4,
+      8.0,
+      2.6,
+      0.5
+    ],
+    "direction": [
+      0.41402463330712064,
+      0.1370410079644498,
+      -0.015405772362478521,
+      -0.580943390964761,
+      0.25669980991726127,
+      0.637319395132232
+    ],
+    "objective": 6254.9355824236145,
+    "gradient": [
+      -3511.409053872638,
+      5453.209656146944,
+      1970.747488360742,
+      -27.180283636577386,
+      -89.1453201757255,
+      -166.95497005114436
+    ],
+    "gradient_dot_direction": -850.3544063189065,
+    "steps": [
+      {
+        "h": 0.1,
+        "objective": 6180.235400246969,
+        "remainder": 10.335258455245366,
+        "rate": null,
+        "fd_slope_relative_error": 0.12154059975987656
+      },
+      {
+        "h": 0.01,
+        "objective": 6246.547140709713,
+        "remainder": 0.11510234928750762,
+        "rate": 1.9532371537077573,
+        "fd_slope_relative_error": 0.01353580912054941
+      },
+      {
+        "h": 0.001,
+        "objective": 6254.086389958931,
+        "remainder": 0.001161941635650754,
+        "rate": 1.9958998738713112,
+        "fd_slope_relative_error": 0.001366420432488394
+      },
+      {
+        "h": 0.0001,
+        "objective": 6254.8505586132305,
+        "remainder": 1.1630247917768233e-05,
+        "rate": 1.9995953414577727,
+        "fd_slope_relative_error": 0.00013676942027161232
+      },
+      {
+        "h": 1e-05,
+        "objective": 6254.927078995865,
+        "remainder": 1.1631326010501375e-07,
+        "rate": 1.999959743934201,
+        "fd_slope_relative_error": 1.3678209843077204e-05
+      }
+    ],
+    "best_two_step_rate": 1.9997775426959867,
+    "best_fd_slope_relative_error": 1.3678209843077204e-05,
+    "feasibility": [
+      {
+        "source": 1,
+        "center": [
+          3.6,
+          5.0
+        ],
+        "amplitude": 1.4,
+        "in_fluid_mesh": true,
+        "signed_clearance_m": 0.3999999999999999
+      },
+      {
+        "source": 2,
+        "center": [
+          8.0,
+          2.6
+        ],
+        "amplitude": 0.5,
+        "in_fluid_mesh": true,
+        "signed_clearance_m": 0.8999999999999999
+      }
+    ],
+    "distance_to_nearest_true_center_m": 1.1426394882026438,
+    "passed": true
+  },
+  {
+    "case": "23",
+    "data": "clean",
+    "control": [
+      10.0,
+      1.0,
+      0.9,
+      4.5,
+      2.9,
+      1.2
+    ],
+    "direction": [
+      -0.4951875265449891,
+      -0.184126408931115,
+      0.6447788476998751,
+      0.09711014001416499,
+      0.4606986421662786,
+      0.2889176326564114
+    ],
+    "objective": 4110.437909896585,
+    "gradient": [
+      -112.66237012215593,
+      708.908050122207,
+      363.72792325270166,
+      -93.9790842433048,
+      -134.20142272450974,
+      105.69116075793002
+    ],
+    "gradient_dot_direction": 119.3676827989258,
+    "steps": [
+      {
+        "h": 0.1,
+        "objective": 4122.498740259957,
+        "remainder": 0.12406208348000725,
+        "rate": null,
+        "fd_slope_relative_error": 0.01039327233058467
+      },
+      {
+        "h": 0.01,
+        "objective": 4111.633054311574,
+        "remainder": 0.0014675869997868851,
+        "rate": 1.9270352143430065,
+        "fd_slope_relative_error": 0.001229467612485236
+      },
+      {
+        "h": 0.001,
+        "objective": 4110.557292499532,
+        "remainder": 1.4920148627292629e-05,
+        "rate": 1.992830706634087,
+        "fd_slope_relative_error": 0.00012499319981296855
+      },
+      {
+        "h": 0.0001,
+        "objective": 4110.449846814313,
+        "remainder": 1.4944834255022077e-07,
+        "rate": 1.9992820465098509,
+        "fd_slope_relative_error": 1.252000030879999e-05
+      },
+      {
+        "h": 1e-05,
+        "objective": 4110.439103574908,
+        "remainder": 1.4950447060901872e-09,
+        "rate": 1.999836923384365,
+        "fd_slope_relative_error": 1.2524702424279864e-06
+      }
+    ],
+    "best_two_step_rate": 1.999559484947108,
+    "best_fd_slope_relative_error": 1.2524702424279864e-06,
+    "feasibility": [
+      {
+        "source": 1,
+        "center": [
+          10.0,
+          1.0
+        ],
+        "amplitude": 0.9,
+        "in_fluid_mesh": true,
+        "signed_clearance_m": 1.0
+      },
+      {
+        "source": 2,
+        "center": [
+          4.5,
+          2.9
+        ],
+        "amplitude": 1.2,
+        "in_fluid_mesh": true,
+        "signed_clearance_m": 0.6000000000000001
+      }
+    ],
+    "distance_to_nearest_true_center_m": 2.4981242963471613,
+    "passed": true
+  },
+  {
+    "case": "23",
+    "data": "noisy",
+    "control": [
+      10.0,
+      1.0,
+      0.9,
+      4.5,
+      2.9,
+      1.2
+    ],
+    "direction": [
+      -0.4951875265449891,
+      -0.184126408931115,
+      0.6447788476998751,
+      0.09711014001416499,
+      0.4606986421662786,
+      0.2889176326564114
+    ],
+    "objective": 4110.801583489648,
+    "gradient": [
+      -112.65872702518828,
+      708.936816017906,
+      363.73947914620663,
+      -93.9881799459671,
+      -134.21297069925143,
+      105.72369249661548
+    ],
+    "gradient_dot_direction": 119.37122878905785,
+    "steps": [
+      {
+        "h": 0.1,
+        "objective": 4122.862718488756,
+        "remainder": 0.12401212020283126,
+        "rate": null,
+        "fd_slope_relative_error": 0.010388778054884152
+      },
+      {
+        "h": 0.01,
+        "objective": 4111.99676285912,
+        "remainder": 0.0014670815819197713,
+        "rate": 1.9270098676866994,
+        "fd_slope_relative_error": 0.0012290076903810193
+      },
+      {
+        "h": 0.001,
+        "objective": 4110.920969633526,
+        "remainder": 1.4915088760683592e-05,
+        "rate": 1.9928284226736388,
+        "fd_slope_relative_error": 0.00012494709916276836
+      },
+      {
+        "h": 0.0001,
+        "objective": 4110.8135207619225,
+        "remainder": 1.493958299465803e-07,
+        "rate": 1.9992873669402496,
+        "fd_slope_relative_error": 1.2515229294632302e-05
+      },
+      {
+        "h": 1e-05,
+        "objective": 4110.802777203429,
+        "remainder": 1.4936133237337945e-09,
+        "rate": 2.000100296211347,
+        "fd_slope_relative_error": 1.251233935320392e-06
+      }
+    ],
+    "best_two_step_rate": 1.9996938315757984,
+    "best_fd_slope_relative_error": 1.251233935320392e-06,
+    "feasibility": [
+      {
+        "source": 1,
+        "center": [
+          10.0,
+          1.0
+        ],
+        "amplitude": 0.9,
+        "in_fluid_mesh": true,
+        "signed_clearance_m": 1.0
+      },
+      {
+        "source": 2,
+        "center": [
+          4.5,
+          2.9
+        ],
+        "amplitude": 1.2,
+        "in_fluid_mesh": true,
+        "signed_clearance_m": 0.6000000000000001
+      }
+    ],
+    "distance_to_nearest_true_center_m": 2.4981242963471613,
+    "passed": true
+  }
+]

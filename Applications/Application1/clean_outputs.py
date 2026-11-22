@@ -1,6 +1,6 @@
 """Safely remove generated Application1 optimization/diagnostic outputs.
 
-Adapted from ``Test Application4/clean_outputs.py`` for the DC Navy Yard app.
+Adapted from App4's ``clean_outputs.py`` for the DC Navy Yard app.
 
 CRITICAL SAFETY DIFFERENCE FROM APP4:
 The expensive Application1 Navier-Stokes result lives under

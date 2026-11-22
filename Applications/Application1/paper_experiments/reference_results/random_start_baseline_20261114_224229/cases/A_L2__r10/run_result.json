@@ -1,0 +1,344 @@
+{
+  "run_id": "A_L2__r10",
+  "exit_status": 0,
+  "error": null,
+  "start_control_from_argv": [
+    16.473578937337592,
+    258.09844825787377,
+    1.4030838005427886,
+    255.78462943441468,
+    387.0707457336956,
+    1.3026168952162755
+  ],
+  "true_control": [
+    162.0,
+    300.0,
+    1.4,
+    270.0,
+    600.0,
+    0.95
+  ],
+  "J0_zero_source": 471946.15652038367,
+  "initial_control": [
+    16.473578937337592,
+    258.09844825787377,
+    1.4030838005427886,
+    255.78462943441468,
+    387.0707457336956,
+    1.3026168952162755
+  ],
+  "start_control_matches_argv": true,
+  "final_control": [
+    96.38473269465244,
+    477.54122190689856,
+    0.1,
+    161.99740277659228,
+    299.9967352676114,
+    1.3996489696965757
+  ],
+  "initial_objective": 536185.9037074244,
+  "final_objective": 19618.099207952513,
+  "final_gradient_norm": 2109.758899388937,
+  "final_over_J0": 0.041568511443328585,
+  "initial_over_J0": 1.136116686828588,
+  "max_position_error_m": 212.4580273220166,
+  "max_amplitude_error": 0.85,
+  "position_errors_m": [
+    0.004171815791546544,
+    212.4580273220166
+  ],
+  "amplitude_errors": [
+    0.0003510303034242046,
+    0.85
+  ],
+  "permutation": [
+    1,
+    0
+  ],
+  "initial_max_position_error_m": 213.40324290582234,
+  "initial_max_amplitude_error": 0.3526168952162756,
+  "success_flag": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "iterations": 66,
+  "n_objective_evaluations": 103,
+  "n_gradient_evaluations": 103,
+  "lbfgsb_maxcor": 10,
+  "scaling": "gn-diag",
+  "gn_condition_unscaled": 133928.61949823404,
+  "gn_condition_scaled": 1119.2871832517867,
+  "gn_n_floored": 0,
+  "feasibility": {
+    "feasibility_mode": "raw",
+    "invalid_evaluations": 18,
+    "projected_evaluations": 0,
+    "penalized_evaluations": 0,
+    "projected_source_events": 0,
+    "max_projection_distance": 0.0,
+    "last_projection_distance": null,
+    "raw_infeasible_evaluations": 18,
+    "raw_infeasible_iterates": 10,
+    "raw_max_outside_distance": 16.047208208693995,
+    "raw_infeasible_iterate_log": [
+      {
+        "iteration": 43,
+        "objective": 19891.898531089115,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              42.16364558733838,
+              478.60837601964755
+            ],
+            "amplitude": 0.10793348926671859,
+            "distance_outside_fluid": 1.0375966723206147
+          }
+        ]
+      },
+      {
+        "iteration": 44,
+        "objective": 19871.382960773746,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              48.63935054304988,
+              475.2552867608322
+            ],
+            "amplitude": 0.12979407109003024,
+            "distance_outside_fluid": 5.4706001939481075
+          }
+        ]
+      },
+      {
+        "iteration": 45,
+        "objective": 19848.99291792485,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              55.49640281100807,
+              472.96448323841054
+            ],
+            "amplitude": 0.1534589389588526,
+            "distance_outside_fluid": 6.89978728076386
+          }
+        ]
+      },
+      {
+        "iteration": 46,
+        "objective": 19839.109202168627,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              58.00857077794641,
+              472.2343237802366
+            ],
+            "amplitude": 0.16257855030858895,
+            "distance_outside_fluid": 7.8951304870629535
+          }
+        ]
+      },
+      {
+        "iteration": 47,
+        "objective": 19822.262990373853,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              57.38075898002747,
+              472.66243795042936
+            ],
+            "amplitude": 0.1605601798353022,
+            "distance_outside_fluid": 7.875551382696514
+          }
+        ]
+      },
+      {
+        "iteration": 48,
+        "objective": 19820.862836692297,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              58.337768473638725,
+              472.22050649656967
+            ],
+            "amplitude": 0.16370045019278445,
+            "distance_outside_fluid": 7.74771620882326
+          }
+        ]
+      },
+      {
+        "iteration": 49,
+        "objective": 19817.399601141406,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              57.97373254095419,
+              472.23281764289027
+            ],
+            "amplitude": 0.16196446369308382,
+            "distance_outside_fluid": 7.91393683295534
+          }
+        ]
+      },
+      {
+        "iteration": 50,
+        "objective": 19815.730743430362,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              58.73373544199262,
+              472.0604509811867
+            ],
+            "amplitude": 0.16248324081648793,
+            "distance_outside_fluid": 7.71561615852014
+          }
+        ]
+      },
+      {
+        "iteration": 51,
+        "objective": 19813.0984705781,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              60.23785152728904,
+              471.39723110725555
+            ],
+            "amplitude": 0.16061945149751447,
+            "distance_outside_fluid": 7.862215890754858
+          }
+        ]
+      },
+      {
+        "iteration": 52,
+        "objective": 19805.645828547516,
+        "sources": [
+          {
+            "source_id": 1,
+            "center": [
+              61.91668514358915,
+              471.40435060908413
+            ],
+            "amplitude": 0.15726357240331335,
+            "distance_outside_fluid": 6.483788757556033
+          }
+        ]
+      }
+    ]
+  },
+  "pde": {
+    "lx": 301.98544034478255,
+    "ly": 700.4646734384005,
+    "k": 10.0,
+    "vx": 2.07,
+    "vy": -0.36,
+    "dt": 0.1,
+    "tfinal": 150.0,
+    "jprint": 1,
+    "ngauss": 3,
+    "sigma2": 400.0,
+    "velocity_field": {
+      "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "coords_shape": [
+        2795,
+        3
+      ],
+      "velocity_nodes_shape": [
+        2795,
+        2
+      ],
+      "velocity_magnitude_min": 2.5643005027931998e-21,
+      "velocity_magnitude_max": 10.580957815647944,
+      "coordinate_validation_passed": true,
+      "coordinate_validation_tolerance": 1e-10,
+      "max_coordinate_difference": 0.0
+    },
+    "velocity_mode": "nodal"
+  },
+  "active_bounds": [
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ],
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ]
+  ],
+  "final_feasibility_check": {
+    "centers_in_fluid_mesh": [
+      true,
+      true
+    ],
+    "all_centers_feasible": true,
+    "signed_clearance_m": [
+      0.29632789442970386,
+      4.386799408272231
+    ],
+    "within_lbfgsb_box": true
+  },
+  "numerical_flags": {
+    "finite_final_values": true,
+    "abnormal_termination": false,
+    "iteration_limit": false,
+    "raw_infeasible_evaluations": 18
+  },
+  "history_rows": 67,
+  "pde_solves": {
+    "data_generation": {
+      "seconds": 21.971270903013647,
+      "forward_solves": 1,
+      "adjoint_solves": 0
+    },
+    "scaling_setup": {
+      "seconds": 451.22357220062986,
+      "forward_solves": 7,
+      "adjoint_solves": 6
+    },
+    "optimization": {
+      "seconds": 7449.392484320328,
+      "forward_solves": 104,
+      "adjoint_solves": 103
+    },
+    "post_init_total": {
+      "seconds": 7900.6160565209575,
+      "forward_solves": 111,
+      "adjoint_solves": 109
+    },
+    "driver_output_overhead": {
+      "seconds": 184.58564875135198,
+      "forward_solves": 4,
+      "adjoint_solves": 2
+    },
+    "between_data_and_optimization": {
+      "seconds": 5.414290353655815e-05,
+      "forward_solves": 0,
+      "adjoint_solves": 0
+    },
+    "total_counted": {
+      "forward_solves": 116,
+      "adjoint_solves": 111
+    }
+  }
+}

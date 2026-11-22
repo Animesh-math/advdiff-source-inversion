@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\caption{Sensitivity initialization followed by GN-diagonal-scaled L-BFGS-B: recovery and PDE solves.}
+\label{tab:table_reference}
+\footnotesize
+\begin{tabular}{lrcccrrrrrr}
+\toprule
+Case & Iter. & $J/J(0)$ & Centre err. [m] & Amp. err. & Init. F & Init. A & Local F & Local A & Total F & Total A \\
+\midrule
+A-L1 & 29 & $8.43\times 10^{-23}$ & $1.08\times 10^{-8}$ & $5.74\times 10^{-10}$ & 482 & 2 & 39 & 38 & 521 & 40 \\
+A-L2 & 90 & $9.72\times 10^{-23}$ & $2.03\times 10^{-8}$ & $1.48\times 10^{-9}$ & 427 & 5 & 118 & 117 & 545 & 122 \\
+B-L1 & 32 & $5.52\times 10^{-23}$ & $5.24\times 10^{-8}$ & $1.49\times 10^{-9}$ & 507 & 2 & 44 & 42 & 551 & 44 \\
+B-L2 & 31 & $2.63\times 10^{-22}$ & $3.62\times 10^{-9}$ & $1.77\times 10^{-10}$ & 395 & 3 & 40 & 39 & 435 & 42 \\
+M5 & 62 & $4.38\times 10^{-22}$ & $1.92\times 10^{-8}$ & $1.94\times 10^{-10}$ & 3069 & 12 & 84 & 82 & 3153 & 94 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\parbox{0.92\linewidth}{\scriptsize F, A: forward and adjoint solves. Local = GN-diagonal construction plus L-BFGS-B. Errors are the largest over the sources after permutation matching.}
+\end{table}

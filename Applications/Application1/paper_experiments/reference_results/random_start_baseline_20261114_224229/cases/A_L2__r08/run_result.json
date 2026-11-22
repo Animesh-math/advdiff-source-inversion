@@ -1,0 +1,224 @@
+{
+  "run_id": "A_L2__r08",
+  "exit_status": 0,
+  "error": null,
+  "start_control_from_argv": [
+    264.786317097158,
+    693.705108705156,
+    0.8721925993941494,
+    59.797351793437244,
+    235.32900663361985,
+    0.571643894295204
+  ],
+  "true_control": [
+    162.0,
+    300.0,
+    1.4,
+    270.0,
+    600.0,
+    0.95
+  ],
+  "J0_zero_source": 471946.15652038367,
+  "initial_control": [
+    264.786317097158,
+    693.705108705156,
+    0.8721925993941494,
+    59.797351793437244,
+    235.32900663361985,
+    0.571643894295204
+  ],
+  "start_control_matches_argv": true,
+  "final_control": [
+    301.98544034478255,
+    700.4646734384005,
+    0.2978732090562784,
+    126.75710942201074,
+    263.9773840823999,
+    0.4962795071291867
+  ],
+  "initial_objective": 411332.97568837914,
+  "final_objective": 27051.03380393345,
+  "final_gradient_norm": 0.42027314245508934,
+  "final_over_J0": 0.057318050862789675,
+  "initial_over_J0": 0.871567593051504,
+  "max_position_error_m": 105.43348141427417,
+  "max_amplitude_error": 0.9037204928708131,
+  "position_errors_m": [
+    50.39533900906967,
+    105.43348141427417
+  ],
+  "amplitude_errors": [
+    0.9037204928708131,
+    0.6521267909437216
+  ],
+  "permutation": [
+    1,
+    0
+  ],
+  "initial_max_position_error_m": 120.94510607473462,
+  "initial_max_amplitude_error": 0.8283561057047959,
+  "success_flag": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "iterations": 38,
+  "n_objective_evaluations": 47,
+  "n_gradient_evaluations": 47,
+  "lbfgsb_maxcor": 10,
+  "scaling": "gn-diag",
+  "gn_condition_unscaled": 552249.4630550349,
+  "gn_condition_scaled": 7622.904968411609,
+  "gn_n_floored": 0,
+  "feasibility": {
+    "feasibility_mode": "raw",
+    "invalid_evaluations": 4,
+    "projected_evaluations": 0,
+    "penalized_evaluations": 0,
+    "projected_source_events": 0,
+    "max_projection_distance": 0.0,
+    "last_projection_distance": null,
+    "raw_infeasible_evaluations": 4,
+    "raw_infeasible_iterates": 2,
+    "raw_max_outside_distance": 9.223653340285733,
+    "raw_infeasible_iterate_log": [
+      {
+        "iteration": 1,
+        "objective": 211029.96935894966,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              84.27852454538655,
+              214.5575068037764
+            ],
+            "amplitude": 1.0402019791278478,
+            "distance_outside_fluid": 7.55427337579115
+          }
+        ]
+      },
+      {
+        "iteration": 2,
+        "objective": 207758.63485069922,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              86.66435455939002,
+              214.62233928630923
+            ],
+            "amplitude": 1.052548792984242,
+            "distance_outside_fluid": 5.914583289301452
+          }
+        ]
+      }
+    ]
+  },
+  "pde": {
+    "lx": 301.98544034478255,
+    "ly": 700.4646734384005,
+    "k": 10.0,
+    "vx": 2.07,
+    "vy": -0.36,
+    "dt": 0.1,
+    "tfinal": 150.0,
+    "jprint": 1,
+    "ngauss": 3,
+    "sigma2": 400.0,
+    "velocity_field": {
+      "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "coords_shape": [
+        2795,
+        3
+      ],
+      "velocity_nodes_shape": [
+        2795,
+        2
+      ],
+      "velocity_magnitude_min": 2.5643005027931998e-21,
+      "velocity_magnitude_max": 10.580957815647944,
+      "coordinate_validation_passed": true,
+      "coordinate_validation_tolerance": 1e-10,
+      "max_coordinate_difference": 0.0
+    },
+    "velocity_mode": "nodal"
+  },
+  "active_bounds": [
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ],
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ]
+  ],
+  "final_feasibility_check": {
+    "centers_in_fluid_mesh": [
+      true,
+      true
+    ],
+    "all_centers_feasible": true,
+    "signed_clearance_m": [
+      0.0,
+      30.925044204128042
+    ],
+    "within_lbfgsb_box": true
+  },
+  "numerical_flags": {
+    "finite_final_values": true,
+    "abnormal_termination": false,
+    "iteration_limit": false,
+    "raw_infeasible_evaluations": 4
+  },
+  "history_rows": 39,
+  "pde_solves": {
+    "data_generation": {
+      "seconds": 19.86990182287991,
+      "forward_solves": 1,
+      "adjoint_solves": 0
+    },
+    "scaling_setup": {
+      "seconds": 459.8147955769673,
+      "forward_solves": 7,
+      "adjoint_solves": 6
+    },
+    "optimization": {
+      "seconds": 3108.5771108716726,
+      "forward_solves": 47,
+      "adjoint_solves": 47
+    },
+    "post_init_total": {
+      "seconds": 3568.39190644864,
+      "forward_solves": 54,
+      "adjoint_solves": 53
+    },
+    "driver_output_overhead": {
+      "seconds": 185.67038771044463,
+      "forward_solves": 4,
+      "adjoint_solves": 2
+    },
+    "between_data_and_optimization": {
+      "seconds": 4.208507016301155e-05,
+      "forward_solves": 0,
+      "adjoint_solves": 0
+    },
+    "total_counted": {
+      "forward_solves": 59,
+      "adjoint_solves": 55
+    }
+  }
+}

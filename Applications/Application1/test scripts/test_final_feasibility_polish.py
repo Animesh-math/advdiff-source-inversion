@@ -18,8 +18,9 @@ from pathlib import Path
 import numpy as np
 
 APP = Path(__file__).resolve().parents[1]
-# APP must end up FIRST: Test Application2 also ships a mesh_data_config.py
-sys.path.insert(0, str(APP.parents[1] / "Applications" / "Test Application2"))
+# Src/Objective (gradient_test) on the path; APP inserted last so it is FIRST
+# and Application1's mesh_data_config / multi_source_utils win.
+sys.path.insert(0, str(APP.parents[1] / "Src" / "Objective"))
 sys.path.insert(0, str(APP))
 
 import run_optimization as ro

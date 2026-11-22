@@ -1,0 +1,3 @@
+method,forward_sweeps,adjoint_sweeps,total_sweeps,init_fwd,init_adj,local_or_setup+opt_fwd,local_or_setup+opt_adj,gn_setup_fwd,gn_setup_adj,iterations,objective,objective_over_J0,max_center_err_m,max_amp_err,feasible,stop
+sensitivity initialization + GN-diag L-BFGS-B (saved paper run),3153,94,3247,3069,12,84,82,16,15,62,7.771800402956202e-15,4.379119310862336e-22,1.9158110510714794e-08,1.9449619692579745e-10,True,CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+best of 10 random starts by lowest objective (r05) -- AGGREGATE cost of all starts,1629,1612,3241,0,0,1629,1612,160,150,1114,71629.01805611028,0.004036027688877681,313.9650774445065,1.0,True,budget_exhausted

@@ -1,0 +1,428 @@
+{
+  "row": {
+    "case_id": "M5_L1_plus_S4",
+    "exit_status": 0,
+    "J_after_init": 843.4076596378245,
+    "J_final": 34.712639269934506,
+    "grad_norm_final": 380.105282100577,
+    "iterations": 500,
+    "max_iter": 500,
+    "maxfun": 15000,
+    "nfev": 560,
+    "njev": 560,
+    "stopping_reason": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+    "success_flag": false,
+    "budget_limited": true,
+    "synthetic_fwd": 1,
+    "synthetic_adj": 0,
+    "init_fwd": 3069,
+    "init_adj": 12,
+    "opt_fwd": 560,
+    "opt_adj": 560,
+    "overhead_fwd": 4,
+    "overhead_adj": 2,
+    "init_seconds": 3127.8177052039828,
+    "opt_seconds": 2918.3200054859917,
+    "process_seconds": 6063.569507892011,
+    "total_wall_seconds": 6064,
+    "init_max_pos_err_m": 10.591442434592071,
+    "max_pos_err_m": 7.160167693406789,
+    "max_amp_err": 0.014066418040999729,
+    "permutation": [
+      3,
+      2,
+      4,
+      0,
+      1
+    ],
+    "pos_errs_m": [
+      0.5327403269503104,
+      0.27389914283972305,
+      7.160167693406789,
+      0.027099367684935857,
+      0.02227112729507799
+    ],
+    "amp_errs": [
+      0.014066418040999729,
+      0.002856717952498755,
+      0.008577108315072302,
+      0.0005747278109551335,
+      0.00043455461118857563
+    ],
+    "init_pos_errs_m": [
+      7.953570410668096,
+      3.3667168158372602,
+      10.591442434592071,
+      0.5992454468591512,
+      0.3102158164743652
+    ],
+    "init_amp_errs": [
+      0.10081390793260747,
+      0.08425719639553297,
+      0.016520128633717435,
+      0.01038444924266746,
+      0.0070661977337971305
+    ],
+    "terminal_feasible": true,
+    "terminal_amp_at_bound": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "J0_all_sources": 17747405.01743895,
+    "J0_source1": 78175.54879418244,
+    "J0_source2": 755103.4542370532,
+    "J0_source3": 47340.629383406886,
+    "J0_source4": 13990127.563416388,
+    "J0_source5": 2787513.1843912196,
+    "true_control": [
+      110.0,
+      660.0,
+      0.9,
+      270.0,
+      600.0,
+      1.35,
+      200.0,
+      425.0,
+      0.7,
+      100.0,
+      210.0,
+      1.6,
+      275.0,
+      120.0,
+      1.1
+    ],
+    "initial_control": [
+      99.99951069131538,
+      209.40075475291127,
+      1.6103844492426675,
+      275.299898110353,
+      120.0793408860396,
+      1.092933802266203,
+      267.10945607144106,
+      601.7261338056803,
+      1.434257196395533,
+      117.83643801734337,
+      661.3599711312343,
+      0.7991860920673926,
+      189.5867664420013,
+      426.9347402181811,
+      0.7165201286337174
+    ],
+    "final_control": [
+      99.97553865309206,
+      209.9883373143585,
+      1.6005747278109552,
+      275.0200974616269,
+      119.99040337834711,
+      1.0995654453888115,
+      270.273896239194,
+      599.9987388086151,
+      1.3471432820475013,
+      109.53091068927247,
+      659.7474777742053,
+      0.9140664180409998,
+      192.85673644002168,
+      424.50828147239287,
+      0.7085771083150723
+    ],
+    "error": ""
+  },
+  "case_result": {
+    "case_id": "M5_L1_plus_S4",
+    "source_config": "M5",
+    "layout": "L1_plus_S4",
+    "true_control": [
+      110.0,
+      660.0,
+      0.9,
+      270.0,
+      600.0,
+      1.35,
+      200.0,
+      425.0,
+      0.7,
+      100.0,
+      210.0,
+      1.6,
+      275.0,
+      120.0,
+      1.1
+    ],
+    "exit_status": 0,
+    "start_time": "2026-10-03T20:48:11-04:00",
+    "end_time": "2026-10-03T22:29:15-04:00",
+    "batch_wall_seconds": 6064,
+    "error": null,
+    "log": "Applications/Application1/output/five_source_M5_S4sensors_20261003_204754/cases/M5_L1_plus_S4/run.log",
+    "initialization": {
+      "selected_control": [
+        99.99951069131538,
+        209.40075475291127,
+        1.6103844492426675,
+        275.299898110353,
+        120.0793408860396,
+        1.092933802266203,
+        267.10945607144106,
+        601.7261338056803,
+        1.434257196395533,
+        117.83643801734337,
+        661.3599711312343,
+        0.7991860920673926,
+        189.5867664420013,
+        426.9347402181811,
+        0.7165201286337174
+      ],
+      "objective_after_initialization_exact": 843.4076596378288,
+      "zero_source_objective": 17747405.01743895,
+      "initializer_self_reported_forward_solves": 3069,
+      "initializer_self_reported_adjoint_solves": 12,
+      "candidate_traces": 321,
+      "initializer_self_reported_wall_seconds": 3127.805246094009,
+      "amplitude_solver": "osqp"
+    },
+    "optimization": {
+      "objective_after_initialization": 843.4076596378245,
+      "objective_after_local_optimization": 34.712639269934506,
+      "final_gradient_norm": 380.105282100577,
+      "iterations": 500,
+      "objective_evaluations_nfev": 560,
+      "gradient_evaluations_njev": 560,
+      "success_flag": false,
+      "stopping_reason": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "budget_limited": true,
+      "post_init_forward_solves_driver_counter": 560,
+      "post_init_adjoint_solves_driver_counter": 560,
+      "initial_control": [
+        99.99951069131538,
+        209.40075475291127,
+        1.6103844492426675,
+        275.299898110353,
+        120.0793408860396,
+        1.092933802266203,
+        267.10945607144106,
+        601.7261338056803,
+        1.434257196395533,
+        117.83643801734337,
+        661.3599711312343,
+        0.7991860920673926,
+        189.5867664420013,
+        426.9347402181811,
+        0.7165201286337174
+      ],
+      "final_control": [
+        99.97553865309206,
+        209.9883373143585,
+        1.6005747278109552,
+        275.0200974616269,
+        119.99040337834711,
+        1.0995654453888115,
+        270.273896239194,
+        599.9987388086151,
+        1.3471432820475013,
+        109.53091068927247,
+        659.7474777742053,
+        0.9140664180409998,
+        192.85673644002168,
+        424.50828147239287,
+        0.7085771083150723
+      ]
+    },
+    "recovery": {
+      "permutation": [
+        3,
+        2,
+        4,
+        0,
+        1
+      ],
+      "position_errors_m": [
+        0.5327403269503104,
+        0.27389914283972305,
+        7.160167693406789,
+        0.027099367684935857,
+        0.02227112729507799
+      ],
+      "amplitude_errors": [
+        0.014066418040999729,
+        0.002856717952498755,
+        0.008577108315072302,
+        0.0005747278109551335,
+        0.00043455461118857563
+      ],
+      "max_position_error_m": 7.160167693406789,
+      "max_amplitude_error": 0.014066418040999729,
+      "init_position_errors_m": [
+        7.953570410668096,
+        3.3667168158372602,
+        10.591442434592071,
+        0.5992454468591512,
+        0.3102158164743652
+      ],
+      "init_amplitude_errors": [
+        0.10081390793260747,
+        0.08425719639553297,
+        0.016520128633717435,
+        0.01038444924266746,
+        0.0070661977337971305
+      ],
+      "init_max_position_error_m": 10.591442434592071,
+      "terminal_sources": [
+        {
+          "x": 99.97553865309206,
+          "y": 209.9883373143585,
+          "A": 1.6005747278109552,
+          "fluid_admissible": true,
+          "wall_clearance_m": 7.723359336463673
+        },
+        {
+          "x": 275.0200974616269,
+          "y": 119.99040337834711,
+          "A": 1.0995654453888115,
+          "fluid_admissible": true,
+          "wall_clearance_m": 26.965342883155643
+        },
+        {
+          "x": 270.273896239194,
+          "y": 599.9987388086151,
+          "A": 1.3471432820475013,
+          "fluid_admissible": true,
+          "wall_clearance_m": 26.096828461103467
+        },
+        {
+          "x": 109.53091068927247,
+          "y": 659.7474777742053,
+          "A": 0.9140664180409998,
+          "fluid_admissible": true,
+          "wall_clearance_m": 28.503305449350357
+        },
+        {
+          "x": 192.85673644002168,
+          "y": 424.50828147239287,
+          "A": 0.7085771083150723,
+          "fluid_admissible": true,
+          "wall_clearance_m": 20.87665030308442
+        }
+      ],
+      "terminal_all_fluid_admissible": true,
+      "terminal_amplitude_at_bound": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "raw_feasibility_record": {
+        "feasibility_mode": "raw",
+        "invalid_evaluations": 1,
+        "projected_evaluations": 0,
+        "penalized_evaluations": 0,
+        "projected_source_events": 0,
+        "max_projection_distance": 0.0,
+        "last_projection_distance": null,
+        "raw_infeasible_evaluations": 1,
+        "raw_infeasible_iterates": 0,
+        "raw_max_outside_distance": 8.971179275151101,
+        "raw_infeasible_iterate_log": []
+      }
+    },
+    "pde_solves": {
+      "synthetic_data_and_setup": {
+        "seconds": 1.608706337021431,
+        "forward_solves": 1,
+        "adjoint_solves": 0
+      },
+      "initialization": {
+        "seconds": 3127.8177052039828,
+        "forward_solves": 3069,
+        "adjoint_solves": 12
+      },
+      "local_optimization": {
+        "seconds": 2918.3200054859917,
+        "forward_solves": 560,
+        "adjoint_solves": 560
+      },
+      "driver_overhead_smoke_export_final_eval": {
+        "seconds": 15.822210280020954,
+        "forward_solves": 4,
+        "adjoint_solves": 2
+      },
+      "total_counted": {
+        "forward_solves": 3634,
+        "adjoint_solves": 574
+      },
+      "note": "counts = actual gt.run_forward / gt.rk4_discrete_source_adjoint calls (cached evaluator responses excluded); 'seconds' = wall time of that phase"
+    },
+    "timing_seconds": {
+      "initialization": 3127.8177052039828,
+      "local_optimization": 2918.3200054859917,
+      "driver_process_total": 6063.569507892011,
+      "batch_wall_total": 6064
+    },
+    "observation_signal": {
+      "both_sources": {
+        "J_zero_control": 17747405.01743895,
+        "peak_abs": 34.11266127057619,
+        "rms_over_sensors_and_time": 8.733960733412639,
+        "time_integrated_sum_sq": 354948.100348779,
+        "sensors_above_1e-3": 26,
+        "sensors_above_1e-6": 30
+      },
+      "source_1_only": {
+        "J_zero_control": 78175.54879418244,
+        "peak_abs": 3.1919844616300423,
+        "rms_over_sensors_and_time": 0.5796679304611684,
+        "time_integrated_sum_sq": 1563.5109758836488,
+        "sensors_above_1e-3": 8,
+        "sensors_above_1e-6": 11
+      },
+      "source_2_only": {
+        "J_zero_control": 755103.4542370532,
+        "peak_abs": 10.448121974628737,
+        "rms_over_sensors_and_time": 1.8015529588963777,
+        "time_integrated_sum_sq": 15102.069084741062,
+        "sensors_above_1e-3": 5,
+        "sensors_above_1e-6": 9
+      },
+      "source_3_only": {
+        "J_zero_control": 47340.629383406886,
+        "peak_abs": 2.7031795822434734,
+        "rms_over_sensors_and_time": 0.45108752692418946,
+        "time_integrated_sum_sq": 946.8125876681378,
+        "sensors_above_1e-3": 6,
+        "sensors_above_1e-6": 11
+      },
+      "source_4_only": {
+        "J_zero_control": 13990127.563416388,
+        "peak_abs": 34.112521237692214,
+        "rms_over_sensors_and_time": 7.754515029004161,
+        "time_integrated_sum_sq": 279802.55126832775,
+        "sensors_above_1e-3": 13,
+        "sensors_above_1e-6": 22
+      },
+      "source_5_only": {
+        "J_zero_control": 2787513.1843912196,
+        "peak_abs": 23.5496406198592,
+        "rms_over_sensors_and_time": 3.4614038300335004,
+        "time_integrated_sum_sq": 55750.263687824394,
+        "sensors_above_1e-3": 9,
+        "sensors_above_1e-6": 17
+      }
+    },
+    "figures": {
+      "reconstruction_map": "Applications/Application1/output/five_source_M5_S4sensors_20261003_204754/cases/M5_L1_plus_S4/reconstruction_M5_L1_plus_S4.png",
+      "convergence_history": "Applications/Application1/output/five_source_M5_S4sensors_20261003_204754/cases/M5_L1_plus_S4/convergence_M5_L1_plus_S4.png",
+      "sensitivity_init": [
+        "Applications/Application1/output/five_source_M5_S4sensors_20261003_204754/cases/M5_L1_plus_S4/full/sensitivity_init/sensitivity_init_source_01.png",
+        "Applications/Application1/output/five_source_M5_S4sensors_20261003_204754/cases/M5_L1_plus_S4/full/sensitivity_init/sensitivity_init_source_02.png",
+        "Applications/Application1/output/five_source_M5_S4sensors_20261003_204754/cases/M5_L1_plus_S4/full/sensitivity_init/sensitivity_init_source_03.png",
+        "Applications/Application1/output/five_source_M5_S4sensors_20261003_204754/cases/M5_L1_plus_S4/full/sensitivity_init/sensitivity_init_source_04.png",
+        "Applications/Application1/output/five_source_M5_S4sensors_20261003_204754/cases/M5_L1_plus_S4/full/sensitivity_init/sensitivity_init_source_05.png"
+      ],
+      "layout": "Applications/Application1/output/five_source_M5_S4sensors_20261003_204754/cases/M5_L1_plus_S4/layout_M5_L1_plus_S4.png"
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,987 @@
+{
+  "case_id": "B_L2",
+  "label": "Configuration B, layout L2 (10 boundary + 15 interior sensors)",
+  "short_label": "B\u2013L2: 2 sources, 10 boundary + 15 interior",
+  "source_run": "Applications/Application1/output/gn_diag_default_check_20261004_161718/cases/P_B_L2_mixed__gn-diag",
+  "recovered_settings": {
+    "case_id": "B_L2",
+    "run_dir": "Applications/Application1/output/gn_diag_default_check_20261004_161718/cases/P_B_L2_mixed__gn-diag",
+    "driver_args": {
+      "num_sources": 2,
+      "mode": "location_and_intensity",
+      "bound_case": "mesh_domain",
+      "stage": "full",
+      "max_iter": 150,
+      "post_init_method": "lbfgsb",
+      "post_init_scaling": "gn-diag",
+      "post_init_stall_iters": 150,
+      "post_init_scaling_max_ratio": 10000.0,
+      "post_init_lbfgsb_maxcor": null,
+      "infer_num_sources": false,
+      "max_sources": 4,
+      "source_count_discrepancy_tol": 0.0,
+      "source_count_rel_reduction_tol": 0.001,
+      "source_count_abs_reduction_tol": 0.0,
+      "source_count_amp_tol": 0.001,
+      "source_count_top_k": 12,
+      "source_count_polish_method": "lbfgsb",
+      "source_count_polish_max_iter": 60,
+      "max_paraview_frames": 100,
+      "tfinal": 150.0,
+      "amplitude_floor": 0.1,
+      "sigma2_continuation": null,
+      "measurement_boundaries": null,
+      "observation_mode": "nodes",
+      "sensor_node_ids": [
+        "641,647,653,662,671,677,588,596,690,684,1855,2771,2704,1279,789,1156,1677,2464,1137,827,1807,1332,1616,2790,1022"
+      ],
+      "sensor_coordinates": null,
+      "sensor_snap_tolerance": 20.0,
+      "sensor_weights": "equal",
+      "sensor_equal_weight": 1.0,
+      "true_control": [
+        100.0,
+        210.0,
+        1.3,
+        270.0,
+        60.0,
+        0.85
+      ],
+      "initial_control": [
+        100.08834882378963,
+        209.95083427163502,
+        1.2985632230142587,
+        269.6867899200351,
+        60.010972723866885,
+        0.8469266521345944
+      ],
+      "init_mode": "manual",
+      "sensitivity_score": "predicted_reduction",
+      "sensitivity_top_k": 24,
+      "sensitivity_beam_width": 1,
+      "sensitivity_min_value_tol": 0.0,
+      "sensitivity_min_separation": null,
+      "sensitivity_refine_centers": false,
+      "sensitivity_refine_max_fev": 50,
+      "sensitivity_coherence_cap": null,
+      "feasibility_mode": "raw",
+      "final_feasibility_polish": false,
+      "final_feasibility_margin": 0.5,
+      "final_feasibility_max_iter": 50,
+      "final_feasibility_method": "slsqp",
+      "sensitivity_refine_pair": false,
+      "sensitivity_pair_refine_max_fev": 0,
+      "sensitivity_reselect_second": false,
+      "sensitivity_reselect_threshold": 0.25,
+      "sensitivity_reselect_max_passes": 2,
+      "sensitivity_reselect_at_target_width": false,
+      "sensitivity_reselect_refine_max_fev": 0,
+      "sensitivity_geometry_aware_branches": false,
+      "sensitivity_obstacle_aware_diversity": false,
+      "sensitivity_branch_multistart": false,
+      "amplitude_solver": "osqp",
+      "sensitivity_save_plots": false,
+      "sensitivity_mask_boundary_buffer": 0.0,
+      "sensitivity_mask_building_buffer": 0.0,
+      "smart_amplitude_low": 0.3,
+      "smart_amplitude_high": 1.3,
+      "adaptive_initial_random_starts": 2,
+      "adaptive_max_starts": 6,
+      "adaptive_success_tol": 1e-08,
+      "adaptive_promising_factor": 0.75,
+      "adaptive_perturb_radius": 15.0,
+      "adaptive_amplitude_perturb": 0.15,
+      "adaptive_exploration_probability": 0.35,
+      "adaptive_stop_on_success": false,
+      "adaptive_reinsert_dead_sources": false,
+      "adaptive_max_reinsertions": 2,
+      "num_starts": 1,
+      "random_seed": 0,
+      "min_source_separation": null,
+      "case_name": "P_B_L2_mixed__gn-diag",
+      "velocity_field_file": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "constant_velocity": false
+    },
+    "summary_pde": {
+      "lx": 301.98544034478255,
+      "ly": 700.4646734384005,
+      "k": 10.0,
+      "vx": 2.07,
+      "vy": -0.36,
+      "dt": 0.1,
+      "tfinal": 150.0,
+      "jprint": 1,
+      "ngauss": 3,
+      "sigma2": 400.0,
+      "velocity_field": {
+        "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+        "coords_shape": [
+          2795,
+          3
+        ],
+        "velocity_nodes_shape": [
+          2795,
+          2
+        ],
+        "velocity_magnitude_min": 2.5643005027931998e-21,
+        "velocity_magnitude_max": 10.580957815647944,
+        "coordinate_validation_passed": true,
+        "coordinate_validation_tolerance": 1e-10,
+        "max_coordinate_difference": 0.0
+      },
+      "velocity_mode": "nodal"
+    },
+    "summary_observation": {
+      "observation_mode": "nodes",
+      "num_sensors": 25,
+      "sensor_node_ids": [
+        641,
+        647,
+        653,
+        662,
+        671,
+        677,
+        588,
+        596,
+        690,
+        684,
+        1855,
+        2771,
+        2704,
+        1279,
+        789,
+        1156,
+        1677,
+        2464,
+        1137,
+        827,
+        1807,
+        1332,
+        1616,
+        2790,
+        1022
+      ],
+      "weight_kind": "diagonal",
+      "weight_convention": "equal diagonal sensor weights w = 1 (||r||_W^2 = w * sum_s r_s^2)",
+      "selection": "node_ids",
+      "sensor_coordinates": [
+        [
+          301.98544034478255,
+          21.591354933188995
+        ],
+        [
+          301.98544034478255,
+          146.89537197179743
+        ],
+        [
+          301.98544034478255,
+          268.02978988797986
+        ],
+        [
+          301.98544034478255,
+          411.2740488081763
+        ],
+        [
+          301.98544034478255,
+          540.1290389206843
+        ],
+        [
+          301.98544034478255,
+          657.2819635719934
+        ],
+        [
+          129.7057670445065,
+          0.0
+        ],
+        [
+          280.26300151791656,
+          0.0
+        ],
+        [
+          60.120140525803436,
+          700.4646734384005
+        ],
+        [
+          174.4698149127653,
+          700.4646734384005
+        ],
+        [
+          286.9262012791005,
+          328.2411739927775
+        ],
+        [
+          256.52638902317267,
+          298.0724291961815
+        ],
+        [
+          163.16479911410715,
+          254.54181118079578
+        ],
+        [
+          240.99865939776646,
+          207.26507770919125
+        ],
+        [
+          266.43885352037614,
+          181.6625576778024
+        ],
+        [
+          160.42995957750827,
+          99.20825499939383
+        ],
+        [
+          213.6997751648887,
+          43.07288372097537
+        ],
+        [
+          264.46433099987917,
+          102.43356262648012
+        ],
+        [
+          117.42675484280335,
+          301.0115600822901
+        ],
+        [
+          198.30186941096326,
+          377.7670684456825
+        ],
+        [
+          291.1735958865611,
+          466.3187183442933
+        ],
+        [
+          196.35962281818502,
+          490.3814532835968
+        ],
+        [
+          242.9368843336124,
+          586.3431639428891
+        ],
+        [
+          108.88711422937922,
+          546.0115495945793
+        ],
+        [
+          69.22813570819562,
+          590.2193941122969
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "weight_mode": "equal"
+    },
+    "initial_control": [
+      100.08834882378963,
+      209.95083427163502,
+      1.2985632230142587,
+      269.6867899200351,
+      60.010972723866885,
+      0.8469266521345944
+    ],
+    "input_initial_control": [
+      100.08834882378963,
+      209.95083427163502,
+      1.2985632230142587,
+      269.6867899200351,
+      60.010972723866885,
+      0.8469266521345944
+    ],
+    "true_control": [
+      100.0,
+      210.0,
+      1.3,
+      270.0,
+      60.0,
+      0.85
+    ],
+    "final_control": [
+      100.0000000013984,
+      210.00000000013526,
+      1.2999999999659504,
+      270.0000000016044,
+      59.99999999675323,
+      0.8500000001767819
+    ],
+    "recorded_initial_objective": 0.5274343215019945,
+    "recorded_history_iter0_objective": 0.5274343215019945,
+    "recorded_history_iter0_gradient_norm": 6.448310248699806,
+    "amplitude_floor": 0.1,
+    "measurement_boundaries": [
+      "right"
+    ],
+    "feasibility_mode": "raw",
+    "bound_case": "mesh_domain",
+    "mode": "location_and_intensity",
+    "num_sources": 2,
+    "target_sigma2": 400.0,
+    "sigma2_continuation": null,
+    "building_boundary_condition": "natural no-flux",
+    "instrumentation_argv": [
+      "--mode",
+      "location_and_intensity",
+      "--stage",
+      "full",
+      "--num-sources",
+      "2",
+      "--bound-case",
+      "mesh_domain",
+      "--num-starts",
+      "1",
+      "--random-seed",
+      "0",
+      "--amplitude-solver",
+      "osqp",
+      "--post-init-method",
+      "lbfgsb",
+      "--feasibility-mode",
+      "raw",
+      "--tfinal",
+      "150",
+      "--amplitude-floor",
+      "0.1",
+      "--max-iter",
+      "150",
+      "--max-paraview-frames",
+      "100",
+      "--observation-mode",
+      "nodes",
+      "--sensor-weights",
+      "equal",
+      "--sensor-equal-weight",
+      "1.0",
+      "--velocity-field-file",
+      "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "--true-control",
+      "100.0",
+      "210.0",
+      "1.3",
+      "270.0",
+      "60.0",
+      "0.85",
+      "--sensor-node-ids",
+      "641,647,653,662,671,677,588,596,690,684,1855,2771,2704,1279,789,1156,1677,2464,1137,827,1807,1332,1616,2790,1022",
+      "--init-mode",
+      "manual",
+      "--initial-control",
+      "100.08834882378963",
+      "209.95083427163502",
+      "1.2985632230142587",
+      "269.6867899200351",
+      "60.010972723866885",
+      "0.8469266521345944",
+      "--case-name",
+      "P_B_L2_mixed__gn-diag",
+      "--post-init-scaling",
+      "gn-diag"
+    ],
+    "companion_none_run": "Applications/Application1/output/gn_diag_default_check_20261004_161718/cases/P_B_L2_mixed__none",
+    "companion_none_iter0_gradient_norm_physical": 6.448310248699806,
+    "companion_none_iter0_objective": 0.5274343215019945
+  },
+  "checks": {
+    "true_control_matches_brief": true,
+    "num_sensors_matches_brief": true,
+    "sigma2_is_400": true,
+    "no_sigma2_continuation": true,
+    "mode_location_and_intensity": true,
+    "observation_mode_nodes": true,
+    "sensor_weights_equal_1": true,
+    "constant_velocity_false": true,
+    "pde_k_matches_record": true,
+    "pde_dt_matches_record": true,
+    "pde_tfinal_matches_record": true,
+    "pde_jprint_matches_record": true,
+    "pde_ngauss_matches_record": true,
+    "pde_sigma2_matches_record": true,
+    "velocity_mode_matches_record": true,
+    "velocity_shape_matches_record": true,
+    "mesh_nodes_match_record": true,
+    "sensor_ids_match_record": true,
+    "sensor_coords_match_record": true,
+    "sensor_weights_match_record": true
+  },
+  "reproduction": {
+    "J_z_recomputed": 0.5274343215019892,
+    "J_z_recorded": 0.5274343215019945,
+    "J_z_rel_diff": 1.0103761361272351e-14,
+    "grad_norm_recomputed": 6.448310248699766,
+    "grad_norm_recorded_physical_none_run": 6.448310248699806,
+    "grad_norm_rel_diff_vs_none_run": 6.198217415882637e-15
+  },
+  "rebuilt_pde": {
+    "lx": 301.98544034478255,
+    "ly": 700.4646734384005,
+    "k": 10.0,
+    "vx": 2.07,
+    "vy": -0.36,
+    "dt": 0.1,
+    "tfinal": 150.0,
+    "jprint": 1,
+    "ngauss": 3,
+    "sigma2": 400.0,
+    "velocity_field": {
+      "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "coords_shape": [
+        2795,
+        3
+      ],
+      "velocity_nodes_shape": [
+        2795,
+        2
+      ],
+      "velocity_magnitude_min": 2.5643005027931998e-21,
+      "velocity_magnitude_max": 10.580957815647944,
+      "coordinate_validation_passed": true,
+      "coordinate_validation_tolerance": 1e-10,
+      "max_coordinate_difference": 0.0
+    },
+    "velocity_mode": "nodal"
+  },
+  "rebuilt_observation": {
+    "observation_mode": "nodes",
+    "num_sensors": 25,
+    "sensor_node_ids": [
+      641,
+      647,
+      653,
+      662,
+      671,
+      677,
+      588,
+      596,
+      690,
+      684,
+      1855,
+      2771,
+      2704,
+      1279,
+      789,
+      1156,
+      1677,
+      2464,
+      1137,
+      827,
+      1807,
+      1332,
+      1616,
+      2790,
+      1022
+    ],
+    "weight_kind": "diagonal",
+    "weight_convention": "equal diagonal sensor weights w = 1 (||r||_W^2 = w * sum_s r_s^2)",
+    "selection": "node_ids",
+    "sensor_coordinates": [
+      [
+        301.98544034478255,
+        21.591354933188995
+      ],
+      [
+        301.98544034478255,
+        146.89537197179743
+      ],
+      [
+        301.98544034478255,
+        268.02978988797986
+      ],
+      [
+        301.98544034478255,
+        411.2740488081763
+      ],
+      [
+        301.98544034478255,
+        540.1290389206843
+      ],
+      [
+        301.98544034478255,
+        657.2819635719934
+      ],
+      [
+        129.7057670445065,
+        0.0
+      ],
+      [
+        280.26300151791656,
+        0.0
+      ],
+      [
+        60.120140525803436,
+        700.4646734384005
+      ],
+      [
+        174.4698149127653,
+        700.4646734384005
+      ],
+      [
+        286.9262012791005,
+        328.2411739927775
+      ],
+      [
+        256.52638902317267,
+        298.0724291961815
+      ],
+      [
+        163.16479911410715,
+        254.54181118079578
+      ],
+      [
+        240.99865939776646,
+        207.26507770919125
+      ],
+      [
+        266.43885352037614,
+        181.6625576778024
+      ],
+      [
+        160.42995957750827,
+        99.20825499939383
+      ],
+      [
+        213.6997751648887,
+        43.07288372097537
+      ],
+      [
+        264.46433099987917,
+        102.43356262648012
+      ],
+      [
+        117.42675484280335,
+        301.0115600822901
+      ],
+      [
+        198.30186941096326,
+        377.7670684456825
+      ],
+      [
+        291.1735958865611,
+        466.3187183442933
+      ],
+      [
+        196.35962281818502,
+        490.3814532835968
+      ],
+      [
+        242.9368843336124,
+        586.3431639428891
+      ],
+      [
+        108.88711422937922,
+        546.0115495945793
+      ],
+      [
+        69.22813570819562,
+        590.2193941122969
+      ]
+    ],
+    "sensor_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "weight_mode": "equal"
+  },
+  "objective": {
+    "eta1": 100.0,
+    "lambda_reg": 0.0,
+    "objective_time_rule": "exclude_first",
+    "gradient_time_rule_arg": "trapezoid",
+    "evaluator": "run_optimization.build_evaluator (production)",
+    "feasibility_mode": "raw",
+    "bound_case": "mesh_domain",
+    "mode": "location_and_intensity"
+  },
+  "control_ordering": "[x1, y1, A1, ..., xM, yM, AM] physical (m, m, amplitude)",
+  "z": [
+    100.08834882378963,
+    209.95083427163502,
+    1.2985632230142587,
+    269.6867899200351,
+    60.010972723866885,
+    0.8469266521345944
+  ],
+  "true_control": [
+    100.0,
+    210.0,
+    1.3,
+    270.0,
+    60.0,
+    0.85
+  ],
+  "J_z": 0.5274343215019892,
+  "gradient": [
+    2.4216474268238275,
+    -4.114763430675178,
+    1.5277694618966692e-09,
+    -2.1697214445318727,
+    -3.7519807523963893,
+    -2.786870418616188e-06
+  ],
+  "gradient_norm": 6.448310248699766,
+  "direction": {
+    "q": [
+      1.346347353758899,
+      -1.4146084494579108,
+      0.06857789107609234,
+      1.1232939376849214,
+      -5.736067564133524,
+      0.0387204079557027
+    ],
+    "r_unit": [
+      0.1346347353758899,
+      -0.1414608449457911,
+      0.6857789107609233,
+      0.11232939376849213,
+      -0.5736067564133525,
+      0.387204079557027
+    ],
+    "seed": 0,
+    "rng": "numpy.random.default_rng(seed).normal(size=3M); r /= ||r||_2",
+    "scaling_D": [
+      10.0,
+      10.0,
+      0.1,
+      10.0,
+      10.0,
+      0.1
+    ],
+    "construction": "q = D r",
+    "center_scale": 10.0,
+    "amplitude_scale": 0.1,
+    "min_directional_fraction": 0.1,
+    "rejected_draws": [],
+    "admissible_set": "centers in fluid mesh; amplitudes in [0.1, 2.0]",
+    "max_center_step_m": 5.736067564133524,
+    "max_amplitude_step": 0.06857789107609234
+  },
+  "g_dot_q": 28.165537763557445,
+  "g_dot_q_centers": 28.165537871361437,
+  "g_dot_q_amplitudes": -1.0780398832075145e-07,
+  "eps": [
+    1.0,
+    0.31622776601683794,
+    0.1,
+    0.03162277660168379,
+    0.01,
+    0.0031622776601683794,
+    0.001,
+    0.00031622776601683794,
+    0.0001,
+    3.1622776601683795e-05,
+    1e-05,
+    3.162277660168379e-06,
+    1e-06,
+    3.162277660168379e-07,
+    1e-07,
+    3.162277660168379e-08,
+    1e-08
+  ],
+  "rows": [
+    {
+      "eps": 1.0,
+      "J_eps": 14657.122518874197,
+      "J_eps_minus_J": 14656.595084552695,
+      "E0": 14656.595084552695,
+      "E1": 14628.429546789137,
+      "E0_over_J": 27788.474293471663,
+      "E1_over_J": 27735.073260176465,
+      "E0_rate": null,
+      "E1_rate": null
+    },
+    {
+      "eps": 0.31622776601683794,
+      "J_eps": 1621.3795381456816,
+      "J_eps_minus_J": 1620.8521038241797,
+      "E0": 1620.8521038241797,
+      "E1": 1611.945378738547,
+      "E0_over_J": 3073.088037214633,
+      "E1_over_J": 3056.201147752702,
+      "E0_rate": 1.9125794015681021,
+      "E1_rate": 1.915694765774873
+    },
+    {
+      "eps": 0.1,
+      "J_eps": 169.87748665468723,
+      "J_eps_minus_J": 169.35005233318523,
+      "E0": 169.35005233318523,
+      "E1": 166.5334985568295,
+      "E0_over_J": 321.0827309283219,
+      "E1_over_J": 315.7426275988022,
+      "E0_rate": 1.9619161077191747,
+      "E1_rate": 1.9716974313128053
+    },
+    {
+      "eps": 0.03162277660168379,
+      "J_eps": 18.24591022862769,
+      "J_eps_minus_J": 17.7184759071257,
+      "E0": 17.7184759071257,
+      "E1": 16.827803398562434,
+      "E0_over_J": 33.593710505354125,
+      "E1_over_J": 31.905021559161028,
+      "E0_rate": 1.9607179456115762,
+      "E1_rate": 1.9909483528114444
+    },
+    {
+      "eps": 0.01,
+      "J_eps": 2.4974408023581933,
+      "J_eps_minus_J": 1.9700064808562041,
+      "E0": 1.9700064808562041,
+      "E1": 1.6883511032206298,
+      "E0_over_J": 3.7350744927750674,
+      "E1_over_J": 3.201064159823096,
+      "E0_rate": 1.9079174149838631,
+      "E1_rate": 1.9971293270141586
+    },
+    {
+      "eps": 0.0031622776601683794,
+      "J_eps": 0.7855133792319042,
+      "J_eps_minus_J": 0.258079057729915,
+      "E0": 0.258079057729915,
+      "E1": 0.16901180687358847,
+      "E0_over_J": 0.4893103220794889,
+      "E1_over_J": 0.3204414274601791,
+      "E0_rate": 1.7654297809821553,
+      "E1_rate": 1.9990914424209312
+    },
+    {
+      "eps": 0.001,
+      "J_eps": 0.5725066329015464,
+      "J_eps_minus_J": 0.04507231139955714,
+      "E0": 0.04507231139955714,
+      "E1": 0.016906773635999694,
+      "E0_over_J": 0.08545578010775537,
+      "E1_over_J": 0.03205474681255822,
+      "E0_rate": 1.5156858685102412,
+      "E1_rate": 1.9997126135783057
+    },
+    {
+      "eps": 0.00031622776601683794,
+      "J_eps": 0.5380319008688718,
+      "J_eps_minus_J": 0.010597579366882548,
+      "E0": 0.010597579366882548,
+      "E1": 0.0016908542812498917,
+      "E0_over_J": 0.020092699573860742,
+      "E1_over_J": 0.0032058101119297653,
+      "E0_rate": 1.2574063047884687,
+      "E1_rate": 1.99990911294969
+    },
+    {
+      "eps": 0.0001,
+      "J_eps": 0.5304199663017319,
+      "J_eps_minus_J": 0.002985644799742726,
+      "E0": 0.002985644799742726,
+      "E1": 0.00016909102338698127,
+      "E0_over_J": 0.0056606949491652785,
+      "E1_over_J": 0.0003205916196455629,
+      "E0_rate": 1.1003370780501833,
+      "E1_rate": 1.9999712577100233
+    },
+    {
+      "eps": 3.1622776601683795e-05,
+      "J_eps": 0.5283419032899437,
+      "J_eps_minus_J": 0.0009075817879544701,
+      "E0": 0.0009075817879544701,
+      "E1": 1.6909279391204356e-05,
+      "E0_over_J": 0.0017207484438440117,
+      "E1_over_J": 3.205949765091384e-05,
+      "E0_rate": 1.0343047324424208,
+      "E1_rate": 1.9999909051914933
+    },
+    {
+      "eps": 1e-05,
+      "J_eps": 0.5277176678131443,
+      "J_eps_minus_J": 0.0002833463111551193,
+      "E0": 0.0002833463111551193,
+      "E1": 1.690933519544861e-06,
+      "E0_over_J": 0.000537216293297384,
+      "E1_over_J": 3.2059603454123788e-06,
+      "E0_rate": 1.0111364190132162,
+      "E1_rate": 1.9999971334750828
+    },
+    {
+      "eps": 3.162277660168379e-06,
+      "J_eps": 0.527523557846527,
+      "J_eps_minus_J": 8.923634453783524e-05,
+      "E0": 8.923634453783524e-05,
+      "E1": 1.6909368150868145e-07,
+      "E0_over_J": 0.0001691894912786761,
+      "E1_over_J": 3.20596659366324e-07,
+      "E0_rate": 1.003551582769378,
+      "E1_rate": 1.9999983071666934
+    },
+    {
+      "eps": 1e-06,
+      "J_eps": 0.5274625039491453,
+      "J_eps_minus_J": 2.818244715607765e-05,
+      "E0": 2.818244715607765e-05,
+      "E1": 1.690939252020526e-08,
+      "E0_over_J": 5.3433093007337334e-05,
+      "E1_over_J": 3.2059712140180636e-08,
+      "E0_rate": 1.0011261405367236,
+      "E1_rate": 1.999998748213308
+    },
+    {
+      "eps": 3.162277660168379e-07,
+      "J_eps": 0.5274432299179839,
+      "J_eps_minus_J": 8.908415994657304e-06,
+      "E0": 8.908415994657304e-06,
+      "E1": 1.690909024647255e-09,
+      "E0_over_J": 1.6890095375834782e-05,
+      "E1_over_J": 3.205913903805135e-09,
+      "E0_rate": 1.000356424678156,
+      "E1_rate": 2.000015527108658
+    },
+    {
+      "eps": 1e-07,
+      "J_eps": 0.5274371382247981,
+      "J_eps_minus_J": 2.8167228088848972e-06,
+      "E0": 2.8167228088848972e-06,
+      "E1": 1.6903252915282776e-10,
+      "E0_over_J": 5.340423810236008e-06,
+      "E1_over_J": 3.2048071629367837e-10,
+      "E0_rate": 1.0001127568778412,
+      "E1_rate": 2.0002999047700207
+    },
+    {
+      "eps": 3.162277660168379e-08,
+      "J_eps": 0.5274352121913831,
+      "J_eps_minus_J": 8.906893939064631e-07,
+      "E0": 8.906893939064631e-07,
+      "E1": 1.6885343197473538e-11,
+      "E0_over_J": 1.6887209603084274e-06,
+      "E1_over_J": 3.201411532982662e-11,
+      "E0_rate": 1.0000356593661903,
+      "E1_rate": 2.0009207949711163
+    },
+    {
+      "eps": 1e-08,
+      "J_eps": 0.527434603159087,
+      "J_eps_minus_J": 2.816570977559607e-07,
+      "E0": 2.816570977559607e-07,
+      "E1": 1.7201203862441156e-12,
+      "E0_over_J": 5.340135942497599e-07,
+      "E1_over_J": 3.261297788406491e-12,
+      "E0_rate": 1.0000111619140546,
+      "E1_rate": 1.9839020983722826
+    }
+  ],
+  "analysis": {
+    "E1_resolved_eps_range": [
+      1.0,
+      1e-08
+    ],
+    "E1_resolved_num_points": 17,
+    "E1_fitted_slope_resolved": 1.9962905649920923,
+    "E1_points_below_resolved_range": [],
+    "E1_points_above_resolved_range": [],
+    "cancellation_onset_eps": null,
+    "E0_first_order_eps_range": [
+      0.0001,
+      1e-08
+    ],
+    "E0_fitted_slope": 1.004387880584258,
+    "E0_rate_all": [
+      null,
+      1.9125794015681021,
+      1.9619161077191747,
+      1.9607179456115762,
+      1.9079174149838631,
+      1.7654297809821553,
+      1.5156858685102412,
+      1.2574063047884687,
+      1.1003370780501833,
+      1.0343047324424208,
+      1.0111364190132162,
+      1.003551582769378,
+      1.0011261405367236,
+      1.000356424678156,
+      1.0001127568778412,
+      1.0000356593661903,
+      1.0000111619140546
+    ],
+    "E1_rate_all": [
+      null,
+      1.915694765774873,
+      1.9716974313128053,
+      1.9909483528114444,
+      1.9971293270141586,
+      1.9990914424209312,
+      1.9997126135783057,
+      1.99990911294969,
+      1.9999712577100233,
+      1.9999909051914933,
+      1.9999971334750828,
+      1.9999983071666934,
+      1.999998748213308,
+      2.000015527108658,
+      2.0002999047700207,
+      2.0009207949711163,
+      1.9839020983722826
+    ],
+    "roundoff_floor_estimate": 1.1711394554181114e-16,
+    "roundoff_floor_note": "machine eps * |J(z)|; E1 cannot resolve below a small multiple of this",
+    "second_order_observed": true,
+    "first_order_observed": true
+  },
+  "feasibility_stats": {
+    "feasibility_mode": "raw",
+    "invalid_evaluations": 0,
+    "projected_evaluations": 0,
+    "penalized_evaluations": 0,
+    "projected_source_events": 0,
+    "max_projection_distance": 0.0,
+    "last_projection_distance": null,
+    "raw_infeasible_evaluations": 0,
+    "raw_infeasible_iterates": 0,
+    "raw_max_outside_distance": 0.0,
+    "raw_infeasible_iterate_log": []
+  },
+  "elapsed_s": 136.52236032485962,
+  "python": "3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0]",
+  "platform": "Linux-6.12.111+deb13-amd64-x86_64-with-glibc2.41"
+}

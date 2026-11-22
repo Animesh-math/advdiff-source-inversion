@@ -1,0 +1,64 @@
+{
+  "dataset_version": "source_id_v2_wall8_20261116",
+  "sensor_layout": "wall_8",
+  "sensor_layout_rule": "eight wall-mounted sensors (user decision 2026-11-16): geometry only; each wall point moved 0.1 m into the fluid and snapped to the nearest coarse-mesh node that is not a boundary node; identical for all cases; not adjusted using true sources, signals or recovery outcomes.",
+  "proposed_inactive_sensor_layouts": {
+    "wall_10": "PROPOSED, NOT ACTIVE: wall_8 plus two sensors evenly spaced on the bottom aisle wall between S7 and the bathroom wall."
+  },
+  "superseded_datasets": {
+    "source_id_v1_20261116": "aisle_passage_12"
+  },
+  "flow_version": "v3_bathroom_topsupply_20261116",
+  "data_mesh_level": "fine",
+  "inversion_mesh_level": "coarse",
+  "pde": "du/dt + v.grad(u) - k Laplace(u) = S(x; z); u(0) = 0",
+  "boundary_conditions": {
+    "supplies (inlet_1..3)": "u = 0 (clean supply air)",
+    "walls, partitions, beds, bathroom wall": "k grad(u).n = 0 (impermeable, no-slip velocity)",
+    "outlets (outlet_door, outlet_exhaust)": "k grad(u).n = 0 (advective outflow)"
+  },
+  "diffusivity_k_m2_per_s": 0.01,
+  "flow_viscosity_note": "the airflow's effective viscosity is navier_stokes_config.NU; it is a different parameter and is not used by the transport solve",
+  "source_formula": "S(x; z) = sum_i A_i exp(-|x - c_i|^2 / rho); z = [x1, y1, A1, x2, y2, A2]",
+  "amplitude_convention": "A_i = peak volumetric release rate at the centre [concentration unit / s]; the Gaussian is NOT normalized; total rate per metre depth = A_i * pi * rho",
+  "sigma2_rho_m2": 0.04,
+  "e_folding_radius_m": 0.2,
+  "gaussian_std_m": 0.1414213562373095,
+  "tfinal_s": 300.0,
+  "dt_s": {
+    "coarse": 0.015,
+    "fine": 0.0025
+  },
+  "num_steps": {
+    "coarse": 20000,
+    "fine": 120000
+  },
+  "observation_interval_s": 0.015,
+  "fine_substeps_per_observation": 6,
+  "num_observation_times_in_objective": 20000,
+  "time_integrator": "classical explicit RK4, lumped mass, P1 triangles (Src/Solvers/adv_diff_forward.py)",
+  "rk4_stability_target_dt_rho": 2.5,
+  "objective": "J = (eta1 * dt_obs / 2) * sum_{n=1}^{N} ||C U^n - d^n||_W^2 + (lambda / 2) |z|^2",
+  "eta1": 1.0,
+  "lambda_reg": 0.0,
+  "objective_time_rule": "exclude_first",
+  "sensor_weight_W": "1.0 * I",
+  "num_sources": 2,
+  "amplitude_bounds": [
+    0.1,
+    2.0
+  ],
+  "noise_level_nominal": 0.01,
+  "noise_seeds": {
+    "12": 2026111612,
+    "13": 2026111613,
+    "23": 2026111623
+  },
+  "settings_rationale": {
+    "diffusivity_k": "k = 1.0e-2 m^2/s is the smallest of the candidates {nu_eff = 2.3244e-3, 5e-3, 1e-2} for which the cell Peclet number |v| h / (2 k) is <= 1 in every triangle of the COARSE (inversion) mesh (max 0.97), the classical condition for a non-oscillatory unstabilized Galerkin P1 discretization; the shared solver has no stabilization.  Measured with all three releases active: k = nu_eff gives cell Pe up to 4.2 on the coarse mesh (46 % of the area above 1) and a small negative undershoot (min u / max u = -6.6e-4); k = 1e-2 gives a non-negative coarse solution and the smallest coarse-vs-fine field difference (1.6-1.9 % relative L2, against 2.4-3.0 % for k = nu_eff).  k is an effective (eddy) diffusivity, a modelling parameter like nu_eff but a different one (nu_eff / k = 0.23); it is far above molecular diffusion.",
+    "sigma2": "sqrt(rho) = 0.20 m is a compromise fixed by the 0.95-1.0 m bed-side passages: the passage centreline is 2.4 e-folding radii from the nearest solid (Gaussian value 0.4 % there), and the radius spans 1.3 mean element edges on the coarse mesh and 2.5 on the fine mesh at the release locations (Application1's default was 2.5 on its mesh; its width study went down to about 0.9).  The 3-point quadrature of the source integral agrees between the two meshes to 3e-4 and the coarse and fine concentration fields differ by 1.6-1.9 % (settings-selection record).  A wider Gaussian would be better resolved on the coarse mesh but would overlap the bed and the partition.",
+    "tfinal": "T = 300 s, about one nominal air-change time A_fluid / Q_supply = 50.98 / 0.18 = 283 s.",
+    "dt": "largest round steps with dt * rho(M^-1 K) <= 2.5 on each mesh with its own velocity field and an integer fine/coarse ratio, so that both meshes share the observation times.",
+    "amplitudes": "arbitrary distinct values within +-30 % of 1, strictly inside the bounds [0.1, 2.0]."
+  }
+}

@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\caption{PDE solves: sensitivity initialization against ten random starts.}
+\label{tab:table_cost}
+\footnotesize
+\begin{tabular}{lrrrrrrcr}
+\toprule
+Case & Sens. F & Sens. A & Sens. total & Random F & Random A & Random total & First rec. $k$ & Solves to $k$ \\
+\midrule
+A-L1 & 521 & 40 & 561 & 733 & 717 & 1450 & 8 & 1244 \\
+A-L2 & 545 & 122 & 667 & 940 & 924 & 1864 & 5 & 911 \\
+B-L1 & 551 & 44 & 595 & 862 & 847 & 1709 & 8 & 1514 \\
+B-L2 & 435 & 42 & 477 & 713 & 697 & 1410 & -- & -- \\
+M5 & 3153 & 94 & 3247 & 4431 & 4412 & 8843 & 4 & 3409 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\parbox{0.92\linewidth}{\scriptsize Random totals cover all ten starts (GN-diagonal setup plus L-BFGS-B). First rec. $k$: first start, in the fixed order r01--r10, that recovers the sources; a dash means none did. Identifying it uses the true sources.}
+\end{table}

@@ -1,0 +1,410 @@
+{
+  "layout": "wall_8",
+  "active_layout": true,
+  "selection_rule": "eight wall-mounted sensors (user decision 2026-11-16): geometry only; each wall point moved 0.1 m into the fluid and snapped to the nearest coarse-mesh node that is not a boundary node; identical for all cases; not adjusted using true sources, signals or recovery outcomes.",
+  "num_sensors": 8,
+  "snap_tolerance_m": 0.15,
+  "coarse_mesh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+  "sensors": [
+    {
+      "label": "S1",
+      "name": "bay1_left_wall_upper",
+      "description": "left exterior wall of Bay 1, beside the upper portion of the bed",
+      "wall": "wall_left",
+      "wall_point": [
+        0.0,
+        5.075
+      ],
+      "inward_normal": [
+        1.0,
+        0.0
+      ],
+      "intended_xy": [
+        0.1,
+        5.075
+      ],
+      "region": "bay_1",
+      "coarse_node_id": 1331,
+      "xy": [
+        0.1591379370343268,
+        5.100000000005242
+      ],
+      "snap_distance_m": 0.06420510569213382,
+      "distance_to_boundary_m": 0.1591379370343268,
+      "on_boundary": false,
+      "wall_offset_m": 0.1591379370343268,
+      "intended_wall_offset_m": 0.1,
+      "along_wall_shift_m": 0.025000000005241496,
+      "fine_mesh_interpolation": {
+        "cell": 23094,
+        "nodes": [
+          10610,
+          11850,
+          14219
+        ],
+        "weights": [
+          0.3530477428341672,
+          0.6106045793291431,
+          0.036347677836689705
+        ]
+      }
+    },
+    {
+      "label": "S2",
+      "name": "bay1_partition1_lower",
+      "description": "Bay 1 face of the first partition, beside the lower portion of the bed",
+      "wall": "partition_1",
+      "wall_point": [
+        2.95,
+        4.025
+      ],
+      "inward_normal": [
+        -1.0,
+        0.0
+      ],
+      "intended_xy": [
+        2.85,
+        4.025
+      ],
+      "region": "bay_1",
+      "coarse_node_id": 3741,
+      "xy": [
+        2.830827318273924,
+        4.053130069092704
+      ],
+      "snap_distance_m": 0.03404251036174796,
+      "distance_to_boundary_m": 0.11917268172607631,
+      "on_boundary": false,
+      "wall_offset_m": 0.11917268172607631,
+      "intended_wall_offset_m": 0.1,
+      "along_wall_shift_m": 0.02813006909270399,
+      "fine_mesh_interpolation": {
+        "cell": 6372,
+        "nodes": [
+          9308,
+          7438,
+          12230
+        ],
+        "weights": [
+          0.549436026050474,
+          0.20298125110911747,
+          0.24758272284040844
+        ]
+      }
+    },
+    {
+      "label": "S3",
+      "name": "bay2_partition1_upper",
+      "description": "Bay 2 face of the first partition, upper position",
+      "wall": "partition_1",
+      "wall_point": [
+        3.05,
+        5.075
+      ],
+      "inward_normal": [
+        1.0,
+        0.0
+      ],
+      "intended_xy": [
+        3.15,
+        5.075
+      ],
+      "region": "bay_2",
+      "coarse_node_id": 4234,
+      "xy": [
+        3.160704287239835,
+        5.084495546739492
+      ],
+      "snap_distance_m": 0.014308989244344834,
+      "distance_to_boundary_m": 0.11070428723983516,
+      "on_boundary": false,
+      "wall_offset_m": 0.11070428723983516,
+      "intended_wall_offset_m": 0.1,
+      "along_wall_shift_m": 0.009495546739492156,
+      "fine_mesh_interpolation": {
+        "cell": 2134,
+        "nodes": [
+          5975,
+          6111,
+          8259
+        ],
+        "weights": [
+          0.17598941461929363,
+          0.02591135259282752,
+          0.7980992327878789
+        ]
+      }
+    },
+    {
+      "label": "S4",
+      "name": "bay2_partition2_lower",
+      "description": "Bay 2 face of the second partition, lower position",
+      "wall": "partition_2",
+      "wall_point": [
+        5.95,
+        4.025
+      ],
+      "inward_normal": [
+        -1.0,
+        0.0
+      ],
+      "intended_xy": [
+        5.85,
+        4.025
+      ],
+      "region": "bay_2",
+      "coarse_node_id": 3743,
+      "xy": [
+        5.830827318273931,
+        4.053130069092686
+      ],
+      "snap_distance_m": 0.0340425103617283,
+      "distance_to_boundary_m": 0.11917268172606921,
+      "on_boundary": false,
+      "wall_offset_m": 0.11917268172606921,
+      "intended_wall_offset_m": 0.1,
+      "along_wall_shift_m": 0.02813006909268534,
+      "fine_mesh_interpolation": {
+        "cell": 6373,
+        "nodes": [
+          9307,
+          7441,
+          12231
+        ],
+        "weights": [
+          0.55750076787404,
+          0.20994248026443024,
+          0.23255675186152974
+        ]
+      }
+    },
+    {
+      "label": "S5",
+      "name": "bay3_partition2_upper",
+      "description": "Bay 3 face of the second partition, upper position",
+      "wall": "partition_2",
+      "wall_point": [
+        6.05,
+        5.075
+      ],
+      "inward_normal": [
+        1.0,
+        0.0
+      ],
+      "intended_xy": [
+        6.15,
+        5.075
+      ],
+      "region": "bay_3",
+      "coarse_node_id": 4231,
+      "xy": [
+        6.15578773745208,
+        5.078374589255392
+      ],
+      "snap_distance_m": 0.0066996833848184415,
+      "distance_to_boundary_m": 0.10578773745208014,
+      "on_boundary": false,
+      "wall_offset_m": 0.10578773745208014,
+      "intended_wall_offset_m": 0.1,
+      "along_wall_shift_m": 0.0033745892553920243,
+      "fine_mesh_interpolation": {
+        "cell": 3432,
+        "nodes": [
+          6466,
+          5959,
+          8256
+        ],
+        "weights": [
+          0.11722570587714165,
+          0.029530536069685673,
+          0.8532437580531727
+        ]
+      }
+    },
+    {
+      "label": "S6",
+      "name": "bay3_right_wall_lower",
+      "description": "right exterior wall of Bay 3, lower position",
+      "wall": "wall_right",
+      "wall_point": [
+        9.0,
+        4.025
+      ],
+      "inward_normal": [
+        -1.0,
+        0.0
+      ],
+      "intended_xy": [
+        8.9,
+        4.025
+      ],
+      "region": "bay_3",
+      "coarse_node_id": 3833,
+      "xy": [
+        8.84298063082124,
+        3.977251096959357
+      ],
+      "snap_distance_m": 0.0743718105408803,
+      "distance_to_boundary_m": 0.15701936917876047,
+      "on_boundary": false,
+      "wall_offset_m": 0.15701936917876047,
+      "intended_wall_offset_m": 0.1,
+      "along_wall_shift_m": 0.0477489030406435,
+      "fine_mesh_interpolation": {
+        "cell": 6524,
+        "nodes": [
+          10542,
+          7061,
+          12091
+        ],
+        "weights": [
+          0.18011432571384606,
+          0.5679321735638518,
+          0.2519535007223021
+        ]
+      }
+    },
+    {
+      "label": "S7",
+      "name": "aisle_bottom_wall_right_of_door",
+      "description": "bottom wall of the shared aisle, immediately to the right of the corridor doorway",
+      "wall": "wall_bottom",
+      "wall_point": [
+        1.9,
+        0.0
+      ],
+      "inward_normal": [
+        0.0,
+        1.0
+      ],
+      "intended_xy": [
+        1.9,
+        0.1
+      ],
+      "region": "aisle",
+      "coarse_node_id": 2663,
+      "xy": [
+        1.907425199890157,
+        0.08974677487999244
+      ],
+      "snap_distance_m": 0.012659471504385294,
+      "distance_to_boundary_m": 0.08974677487999244,
+      "on_boundary": false,
+      "wall_offset_m": 0.08974677487999244,
+      "intended_wall_offset_m": 0.1,
+      "along_wall_shift_m": 0.007425199890157108,
+      "fine_mesh_interpolation": {
+        "cell": 663,
+        "nodes": [
+          9814,
+          2348,
+          13832
+        ],
+        "weights": [
+          0.441169180944201,
+          0.23232174954469217,
+          0.3265090695111068
+        ]
+      }
+    },
+    {
+      "label": "S8",
+      "name": "bathroom_top_wall_near_exhaust",
+      "description": "bathroom's upper wall, near the exhaust side",
+      "wall": "bath_top",
+      "wall_point": [
+        10.5,
+        2.0
+      ],
+      "inward_normal": [
+        0.0,
+        -1.0
+      ],
+      "intended_xy": [
+        10.5,
+        1.9
+      ],
+      "region": "bathroom",
+      "coarse_node_id": 1382,
+      "xy": [
+        10.50859512247117,
+        1.788664463186837
+      ],
+      "snap_distance_m": 0.11166681641279828,
+      "distance_to_boundary_m": 0.21133553681316308,
+      "on_boundary": false,
+      "wall_offset_m": 0.21133553681316308,
+      "intended_wall_offset_m": 0.1,
+      "along_wall_shift_m": 0.008595122471170669,
+      "fine_mesh_interpolation": {
+        "cell": 5527,
+        "nodes": [
+          11843,
+          10591,
+          11933
+        ],
+        "weights": [
+          0.6804612025925237,
+          0.11060651767950966,
+          0.20893227972796657
+        ]
+      }
+    }
+  ],
+  "labels": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+  ],
+  "node_ids": [
+    1331,
+    3741,
+    4234,
+    3743,
+    4231,
+    3833,
+    2663,
+    1382
+  ],
+  "coordinates": [
+    [
+      0.1591379370343268,
+      5.100000000005242
+    ],
+    [
+      2.830827318273924,
+      4.053130069092704
+    ],
+    [
+      3.160704287239835,
+      5.084495546739492
+    ],
+    [
+      5.830827318273931,
+      4.053130069092686
+    ],
+    [
+      6.15578773745208,
+      5.078374589255392
+    ],
+    [
+      8.84298063082124,
+      3.977251096959357
+    ],
+    [
+      1.907425199890157,
+      0.08974677487999244
+    ],
+    [
+      10.50859512247117,
+      1.788664463186837
+    ]
+  ],
+  "fine_mesh_sha256": "5309186742fc17e1627e169edb7d241568f4dced6f8055b5d0a1453642ed66b5",
+  "fine_sampling": "P1 finite-element interpolation of the fine solution at the coarse-node coordinates (containing fine triangle, barycentric weights)"
+}

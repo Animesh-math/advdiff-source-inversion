@@ -30,7 +30,7 @@ from pathlib import Path
 import numpy as np
 
 APP = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(APP.parents[1] / "Applications" / "Test Application2"))
+sys.path.insert(0, str(APP.parents[1] / "Src" / "Objective"))
 sys.path.insert(0, str(APP))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 

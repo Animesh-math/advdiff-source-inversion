@@ -29,7 +29,7 @@ import numpy as np
 
 HERE = Path(__file__).resolve().parent
 APP = HERE.parents[1]
-sys.path.insert(0, str(APP.parents[1] / "Applications" / "Test Application2"))
+sys.path.insert(0, str(APP.parents[1] / "Src" / "Objective"))
 sys.path.insert(0, str(APP))
 sys.path.insert(0, str(HERE))
 

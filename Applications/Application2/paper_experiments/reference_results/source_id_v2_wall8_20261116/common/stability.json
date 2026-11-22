@@ -1,0 +1,55 @@
+{
+  "rk4_real_axis_limit": 2.785,
+  "target_dt_rho": 2.5,
+  "observation_interval_s": 0.015,
+  "fine_substeps_per_observation": 6,
+  "tfinal_s": 300.0,
+  "levels": {
+    "coarse": {
+      "dt_s": 0.015,
+      "num_steps": 20000,
+      "spectral_radius_Minv_K_per_s": 154.39662720127828,
+      "dt_times_spectral_radius": 2.3159494080191743,
+      "largest_stable_dt_at_target_s": 0.016192063552922624,
+      "stable": true,
+      "cell_peclet": {
+        "k": 0.01,
+        "max": 0.9693456086272102,
+        "area_median": 0.2134573045445319,
+        "area_q90": 0.45168413515263717,
+        "area_q99": 0.741303707449248,
+        "area_fraction_above_1": 0.0,
+        "area_fraction_above_2": 0.0,
+        "edge_min_m": 0.017250706178502995,
+        "edge_median_m": 0.08559260791293007,
+        "edge_max_m": 0.2670242000403634,
+        "speed_max_m_per_s": 0.1529006883178455
+      },
+      "velocity_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+      "mesh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e"
+    },
+    "fine": {
+      "dt_s": 0.0025,
+      "num_steps": 120000,
+      "spectral_radius_Minv_K_per_s": 834.0877196821604,
+      "dt_times_spectral_radius": 2.085219299205401,
+      "largest_stable_dt_at_target_s": 0.0029972866654272966,
+      "stable": true,
+      "cell_peclet": {
+        "k": 0.01,
+        "max": 0.5548121317939738,
+        "area_median": 0.10594841582819774,
+        "area_q90": 0.23230748913668792,
+        "area_q99": 0.37356204247117164,
+        "area_fraction_above_1": 0.0,
+        "area_fraction_above_2": 0.0,
+        "edge_min_m": 0.008688130239735314,
+        "edge_median_m": 0.04896794721593149,
+        "edge_max_m": 0.13467975806153865,
+        "speed_max_m_per_s": 0.15287132311127077
+      },
+      "velocity_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_navier_stokes_velocity_nodes_fine.npz",
+      "mesh_sha256": "5309186742fc17e1627e169edb7d241568f4dced6f8055b5d0a1453642ed66b5"
+    }
+  }
+}

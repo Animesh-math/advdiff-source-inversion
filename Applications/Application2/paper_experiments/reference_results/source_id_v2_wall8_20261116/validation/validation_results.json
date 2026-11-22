@@ -1,0 +1,424 @@
+{
+  "dataset_version": "source_id_v2_wall8_20261116",
+  "all_passed": true,
+  "num_checks": 48,
+  "num_failed": 0,
+  "optimization_or_initialization_run": false,
+  "checks": [
+    {
+      "id": "V1a",
+      "name": "sensor coordinates are the coarse-mesh node coordinates",
+      "passed": true,
+      "detail": "8 sensors",
+      "data": null
+    },
+    {
+      "id": "V1b",
+      "name": "no sensor on a clean-air Dirichlet node or outside the fluid",
+      "passed": true,
+      "detail": "",
+      "data": null
+    },
+    {
+      "id": "V1c",
+      "name": "fine-mesh P1 interpolation reproduces a linear field at the sensor coordinates",
+      "passed": true,
+      "detail": "max error 1.8e-15",
+      "data": null
+    },
+    {
+      "id": "V1d",
+      "name": "interpolation cells/weights equal those recorded at generation",
+      "passed": true,
+      "detail": "",
+      "data": null
+    },
+    {
+      "id": "V1e",
+      "name": "saved clean traces equal the interpolated saved fine-mesh fields at the snapshot times",
+      "passed": true,
+      "detail": "max abs difference 0.0e+00",
+      "data": null
+    },
+    {
+      "id": "V2a",
+      "name": "case 12: inversion configuration holds no truth field",
+      "passed": true,
+      "detail": "",
+      "data": null
+    },
+    {
+      "id": "V2b",
+      "name": "case 12: clean/noisy files reload identically and match the recorded hashes",
+      "passed": true,
+      "detail": "",
+      "data": null
+    },
+    {
+      "id": "V2c",
+      "name": "case 12: d_noisy = d_clean + noise exactly; n = 0 sample is zero and noise-free",
+      "passed": true,
+      "detail": "",
+      "data": null
+    },
+    {
+      "id": "V2d",
+      "name": "case 12: noise reproducible from the recorded seed; one common std",
+      "passed": true,
+      "detail": "seed 2026111612, s_noise 1.543931e-02, realized relative noise norm 0.009984",
+      "data": null
+    },
+    {
+      "id": "V2e",
+      "name": "case 12: realized relative noise norm consistent with the nominal level",
+      "passed": true,
+      "detail": "0.009984 vs nominal 0.01",
+      "data": null
+    },
+    {
+      "id": "V2f",
+      "name": "case 12: negative noisy samples are kept (no clipping)",
+      "passed": true,
+      "detail": "46618 negative samples of 160000",
+      "data": null
+    },
+    {
+      "id": "V2a",
+      "name": "case 13: inversion configuration holds no truth field",
+      "passed": true,
+      "detail": "",
+      "data": null
+    },
+    {
+      "id": "V2b",
+      "name": "case 13: clean/noisy files reload identically and match the recorded hashes",
+      "passed": true,
+      "detail": "",
+      "data": null
+    },
+    {
+      "id": "V2c",
+      "name": "case 13: d_noisy = d_clean + noise exactly; n = 0 sample is zero and noise-free",
+      "passed": true,
+      "detail": "",
+      "data": null
+    },
+    {
+      "id": "V2d",
+      "name": "case 13: noise reproducible from the recorded seed; one common std",
+      "passed": true,
+      "detail": "seed 2026111613, s_noise 2.053230e-02, realized relative noise norm 0.009980",
+      "data": null
+    },
+    {
+      "id": "V2e",
+      "name": "case 13: realized relative noise norm consistent with the nominal level",
+      "passed": true,
+      "detail": "0.009980 vs nominal 0.01",
+      "data": null
+    },
+    {
+      "id": "V2f",
+      "name": "case 13: negative noisy samples are kept (no clipping)",
+      "passed": true,
+      "detail": "43830 negative samples of 160000",
+      "data": null
+    },
+    {
+      "id": "V2a",
+      "name": "case 23: inversion configuration holds no truth field",
+      "passed": true,
+      "detail": "",
+      "data": null
+    },
+    {
+      "id": "V2b",
+      "name": "case 23: clean/noisy files reload identically and match the recorded hashes",
+      "passed": true,
+      "detail": "",
+      "data": null
+    },
+    {
+      "id": "V2c",
+      "name": "case 23: d_noisy = d_clean + noise exactly; n = 0 sample is zero and noise-free",
+      "passed": true,
+      "detail": "",
+      "data": null
+    },
+    {
+      "id": "V2d",
+      "name": "case 23: noise reproducible from the recorded seed; one common std",
+      "passed": true,
+      "detail": "seed 2026111623, s_noise 1.846419e-02, realized relative noise norm 0.009996",
+      "data": null
+    },
+    {
+      "id": "V2e",
+      "name": "case 23: realized relative noise norm consistent with the nominal level",
+      "passed": true,
+      "detail": "0.009996 vs nominal 0.01",
+      "data": null
+    },
+    {
+      "id": "V2f",
+      "name": "case 23: negative noisy samples are kept (no clipping)",
+      "passed": true,
+      "detail": "45421 negative samples of 160000",
+      "data": null
+    },
+    {
+      "id": "V5a",
+      "name": "mesh admissibility rejects beds, partitions, the bathroom wall and the exterior; accepts the fluid",
+      "passed": true,
+      "detail": "16 probe points; wrong: none",
+      "data": null
+    },
+    {
+      "id": "V5b",
+      "name": "control-level admissibility (validate_sources_in_domain) flags a centre inside a bed",
+      "passed": true,
+      "detail": "",
+      "data": null
+    },
+    {
+      "id": "V5c",
+      "name": "release centres in the fluid with >= 2 radii of clearance; radius / local mean edge >= 1 on the coarse mesh; source integral agrees between meshes",
+      "passed": true,
+      "detail": "bed 1: clearance 2.38 radii, radius/h coarse 1.3 fine 2.5, quadrature integral coarse vs fine 2.5e-04; bed 2: clearance 2.37 radii, radius/h coarse 1.3 fine 2.5, quadrature integral coarse vs fine 2.5e-04; bed 3: clearance 2.50 radii, radius/h coarse 1.2 fine 2.2, quadrature integral coarse vs fine 1.0e-04",
+      "data": [
+        {
+          "bay": 1,
+          "center": [
+            2.475,
+            5.2
+          ],
+          "amplitude": 1.0,
+          "in_fluid": true,
+          "clearance_m": 0.4750000000000001,
+          "clearance_radii": 2.3750000000000004,
+          "analytic_integral_unbounded": 0.12566370614359174,
+          "coarse": {
+            "integral": 0.12560226247105846,
+            "triangles_within_radius": 14,
+            "mean_edge_within_radius_m": 0.15974880489980217,
+            "radius_over_mean_edge": 1.2519655475697877
+          },
+          "fine": {
+            "integral": 0.12557064452891564,
+            "triangles_within_radius": 44,
+            "mean_edge_within_radius_m": 0.08115489680677378,
+            "radius_over_mean_edge": 2.4644230708122414
+          },
+          "coarse_vs_fine_integral_rel": 0.0002517940579299884,
+          "fine_vs_analytic_rel": 0.0007405607993906752
+        },
+        {
+          "bay": 2,
+          "center": [
+            5.475,
+            5.2
+          ],
+          "amplitude": 0.7,
+          "in_fluid": true,
+          "clearance_m": 0.47499999999999964,
+          "clearance_radii": 2.3749999999999982,
+          "analytic_integral_unbounded": 0.0879645943005142,
+          "coarse": {
+            "integral": 0.08792158421622623,
+            "triangles_within_radius": 14,
+            "mean_edge_within_radius_m": 0.1597488045053503,
+            "radius_over_mean_edge": 1.251965550661142
+          },
+          "fine": {
+            "integral": 0.08789945117023591,
+            "triangles_within_radius": 44,
+            "mean_edge_within_radius_m": 0.08115489680670074,
+            "radius_over_mean_edge": 2.4644230708144597
+          },
+          "coarse_vs_fine_integral_rel": 0.0002517995925532113,
+          "fine_vs_analytic_rel": 0.000740560799447818
+        },
+        {
+          "bay": 3,
+          "center": [
+            8.5,
+            5.2
+          ],
+          "amplitude": 1.3,
+          "in_fluid": true,
+          "clearance_m": 0.5,
+          "clearance_radii": 2.5,
+          "analytic_integral_unbounded": 0.16336281798666924,
+          "coarse": {
+            "integral": 0.16331359586303182,
+            "triangles_within_radius": 12,
+            "mean_edge_within_radius_m": 0.1654592571646444,
+            "radius_over_mean_edge": 1.2087567865784927
+          },
+          "fine": {
+            "integral": 0.16329661609914592,
+            "triangles_within_radius": 36,
+            "mean_edge_within_radius_m": 0.09063417985390201,
+            "radius_over_mean_edge": 2.2066730269131414
+          },
+          "coarse_vs_fine_integral_rel": 0.00010398111296801139,
+          "fine_vs_analytic_rel": 0.00040524452466731315
+        }
+      ]
+    },
+    {
+      "id": "V5d",
+      "name": "release amplitudes strictly inside the amplitude bounds",
+      "passed": true,
+      "detail": "[1.0, 0.7, 1.3] in (0.1, 2.0)",
+      "data": null
+    },
+    {
+      "id": "V5e",
+      "name": "analytic Gaussian source derivatives (x, y, A) match central differences",
+      "passed": true,
+      "detail": "max relative error 1.6e-10",
+      "data": null
+    },
+    {
+      "id": "V3a",
+      "name": "case 12: evaluator objective == direct (eta1 dt / 2) sum_n>=1 r^T W r, W = I",
+      "passed": true,
+      "detail": "J = 2.914758072331e+03, relative difference 1.6e-16",
+      "data": null
+    },
+    {
+      "id": "V3b",
+      "name": "case 12: shared objective supports a non-uniform diagonal W",
+      "passed": true,
+      "detail": "relative difference 0.0e+00",
+      "data": null
+    },
+    {
+      "id": "V3b",
+      "name": "case 12: shared objective supports a full symmetric positive definite W",
+      "passed": true,
+      "detail": "relative difference 0.0e+00",
+      "data": null
+    },
+    {
+      "id": "V3c",
+      "name": "case 12: repeated evaluation gives the same objective; data file and data array unchanged",
+      "passed": true,
+      "detail": "J = 2.914758072331e+03 twice",
+      "data": null
+    },
+    {
+      "id": "V3d",
+      "name": "sparse RK4 (data-generation stepping) reproduces the shared dense forward solver on the coarse mesh",
+      "passed": true,
+      "detail": "max relative trace difference 2.7e-16",
+      "data": null
+    },
+    {
+      "id": "V6",
+      "name": "case 12 (clean): initializer and optimizer entry points wired to the coarse mesh, its velocity and this dataset",
+      "passed": true,
+      "detail": "J = 2.914513e+03, |g| = 2.595e+02, 4381 candidate centres {'bay_1': 878, 'bay_2': 1018, 'bay_3': 869, 'aisle': 1204, 'bathroom_and_doorway': 428}",
+      "data": null
+    },
+    {
+      "id": "V6",
+      "name": "case 12 (noisy): initializer and optimizer entry points wired to the coarse mesh, its velocity and this dataset",
+      "passed": true,
+      "detail": "J = 2.914758e+03, |g| = 2.595e+02, 4381 candidate centres {'bay_1': 878, 'bay_2': 1018, 'bay_3': 869, 'aisle': 1204, 'bathroom_and_doorway': 428}; GN-diagonal scaling path: cond 3.26e+04 -> 3.51e+02 (7 forward / 6 adjoint sweeps)",
+      "data": null
+    },
+    {
+      "id": "V6",
+      "name": "case 13 (clean): initializer and optimizer entry points wired to the coarse mesh, its velocity and this dataset",
+      "passed": true,
+      "detail": "J = 6.254486e+03, |g| = 6.781e+03, 4381 candidate centres {'bay_1': 878, 'bay_2': 1018, 'bay_3': 869, 'aisle': 1204, 'bathroom_and_doorway': 428}",
+      "data": null
+    },
+    {
+      "id": "V6",
+      "name": "case 13 (noisy): initializer and optimizer entry points wired to the coarse mesh, its velocity and this dataset",
+      "passed": true,
+      "detail": "J = 6.254936e+03, |g| = 6.781e+03, 4381 candidate centres {'bay_1': 878, 'bay_2': 1018, 'bay_3': 869, 'aisle': 1204, 'bathroom_and_doorway': 428}",
+      "data": null
+    },
+    {
+      "id": "V6",
+      "name": "case 23 (clean): initializer and optimizer entry points wired to the coarse mesh, its velocity and this dataset",
+      "passed": true,
+      "detail": "J = 4.110438e+03, |g| = 8.280e+02, 4381 candidate centres {'bay_1': 878, 'bay_2': 1018, 'bay_3': 869, 'aisle': 1204, 'bathroom_and_doorway': 428}",
+      "data": null
+    },
+    {
+      "id": "V6",
+      "name": "case 23 (noisy): initializer and optimizer entry points wired to the coarse mesh, its velocity and this dataset",
+      "passed": true,
+      "detail": "J = 4.110802e+03, |g| = 8.280e+02, 4381 candidate centres {'bay_1': 878, 'bay_2': 1018, 'bay_3': 869, 'aisle': 1204, 'bathroom_and_doorway': 428}",
+      "data": null
+    },
+    {
+      "id": "V4",
+      "name": "case 12 (clean data): directional Taylor test of the discrete-adjoint gradient",
+      "passed": true,
+      "detail": "best two-step remainder rate 2.003, best FD-slope relative error 2.8e-06, J = 2.914513e+03, g.d = 1.321377e+02, distance to nearest true centre 2.54 m",
+      "data": null
+    },
+    {
+      "id": "V4",
+      "name": "case 12 (noisy data): directional Taylor test of the discrete-adjoint gradient",
+      "passed": true,
+      "detail": "best two-step remainder rate 2.003, best FD-slope relative error 2.8e-06, J = 2.914758e+03, g.d = 1.321217e+02, distance to nearest true centre 2.54 m",
+      "data": null
+    },
+    {
+      "id": "V4",
+      "name": "case 13 (clean data): directional Taylor test of the discrete-adjoint gradient",
+      "passed": true,
+      "detail": "best two-step remainder rate 2.000, best FD-slope relative error 1.4e-05, J = 6.254486e+03, g.d = -8.503837e+02, distance to nearest true centre 1.14 m",
+      "data": null
+    },
+    {
+      "id": "V4",
+      "name": "case 13 (noisy data): directional Taylor test of the discrete-adjoint gradient",
+      "passed": true,
+      "detail": "best two-step remainder rate 2.000, best FD-slope relative error 1.4e-05, J = 6.254936e+03, g.d = -8.503544e+02, distance to nearest true centre 1.14 m",
+      "data": null
+    },
+    {
+      "id": "V4",
+      "name": "case 23 (clean data): directional Taylor test of the discrete-adjoint gradient",
+      "passed": true,
+      "detail": "best two-step remainder rate 2.000, best FD-slope relative error 1.3e-06, J = 4.110438e+03, g.d = 1.193677e+02, distance to nearest true centre 2.50 m",
+      "data": null
+    },
+    {
+      "id": "V4",
+      "name": "case 23 (noisy data): directional Taylor test of the discrete-adjoint gradient",
+      "passed": true,
+      "detail": "best two-step remainder rate 2.000, best FD-slope relative error 1.3e-06, J = 4.110802e+03, g.d = 1.193712e+02, distance to nearest true centre 2.50 m",
+      "data": null
+    },
+    {
+      "id": "D",
+      "name": "case 12: coarse model at the true control vs clean fine-mesh data (diagnostic, not a pass/fail)",
+      "passed": true,
+      "detail": "J = 4.886373e-01 (relative misfit norm 0.0131; noise-only objective 2.851442e-01; ratio 1.71)",
+      "data": null
+    },
+    {
+      "id": "D",
+      "name": "case 13: coarse model at the true control vs clean fine-mesh data (diagnostic, not a pass/fail)",
+      "passed": true,
+      "detail": "J = 1.521038e+00 (relative misfit norm 0.0173; noise-only objective 5.038688e-01; ratio 3.02)",
+      "data": null
+    },
+    {
+      "id": "D",
+      "name": "case 23: coarse model at the true control vs clean fine-mesh data (diagnostic, not a pass/fail)",
+      "passed": true,
+      "detail": "J = 1.352086e+00 (relative misfit norm 0.0182; noise-only objective 4.087888e-01; ratio 3.31)",
+      "data": null
+    }
+  ]
+}

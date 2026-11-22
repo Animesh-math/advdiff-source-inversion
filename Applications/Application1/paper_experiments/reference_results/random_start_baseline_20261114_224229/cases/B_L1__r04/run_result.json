@@ -1,0 +1,434 @@
+{
+  "run_id": "B_L1__r04",
+  "exit_status": 0,
+  "error": null,
+  "start_control_from_argv": [
+    6.9923816626897315,
+    182.4876911935128,
+    0.986928653952312,
+    58.37115542242694,
+    239.32051478819017,
+    0.8483490665400075
+  ],
+  "true_control": [
+    100.0,
+    210.0,
+    1.3,
+    270.0,
+    60.0,
+    0.85
+  ],
+  "J0_zero_source": 562286.9322393695,
+  "initial_control": [
+    6.9923816626897315,
+    182.4876911935128,
+    0.986928653952312,
+    58.37115542242694,
+    239.32051478819017,
+    0.8483490665400075
+  ],
+  "start_control_matches_argv": true,
+  "final_control": [
+    0.0,
+    0.0,
+    0.1,
+    269.97928863105716,
+    60.13404454516761,
+    0.8461411001936338
+  ],
+  "initial_objective": 573345.2187490904,
+  "final_objective": 918.6878351786655,
+  "final_gradient_norm": 16921.569489968355,
+  "final_over_J0": 0.001633841696302438,
+  "initial_over_J0": 1.019666625481905,
+  "max_position_error_m": 232.59406699226014,
+  "max_amplitude_error": 1.2,
+  "position_errors_m": [
+    232.59406699226014,
+    0.1356351757203064
+  ],
+  "amplitude_errors": [
+    1.2,
+    0.0038588998063662228
+  ],
+  "permutation": [
+    0,
+    1
+  ],
+  "initial_max_position_error_m": 290.1314215961132,
+  "initial_max_amplitude_error": 0.4516509334599925,
+  "success_flag": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "iterations": 61,
+  "n_objective_evaluations": 100,
+  "n_gradient_evaluations": 100,
+  "lbfgsb_maxcor": 10,
+  "scaling": "gn-diag",
+  "gn_condition_unscaled": 2362196668.9872794,
+  "gn_condition_scaled": 1283601.5710745882,
+  "gn_n_floored": 0,
+  "feasibility": {
+    "feasibility_mode": "raw",
+    "invalid_evaluations": 32,
+    "projected_evaluations": 0,
+    "penalized_evaluations": 0,
+    "projected_source_events": 0,
+    "max_projection_distance": 0.0,
+    "last_projection_distance": null,
+    "raw_infeasible_evaluations": 32,
+    "raw_infeasible_iterates": 16,
+    "raw_max_outside_distance": 16.307710836721608,
+    "raw_infeasible_iterate_log": [
+      {
+        "iteration": 1,
+        "objective": 561631.3048323224,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              111.25243191867541,
+              190.1312674251159
+            ],
+            "amplitude": 0.1,
+            "distance_outside_fluid": 5.75570388345968
+          }
+        ]
+      },
+      {
+        "iteration": 2,
+        "objective": 561429.8359167996,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              114.31721464359906,
+              187.91526517329774
+            ],
+            "amplitude": 0.11036288326239237,
+            "distance_outside_fluid": 3.6780782385381
+          }
+        ]
+      },
+      {
+        "iteration": 3,
+        "objective": 561429.0538989975,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              114.4533877654176,
+              187.83576658224632
+            ],
+            "amplitude": 0.11143031307681109,
+            "distance_outside_fluid": 3.6362606111843503
+          }
+        ]
+      },
+      {
+        "iteration": 4,
+        "objective": 561428.9051949121,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              114.3671544276567,
+              187.9567559392851
+            ],
+            "amplitude": 0.1145438899840265,
+            "distance_outside_fluid": 3.6132704503414423
+          }
+        ]
+      },
+      {
+        "iteration": 5,
+        "objective": 561428.0436922568,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              113.68148968346509,
+              188.8400481630778
+            ],
+            "amplitude": 0.13506565740145246,
+            "distance_outside_fluid": 3.680482652574659
+          }
+        ]
+      },
+      {
+        "iteration": 6,
+        "objective": 561424.043468623,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              110.09699130538493,
+              193.3599694919177
+            ],
+            "amplitude": 0.23707435255416695,
+            "distance_outside_fluid": 3.588075865913216
+          }
+        ]
+      },
+      {
+        "iteration": 9,
+        "objective": 561370.9454272685,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              89.27454062918295,
+              218.84108481098616
+            ],
+            "amplitude": 0.7682632839283291,
+            "distance_outside_fluid": 3.7609020225358902
+          }
+        ]
+      },
+      {
+        "iteration": 10,
+        "objective": 561370.3201179241,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              91.62635273931218,
+              216.88651998610902
+            ],
+            "amplitude": 0.7371389264886977,
+            "distance_outside_fluid": 0.7146585557855839
+          }
+        ]
+      },
+      {
+        "iteration": 11,
+        "objective": 561365.1380783614,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              90.41262605402873,
+              218.03712344838027
+            ],
+            "amplitude": 0.7632080407503848,
+            "distance_outside_fluid": 2.3692908971050084
+          }
+        ]
+      },
+      {
+        "iteration": 12,
+        "objective": 561364.8261440422,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              90.40666090423501,
+              218.0326506618441
+            ],
+            "amplitude": 0.7711569898911335,
+            "distance_outside_fluid": 2.3711345671726525
+          }
+        ]
+      },
+      {
+        "iteration": 13,
+        "objective": 561364.5094204124,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              90.47080416554094,
+              218.04721513839056
+            ],
+            "amplitude": 0.7855328728679286,
+            "distance_outside_fluid": 2.330779931158119
+          }
+        ]
+      },
+      {
+        "iteration": 17,
+        "objective": 561333.4650659722,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              120.38749482306197,
+              194.7536965311071
+            ],
+            "amplitude": 2.0,
+            "distance_outside_fluid": 1.1892558916898728
+          }
+        ]
+      },
+      {
+        "iteration": 26,
+        "objective": 528673.6130517664,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              177.20550880627235,
+              65.35753800939015
+            ],
+            "amplitude": 2.0,
+            "distance_outside_fluid": 7.151477936731894
+          }
+        ]
+      },
+      {
+        "iteration": 28,
+        "objective": 342823.5450443232,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              225.5608572871021,
+              73.22767026504586
+            ],
+            "amplitude": 1.3592421008323496,
+            "distance_outside_fluid": 9.273037849532244
+          }
+        ]
+      },
+      {
+        "iteration": 29,
+        "objective": 249519.5271069947,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              236.90593831609226,
+              115.54666048936558
+            ],
+            "amplitude": 1.4270784136168027,
+            "distance_outside_fluid": 8.528168294786118
+          }
+        ]
+      },
+      {
+        "iteration": 32,
+        "objective": 20032.305568682732,
+        "sources": [
+          {
+            "source_id": 2,
+            "center": [
+              244.8493774563636,
+              78.60371011605807
+            ],
+            "amplitude": 1.403028906874713,
+            "distance_outside_fluid": 4.1767278457989265
+          }
+        ]
+      }
+    ]
+  },
+  "pde": {
+    "lx": 301.98544034478255,
+    "ly": 700.4646734384005,
+    "k": 10.0,
+    "vx": 2.07,
+    "vy": -0.36,
+    "dt": 0.1,
+    "tfinal": 150.0,
+    "jprint": 1,
+    "ngauss": 3,
+    "sigma2": 400.0,
+    "velocity_field": {
+      "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "coords_shape": [
+        2795,
+        3
+      ],
+      "velocity_nodes_shape": [
+        2795,
+        2
+      ],
+      "velocity_magnitude_min": 2.5643005027931998e-21,
+      "velocity_magnitude_max": 10.580957815647944,
+      "coordinate_validation_passed": true,
+      "coordinate_validation_tolerance": 1e-10,
+      "max_coordinate_difference": 0.0
+    },
+    "velocity_mode": "nodal"
+  },
+  "active_bounds": [
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ],
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ]
+  ],
+  "final_feasibility_check": {
+    "centers_in_fluid_mesh": [
+      true,
+      true
+    ],
+    "all_centers_feasible": true,
+    "signed_clearance_m": [
+      0.0,
+      23.58744025755568
+    ],
+    "within_lbfgsb_box": true
+  },
+  "numerical_flags": {
+    "finite_final_values": true,
+    "abnormal_termination": false,
+    "iteration_limit": false,
+    "raw_infeasible_evaluations": 32
+  },
+  "history_rows": 62,
+  "pde_solves": {
+    "data_generation": {
+      "seconds": 6.0376797979697585,
+      "forward_solves": 1,
+      "adjoint_solves": 0
+    },
+    "scaling_setup": {
+      "seconds": 474.4985808120109,
+      "forward_solves": 7,
+      "adjoint_solves": 6
+    },
+    "optimization": {
+      "seconds": 7278.757666083053,
+      "forward_solves": 101,
+      "adjoint_solves": 100
+    },
+    "post_init_total": {
+      "seconds": 7753.256246895064,
+      "forward_solves": 108,
+      "adjoint_solves": 106
+    },
+    "driver_output_overhead": {
+      "seconds": 159.4818413038738,
+      "forward_solves": 4,
+      "adjoint_solves": 2
+    },
+    "between_data_and_optimization": {
+      "seconds": 4.465831443667412e-05,
+      "forward_solves": 0,
+      "adjoint_solves": 0
+    },
+    "total_counted": {
+      "forward_solves": 113,
+      "adjoint_solves": 108
+    }
+  }
+}

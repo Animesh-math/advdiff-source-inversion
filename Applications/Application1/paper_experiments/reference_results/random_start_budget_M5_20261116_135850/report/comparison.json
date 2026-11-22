@@ -1,0 +1,137 @@
+{
+  "ours": {
+    "method": "sensitivity initialization + GN-diag L-BFGS-B (saved paper run)",
+    "init_fwd": 3069,
+    "init_adj": 12,
+    "local_fwd": 84,
+    "local_adj": 82,
+    "total_fwd": 3153,
+    "total_adj": 94,
+    "total_sweeps": 3247,
+    "gn_setup_fwd": 16,
+    "gn_setup_adj": 15,
+    "iterations": 62,
+    "objective": 7.771800402956202e-15,
+    "objective_over_J0": 4.379119310862336e-22,
+    "max_center_err_m": 1.9158110510714794e-08,
+    "max_amp_err": 1.9449619692579745e-10,
+    "feasible": true,
+    "stop": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "control": [
+      100.00000000048254,
+      209.99999999768733,
+      1.6000000000247645,
+      275.0000000036847,
+      119.99999999966319,
+      1.0999999999153676,
+      269.9999999966208,
+      600.00000000508,
+      1.3500000001944963,
+      109.99999998598473,
+      659.999999998054,
+      0.9000000001109427,
+      200.00000001899159,
+      425.0000000025205,
+      0.6999999999582392
+    ]
+  },
+  "best_random": {
+    "method": "best of 10 random starts by lowest objective (r05)",
+    "selected_run": "r05",
+    "selection_rule": "lowest best-feasible objective (data misfit) only",
+    "own_fwd": 163,
+    "own_adj": 161,
+    "own_sweeps": 324,
+    "aggregate_fwd_all_starts": 1629,
+    "aggregate_adj_all_starts": 1612,
+    "aggregate_sweeps_all_starts": 3241,
+    "aggregate_gn_setup_fwd": 160,
+    "aggregate_gn_setup_adj": 150,
+    "aggregate_unused_sweeps": 6,
+    "total_budget_sweeps": 3247,
+    "iterations": 115,
+    "aggregate_iterations": 1114,
+    "objective": 71629.01805611028,
+    "objective_over_J0": 0.004036027688877681,
+    "max_center_err_m": 313.9650774445065,
+    "max_amp_err": 1.0,
+    "feasible": true,
+    "stop": "budget_exhausted",
+    "control": [
+      274.7219042940469,
+      120.05622342240488,
+      1.107068596095099,
+      301.98544034478255,
+      0.0,
+      0.1,
+      100.04016936952232,
+      209.96568717464626,
+      1.5997259269988084,
+      250.06701094573117,
+      609.087457745096,
+      2.0,
+      199.01206923691558,
+      424.7404131205259,
+      0.6986424441254373
+    ],
+    "n_finished": 10
+  },
+  "J0": 17747405.01743895,
+  "budget": {
+    "unit": "PDE sweep: one complete forward solve OR one complete adjoint solve = 1 unit",
+    "source": "Applications/Application1/output/post_init_scaling_validation_20261004_125952/cases/M5_S4_gndiag/run_instrumentation.json (actual gt.run_forward / gt.rk4_discrete_source_adjoint calls)",
+    "reference_initialization": {
+      "forward": 3069,
+      "adjoint": 12,
+      "sweeps": 3081
+    },
+    "reference_local_refinement": {
+      "forward": 84,
+      "adjoint": 82,
+      "sweeps": 166,
+      "decomposition": {
+        "objective_at_initialized_control": {
+          "forward": 1,
+          "adjoint": 0
+        },
+        "gn_diag_construction": {
+          "forward": 16,
+          "adjoint": 15
+        },
+        "lbfgsb_evaluations_incl_line_search": {
+          "forward": 67,
+          "adjoint": 67,
+          "nfev": 67,
+          "njev": 67,
+          "iterations": 62
+        },
+        "check": "84 = 1 + 16 + 67 and 82 = 15 + 67 (verified)"
+      }
+    },
+    "total_budget": {
+      "forward": 3153,
+      "adjoint": 94,
+      "sweeps": 3247
+    },
+    "paper_note": "the paper's 3,069 forward sweeps are the initialization forward count only; the initialization also used 12 adjoint sweeps and local refinement 84 fwd + 82 adj.",
+    "excluded_for_both_methods": {
+      "synthetic_data_generation": "1 forward solve of the true control (needed by any method)",
+      "driver_reporting_overhead": "reference: 4 fwd / 2 adj (forward smoke/export at the start control, objective/gradient smoke test, final re-evaluation/state export); these do not feed the optimizer. Measured and reported separately for every random start too."
+    },
+    "n_starts": 10,
+    "per_start_allocation_sweeps": {
+      "r01": 325,
+      "r02": 325,
+      "r03": 325,
+      "r04": 325,
+      "r05": 325,
+      "r06": 325,
+      "r07": 325,
+      "r08": 324,
+      "r09": 324,
+      "r10": 324
+    },
+    "allocation_rule": "floor(3247/10) = 324 each; remainder 7 -> +1 sweep to r01..r07 (predetermined run order). No reallocation of unused allowance.",
+    "enforcement": "PDE-evaluation level inside the driver's budgeted block (objective at the start, GN-diag construction, L-BFGS-B): before every forward or adjoint solve the guard checks the remaining allowance; during L-BFGS-B a new objective evaluation (forward) is only started when at least 2 sweeps remain, so that its gradient (adjoint) can also be completed. Otherwise the run stops cleanly (no solve started) and returns the best feasible fully evaluated point (objective AND gradient computed, all source centers in the fluid mesh). The GN-diag construction is only started if its full cost plus one evaluation fits."
+  }
+}

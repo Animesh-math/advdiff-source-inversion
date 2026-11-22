@@ -1,0 +1,3297 @@
+{
+  "source_configs": {
+    "A": {
+      "label": "c06 (manuscript discrete-sensor example): mid-domain wake + upper-right street",
+      "documented_as": "final_sweep c06_nearwall_b13; node_sensors_right_bottom_top_c06",
+      "true_control": [
+        162.0,
+        300.0,
+        1.4,
+        270.0,
+        600.0,
+        0.95
+      ],
+      "source_wall_clearance_m": [
+        4.384149436263383,
+        25.9449676100578
+      ]
+    },
+    "B": {
+      "label": "c07 (lower domain): wake between buildings 15/19 + south-east corner below building 21",
+      "documented_as": "final_sweep c07_lower_domain",
+      "true_control": [
+        100.0,
+        210.0,
+        1.3,
+        270.0,
+        60.0,
+        0.85
+      ],
+      "source_wall_clearance_m": [
+        7.747813319057597,
+        23.60618689847124
+      ]
+    }
+  },
+  "layout_info": {
+    "L1_boundary": "boundary-only: 25 outer-boundary nodes (right 13, bottom 6, top 6), the existing node_sensors_right_bottom_top_c06 set",
+    "L2_mixed": "mixed: 10 outer-boundary nodes (right 6, bottom 2, top 2) + 15 interior fluid nodes around buildings / in streets and wakes",
+    "L3_weak": "deliberately weak: 25 interior fluid nodes upstream of the sources or screened by buildings / poorly connected to their downstream paths (intended to provide weak observations)"
+  },
+  "cases": [
+    {
+      "case_id": "A_L1_boundary",
+      "source_config": "A",
+      "layout": "L1_boundary",
+      "layout_description": "boundary-only: 25 outer-boundary nodes (right 13, bottom 6, top 6), the existing node_sensors_right_bottom_top_c06 set",
+      "true_control": [
+        162.0,
+        300.0,
+        1.4,
+        270.0,
+        600.0,
+        0.95
+      ],
+      "sensor_node_ids": [
+        641,
+        644,
+        647,
+        650,
+        653,
+        656,
+        659,
+        662,
+        665,
+        668,
+        671,
+        674,
+        677,
+        582,
+        585,
+        588,
+        591,
+        594,
+        596,
+        693,
+        690,
+        687,
+        684,
+        681,
+        679
+      ],
+      "sensors": [
+        {
+          "sensor_index": 0,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            21.591354933188995
+          ],
+          "node_id": 641,
+          "actual_xy": [
+            301.98544034478255,
+            21.591354933188995
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 1,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            84.26294090910233
+          ],
+          "node_id": 644,
+          "actual_xy": [
+            301.98544034478255,
+            84.26294090910233
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 2,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            146.89537197179743
+          ],
+          "node_id": 647,
+          "actual_xy": [
+            301.98544034478255,
+            146.89537197179743
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 3,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            209.78690056328196
+          ],
+          "node_id": 650,
+          "actual_xy": [
+            301.98544034478255,
+            209.78690056328196
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 4,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            268.02978988797986
+          ],
+          "node_id": 653,
+          "actual_xy": [
+            301.98544034478255,
+            268.02978988797986
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 5,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            311.66010967758484
+          ],
+          "node_id": 656,
+          "actual_xy": [
+            301.98544034478255,
+            311.66010967758484
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 6,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            356.78659384607454
+          ],
+          "node_id": 659,
+          "actual_xy": [
+            301.98544034478255,
+            356.78659384607454
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 7,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            411.2740488081763
+          ],
+          "node_id": 662,
+          "actual_xy": [
+            301.98544034478255,
+            411.2740488081763
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 8,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            452.9394430399989
+          ],
+          "node_id": 665,
+          "actual_xy": [
+            301.98544034478255,
+            452.9394430399989
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 9,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            490.98378297447925
+          ],
+          "node_id": 668,
+          "actual_xy": [
+            301.98544034478255,
+            490.98378297447925
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 10,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            540.1290389206843
+          ],
+          "node_id": 671,
+          "actual_xy": [
+            301.98544034478255,
+            540.1290389206843
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 11,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            594.0383510207757
+          ],
+          "node_id": 674,
+          "actual_xy": [
+            301.98544034478255,
+            594.0383510207757
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 12,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            657.2819635719934
+          ],
+          "node_id": 677,
+          "actual_xy": [
+            301.98544034478255,
+            657.2819635719934
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 13,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            21.722438826865982,
+            0.0
+          ],
+          "node_id": 582,
+          "actual_xy": [
+            21.722438826865982,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 14,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            78.43458346417174,
+            0.0
+          ],
+          "node_id": 585,
+          "actual_xy": [
+            78.43458346417174,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 15,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            129.7057670445065,
+            0.0
+          ],
+          "node_id": 588,
+          "actual_xy": [
+            129.7057670445065,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 16,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            179.30520862987032,
+            0.0
+          ],
+          "node_id": 591,
+          "actual_xy": [
+            179.30520862987032,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 17,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            238.89794434956275,
+            0.0
+          ],
+          "node_id": 594,
+          "actual_xy": [
+            238.89794434956275,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 18,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            280.26300151791656,
+            0.0
+          ],
+          "node_id": 596,
+          "actual_xy": [
+            280.26300151791656,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 19,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            16.426677579176612,
+            700.4646734384005
+          ],
+          "node_id": 693,
+          "actual_xy": [
+            16.426677579176612,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 20,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            60.120140525803436,
+            700.4646734384005
+          ],
+          "node_id": 690,
+          "actual_xy": [
+            60.120140525803436,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 21,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            111.35106871026801,
+            700.4646734384005
+          ],
+          "node_id": 687,
+          "actual_xy": [
+            111.35106871026801,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 22,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            174.4698149127653,
+            700.4646734384005
+          ],
+          "node_id": 684,
+          "actual_xy": [
+            174.4698149127653,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 23,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            238.22762762877392,
+            700.4646734384005
+          ],
+          "node_id": 681,
+          "actual_xy": [
+            238.22762762877392,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 24,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            280.7328361060936,
+            700.4646734384005
+          ],
+          "node_id": 679,
+          "actual_xy": [
+            280.7328361060936,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        }
+      ],
+      "layout_figure": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/A_L1_boundary/layout_A_L1_boundary.png"
+    },
+    {
+      "case_id": "A_L2_mixed",
+      "source_config": "A",
+      "layout": "L2_mixed",
+      "layout_description": "mixed: 10 outer-boundary nodes (right 6, bottom 2, top 2) + 15 interior fluid nodes around buildings / in streets and wakes",
+      "true_control": [
+        162.0,
+        300.0,
+        1.4,
+        270.0,
+        600.0,
+        0.95
+      ],
+      "sensor_node_ids": [
+        641,
+        647,
+        653,
+        662,
+        671,
+        677,
+        588,
+        596,
+        690,
+        684,
+        1855,
+        2771,
+        2704,
+        1279,
+        789,
+        1156,
+        1677,
+        2464,
+        1137,
+        827,
+        1807,
+        1332,
+        1616,
+        2790,
+        1022
+      ],
+      "sensors": [
+        {
+          "sensor_index": 0,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            301.98544034478255,
+            21.591354933188995
+          ],
+          "node_id": 641,
+          "actual_xy": [
+            301.98544034478255,
+            21.591354933188995
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 1,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            301.98544034478255,
+            146.89537197179743
+          ],
+          "node_id": 647,
+          "actual_xy": [
+            301.98544034478255,
+            146.89537197179743
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 2,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            301.98544034478255,
+            268.02978988797986
+          ],
+          "node_id": 653,
+          "actual_xy": [
+            301.98544034478255,
+            268.02978988797986
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 3,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            301.98544034478255,
+            411.2740488081763
+          ],
+          "node_id": 662,
+          "actual_xy": [
+            301.98544034478255,
+            411.2740488081763
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 4,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            301.98544034478255,
+            540.1290389206843
+          ],
+          "node_id": 671,
+          "actual_xy": [
+            301.98544034478255,
+            540.1290389206843
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 5,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            301.98544034478255,
+            657.2819635719934
+          ],
+          "node_id": 677,
+          "actual_xy": [
+            301.98544034478255,
+            657.2819635719934
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 6,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            129.7057670445065,
+            0.0
+          ],
+          "node_id": 588,
+          "actual_xy": [
+            129.7057670445065,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 7,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            280.26300151791656,
+            0.0
+          ],
+          "node_id": 596,
+          "actual_xy": [
+            280.26300151791656,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 8,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            60.120140525803436,
+            700.4646734384005
+          ],
+          "node_id": 690,
+          "actual_xy": [
+            60.120140525803436,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 9,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            174.4698149127653,
+            700.4646734384005
+          ],
+          "node_id": 684,
+          "actual_xy": [
+            174.4698149127653,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 10,
+          "kind": "interior_near_building",
+          "note": "wake between buildings 11 and 14",
+          "requested_xy": [
+            285.0,
+            330.0
+          ],
+          "node_id": 1855,
+          "actual_xy": [
+            286.9262012791005,
+            328.2411739927775
+          ],
+          "snap_distance_m": 2.6083941978333556,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 15.05923906568205
+        },
+        {
+          "sensor_index": 11,
+          "kind": "interior_near_building",
+          "note": "street between buildings 13 and 14",
+          "requested_xy": [
+            255.0,
+            300.0
+          ],
+          "node_id": 2771,
+          "actual_xy": [
+            256.52638902317267,
+            298.0724291961815
+          ],
+          "snap_distance_m": 2.458738020569823,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 3.8801208376934007
+        },
+        {
+          "sensor_index": 12,
+          "kind": "interior_near_building",
+          "note": "street between buildings 15 and 16",
+          "requested_xy": [
+            160.0,
+            255.0
+          ],
+          "node_id": 2704,
+          "actual_xy": [
+            163.16479911410715,
+            254.54181118079578
+          ],
+          "snap_distance_m": 3.1977946192176243,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 4.373959434943164
+        },
+        {
+          "sensor_index": 13,
+          "kind": "interior_near_building",
+          "note": "street between buildings 16 and 17",
+          "requested_xy": [
+            240.0,
+            205.0
+          ],
+          "node_id": 1279,
+          "actual_xy": [
+            240.99865939776646,
+            207.26507770919125
+          ],
+          "snap_distance_m": 2.4754590728635226,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.949065463406789
+        },
+        {
+          "sensor_index": 14,
+          "kind": "interior_near_building",
+          "note": "east of building 17",
+          "requested_xy": [
+            265.0,
+            185.0
+          ],
+          "node_id": 789,
+          "actual_xy": [
+            266.43885352037614,
+            181.6625576778024
+          ],
+          "snap_distance_m": 3.6343941320520736,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 21.221581968717263
+        },
+        {
+          "sensor_index": 15,
+          "kind": "interior_near_building",
+          "note": "street between buildings 19 and 20",
+          "requested_xy": [
+            160.0,
+            100.0
+          ],
+          "node_id": 1156,
+          "actual_xy": [
+            160.42995957750827,
+            99.20825499939383
+          ],
+          "snap_distance_m": 0.9009580369117947,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 9.208506547087998
+        },
+        {
+          "sensor_index": 16,
+          "kind": "interior_near_building",
+          "note": "south of building 21",
+          "requested_xy": [
+            210.0,
+            40.0
+          ],
+          "node_id": 1677,
+          "actual_xy": [
+            213.6997751648887,
+            43.07288372097537
+          ],
+          "snap_distance_m": 4.8094646930155,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 8.998880649348697
+        },
+        {
+          "sensor_index": 17,
+          "kind": "interior_near_building",
+          "note": "east of building 20",
+          "requested_xy": [
+            265.0,
+            100.0
+          ],
+          "node_id": 2464,
+          "actual_xy": [
+            264.46433099987917,
+            102.43356262648012
+          ],
+          "snap_distance_m": 2.491820285392046,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 18.918028767206835
+        },
+        {
+          "sensor_index": 18,
+          "kind": "interior_near_building",
+          "note": "between buildings 15 and 12 (jet entrance)",
+          "requested_xy": [
+            120.0,
+            300.0
+          ],
+          "node_id": 1137,
+          "actual_xy": [
+            117.42675484280335,
+            301.0115600822901
+          ],
+          "snap_distance_m": 2.7649311816243736,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 22.912491617952355
+        },
+        {
+          "sensor_index": 19,
+          "kind": "interior_near_building",
+          "note": "main jet north of building 13",
+          "requested_xy": [
+            200.0,
+            380.0
+          ],
+          "node_id": 827,
+          "actual_xy": [
+            198.30186941096326,
+            377.7670684456825
+          ],
+          "snap_distance_m": 2.805286228478104,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 40.31518061515373
+        },
+        {
+          "sensor_index": 20,
+          "kind": "interior_near_building",
+          "note": "east of building 8",
+          "requested_xy": [
+            290.0,
+            470.0
+          ],
+          "node_id": 1807,
+          "actual_xy": [
+            291.1735958865611,
+            466.3187183442933
+          ],
+          "snap_distance_m": 3.86382736850338,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.2127485243581315
+        },
+        {
+          "sensor_index": 21,
+          "kind": "interior_near_building",
+          "note": "street between buildings 4 and 8",
+          "requested_xy": [
+            200.0,
+            490.0
+          ],
+          "node_id": 1332,
+          "actual_xy": [
+            196.35962281818502,
+            490.3814532835968
+          ],
+          "snap_distance_m": 3.6603077238732222,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 11.103844179236253
+        },
+        {
+          "sensor_index": 22,
+          "kind": "interior_near_building",
+          "note": "street north of building 4",
+          "requested_xy": [
+            240.0,
+            590.0
+          ],
+          "node_id": 1616,
+          "actual_xy": [
+            242.9368843336124,
+            586.3431639428891
+          ],
+          "snap_distance_m": 4.690174787532389,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.958531773184226
+        },
+        {
+          "sensor_index": 23,
+          "kind": "interior_near_building",
+          "note": "street between buildings 3 and 4",
+          "requested_xy": [
+            110.0,
+            545.0
+          ],
+          "node_id": 2790,
+          "actual_xy": [
+            108.88711422937922,
+            546.0115495945793
+          ],
+          "snap_distance_m": 1.503910675786191,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 15.592488224223791
+        },
+        {
+          "sensor_index": 24,
+          "kind": "interior_near_building",
+          "note": "street between building 1 and buildings 2/3",
+          "requested_xy": [
+            70.0,
+            590.0
+          ],
+          "node_id": 1022,
+          "actual_xy": [
+            69.22813570819562,
+            590.2193941122969
+          ],
+          "snap_distance_m": 0.8024389456358678,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 12.467030339375293
+        }
+      ],
+      "layout_figure": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/A_L2_mixed/layout_A_L2_mixed.png"
+    },
+    {
+      "case_id": "A_L3_weak",
+      "source_config": "A",
+      "layout": "L3_weak",
+      "layout_description": "deliberately weak: 25 interior fluid nodes upstream of the sources or screened by buildings / poorly connected to their downstream paths (intended to provide weak observations)",
+      "true_control": [
+        162.0,
+        300.0,
+        1.4,
+        270.0,
+        600.0,
+        0.95
+      ],
+      "sensor_node_ids": [
+        1944,
+        2431,
+        2141,
+        2697,
+        2045,
+        1319,
+        2708,
+        1387,
+        1607,
+        2607,
+        1950,
+        1270,
+        1568,
+        2790,
+        2746,
+        876,
+        2026,
+        2698,
+        2006,
+        1683,
+        935,
+        1655,
+        2290,
+        1195,
+        1302
+      ],
+      "sensors": [
+        {
+          "sensor_index": 0,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, far upstream",
+          "requested_xy": [
+            12.0,
+            30.0
+          ],
+          "node_id": 1944,
+          "actual_xy": [
+            11.994816195976455,
+            33.614758574578445
+          ],
+          "snap_distance_m": 3.6147622915362705,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 11.994816195976455
+        },
+        {
+          "sensor_index": 1,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, far upstream",
+          "requested_xy": [
+            12.0,
+            110.0
+          ],
+          "node_id": 2431,
+          "actual_xy": [
+            7.878017368086148,
+            109.7361820905935
+          ],
+          "snap_distance_m": 4.130416529494703,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.878017368086148
+        },
+        {
+          "sensor_index": 2,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, upstream of source 1",
+          "requested_xy": [
+            12.0,
+            230.0
+          ],
+          "node_id": 2141,
+          "actual_xy": [
+            9.642470168997534,
+            231.40410093410173
+          ],
+          "snap_distance_m": 2.743983661979765,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 9.642470168997534
+        },
+        {
+          "sensor_index": 3,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, upstream of source 1",
+          "requested_xy": [
+            12.0,
+            300.0
+          ],
+          "node_id": 2697,
+          "actual_xy": [
+            12.424388159066439,
+            296.77667494048364
+          ],
+          "snap_distance_m": 3.2511428373514932,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 12.424388159066439
+        },
+        {
+          "sensor_index": 4,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, upstream",
+          "requested_xy": [
+            12.0,
+            370.0
+          ],
+          "node_id": 2045,
+          "actual_xy": [
+            8.411018365179189,
+            374.3230168018781
+          ],
+          "snap_distance_m": 5.618653169968896,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 8.411018365179189
+        },
+        {
+          "sensor_index": 5,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, upstream",
+          "requested_xy": [
+            12.0,
+            440.0
+          ],
+          "node_id": 1319,
+          "actual_xy": [
+            11.671164369385224,
+            444.6986108646961
+          ],
+          "snap_distance_m": 4.710103706905187,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 11.671164369385224
+        },
+        {
+          "sensor_index": 6,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, upstream of source 2",
+          "requested_xy": [
+            12.0,
+            560.0
+          ],
+          "node_id": 2708,
+          "actual_xy": [
+            7.437024725601077,
+            561.2170138188812
+          ],
+          "snap_distance_m": 4.722485149804479,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.437024725601077
+        },
+        {
+          "sensor_index": 7,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, upstream of source 2",
+          "requested_xy": [
+            12.0,
+            650.0
+          ],
+          "node_id": 1387,
+          "actual_xy": [
+            9.591607621870935,
+            648.6290769261832
+          ],
+          "snap_distance_m": 2.77124230650326,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 9.591607621870935
+        },
+        {
+          "sensor_index": 8,
+          "kind": "interior_weak",
+          "note": "north-west, upstream of source 2",
+          "requested_xy": [
+            100.0,
+            690.0
+          ],
+          "node_id": 1607,
+          "actual_xy": [
+            97.55062540341169,
+            686.4103736219986
+          ],
+          "snap_distance_m": 4.345670655728032,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 14.054299816401908
+        },
+        {
+          "sensor_index": 9,
+          "kind": "interior_weak",
+          "note": "east of building 1, upstream of source 2",
+          "requested_xy": [
+            100.0,
+            640.0
+          ],
+          "node_id": 2607,
+          "actual_xy": [
+            97.22743426717352,
+            636.1171596674831
+          ],
+          "snap_distance_m": 4.771118295605743,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 16.207443306361565
+        },
+        {
+          "sensor_index": 10,
+          "kind": "interior_weak",
+          "note": "north edge, upstream/cross-stream of source 2",
+          "requested_xy": [
+            150.0,
+            690.0
+          ],
+          "node_id": 1950,
+          "actual_xy": [
+            156.77912796667079,
+            683.415635043988
+          ],
+          "snap_distance_m": 9.450419983389988,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 17.04903839441249
+        },
+        {
+          "sensor_index": 11,
+          "kind": "interior_weak",
+          "note": "upstream of source 2",
+          "requested_xy": [
+            150.0,
+            630.0
+          ],
+          "node_id": 1270,
+          "actual_xy": [
+            148.749666290998,
+            635.7291886040766
+          ],
+          "snap_distance_m": 5.864037554871915,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 64.73548483432387
+        },
+        {
+          "sensor_index": 12,
+          "kind": "interior_weak",
+          "note": "street west end between 1 and 2, upstream of source 2",
+          "requested_xy": [
+            45.0,
+            592.0
+          ],
+          "node_id": 1568,
+          "actual_xy": [
+            47.45594569738023,
+            595.4914246900007
+          ],
+          "snap_distance_m": 4.268690154418219,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.555872847193209
+        },
+        {
+          "sensor_index": 13,
+          "kind": "interior_weak",
+          "note": "between buildings 3 and 4, screened from source 2",
+          "requested_xy": [
+            110.0,
+            545.0
+          ],
+          "node_id": 2790,
+          "actual_xy": [
+            108.88711422937922,
+            546.0115495945793
+          ],
+          "snap_distance_m": 1.503910675786191,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 15.592488224223791
+        },
+        {
+          "sensor_index": 14,
+          "kind": "interior_weak",
+          "note": "courtyard among buildings 5/6/7/9",
+          "requested_xy": [
+            95.0,
+            455.0
+          ],
+          "node_id": 2746,
+          "actual_xy": [
+            92.74687402817653,
+            455.72823877009796
+          ],
+          "snap_distance_m": 2.367891118945131,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 4.064352779171868
+        },
+        {
+          "sensor_index": 15,
+          "kind": "interior_weak",
+          "note": "street between buildings 2 and 9",
+          "requested_xy": [
+            55.0,
+            490.0
+          ],
+          "node_id": 876,
+          "actual_xy": [
+            53.918673250998836,
+            491.7426759751979
+          ],
+          "snap_distance_m": 2.050899093723889,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 12.592969839061382
+        },
+        {
+          "sensor_index": 16,
+          "kind": "interior_weak",
+          "note": "south-west corner jet, upstream",
+          "requested_xy": [
+            40.0,
+            60.0
+          ],
+          "node_id": 2026,
+          "actual_xy": [
+            40.88960717699956,
+            55.408922344475286
+          ],
+          "snap_distance_m": 4.676472491999438,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 20.437151579511042
+        },
+        {
+          "sensor_index": 17,
+          "kind": "interior_weak",
+          "note": "south of building 19, screened by 15/16/19",
+          "requested_xy": [
+            100.0,
+            20.0
+          ],
+          "node_id": 2698,
+          "actual_xy": [
+            99.11126116081141,
+            23.58535990069504
+          ],
+          "snap_distance_m": 3.693868208503685,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 18.704485667426155
+        },
+        {
+          "sensor_index": 18,
+          "kind": "interior_weak",
+          "note": "south of building 21, screened by 16/17/20/21",
+          "requested_xy": [
+            200.0,
+            30.0
+          ],
+          "node_id": 2006,
+          "actual_xy": [
+            195.24025211506523,
+            32.75902291818056
+          ],
+          "snap_distance_m": 5.5015822625119934,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 19.042492073796964
+        },
+        {
+          "sensor_index": 19,
+          "kind": "interior_weak",
+          "note": "south-east corner, screened from both sources",
+          "requested_xy": [
+            290.0,
+            30.0
+          ],
+          "node_id": 1683,
+          "actual_xy": [
+            284.70714052580297,
+            25.554600797593594
+          ],
+          "snap_distance_m": 6.912013851429465,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 17.278299818979576
+        },
+        {
+          "sensor_index": 20,
+          "kind": "interior_weak",
+          "note": "street between 19 and 20, screened by 16",
+          "requested_xy": [
+            160.0,
+            150.0
+          ],
+          "node_id": 935,
+          "actual_xy": [
+            159.37192182376748,
+            147.7436279816029
+          ],
+          "snap_distance_m": 2.342156459518645,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 10.042935223891904
+        },
+        {
+          "sensor_index": 21,
+          "kind": "interior_weak",
+          "note": "street between 16 and 17, behind building 16",
+          "requested_xy": [
+            195.0,
+            205.0
+          ],
+          "node_id": 1655,
+          "actual_xy": [
+            191.81968891149154,
+            206.04585319707985
+          ],
+          "snap_distance_m": 3.347863128852793,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 8.430878353573926
+        },
+        {
+          "sensor_index": 22,
+          "kind": "interior_weak",
+          "note": "east of building 20, screened",
+          "requested_xy": [
+            255.0,
+            125.0
+          ],
+          "node_id": 2290,
+          "actual_xy": [
+            257.1954162779148,
+            124.90580069558928
+          ],
+          "snap_distance_m": 2.1974362658071844,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 12.138636258990884
+        },
+        {
+          "sensor_index": 23,
+          "kind": "interior_weak",
+          "note": "street between 19 and 20/21, screened",
+          "requested_xy": [
+            160.0,
+            60.0
+          ],
+          "node_id": 1195,
+          "actual_xy": [
+            161.22359250410227,
+            59.96550502849277
+          ],
+          "snap_distance_m": 1.2240786409191815,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 8.6209741147529
+        },
+        {
+          "sensor_index": 24,
+          "kind": "interior_weak",
+          "note": "east of building 17, screened by 16/17",
+          "requested_xy": [
+            290.0,
+            190.0
+          ],
+          "node_id": 1302,
+          "actual_xy": [
+            282.8483918940183,
+            194.40328404598404
+          ],
+          "snap_distance_m": 8.398476581568888,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 19.13704845076427
+        }
+      ],
+      "layout_figure": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/A_L3_weak/layout_A_L3_weak.png"
+    },
+    {
+      "case_id": "B_L1_boundary",
+      "source_config": "B",
+      "layout": "L1_boundary",
+      "layout_description": "boundary-only: 25 outer-boundary nodes (right 13, bottom 6, top 6), the existing node_sensors_right_bottom_top_c06 set",
+      "true_control": [
+        100.0,
+        210.0,
+        1.3,
+        270.0,
+        60.0,
+        0.85
+      ],
+      "sensor_node_ids": [
+        641,
+        644,
+        647,
+        650,
+        653,
+        656,
+        659,
+        662,
+        665,
+        668,
+        671,
+        674,
+        677,
+        582,
+        585,
+        588,
+        591,
+        594,
+        596,
+        693,
+        690,
+        687,
+        684,
+        681,
+        679
+      ],
+      "sensors": [
+        {
+          "sensor_index": 0,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            21.591354933188995
+          ],
+          "node_id": 641,
+          "actual_xy": [
+            301.98544034478255,
+            21.591354933188995
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 1,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            84.26294090910233
+          ],
+          "node_id": 644,
+          "actual_xy": [
+            301.98544034478255,
+            84.26294090910233
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 2,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            146.89537197179743
+          ],
+          "node_id": 647,
+          "actual_xy": [
+            301.98544034478255,
+            146.89537197179743
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 3,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            209.78690056328196
+          ],
+          "node_id": 650,
+          "actual_xy": [
+            301.98544034478255,
+            209.78690056328196
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 4,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            268.02978988797986
+          ],
+          "node_id": 653,
+          "actual_xy": [
+            301.98544034478255,
+            268.02978988797986
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 5,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            311.66010967758484
+          ],
+          "node_id": 656,
+          "actual_xy": [
+            301.98544034478255,
+            311.66010967758484
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 6,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            356.78659384607454
+          ],
+          "node_id": 659,
+          "actual_xy": [
+            301.98544034478255,
+            356.78659384607454
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 7,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            411.2740488081763
+          ],
+          "node_id": 662,
+          "actual_xy": [
+            301.98544034478255,
+            411.2740488081763
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 8,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            452.9394430399989
+          ],
+          "node_id": 665,
+          "actual_xy": [
+            301.98544034478255,
+            452.9394430399989
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 9,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            490.98378297447925
+          ],
+          "node_id": 668,
+          "actual_xy": [
+            301.98544034478255,
+            490.98378297447925
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 10,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            540.1290389206843
+          ],
+          "node_id": 671,
+          "actual_xy": [
+            301.98544034478255,
+            540.1290389206843
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 11,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            594.0383510207757
+          ],
+          "node_id": 674,
+          "actual_xy": [
+            301.98544034478255,
+            594.0383510207757
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 12,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            301.98544034478255,
+            657.2819635719934
+          ],
+          "node_id": 677,
+          "actual_xy": [
+            301.98544034478255,
+            657.2819635719934
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 13,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            21.722438826865982,
+            0.0
+          ],
+          "node_id": 582,
+          "actual_xy": [
+            21.722438826865982,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 14,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            78.43458346417174,
+            0.0
+          ],
+          "node_id": 585,
+          "actual_xy": [
+            78.43458346417174,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 15,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            129.7057670445065,
+            0.0
+          ],
+          "node_id": 588,
+          "actual_xy": [
+            129.7057670445065,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 16,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            179.30520862987032,
+            0.0
+          ],
+          "node_id": 591,
+          "actual_xy": [
+            179.30520862987032,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 17,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            238.89794434956275,
+            0.0
+          ],
+          "node_id": 594,
+          "actual_xy": [
+            238.89794434956275,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 18,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            280.26300151791656,
+            0.0
+          ],
+          "node_id": 596,
+          "actual_xy": [
+            280.26300151791656,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 19,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            16.426677579176612,
+            700.4646734384005
+          ],
+          "node_id": 693,
+          "actual_xy": [
+            16.426677579176612,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 20,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            60.120140525803436,
+            700.4646734384005
+          ],
+          "node_id": 690,
+          "actual_xy": [
+            60.120140525803436,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 21,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            111.35106871026801,
+            700.4646734384005
+          ],
+          "node_id": 687,
+          "actual_xy": [
+            111.35106871026801,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 22,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            174.4698149127653,
+            700.4646734384005
+          ],
+          "node_id": 684,
+          "actual_xy": [
+            174.4698149127653,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 23,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            238.22762762877392,
+            700.4646734384005
+          ],
+          "node_id": 681,
+          "actual_xy": [
+            238.22762762877392,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 24,
+          "kind": "outer_boundary",
+          "note": "reference right/bottom/top node",
+          "requested_xy": [
+            280.7328361060936,
+            700.4646734384005
+          ],
+          "node_id": 679,
+          "actual_xy": [
+            280.7328361060936,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        }
+      ],
+      "layout_figure": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L1_boundary/layout_B_L1_boundary.png"
+    },
+    {
+      "case_id": "B_L2_mixed",
+      "source_config": "B",
+      "layout": "L2_mixed",
+      "layout_description": "mixed: 10 outer-boundary nodes (right 6, bottom 2, top 2) + 15 interior fluid nodes around buildings / in streets and wakes",
+      "true_control": [
+        100.0,
+        210.0,
+        1.3,
+        270.0,
+        60.0,
+        0.85
+      ],
+      "sensor_node_ids": [
+        641,
+        647,
+        653,
+        662,
+        671,
+        677,
+        588,
+        596,
+        690,
+        684,
+        1855,
+        2771,
+        2704,
+        1279,
+        789,
+        1156,
+        1677,
+        2464,
+        1137,
+        827,
+        1807,
+        1332,
+        1616,
+        2790,
+        1022
+      ],
+      "sensors": [
+        {
+          "sensor_index": 0,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            301.98544034478255,
+            21.591354933188995
+          ],
+          "node_id": 641,
+          "actual_xy": [
+            301.98544034478255,
+            21.591354933188995
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 1,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            301.98544034478255,
+            146.89537197179743
+          ],
+          "node_id": 647,
+          "actual_xy": [
+            301.98544034478255,
+            146.89537197179743
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 2,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            301.98544034478255,
+            268.02978988797986
+          ],
+          "node_id": 653,
+          "actual_xy": [
+            301.98544034478255,
+            268.02978988797986
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 3,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            301.98544034478255,
+            411.2740488081763
+          ],
+          "node_id": 662,
+          "actual_xy": [
+            301.98544034478255,
+            411.2740488081763
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 4,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            301.98544034478255,
+            540.1290389206843
+          ],
+          "node_id": 671,
+          "actual_xy": [
+            301.98544034478255,
+            540.1290389206843
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 5,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            301.98544034478255,
+            657.2819635719934
+          ],
+          "node_id": 677,
+          "actual_xy": [
+            301.98544034478255,
+            657.2819635719934
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "right"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 6,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            129.7057670445065,
+            0.0
+          ],
+          "node_id": 588,
+          "actual_xy": [
+            129.7057670445065,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 7,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            280.26300151791656,
+            0.0
+          ],
+          "node_id": 596,
+          "actual_xy": [
+            280.26300151791656,
+            0.0
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "bottom"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 8,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            60.120140525803436,
+            700.4646734384005
+          ],
+          "node_id": 690,
+          "actual_xy": [
+            60.120140525803436,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 9,
+          "kind": "outer_boundary",
+          "note": "subset of the reference boundary set",
+          "requested_xy": [
+            174.4698149127653,
+            700.4646734384005
+          ],
+          "node_id": 684,
+          "actual_xy": [
+            174.4698149127653,
+            700.4646734384005
+          ],
+          "snap_distance_m": 0.0,
+          "on_boundaries": [
+            "top"
+          ],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": "boundary node (fluid closure)",
+          "wall_distance_m": 0.0
+        },
+        {
+          "sensor_index": 10,
+          "kind": "interior_near_building",
+          "note": "wake between buildings 11 and 14",
+          "requested_xy": [
+            285.0,
+            330.0
+          ],
+          "node_id": 1855,
+          "actual_xy": [
+            286.9262012791005,
+            328.2411739927775
+          ],
+          "snap_distance_m": 2.6083941978333556,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 15.05923906568205
+        },
+        {
+          "sensor_index": 11,
+          "kind": "interior_near_building",
+          "note": "street between buildings 13 and 14",
+          "requested_xy": [
+            255.0,
+            300.0
+          ],
+          "node_id": 2771,
+          "actual_xy": [
+            256.52638902317267,
+            298.0724291961815
+          ],
+          "snap_distance_m": 2.458738020569823,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 3.8801208376934007
+        },
+        {
+          "sensor_index": 12,
+          "kind": "interior_near_building",
+          "note": "street between buildings 15 and 16",
+          "requested_xy": [
+            160.0,
+            255.0
+          ],
+          "node_id": 2704,
+          "actual_xy": [
+            163.16479911410715,
+            254.54181118079578
+          ],
+          "snap_distance_m": 3.1977946192176243,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 4.373959434943164
+        },
+        {
+          "sensor_index": 13,
+          "kind": "interior_near_building",
+          "note": "street between buildings 16 and 17",
+          "requested_xy": [
+            240.0,
+            205.0
+          ],
+          "node_id": 1279,
+          "actual_xy": [
+            240.99865939776646,
+            207.26507770919125
+          ],
+          "snap_distance_m": 2.4754590728635226,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.949065463406789
+        },
+        {
+          "sensor_index": 14,
+          "kind": "interior_near_building",
+          "note": "east of building 17",
+          "requested_xy": [
+            265.0,
+            185.0
+          ],
+          "node_id": 789,
+          "actual_xy": [
+            266.43885352037614,
+            181.6625576778024
+          ],
+          "snap_distance_m": 3.6343941320520736,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 21.221581968717263
+        },
+        {
+          "sensor_index": 15,
+          "kind": "interior_near_building",
+          "note": "street between buildings 19 and 20",
+          "requested_xy": [
+            160.0,
+            100.0
+          ],
+          "node_id": 1156,
+          "actual_xy": [
+            160.42995957750827,
+            99.20825499939383
+          ],
+          "snap_distance_m": 0.9009580369117947,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 9.208506547087998
+        },
+        {
+          "sensor_index": 16,
+          "kind": "interior_near_building",
+          "note": "south of building 21",
+          "requested_xy": [
+            210.0,
+            40.0
+          ],
+          "node_id": 1677,
+          "actual_xy": [
+            213.6997751648887,
+            43.07288372097537
+          ],
+          "snap_distance_m": 4.8094646930155,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 8.998880649348697
+        },
+        {
+          "sensor_index": 17,
+          "kind": "interior_near_building",
+          "note": "east of building 20",
+          "requested_xy": [
+            265.0,
+            100.0
+          ],
+          "node_id": 2464,
+          "actual_xy": [
+            264.46433099987917,
+            102.43356262648012
+          ],
+          "snap_distance_m": 2.491820285392046,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 18.918028767206835
+        },
+        {
+          "sensor_index": 18,
+          "kind": "interior_near_building",
+          "note": "between buildings 15 and 12 (jet entrance)",
+          "requested_xy": [
+            120.0,
+            300.0
+          ],
+          "node_id": 1137,
+          "actual_xy": [
+            117.42675484280335,
+            301.0115600822901
+          ],
+          "snap_distance_m": 2.7649311816243736,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 22.912491617952355
+        },
+        {
+          "sensor_index": 19,
+          "kind": "interior_near_building",
+          "note": "main jet north of building 13",
+          "requested_xy": [
+            200.0,
+            380.0
+          ],
+          "node_id": 827,
+          "actual_xy": [
+            198.30186941096326,
+            377.7670684456825
+          ],
+          "snap_distance_m": 2.805286228478104,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 40.31518061515373
+        },
+        {
+          "sensor_index": 20,
+          "kind": "interior_near_building",
+          "note": "east of building 8",
+          "requested_xy": [
+            290.0,
+            470.0
+          ],
+          "node_id": 1807,
+          "actual_xy": [
+            291.1735958865611,
+            466.3187183442933
+          ],
+          "snap_distance_m": 3.86382736850338,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.2127485243581315
+        },
+        {
+          "sensor_index": 21,
+          "kind": "interior_near_building",
+          "note": "street between buildings 4 and 8",
+          "requested_xy": [
+            200.0,
+            490.0
+          ],
+          "node_id": 1332,
+          "actual_xy": [
+            196.35962281818502,
+            490.3814532835968
+          ],
+          "snap_distance_m": 3.6603077238732222,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 11.103844179236253
+        },
+        {
+          "sensor_index": 22,
+          "kind": "interior_near_building",
+          "note": "street north of building 4",
+          "requested_xy": [
+            240.0,
+            590.0
+          ],
+          "node_id": 1616,
+          "actual_xy": [
+            242.9368843336124,
+            586.3431639428891
+          ],
+          "snap_distance_m": 4.690174787532389,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.958531773184226
+        },
+        {
+          "sensor_index": 23,
+          "kind": "interior_near_building",
+          "note": "street between buildings 3 and 4",
+          "requested_xy": [
+            110.0,
+            545.0
+          ],
+          "node_id": 2790,
+          "actual_xy": [
+            108.88711422937922,
+            546.0115495945793
+          ],
+          "snap_distance_m": 1.503910675786191,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 15.592488224223791
+        },
+        {
+          "sensor_index": 24,
+          "kind": "interior_near_building",
+          "note": "street between building 1 and buildings 2/3",
+          "requested_xy": [
+            70.0,
+            590.0
+          ],
+          "node_id": 1022,
+          "actual_xy": [
+            69.22813570819562,
+            590.2193941122969
+          ],
+          "snap_distance_m": 0.8024389456358678,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 12.467030339375293
+        }
+      ],
+      "layout_figure": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L2_mixed/layout_B_L2_mixed.png"
+    },
+    {
+      "case_id": "B_L3_weak",
+      "source_config": "B",
+      "layout": "L3_weak",
+      "layout_description": "deliberately weak: 25 interior fluid nodes upstream of the sources or screened by buildings / poorly connected to their downstream paths (intended to provide weak observations)",
+      "true_control": [
+        100.0,
+        210.0,
+        1.3,
+        270.0,
+        60.0,
+        0.85
+      ],
+      "sensor_node_ids": [
+        2697,
+        2045,
+        1319,
+        2708,
+        1387,
+        1607,
+        2607,
+        1950,
+        1270,
+        1568,
+        2790,
+        2746,
+        876,
+        1332,
+        1616,
+        1807,
+        2321,
+        1152,
+        1417,
+        1454,
+        1855,
+        2771,
+        1594,
+        1453,
+        867
+      ],
+      "sensors": [
+        {
+          "sensor_index": 0,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, upstream of source 1",
+          "requested_xy": [
+            12.0,
+            300.0
+          ],
+          "node_id": 2697,
+          "actual_xy": [
+            12.424388159066439,
+            296.77667494048364
+          ],
+          "snap_distance_m": 3.2511428373514932,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 12.424388159066439
+        },
+        {
+          "sensor_index": 1,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, upstream",
+          "requested_xy": [
+            12.0,
+            370.0
+          ],
+          "node_id": 2045,
+          "actual_xy": [
+            8.411018365179189,
+            374.3230168018781
+          ],
+          "snap_distance_m": 5.618653169968896,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 8.411018365179189
+        },
+        {
+          "sensor_index": 2,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, upstream",
+          "requested_xy": [
+            12.0,
+            440.0
+          ],
+          "node_id": 1319,
+          "actual_xy": [
+            11.671164369385224,
+            444.6986108646961
+          ],
+          "snap_distance_m": 4.710103706905187,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 11.671164369385224
+        },
+        {
+          "sensor_index": 3,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, far upstream",
+          "requested_xy": [
+            12.0,
+            560.0
+          ],
+          "node_id": 2708,
+          "actual_xy": [
+            7.437024725601077,
+            561.2170138188812
+          ],
+          "snap_distance_m": 4.722485149804479,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.437024725601077
+        },
+        {
+          "sensor_index": 4,
+          "kind": "interior_weak",
+          "note": "west strip near inflow, far upstream",
+          "requested_xy": [
+            12.0,
+            650.0
+          ],
+          "node_id": 1387,
+          "actual_xy": [
+            9.591607621870935,
+            648.6290769261832
+          ],
+          "snap_distance_m": 2.77124230650326,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 9.591607621870935
+        },
+        {
+          "sensor_index": 5,
+          "kind": "interior_weak",
+          "note": "north-west, far from both sources",
+          "requested_xy": [
+            100.0,
+            690.0
+          ],
+          "node_id": 1607,
+          "actual_xy": [
+            97.55062540341169,
+            686.4103736219986
+          ],
+          "snap_distance_m": 4.345670655728032,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 14.054299816401908
+        },
+        {
+          "sensor_index": 6,
+          "kind": "interior_weak",
+          "note": "east of building 1, far from both sources",
+          "requested_xy": [
+            100.0,
+            640.0
+          ],
+          "node_id": 2607,
+          "actual_xy": [
+            97.22743426717352,
+            636.1171596674831
+          ],
+          "snap_distance_m": 4.771118295605743,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 16.207443306361565
+        },
+        {
+          "sensor_index": 7,
+          "kind": "interior_weak",
+          "note": "north edge, far from both sources",
+          "requested_xy": [
+            150.0,
+            690.0
+          ],
+          "node_id": 1950,
+          "actual_xy": [
+            156.77912796667079,
+            683.415635043988
+          ],
+          "snap_distance_m": 9.450419983389988,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 17.04903839441249
+        },
+        {
+          "sensor_index": 8,
+          "kind": "interior_weak",
+          "note": "upper domain, far from both sources",
+          "requested_xy": [
+            150.0,
+            630.0
+          ],
+          "node_id": 1270,
+          "actual_xy": [
+            148.749666290998,
+            635.7291886040766
+          ],
+          "snap_distance_m": 5.864037554871915,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 64.73548483432387
+        },
+        {
+          "sensor_index": 9,
+          "kind": "interior_weak",
+          "note": "street between 1 and 2, upper domain",
+          "requested_xy": [
+            45.0,
+            592.0
+          ],
+          "node_id": 1568,
+          "actual_xy": [
+            47.45594569738023,
+            595.4914246900007
+          ],
+          "snap_distance_m": 4.268690154418219,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.555872847193209
+        },
+        {
+          "sensor_index": 10,
+          "kind": "interior_weak",
+          "note": "between buildings 3 and 4, upper domain",
+          "requested_xy": [
+            110.0,
+            545.0
+          ],
+          "node_id": 2790,
+          "actual_xy": [
+            108.88711422937922,
+            546.0115495945793
+          ],
+          "snap_distance_m": 1.503910675786191,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 15.592488224223791
+        },
+        {
+          "sensor_index": 11,
+          "kind": "interior_weak",
+          "note": "courtyard among buildings 5/6/7/9",
+          "requested_xy": [
+            95.0,
+            455.0
+          ],
+          "node_id": 2746,
+          "actual_xy": [
+            92.74687402817653,
+            455.72823877009796
+          ],
+          "snap_distance_m": 2.367891118945131,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 4.064352779171868
+        },
+        {
+          "sensor_index": 12,
+          "kind": "interior_weak",
+          "note": "street between buildings 2 and 9",
+          "requested_xy": [
+            55.0,
+            490.0
+          ],
+          "node_id": 876,
+          "actual_xy": [
+            53.918673250998836,
+            491.7426759751979
+          ],
+          "snap_distance_m": 2.050899093723889,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 12.592969839061382
+        },
+        {
+          "sensor_index": 13,
+          "kind": "interior_weak",
+          "note": "street between buildings 4 and 8",
+          "requested_xy": [
+            200.0,
+            490.0
+          ],
+          "node_id": 1332,
+          "actual_xy": [
+            196.35962281818502,
+            490.3814532835968
+          ],
+          "snap_distance_m": 3.6603077238732222,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 11.103844179236253
+        },
+        {
+          "sensor_index": 14,
+          "kind": "interior_weak",
+          "note": "street north of building 4",
+          "requested_xy": [
+            240.0,
+            590.0
+          ],
+          "node_id": 1616,
+          "actual_xy": [
+            242.9368843336124,
+            586.3431639428891
+          ],
+          "snap_distance_m": 4.690174787532389,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.958531773184226
+        },
+        {
+          "sensor_index": 15,
+          "kind": "interior_weak",
+          "note": "east of building 8",
+          "requested_xy": [
+            290.0,
+            470.0
+          ],
+          "node_id": 1807,
+          "actual_xy": [
+            291.1735958865611,
+            466.3187183442933
+          ],
+          "snap_distance_m": 3.86382736850338,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 7.2127485243581315
+        },
+        {
+          "sensor_index": 16,
+          "kind": "interior_weak",
+          "note": "east of building 4",
+          "requested_xy": [
+            275.0,
+            530.0
+          ],
+          "node_id": 2321,
+          "actual_xy": [
+            275.8263666362618,
+            531.299492940394
+          ],
+          "snap_distance_m": 1.5399882206239233,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 15.874068796130546
+        },
+        {
+          "sensor_index": 17,
+          "kind": "interior_weak",
+          "note": "street north of building 4",
+          "requested_xy": [
+            185.0,
+            600.0
+          ],
+          "node_id": 1152,
+          "actual_xy": [
+            184.09432203427423,
+            601.6163198947906
+          ],
+          "snap_distance_m": 1.8527661967709872,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 36.81383452808098
+        },
+        {
+          "sensor_index": 18,
+          "kind": "interior_weak",
+          "note": "north-east, upper domain",
+          "requested_xy": [
+            290.0,
+            650.0
+          ],
+          "node_id": 1417,
+          "actual_xy": [
+            285.15123751590727,
+            642.8785031889856
+          ],
+          "snap_distance_m": 8.615463682033191,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 16.834202828875277
+        },
+        {
+          "sensor_index": 19,
+          "kind": "interior_weak",
+          "note": "north edge, upper domain",
+          "requested_xy": [
+            220.0,
+            690.0
+          ],
+          "node_id": 1454,
+          "actual_xy": [
+            227.32225758139975,
+            681.9209130438976
+          ],
+          "snap_distance_m": 10.903536221457244,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 18.543760394502897
+        },
+        {
+          "sensor_index": 20,
+          "kind": "interior_weak",
+          "note": "wake between 11 and 14, screened by 13/16 from source 1",
+          "requested_xy": [
+            285.0,
+            330.0
+          ],
+          "node_id": 1855,
+          "actual_xy": [
+            286.9262012791005,
+            328.2411739927775
+          ],
+          "snap_distance_m": 2.6083941978333556,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 15.05923906568205
+        },
+        {
+          "sensor_index": 21,
+          "kind": "interior_weak",
+          "note": "street 13/14, cross-stream of both sources",
+          "requested_xy": [
+            255.0,
+            300.0
+          ],
+          "node_id": 2771,
+          "actual_xy": [
+            256.52638902317267,
+            298.0724291961815
+          ],
+          "snap_distance_m": 2.458738020569823,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 3.8801208376934007
+        },
+        {
+          "sensor_index": 22,
+          "kind": "interior_weak",
+          "note": "wake north of building 13, screened by 16",
+          "requested_xy": [
+            200.0,
+            330.0
+          ],
+          "node_id": 1594,
+          "actual_xy": [
+            199.4379951104056,
+            325.9882076600916
+          ],
+          "snap_distance_m": 4.050966214926498,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 8.575030970601318
+        },
+        {
+          "sensor_index": 23,
+          "kind": "interior_weak",
+          "note": "street between 8 and 10 jet, north of all sources",
+          "requested_xy": [
+            160.0,
+            420.0
+          ],
+          "node_id": 1453,
+          "actual_xy": [
+            157.86488950881176,
+            418.14745022408897
+          ],
+          "snap_distance_m": 2.8267715651976735,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 27.2351071277657
+        },
+        {
+          "sensor_index": 24,
+          "kind": "interior_weak",
+          "note": "main jet north of building 10, north of all sources",
+          "requested_xy": [
+            240.0,
+            420.0
+          ],
+          "node_id": 867,
+          "actual_xy": [
+            241.6333870154922,
+            415.3035448010778
+          ],
+          "snap_distance_m": 4.972388216728636,
+          "on_boundaries": [],
+          "is_homogeneous_dirichlet_node": false,
+          "fluid_admissible": true,
+          "wall_distance_m": 30.084696744769936
+        }
+      ],
+      "layout_figure": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L3_weak/layout_B_L3_weak.png"
+    }
+  ]
+}

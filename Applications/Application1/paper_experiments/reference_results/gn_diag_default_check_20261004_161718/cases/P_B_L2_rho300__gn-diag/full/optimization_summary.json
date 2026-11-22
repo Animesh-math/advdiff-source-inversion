@@ -1,0 +1,405 @@
+{
+  "optimization_mode": "location_and_intensity",
+  "num_sources": 2,
+  "final_num_sources": 2,
+  "initial_num_sources": 2,
+  "true_num_sources": 2,
+  "inferred_matches_true_count": true,
+  "control_dim": 6,
+  "case_name": "P_B_L2_rho300__gn-diag",
+  "bound_case": "mesh_domain",
+  "source_region": "mesh_domain",
+  "initialization_mode": "manual",
+  "post_init_method": "lbfgsb",
+  "post_init": {
+    "post_init_method": "lbfgsb",
+    "n_stages": 1,
+    "total_iterations": 30,
+    "total_forward_solves": 38,
+    "total_adjoint_solves": 37,
+    "total_objective_evaluations": 31,
+    "total_gradient_evaluations": 31,
+    "total_hessian_evaluations": 0,
+    "stages": [
+      {
+        "stage_index": 1,
+        "post_init_method": "lbfgsb",
+        "iterations": 30,
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_objective_evaluations": 31,
+        "n_gradient_evaluations": 31,
+        "n_hessian_evaluations": 0,
+        "n_forward_solves": 38,
+        "n_adjoint_solves": 37,
+        "stage_initial_objective": 0.31876564292418463,
+        "stage_final_objective": 1.01585592095192e-17,
+        "lbfgsb_maxcor": 10,
+        "scaling": {
+          "scaling": "gn-diag",
+          "control_active": [
+            99.9086276295969,
+            209.96025693959277,
+            1.3022086854058692,
+            269.93384555828334,
+            60.178183552098346,
+            0.8410591485498522
+          ],
+          "hessian_diagonal": [
+            356.0605410439568,
+            79.26662221971384,
+            716098.3513680384,
+            31.41711638371276,
+            554.2025975248891,
+            252778.9009886233
+          ],
+          "scale_vector": [
+            18.869566530367273,
+            8.903180455304376,
+            846.2259458135507,
+            5.605097357201992,
+            23.541507970495203,
+            502.7712213210133
+          ],
+          "max_ratio": 10000.0,
+          "n_floored": 0,
+          "condition_number_unscaled": 260810.088322069,
+          "condition_number_scaled": 444.3222668554489
+        }
+      }
+    ],
+    "scaling": "gn-diag",
+    "stall_iters": 150,
+    "scaling_max_ratio": 10000.0,
+    "lbfgsb_maxcor": 10
+  },
+  "start_index": null,
+  "active_bounds": [
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ],
+    [
+      0.0,
+      301.98544034478255
+    ],
+    [
+      0.0,
+      700.4646734384005
+    ],
+    [
+      0.1,
+      2.0
+    ]
+  ],
+  "success": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "iterations": 30,
+  "input_initial_control": [
+    99.9086276295969,
+    209.96025693959277,
+    1.3022086854058692,
+    269.93384555828334,
+    60.178183552098346,
+    0.8410591485498522
+  ],
+  "initial_control": [
+    99.9086276295969,
+    209.96025693959277,
+    1.3022086854058692,
+    269.93384555828334,
+    60.178183552098346,
+    0.8410591485498522
+  ],
+  "true_control": [
+    100.0,
+    210.0,
+    1.3,
+    270.0,
+    60.0,
+    0.85
+  ],
+  "final_control": [
+    99.999999999786,
+    209.99999999996507,
+    1.3000000000084593,
+    269.9999999984601,
+    60.000000000662084,
+    0.8499999999562786
+  ],
+  "initial_objective": 0.31876564292418463,
+  "final_objective": 1.01585592095192e-17,
+  "final_gradient_norm": 2.71985232620587e-06,
+  "recovery_permutation_matched": {
+    "num_sources": 2,
+    "permutation": [
+      0,
+      1
+    ],
+    "labels_permuted": false,
+    "position_errors_m": [
+      2.1683326382155397e-10,
+      1.6761893015174895e-09
+    ],
+    "amplitude_errors": [
+      8.459233313828918e-12,
+      4.37213598658559e-11
+    ],
+    "max_position_error_m": 1.6761893015174895e-09,
+    "max_amplitude_error": 4.37213598658559e-11,
+    "total_position_error_m": 1.8930225653390434e-09
+  },
+  "recovery_permutation_match_error": null,
+  "initial_recovery_permutation_matched": {
+    "num_sources": 2,
+    "permutation": [
+      0,
+      1
+    ],
+    "labels_permuted": false,
+    "position_errors_m": [
+      0.09964146187012483,
+      0.1900678520876884
+    ],
+    "amplitude_errors": [
+      0.0022086854058691596,
+      0.00894085145014778
+    ],
+    "max_position_error_m": 0.1900678520876884,
+    "max_amplitude_error": 0.00894085145014778,
+    "total_position_error_m": 0.28970931395781324
+  },
+  "initial_recovery_permutation_match_error": null,
+  "amplitude_floor": 0.1,
+  "sigma2_continuation": null,
+  "target_sigma2": 300.0,
+  "max_paraview_frames": 100,
+  "pde": {
+    "lx": 301.98544034478255,
+    "ly": 700.4646734384005,
+    "k": 10.0,
+    "vx": 2.07,
+    "vy": -0.36,
+    "dt": 0.1,
+    "tfinal": 150.0,
+    "jprint": 1,
+    "ngauss": 3,
+    "sigma2": 300.0,
+    "velocity_field": {
+      "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "coords_shape": [
+        2795,
+        3
+      ],
+      "velocity_nodes_shape": [
+        2795,
+        2
+      ],
+      "velocity_magnitude_min": 2.5643005027931998e-21,
+      "velocity_magnitude_max": 10.580957815647944,
+      "coordinate_validation_passed": true,
+      "coordinate_validation_tolerance": 1e-10,
+      "max_coordinate_difference": 0.0
+    },
+    "velocity_mode": "nodal"
+  },
+  "measurement_boundary": "right",
+  "measurement_boundaries": [
+    "right"
+  ],
+  "observation": {
+    "observation_mode": "nodes",
+    "num_sensors": 25,
+    "sensor_node_ids": [
+      641,
+      647,
+      653,
+      662,
+      671,
+      677,
+      588,
+      596,
+      690,
+      684,
+      1855,
+      2771,
+      2704,
+      1279,
+      789,
+      1156,
+      1677,
+      2464,
+      1137,
+      827,
+      1807,
+      1332,
+      1616,
+      2790,
+      1022
+    ],
+    "weight_kind": "diagonal",
+    "weight_convention": "equal diagonal sensor weights w = 1 (||r||_W^2 = w * sum_s r_s^2)",
+    "selection": "node_ids",
+    "sensor_coordinates": [
+      [
+        301.98544034478255,
+        21.591354933188995
+      ],
+      [
+        301.98544034478255,
+        146.89537197179743
+      ],
+      [
+        301.98544034478255,
+        268.02978988797986
+      ],
+      [
+        301.98544034478255,
+        411.2740488081763
+      ],
+      [
+        301.98544034478255,
+        540.1290389206843
+      ],
+      [
+        301.98544034478255,
+        657.2819635719934
+      ],
+      [
+        129.7057670445065,
+        0.0
+      ],
+      [
+        280.26300151791656,
+        0.0
+      ],
+      [
+        60.120140525803436,
+        700.4646734384005
+      ],
+      [
+        174.4698149127653,
+        700.4646734384005
+      ],
+      [
+        286.9262012791005,
+        328.2411739927775
+      ],
+      [
+        256.52638902317267,
+        298.0724291961815
+      ],
+      [
+        163.16479911410715,
+        254.54181118079578
+      ],
+      [
+        240.99865939776646,
+        207.26507770919125
+      ],
+      [
+        266.43885352037614,
+        181.6625576778024
+      ],
+      [
+        160.42995957750827,
+        99.20825499939383
+      ],
+      [
+        213.6997751648887,
+        43.07288372097537
+      ],
+      [
+        264.46433099987917,
+        102.43356262648012
+      ],
+      [
+        117.42675484280335,
+        301.0115600822901
+      ],
+      [
+        198.30186941096326,
+        377.7670684456825
+      ],
+      [
+        291.1735958865611,
+        466.3187183442933
+      ],
+      [
+        196.35962281818502,
+        490.3814532835968
+      ],
+      [
+        242.9368843336124,
+        586.3431639428891
+      ],
+      [
+        108.88711422937922,
+        546.0115495945793
+      ],
+      [
+        69.22813570819562,
+        590.2193941122969
+      ]
+    ],
+    "sensor_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "weight_mode": "equal"
+  },
+  "building_boundary_condition": "natural no-flux",
+  "feasibility": {
+    "feasibility_mode": "raw",
+    "invalid_evaluations": 0,
+    "projected_evaluations": 0,
+    "penalized_evaluations": 0,
+    "projected_source_events": 0,
+    "max_projection_distance": 0.0,
+    "last_projection_distance": null,
+    "raw_infeasible_evaluations": 0,
+    "raw_infeasible_iterates": 0,
+    "raw_max_outside_distance": 0.0,
+    "raw_infeasible_iterate_log": []
+  },
+  "final_feasibility_polish": null,
+  "invalid_control_penalty": {
+    "baseline_floor": 1000000000000.0,
+    "objective_scale_factor": 1000.0,
+    "distance_weight": 1000000.0,
+    "scheme": "max(floor, factor * largest_valid_objective) + distance_weight * sum_i dist_sq(center_i, fluid_domain)"
+  },
+  "geometry_constraint": "DC fluid-mesh point location (21 building holes excluded exactly by the mesh) with a large objective-scale-aware invalid-iterate penalty plus a smooth squared-distance restoring gradient",
+  "inverse_problem_scope": "controlled recovery with full mesh bounding-box bounds"
+}

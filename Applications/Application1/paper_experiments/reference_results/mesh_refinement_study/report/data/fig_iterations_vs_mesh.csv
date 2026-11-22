@@ -1,0 +1,7 @@
+case,series,num_triangles,value,budget_limit_reached
+A_L1,iterations,4936,22,False
+A_L1,iterations,9975,23,False
+A_L1,iterations,19648,23,False
+B_L2,iterations,4936,23,False
+B_L2,iterations,9975,26,False
+B_L2,iterations,19648,21,False

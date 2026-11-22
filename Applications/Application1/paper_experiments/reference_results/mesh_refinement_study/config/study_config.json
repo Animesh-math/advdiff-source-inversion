@@ -1,0 +1,697 @@
+{
+  "study": "App1 post-initialization mesh-dependence study (2 cases x refined meshes in levels)",
+  "levels": [
+    {
+      "level": "original",
+      "target_triangle_ratio": 1.0
+    },
+    {
+      "level": "refine_2x",
+      "target_triangle_ratio": 2.0
+    },
+    {
+      "level": "refine_4x",
+      "target_triangle_ratio": 4.0
+    }
+  ],
+  "refinement_ratio_definition": "ratio of TRIANGLE COUNTS to the original mesh (not of element diameter)",
+  "cases": [
+    {
+      "label": "A_L1",
+      "case_id_prefix": "A_L1",
+      "description": "source config A (162,300,1.4; 270,600,0.95), layout L1: 25 node sensors on the outer east/south/north boundary",
+      "source_run": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/A_L1_boundary",
+      "source_run_files_sha256": {
+        "optimization_summary.json": "a03ecd5dd38de776a1a8bfc6497edf9d6a2f499a046be632c4b8be440ea132e0",
+        "run_instrumentation.json": "6733478e48d7fea8f0bfeb0bebc8ec34c0185d00be6c45ca2044d63d45382669"
+      },
+      "true_control": [
+        162.0,
+        300.0,
+        1.4,
+        270.0,
+        600.0,
+        0.95
+      ],
+      "start_control": [
+        270.0042837605424,
+        600.051691697479,
+        0.9510994778671145,
+        161.8662190981801,
+        300.00986383727934,
+        1.394063613558722
+      ],
+      "start_control_provenance": "optimization_summary.initial_control of the source run: output of the adjoint-sensitivity initializer (init mode 'sensitivity', production M=2 preset, OSQP amplitudes) on the ORIGINAL mesh; the control L-BFGS-B started from",
+      "source_run_initial_objective_original_mesh": 0.163912013266087,
+      "source_run_initialization_mode": "sensitivity",
+      "num_sensors": 25,
+      "sensor_node_ids_original_mesh": [
+        641,
+        644,
+        647,
+        650,
+        653,
+        656,
+        659,
+        662,
+        665,
+        668,
+        671,
+        674,
+        677,
+        582,
+        585,
+        588,
+        591,
+        594,
+        596,
+        693,
+        690,
+        687,
+        684,
+        681,
+        679
+      ],
+      "sensor_xy": [
+        [
+          301.98544034478255,
+          21.591354933188995
+        ],
+        [
+          301.98544034478255,
+          84.26294090910233
+        ],
+        [
+          301.98544034478255,
+          146.89537197179743
+        ],
+        [
+          301.98544034478255,
+          209.78690056328196
+        ],
+        [
+          301.98544034478255,
+          268.02978988797986
+        ],
+        [
+          301.98544034478255,
+          311.66010967758484
+        ],
+        [
+          301.98544034478255,
+          356.78659384607454
+        ],
+        [
+          301.98544034478255,
+          411.2740488081763
+        ],
+        [
+          301.98544034478255,
+          452.9394430399989
+        ],
+        [
+          301.98544034478255,
+          490.98378297447925
+        ],
+        [
+          301.98544034478255,
+          540.1290389206843
+        ],
+        [
+          301.98544034478255,
+          594.0383510207757
+        ],
+        [
+          301.98544034478255,
+          657.2819635719934
+        ],
+        [
+          21.722438826865982,
+          0.0
+        ],
+        [
+          78.43458346417174,
+          0.0
+        ],
+        [
+          129.7057670445065,
+          0.0
+        ],
+        [
+          179.30520862987032,
+          0.0
+        ],
+        [
+          238.89794434956275,
+          0.0
+        ],
+        [
+          280.26300151791656,
+          0.0
+        ],
+        [
+          16.426677579176612,
+          700.4646734384005
+        ],
+        [
+          60.120140525803436,
+          700.4646734384005
+        ],
+        [
+          111.35106871026801,
+          700.4646734384005
+        ],
+        [
+          174.4698149127653,
+          700.4646734384005
+        ],
+        [
+          238.22762762877392,
+          700.4646734384005
+        ],
+        [
+          280.7328361060936,
+          700.4646734384005
+        ]
+      ],
+      "sensor_on_original_boundary": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "sensor_weights_source_run": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_driver_argv": [
+        "--mode",
+        "location_and_intensity",
+        "--stage",
+        "full",
+        "--num-sources",
+        "2",
+        "--bound-case",
+        "mesh_domain",
+        "--init-mode",
+        "sensitivity",
+        "--num-starts",
+        "1",
+        "--random-seed",
+        "0",
+        "--sensitivity-score",
+        "predicted_reduction",
+        "--sensitivity-top-k",
+        "24",
+        "--sensitivity-beam-width",
+        "3",
+        "--sensitivity-refine-centers",
+        "--sensitivity-refine-max-fev",
+        "60",
+        "--sensitivity-coherence-cap",
+        "0.3",
+        "--sensitivity-geometry-aware-branches",
+        "--sensitivity-obstacle-aware-diversity",
+        "--sensitivity-refine-pair",
+        "--sensitivity-pair-refine-max-fev",
+        "60",
+        "--sensitivity-reselect-second",
+        "--sensitivity-reselect-threshold",
+        "0.25",
+        "--sensitivity-reselect-max-passes",
+        "2",
+        "--sensitivity-save-plots",
+        "--amplitude-solver",
+        "osqp",
+        "--post-init-method",
+        "lbfgsb",
+        "--feasibility-mode",
+        "raw",
+        "--tfinal",
+        "150",
+        "--amplitude-floor",
+        "0.1",
+        "--max-iter",
+        "150",
+        "--max-paraview-frames",
+        "100",
+        "--observation-mode",
+        "nodes",
+        "--sensor-weights",
+        "equal",
+        "--sensor-equal-weight",
+        "1.0",
+        "--velocity-field-file",
+        "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+        "--true-control",
+        "162.0",
+        "300.0",
+        "1.4",
+        "270.0",
+        "600.0",
+        "0.95",
+        "--sensor-node-ids",
+        "641,644,647,650,653,656,659,662,665,668,671,674,677,582,585,588,591,594,596,693,690,687,684,681,679",
+        "--case-name",
+        "A_L1_boundary"
+      ]
+    },
+    {
+      "label": "B_L2",
+      "case_id_prefix": "B_L2",
+      "description": "source config B (100,210,1.3; 270,60,0.85), layout L2: 25 node sensors, 10 boundary + 15 interior",
+      "source_run": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L2_mixed",
+      "source_run_files_sha256": {
+        "optimization_summary.json": "b958853d7b64bc1470231c8b42a05e1ee86acb02850efce113664a0bda63dc17",
+        "run_instrumentation.json": "670ccbe24bd90715fc4b27535e85ea18feea32870f615c4471b9384074e0fd84"
+      },
+      "true_control": [
+        100.0,
+        210.0,
+        1.3,
+        270.0,
+        60.0,
+        0.85
+      ],
+      "start_control": [
+        100.08834882378963,
+        209.95083427163502,
+        1.2985632230142587,
+        269.6867899200351,
+        60.010972723866885,
+        0.8469266521345944
+      ],
+      "start_control_provenance": "optimization_summary.initial_control of the source run: output of the adjoint-sensitivity initializer (init mode 'sensitivity', production M=2 preset, OSQP amplitudes) on the ORIGINAL mesh; the control L-BFGS-B started from",
+      "source_run_initial_objective_original_mesh": 0.527434321501965,
+      "source_run_initialization_mode": "sensitivity",
+      "num_sensors": 25,
+      "sensor_node_ids_original_mesh": [
+        641,
+        647,
+        653,
+        662,
+        671,
+        677,
+        588,
+        596,
+        690,
+        684,
+        1855,
+        2771,
+        2704,
+        1279,
+        789,
+        1156,
+        1677,
+        2464,
+        1137,
+        827,
+        1807,
+        1332,
+        1616,
+        2790,
+        1022
+      ],
+      "sensor_xy": [
+        [
+          301.98544034478255,
+          21.591354933188995
+        ],
+        [
+          301.98544034478255,
+          146.89537197179743
+        ],
+        [
+          301.98544034478255,
+          268.02978988797986
+        ],
+        [
+          301.98544034478255,
+          411.2740488081763
+        ],
+        [
+          301.98544034478255,
+          540.1290389206843
+        ],
+        [
+          301.98544034478255,
+          657.2819635719934
+        ],
+        [
+          129.7057670445065,
+          0.0
+        ],
+        [
+          280.26300151791656,
+          0.0
+        ],
+        [
+          60.120140525803436,
+          700.4646734384005
+        ],
+        [
+          174.4698149127653,
+          700.4646734384005
+        ],
+        [
+          286.9262012791005,
+          328.2411739927775
+        ],
+        [
+          256.52638902317267,
+          298.0724291961815
+        ],
+        [
+          163.16479911410715,
+          254.54181118079578
+        ],
+        [
+          240.99865939776646,
+          207.26507770919125
+        ],
+        [
+          266.43885352037614,
+          181.6625576778024
+        ],
+        [
+          160.42995957750827,
+          99.20825499939383
+        ],
+        [
+          213.6997751648887,
+          43.07288372097537
+        ],
+        [
+          264.46433099987917,
+          102.43356262648012
+        ],
+        [
+          117.42675484280335,
+          301.0115600822901
+        ],
+        [
+          198.30186941096326,
+          377.7670684456825
+        ],
+        [
+          291.1735958865611,
+          466.3187183442933
+        ],
+        [
+          196.35962281818502,
+          490.3814532835968
+        ],
+        [
+          242.9368843336124,
+          586.3431639428891
+        ],
+        [
+          108.88711422937922,
+          546.0115495945793
+        ],
+        [
+          69.22813570819562,
+          590.2193941122969
+        ]
+      ],
+      "sensor_on_original_boundary": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sensor_weights_source_run": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_driver_argv": [
+        "--mode",
+        "location_and_intensity",
+        "--stage",
+        "full",
+        "--num-sources",
+        "2",
+        "--bound-case",
+        "mesh_domain",
+        "--init-mode",
+        "sensitivity",
+        "--num-starts",
+        "1",
+        "--random-seed",
+        "0",
+        "--sensitivity-score",
+        "predicted_reduction",
+        "--sensitivity-top-k",
+        "24",
+        "--sensitivity-beam-width",
+        "3",
+        "--sensitivity-refine-centers",
+        "--sensitivity-refine-max-fev",
+        "60",
+        "--sensitivity-coherence-cap",
+        "0.3",
+        "--sensitivity-geometry-aware-branches",
+        "--sensitivity-obstacle-aware-diversity",
+        "--sensitivity-refine-pair",
+        "--sensitivity-pair-refine-max-fev",
+        "60",
+        "--sensitivity-reselect-second",
+        "--sensitivity-reselect-threshold",
+        "0.25",
+        "--sensitivity-reselect-max-passes",
+        "2",
+        "--sensitivity-save-plots",
+        "--amplitude-solver",
+        "osqp",
+        "--post-init-method",
+        "lbfgsb",
+        "--feasibility-mode",
+        "raw",
+        "--tfinal",
+        "150",
+        "--amplitude-floor",
+        "0.1",
+        "--max-iter",
+        "150",
+        "--max-paraview-frames",
+        "100",
+        "--observation-mode",
+        "nodes",
+        "--sensor-weights",
+        "equal",
+        "--sensor-equal-weight",
+        "1.0",
+        "--velocity-field-file",
+        "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+        "--true-control",
+        "100.0",
+        "210.0",
+        "1.3",
+        "270.0",
+        "60.0",
+        "0.85",
+        "--sensor-node-ids",
+        "641,647,653,662,671,677,588,596,690,684,1855,2771,2704,1279,789,1156,1677,2464,1137,827,1807,1332,1616,2790,1022",
+        "--case-name",
+        "B_L2_mixed"
+      ]
+    }
+  ],
+  "common_driver_args": [
+    "--mode",
+    "location_and_intensity",
+    "--stage",
+    "full",
+    "--num-sources",
+    "2",
+    "--bound-case",
+    "mesh_domain",
+    "--init-mode",
+    "manual",
+    "--num-starts",
+    "1",
+    "--random-seed",
+    "0",
+    "--amplitude-solver",
+    "osqp",
+    "--post-init-method",
+    "lbfgsb",
+    "--post-init-scaling",
+    "gn-diag",
+    "--post-init-scaling-max-ratio",
+    "10000",
+    "--post-init-lbfgsb-maxcor",
+    "30",
+    "--feasibility-mode",
+    "raw",
+    "--tfinal",
+    "150",
+    "--amplitude-floor",
+    "0.1",
+    "--max-iter",
+    "200",
+    "--max-paraview-frames",
+    "100",
+    "--observation-mode",
+    "nodes",
+    "--sensor-weights",
+    "equal",
+    "--sensor-equal-weight",
+    "1.0",
+    "--sensor-snap-tolerance",
+    "1e-06"
+  ],
+  "physical_parameters": {
+    "rho_sigma2_m2": 400.0,
+    "tfinal_s": 150.0,
+    "diffusivity_k_m2_per_s": 10.0,
+    "eta1": 100.0,
+    "lambda_reg": 0.0,
+    "ngauss": 3,
+    "jprint": 1,
+    "objective_time_rule": "exclude_first",
+    "gradient_time_rule": "trapezoid",
+    "dirichlet": "homogeneous on 'left' (west, inflow) nodes",
+    "noise": "none (noiseless synthetic data generated on each mesh by the same forward model)",
+    "sensor_weights": "equal, w = 1.0 (W = I); point observations at mesh nodes, also for sensors on the outer boundary (no boundary-integral objective)",
+    "navier_stokes": "navier_stokes_config.py: wind (2.07,-0.36) m/s, nu = 5.0, Picard tol 1e-8, max 50 iterations, Taylor-Hood P2/P1, MUMPS LU"
+  },
+  "optimizer": {
+    "method": "L-BFGS-B (SciPy) via driver post-init polish",
+    "scaling": "gn-diag: D = sqrt(diag H_GN(z0)), floor max(D)/1e4, L-BFGS-B in y = D z, gtol applies to the scaled gradient; H_GN recomputed on each mesh at z0",
+    "maxcor": 30,
+    "ftol": 1e-14,
+    "gtol": 1e-09,
+    "maxls": 20,
+    "max_iter": 200,
+    "maxfun": "SciPy default 15000 (not passed by the driver)",
+    "amplitude_bounds": "[0.1, 2.0] (amplitude floor 0.1; driver default upper bound)",
+    "center_bounds": "mesh bounding box, raw feasibility mode (no projection)",
+    "validated_by": "output/lbfgs_restart_diag_M2_rho400_20261004_122237 variant diagscale_m30"
+  },
+  "dt_rule": {
+    "default_dt_s": 0.1,
+    "candidates_s": [
+      0.1,
+      0.05,
+      0.04,
+      0.025,
+      0.02,
+      0.0125,
+      0.01
+    ],
+    "criterion": "largest candidate with dt * rho(M_L^-1 K) <= 2.5 (90 % of the RK4 real-axis limit 2.785) and max |R_RK4(-dt*lambda)| <= 1 over the computed extreme eigenvalues, on ALL meshes of the study (one common dt)"
+  },
+  "baselines_original_mesh": [
+    {
+      "case": "B_L2",
+      "path": "Applications/Application1/output/lbfgs_restart_diag_M2_rho400_20261004_122237",
+      "variant": "diagscale_m30",
+      "comparable": "same truth, sensors, start control, GN-diag (floor 1e4), maxcor 30, ftol/gtol/maxls",
+      "differences": "standalone restart script (not the driver), max 200 iterations, other processes running (timings not comparable), dt 0.1"
+    },
+    {
+      "case": "A_L1",
+      "path": "Applications/Application1/output/gn_diag_default_check_20261004_161718/cases/P_A_L1_boundary__gn-diag",
+      "variant": "P_A_L1_boundary__gn-diag",
+      "comparable": "same truth, sensors, start control, GN-diag (floor 1e4), driver",
+      "differences": "maxcor 10 (not 30), max-iter 150, ~50 runs concurrently (timings not comparable), dt 0.1"
+    },
+    {
+      "case": "B_L2",
+      "path": "Applications/Application1/output/gn_diag_default_check_20261004_161718/cases/P_B_L2_mixed__gn-diag",
+      "variant": "P_B_L2_mixed__gn-diag",
+      "comparable": "same truth, sensors, start control, GN-diag (floor 1e4), driver",
+      "differences": "maxcor 10 (not 30), max-iter 150, ~50 runs concurrently, dt 0.1"
+    }
+  ],
+  "original_mesh_reconstruction_rerun": true
+}

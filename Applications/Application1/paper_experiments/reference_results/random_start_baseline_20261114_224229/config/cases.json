@@ -1,0 +1,1657 @@
+[
+  {
+    "case": "A_L1",
+    "case_index": 1,
+    "label": "A-L1: two sources, 25 boundary sensors",
+    "num_sources": 2,
+    "true_control": [
+      162.0,
+      300.0,
+      1.4,
+      270.0,
+      600.0,
+      0.95
+    ],
+    "reference_post_init_run": "Applications/Application1/output/gn_diag_default_check_20261004_161718/cases/P_A_L1_boundary__gn-diag",
+    "reference_initializer_run": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/A_L1_boundary",
+    "common_driver_flags": [
+      "--mode",
+      "location_and_intensity",
+      "--stage",
+      "full",
+      "--num-sources",
+      "2",
+      "--bound-case",
+      "mesh_domain",
+      "--num-starts",
+      "1",
+      "--random-seed",
+      "0",
+      "--amplitude-solver",
+      "osqp",
+      "--post-init-method",
+      "lbfgsb",
+      "--feasibility-mode",
+      "raw",
+      "--tfinal",
+      "150",
+      "--amplitude-floor",
+      "0.1",
+      "--max-iter",
+      "150",
+      "--observation-mode",
+      "nodes",
+      "--sensor-weights",
+      "equal",
+      "--sensor-equal-weight",
+      "1.0",
+      "--velocity-field-file",
+      "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "--true-control",
+      "162.0",
+      "300.0",
+      "1.4",
+      "270.0",
+      "600.0",
+      "0.95",
+      "--sensor-node-ids",
+      "641,644,647,650,653,656,659,662,665,668,671,674,677,582,585,588,591,594,596,693,690,687,684,681,679",
+      "--post-init-scaling",
+      "gn-diag"
+    ],
+    "removed_from_reference_argv": [
+      "--max-paraview-frames",
+      "100",
+      "--init-mode",
+      "manual",
+      "--initial-control",
+      "270.0042837605424",
+      "600.051691697479",
+      "0.9510994778671145",
+      "161.8662190981801",
+      "300.00986383727934",
+      "1.394063613558722",
+      "--case-name",
+      "P_A_L1_boundary__gn-diag"
+    ],
+    "added_per_run": [
+      "--init-mode",
+      "manual",
+      "--initial-control",
+      "<sampled start>",
+      "--case-name",
+      "<run id>",
+      "--max-paraview-frames",
+      "1"
+    ],
+    "amplitude_sampling_interval": [
+      0.1,
+      2.0
+    ],
+    "lbfgsb_amplitude_bounds": [
+      0.1,
+      2.0
+    ],
+    "max_iter": 150,
+    "reference_pde": {
+      "lx": 301.98544034478255,
+      "ly": 700.4646734384005,
+      "k": 10.0,
+      "vx": 2.07,
+      "vy": -0.36,
+      "dt": 0.1,
+      "tfinal": 150.0,
+      "jprint": 1,
+      "ngauss": 3,
+      "sigma2": 400.0,
+      "velocity_field": {
+        "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+        "coords_shape": [
+          2795,
+          3
+        ],
+        "velocity_nodes_shape": [
+          2795,
+          2
+        ],
+        "velocity_magnitude_min": 2.5643005027931998e-21,
+        "velocity_magnitude_max": 10.580957815647944,
+        "coordinate_validation_passed": true,
+        "coordinate_validation_tolerance": 1e-10,
+        "max_coordinate_difference": 0.0
+      },
+      "velocity_mode": "nodal"
+    },
+    "reference_active_bounds": [
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ],
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ]
+    ],
+    "reference_observation": {
+      "num_sensors": 25,
+      "sensor_node_ids": [
+        641,
+        644,
+        647,
+        650,
+        653,
+        656,
+        659,
+        662,
+        665,
+        668,
+        671,
+        674,
+        677,
+        582,
+        585,
+        588,
+        591,
+        594,
+        596,
+        693,
+        690,
+        687,
+        684,
+        681,
+        679
+      ],
+      "sensor_coordinates": [
+        [
+          301.98544034478255,
+          21.591354933188995
+        ],
+        [
+          301.98544034478255,
+          84.26294090910233
+        ],
+        [
+          301.98544034478255,
+          146.89537197179743
+        ],
+        [
+          301.98544034478255,
+          209.78690056328196
+        ],
+        [
+          301.98544034478255,
+          268.02978988797986
+        ],
+        [
+          301.98544034478255,
+          311.66010967758484
+        ],
+        [
+          301.98544034478255,
+          356.78659384607454
+        ],
+        [
+          301.98544034478255,
+          411.2740488081763
+        ],
+        [
+          301.98544034478255,
+          452.9394430399989
+        ],
+        [
+          301.98544034478255,
+          490.98378297447925
+        ],
+        [
+          301.98544034478255,
+          540.1290389206843
+        ],
+        [
+          301.98544034478255,
+          594.0383510207757
+        ],
+        [
+          301.98544034478255,
+          657.2819635719934
+        ],
+        [
+          21.722438826865982,
+          0.0
+        ],
+        [
+          78.43458346417174,
+          0.0
+        ],
+        [
+          129.7057670445065,
+          0.0
+        ],
+        [
+          179.30520862987032,
+          0.0
+        ],
+        [
+          238.89794434956275,
+          0.0
+        ],
+        [
+          280.26300151791656,
+          0.0
+        ],
+        [
+          16.426677579176612,
+          700.4646734384005
+        ],
+        [
+          60.120140525803436,
+          700.4646734384005
+        ],
+        [
+          111.35106871026801,
+          700.4646734384005
+        ],
+        [
+          174.4698149127653,
+          700.4646734384005
+        ],
+        [
+          238.22762762877392,
+          700.4646734384005
+        ],
+        [
+          280.7328361060936,
+          700.4646734384005
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "weight_mode": "equal"
+    }
+  },
+  {
+    "case": "A_L2",
+    "case_index": 2,
+    "label": "A-L2: two sources, mixed sensors (10 boundary + 15 interior)",
+    "num_sources": 2,
+    "true_control": [
+      162.0,
+      300.0,
+      1.4,
+      270.0,
+      600.0,
+      0.95
+    ],
+    "reference_post_init_run": "Applications/Application1/output/gn_diag_default_check_20261004_161718/cases/P_A_L2_mixed__gn-diag",
+    "reference_initializer_run": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/A_L2_mixed",
+    "common_driver_flags": [
+      "--mode",
+      "location_and_intensity",
+      "--stage",
+      "full",
+      "--num-sources",
+      "2",
+      "--bound-case",
+      "mesh_domain",
+      "--num-starts",
+      "1",
+      "--random-seed",
+      "0",
+      "--amplitude-solver",
+      "osqp",
+      "--post-init-method",
+      "lbfgsb",
+      "--feasibility-mode",
+      "raw",
+      "--tfinal",
+      "150",
+      "--amplitude-floor",
+      "0.1",
+      "--max-iter",
+      "150",
+      "--observation-mode",
+      "nodes",
+      "--sensor-weights",
+      "equal",
+      "--sensor-equal-weight",
+      "1.0",
+      "--velocity-field-file",
+      "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "--true-control",
+      "162.0",
+      "300.0",
+      "1.4",
+      "270.0",
+      "600.0",
+      "0.95",
+      "--sensor-node-ids",
+      "641,647,653,662,671,677,588,596,690,684,1855,2771,2704,1279,789,1156,1677,2464,1137,827,1807,1332,1616,2790,1022",
+      "--post-init-scaling",
+      "gn-diag"
+    ],
+    "removed_from_reference_argv": [
+      "--max-paraview-frames",
+      "100",
+      "--init-mode",
+      "manual",
+      "--initial-control",
+      "161.82626319679815",
+      "299.87550189807206",
+      "1.3830261331977085",
+      "260.99660471323716",
+      "574.171373849862",
+      "0.30234928961696617",
+      "--case-name",
+      "P_A_L2_mixed__gn-diag"
+    ],
+    "added_per_run": [
+      "--init-mode",
+      "manual",
+      "--initial-control",
+      "<sampled start>",
+      "--case-name",
+      "<run id>",
+      "--max-paraview-frames",
+      "1"
+    ],
+    "amplitude_sampling_interval": [
+      0.1,
+      2.0
+    ],
+    "lbfgsb_amplitude_bounds": [
+      0.1,
+      2.0
+    ],
+    "max_iter": 150,
+    "reference_pde": {
+      "lx": 301.98544034478255,
+      "ly": 700.4646734384005,
+      "k": 10.0,
+      "vx": 2.07,
+      "vy": -0.36,
+      "dt": 0.1,
+      "tfinal": 150.0,
+      "jprint": 1,
+      "ngauss": 3,
+      "sigma2": 400.0,
+      "velocity_field": {
+        "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+        "coords_shape": [
+          2795,
+          3
+        ],
+        "velocity_nodes_shape": [
+          2795,
+          2
+        ],
+        "velocity_magnitude_min": 2.5643005027931998e-21,
+        "velocity_magnitude_max": 10.580957815647944,
+        "coordinate_validation_passed": true,
+        "coordinate_validation_tolerance": 1e-10,
+        "max_coordinate_difference": 0.0
+      },
+      "velocity_mode": "nodal"
+    },
+    "reference_active_bounds": [
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ],
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ]
+    ],
+    "reference_observation": {
+      "num_sensors": 25,
+      "sensor_node_ids": [
+        641,
+        647,
+        653,
+        662,
+        671,
+        677,
+        588,
+        596,
+        690,
+        684,
+        1855,
+        2771,
+        2704,
+        1279,
+        789,
+        1156,
+        1677,
+        2464,
+        1137,
+        827,
+        1807,
+        1332,
+        1616,
+        2790,
+        1022
+      ],
+      "sensor_coordinates": [
+        [
+          301.98544034478255,
+          21.591354933188995
+        ],
+        [
+          301.98544034478255,
+          146.89537197179743
+        ],
+        [
+          301.98544034478255,
+          268.02978988797986
+        ],
+        [
+          301.98544034478255,
+          411.2740488081763
+        ],
+        [
+          301.98544034478255,
+          540.1290389206843
+        ],
+        [
+          301.98544034478255,
+          657.2819635719934
+        ],
+        [
+          129.7057670445065,
+          0.0
+        ],
+        [
+          280.26300151791656,
+          0.0
+        ],
+        [
+          60.120140525803436,
+          700.4646734384005
+        ],
+        [
+          174.4698149127653,
+          700.4646734384005
+        ],
+        [
+          286.9262012791005,
+          328.2411739927775
+        ],
+        [
+          256.52638902317267,
+          298.0724291961815
+        ],
+        [
+          163.16479911410715,
+          254.54181118079578
+        ],
+        [
+          240.99865939776646,
+          207.26507770919125
+        ],
+        [
+          266.43885352037614,
+          181.6625576778024
+        ],
+        [
+          160.42995957750827,
+          99.20825499939383
+        ],
+        [
+          213.6997751648887,
+          43.07288372097537
+        ],
+        [
+          264.46433099987917,
+          102.43356262648012
+        ],
+        [
+          117.42675484280335,
+          301.0115600822901
+        ],
+        [
+          198.30186941096326,
+          377.7670684456825
+        ],
+        [
+          291.1735958865611,
+          466.3187183442933
+        ],
+        [
+          196.35962281818502,
+          490.3814532835968
+        ],
+        [
+          242.9368843336124,
+          586.3431639428891
+        ],
+        [
+          108.88711422937922,
+          546.0115495945793
+        ],
+        [
+          69.22813570819562,
+          590.2193941122969
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "weight_mode": "equal"
+    }
+  },
+  {
+    "case": "B_L1",
+    "case_index": 3,
+    "label": "B-L1: two sources, 25 boundary sensors",
+    "num_sources": 2,
+    "true_control": [
+      100.0,
+      210.0,
+      1.3,
+      270.0,
+      60.0,
+      0.85
+    ],
+    "reference_post_init_run": "Applications/Application1/output/gn_diag_default_check_20261004_161718/cases/P_B_L1_boundary__gn-diag",
+    "reference_initializer_run": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L1_boundary",
+    "common_driver_flags": [
+      "--mode",
+      "location_and_intensity",
+      "--stage",
+      "full",
+      "--num-sources",
+      "2",
+      "--bound-case",
+      "mesh_domain",
+      "--num-starts",
+      "1",
+      "--random-seed",
+      "0",
+      "--amplitude-solver",
+      "osqp",
+      "--post-init-method",
+      "lbfgsb",
+      "--feasibility-mode",
+      "raw",
+      "--tfinal",
+      "150",
+      "--amplitude-floor",
+      "0.1",
+      "--max-iter",
+      "150",
+      "--observation-mode",
+      "nodes",
+      "--sensor-weights",
+      "equal",
+      "--sensor-equal-weight",
+      "1.0",
+      "--velocity-field-file",
+      "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "--true-control",
+      "100.0",
+      "210.0",
+      "1.3",
+      "270.0",
+      "60.0",
+      "0.85",
+      "--sensor-node-ids",
+      "641,644,647,650,653,656,659,662,665,668,671,674,677,582,585,588,591,594,596,693,690,687,684,681,679",
+      "--post-init-scaling",
+      "gn-diag"
+    ],
+    "removed_from_reference_argv": [
+      "--max-paraview-frames",
+      "100",
+      "--init-mode",
+      "manual",
+      "--initial-control",
+      "270.08112281544413",
+      "59.94070585199988",
+      "0.8506274338403631",
+      "120.1363639543732",
+      "213.74172414815877",
+      "1.0066157552593127",
+      "--case-name",
+      "P_B_L1_boundary__gn-diag"
+    ],
+    "added_per_run": [
+      "--init-mode",
+      "manual",
+      "--initial-control",
+      "<sampled start>",
+      "--case-name",
+      "<run id>",
+      "--max-paraview-frames",
+      "1"
+    ],
+    "amplitude_sampling_interval": [
+      0.1,
+      2.0
+    ],
+    "lbfgsb_amplitude_bounds": [
+      0.1,
+      2.0
+    ],
+    "max_iter": 150,
+    "reference_pde": {
+      "lx": 301.98544034478255,
+      "ly": 700.4646734384005,
+      "k": 10.0,
+      "vx": 2.07,
+      "vy": -0.36,
+      "dt": 0.1,
+      "tfinal": 150.0,
+      "jprint": 1,
+      "ngauss": 3,
+      "sigma2": 400.0,
+      "velocity_field": {
+        "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+        "coords_shape": [
+          2795,
+          3
+        ],
+        "velocity_nodes_shape": [
+          2795,
+          2
+        ],
+        "velocity_magnitude_min": 2.5643005027931998e-21,
+        "velocity_magnitude_max": 10.580957815647944,
+        "coordinate_validation_passed": true,
+        "coordinate_validation_tolerance": 1e-10,
+        "max_coordinate_difference": 0.0
+      },
+      "velocity_mode": "nodal"
+    },
+    "reference_active_bounds": [
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ],
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ]
+    ],
+    "reference_observation": {
+      "num_sensors": 25,
+      "sensor_node_ids": [
+        641,
+        644,
+        647,
+        650,
+        653,
+        656,
+        659,
+        662,
+        665,
+        668,
+        671,
+        674,
+        677,
+        582,
+        585,
+        588,
+        591,
+        594,
+        596,
+        693,
+        690,
+        687,
+        684,
+        681,
+        679
+      ],
+      "sensor_coordinates": [
+        [
+          301.98544034478255,
+          21.591354933188995
+        ],
+        [
+          301.98544034478255,
+          84.26294090910233
+        ],
+        [
+          301.98544034478255,
+          146.89537197179743
+        ],
+        [
+          301.98544034478255,
+          209.78690056328196
+        ],
+        [
+          301.98544034478255,
+          268.02978988797986
+        ],
+        [
+          301.98544034478255,
+          311.66010967758484
+        ],
+        [
+          301.98544034478255,
+          356.78659384607454
+        ],
+        [
+          301.98544034478255,
+          411.2740488081763
+        ],
+        [
+          301.98544034478255,
+          452.9394430399989
+        ],
+        [
+          301.98544034478255,
+          490.98378297447925
+        ],
+        [
+          301.98544034478255,
+          540.1290389206843
+        ],
+        [
+          301.98544034478255,
+          594.0383510207757
+        ],
+        [
+          301.98544034478255,
+          657.2819635719934
+        ],
+        [
+          21.722438826865982,
+          0.0
+        ],
+        [
+          78.43458346417174,
+          0.0
+        ],
+        [
+          129.7057670445065,
+          0.0
+        ],
+        [
+          179.30520862987032,
+          0.0
+        ],
+        [
+          238.89794434956275,
+          0.0
+        ],
+        [
+          280.26300151791656,
+          0.0
+        ],
+        [
+          16.426677579176612,
+          700.4646734384005
+        ],
+        [
+          60.120140525803436,
+          700.4646734384005
+        ],
+        [
+          111.35106871026801,
+          700.4646734384005
+        ],
+        [
+          174.4698149127653,
+          700.4646734384005
+        ],
+        [
+          238.22762762877392,
+          700.4646734384005
+        ],
+        [
+          280.7328361060936,
+          700.4646734384005
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "weight_mode": "equal"
+    }
+  },
+  {
+    "case": "B_L2",
+    "case_index": 4,
+    "label": "B-L2: two sources, mixed sensors (10 boundary + 15 interior)",
+    "num_sources": 2,
+    "true_control": [
+      100.0,
+      210.0,
+      1.3,
+      270.0,
+      60.0,
+      0.85
+    ],
+    "reference_post_init_run": "Applications/Application1/output/gn_diag_default_check_20261004_161718/cases/P_B_L2_mixed__gn-diag",
+    "reference_initializer_run": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L2_mixed",
+    "common_driver_flags": [
+      "--mode",
+      "location_and_intensity",
+      "--stage",
+      "full",
+      "--num-sources",
+      "2",
+      "--bound-case",
+      "mesh_domain",
+      "--num-starts",
+      "1",
+      "--random-seed",
+      "0",
+      "--amplitude-solver",
+      "osqp",
+      "--post-init-method",
+      "lbfgsb",
+      "--feasibility-mode",
+      "raw",
+      "--tfinal",
+      "150",
+      "--amplitude-floor",
+      "0.1",
+      "--max-iter",
+      "150",
+      "--observation-mode",
+      "nodes",
+      "--sensor-weights",
+      "equal",
+      "--sensor-equal-weight",
+      "1.0",
+      "--velocity-field-file",
+      "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "--true-control",
+      "100.0",
+      "210.0",
+      "1.3",
+      "270.0",
+      "60.0",
+      "0.85",
+      "--sensor-node-ids",
+      "641,647,653,662,671,677,588,596,690,684,1855,2771,2704,1279,789,1156,1677,2464,1137,827,1807,1332,1616,2790,1022",
+      "--post-init-scaling",
+      "gn-diag"
+    ],
+    "removed_from_reference_argv": [
+      "--max-paraview-frames",
+      "100",
+      "--init-mode",
+      "manual",
+      "--initial-control",
+      "100.08834882378963",
+      "209.95083427163502",
+      "1.2985632230142587",
+      "269.6867899200351",
+      "60.010972723866885",
+      "0.8469266521345944",
+      "--case-name",
+      "P_B_L2_mixed__gn-diag"
+    ],
+    "added_per_run": [
+      "--init-mode",
+      "manual",
+      "--initial-control",
+      "<sampled start>",
+      "--case-name",
+      "<run id>",
+      "--max-paraview-frames",
+      "1"
+    ],
+    "amplitude_sampling_interval": [
+      0.1,
+      2.0
+    ],
+    "lbfgsb_amplitude_bounds": [
+      0.1,
+      2.0
+    ],
+    "max_iter": 150,
+    "reference_pde": {
+      "lx": 301.98544034478255,
+      "ly": 700.4646734384005,
+      "k": 10.0,
+      "vx": 2.07,
+      "vy": -0.36,
+      "dt": 0.1,
+      "tfinal": 150.0,
+      "jprint": 1,
+      "ngauss": 3,
+      "sigma2": 400.0,
+      "velocity_field": {
+        "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+        "coords_shape": [
+          2795,
+          3
+        ],
+        "velocity_nodes_shape": [
+          2795,
+          2
+        ],
+        "velocity_magnitude_min": 2.5643005027931998e-21,
+        "velocity_magnitude_max": 10.580957815647944,
+        "coordinate_validation_passed": true,
+        "coordinate_validation_tolerance": 1e-10,
+        "max_coordinate_difference": 0.0
+      },
+      "velocity_mode": "nodal"
+    },
+    "reference_active_bounds": [
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ],
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ]
+    ],
+    "reference_observation": {
+      "num_sensors": 25,
+      "sensor_node_ids": [
+        641,
+        647,
+        653,
+        662,
+        671,
+        677,
+        588,
+        596,
+        690,
+        684,
+        1855,
+        2771,
+        2704,
+        1279,
+        789,
+        1156,
+        1677,
+        2464,
+        1137,
+        827,
+        1807,
+        1332,
+        1616,
+        2790,
+        1022
+      ],
+      "sensor_coordinates": [
+        [
+          301.98544034478255,
+          21.591354933188995
+        ],
+        [
+          301.98544034478255,
+          146.89537197179743
+        ],
+        [
+          301.98544034478255,
+          268.02978988797986
+        ],
+        [
+          301.98544034478255,
+          411.2740488081763
+        ],
+        [
+          301.98544034478255,
+          540.1290389206843
+        ],
+        [
+          301.98544034478255,
+          657.2819635719934
+        ],
+        [
+          129.7057670445065,
+          0.0
+        ],
+        [
+          280.26300151791656,
+          0.0
+        ],
+        [
+          60.120140525803436,
+          700.4646734384005
+        ],
+        [
+          174.4698149127653,
+          700.4646734384005
+        ],
+        [
+          286.9262012791005,
+          328.2411739927775
+        ],
+        [
+          256.52638902317267,
+          298.0724291961815
+        ],
+        [
+          163.16479911410715,
+          254.54181118079578
+        ],
+        [
+          240.99865939776646,
+          207.26507770919125
+        ],
+        [
+          266.43885352037614,
+          181.6625576778024
+        ],
+        [
+          160.42995957750827,
+          99.20825499939383
+        ],
+        [
+          213.6997751648887,
+          43.07288372097537
+        ],
+        [
+          264.46433099987917,
+          102.43356262648012
+        ],
+        [
+          117.42675484280335,
+          301.0115600822901
+        ],
+        [
+          198.30186941096326,
+          377.7670684456825
+        ],
+        [
+          291.1735958865611,
+          466.3187183442933
+        ],
+        [
+          196.35962281818502,
+          490.3814532835968
+        ],
+        [
+          242.9368843336124,
+          586.3431639428891
+        ],
+        [
+          108.88711422937922,
+          546.0115495945793
+        ],
+        [
+          69.22813570819562,
+          590.2193941122969
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "weight_mode": "equal"
+    }
+  },
+  {
+    "case": "M5_S4",
+    "case_index": 5,
+    "label": "M5: five sources, 31 sensors (25 boundary L1 + 6 interior S4)",
+    "num_sources": 5,
+    "true_control": [
+      110.0,
+      660.0,
+      0.9,
+      270.0,
+      600.0,
+      1.35,
+      200.0,
+      425.0,
+      0.7,
+      100.0,
+      210.0,
+      1.6,
+      275.0,
+      120.0,
+      1.1
+    ],
+    "reference_post_init_run": "Applications/Application1/output/post_init_scaling_validation_20261004_125952/cases/M5_S4_gndiag",
+    "reference_initializer_run": "Applications/Application1/output/post_init_scaling_validation_20261004_125952/cases/M5_S4_gndiag",
+    "common_driver_flags": [
+      "--mode",
+      "location_and_intensity",
+      "--stage",
+      "full",
+      "--num-sources",
+      "5",
+      "--bound-case",
+      "mesh_domain",
+      "--num-starts",
+      "1",
+      "--random-seed",
+      "0",
+      "--amplitude-solver",
+      "osqp",
+      "--post-init-method",
+      "lbfgsb",
+      "--feasibility-mode",
+      "raw",
+      "--tfinal",
+      "150",
+      "--amplitude-floor",
+      "0.1",
+      "--max-iter",
+      "500",
+      "--observation-mode",
+      "nodes",
+      "--sensor-weights",
+      "equal",
+      "--sensor-equal-weight",
+      "1.0",
+      "--velocity-field-file",
+      "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+      "--true-control",
+      "110.0",
+      "660.0",
+      "0.9",
+      "270.0",
+      "600.0",
+      "1.35",
+      "200.0",
+      "425.0",
+      "0.7",
+      "100.0",
+      "210.0",
+      "1.6",
+      "275.0",
+      "120.0",
+      "1.1",
+      "--sensor-node-ids",
+      "641,644,647,650,653,656,659,662,665,668,671,674,677,582,585,588,591,594,596,693,690,687,684,681,679,928,1506,2478,1438,2680,2244",
+      "--post-init-scaling",
+      "gn-diag"
+    ],
+    "removed_from_reference_argv": [
+      "--init-mode",
+      "sensitivity",
+      "--sensitivity-score",
+      "predicted_reduction",
+      "--sensitivity-top-k",
+      "24",
+      "--sensitivity-beam-width",
+      "3",
+      "--sensitivity-refine-centers",
+      "--sensitivity-refine-max-fev",
+      "60",
+      "--sensitivity-coherence-cap",
+      "0.3",
+      "--sensitivity-geometry-aware-branches",
+      "--sensitivity-obstacle-aware-diversity",
+      "--sensitivity-refine-pair",
+      "--sensitivity-pair-refine-max-fev",
+      "60",
+      "--sensitivity-reselect-second",
+      "--sensitivity-reselect-threshold",
+      "0.25",
+      "--sensitivity-reselect-max-passes",
+      "2",
+      "--sensitivity-save-plots",
+      "--max-paraview-frames",
+      "100",
+      "--case-name",
+      "M5_S4_gndiag"
+    ],
+    "added_per_run": [
+      "--init-mode",
+      "manual",
+      "--initial-control",
+      "<sampled start>",
+      "--case-name",
+      "<run id>",
+      "--max-paraview-frames",
+      "1"
+    ],
+    "amplitude_sampling_interval": [
+      0.1,
+      2.0
+    ],
+    "lbfgsb_amplitude_bounds": [
+      0.1,
+      2.0
+    ],
+    "max_iter": 500,
+    "reference_pde": {
+      "lx": 301.98544034478255,
+      "ly": 700.4646734384005,
+      "k": 10.0,
+      "vx": 2.07,
+      "vy": -0.36,
+      "dt": 0.1,
+      "tfinal": 150.0,
+      "jprint": 1,
+      "ngauss": 3,
+      "sigma2": 400.0,
+      "velocity_field": {
+        "path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+        "coords_shape": [
+          2795,
+          3
+        ],
+        "velocity_nodes_shape": [
+          2795,
+          2
+        ],
+        "velocity_magnitude_min": 2.5643005027931998e-21,
+        "velocity_magnitude_max": 10.580957815647944,
+        "coordinate_validation_passed": true,
+        "coordinate_validation_tolerance": 1e-10,
+        "max_coordinate_difference": 0.0
+      },
+      "velocity_mode": "nodal"
+    },
+    "reference_active_bounds": [
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ],
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ],
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ],
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ],
+      [
+        0.0,
+        301.98544034478255
+      ],
+      [
+        0.0,
+        700.4646734384005
+      ],
+      [
+        0.1,
+        2.0
+      ]
+    ],
+    "reference_observation": {
+      "num_sensors": 31,
+      "sensor_node_ids": [
+        641,
+        644,
+        647,
+        650,
+        653,
+        656,
+        659,
+        662,
+        665,
+        668,
+        671,
+        674,
+        677,
+        582,
+        585,
+        588,
+        591,
+        594,
+        596,
+        693,
+        690,
+        687,
+        684,
+        681,
+        679,
+        928,
+        1506,
+        2478,
+        1438,
+        2680,
+        2244
+      ],
+      "sensor_coordinates": [
+        [
+          301.98544034478255,
+          21.591354933188995
+        ],
+        [
+          301.98544034478255,
+          84.26294090910233
+        ],
+        [
+          301.98544034478255,
+          146.89537197179743
+        ],
+        [
+          301.98544034478255,
+          209.78690056328196
+        ],
+        [
+          301.98544034478255,
+          268.02978988797986
+        ],
+        [
+          301.98544034478255,
+          311.66010967758484
+        ],
+        [
+          301.98544034478255,
+          356.78659384607454
+        ],
+        [
+          301.98544034478255,
+          411.2740488081763
+        ],
+        [
+          301.98544034478255,
+          452.9394430399989
+        ],
+        [
+          301.98544034478255,
+          490.98378297447925
+        ],
+        [
+          301.98544034478255,
+          540.1290389206843
+        ],
+        [
+          301.98544034478255,
+          594.0383510207757
+        ],
+        [
+          301.98544034478255,
+          657.2819635719934
+        ],
+        [
+          21.722438826865982,
+          0.0
+        ],
+        [
+          78.43458346417174,
+          0.0
+        ],
+        [
+          129.7057670445065,
+          0.0
+        ],
+        [
+          179.30520862987032,
+          0.0
+        ],
+        [
+          238.89794434956275,
+          0.0
+        ],
+        [
+          280.26300151791656,
+          0.0
+        ],
+        [
+          16.426677579176612,
+          700.4646734384005
+        ],
+        [
+          60.120140525803436,
+          700.4646734384005
+        ],
+        [
+          111.35106871026801,
+          700.4646734384005
+        ],
+        [
+          174.4698149127653,
+          700.4646734384005
+        ],
+        [
+          238.22762762877392,
+          700.4646734384005
+        ],
+        [
+          280.7328361060936,
+          700.4646734384005
+        ],
+        [
+          114.71198286209255,
+          223.09139214627794
+        ],
+        [
+          125.3649585103849,
+          242.78129529519356
+        ],
+        [
+          143.02422776736785,
+          231.75789212450036
+        ],
+        [
+          120.66158328816528,
+          267.1025345243979
+        ],
+        [
+          112.44092235120479,
+          298.2359076634748
+        ],
+        [
+          129.2576136525604,
+          337.32081495647435
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "weight_mode": "equal"
+    }
+  }
+]

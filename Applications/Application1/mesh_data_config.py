@@ -1,6 +1,6 @@
 """Build the mesh_data dictionary for Application1 (DC Navy Yard).
 
-This mirrors ``Test Application4/mesh_data_config.py``: it reads the committed
+This mirrors App4's ``mesh_data_config.py``: it reads the committed
 Gmsh mesh with ``meshio`` and returns coordinates, triangle connectivity, and
 per-boundary node/edge sets keyed by physical-group name.  The ``coord`` array
 here defines the canonical Application1 transport-mesh node ordering, which is
@@ -88,7 +88,7 @@ DOMAIN_Y_MIN = 0.0
 DOMAIN_Y_MAX = 700.4646734384005
 # "Width"/"height" are the physical spans in meters (unchanged by translation).
 # The shared forward solver ignores lx/ly (geometry comes from the mesh); these
-# exist for API parity with the Test Application4 driver signature and for legacy
+# exist for API parity with the App4 driver signature and for legacy
 # bounding-box helpers.
 OUTER_WIDTH = DOMAIN_X_MAX - DOMAIN_X_MIN
 OUTER_HEIGHT = DOMAIN_Y_MAX - DOMAIN_Y_MIN

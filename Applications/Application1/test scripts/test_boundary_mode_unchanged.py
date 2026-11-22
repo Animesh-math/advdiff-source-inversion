@@ -1,7 +1,8 @@
 """Prove the default boundary observation mode is numerically unchanged.
 
 The node-sensor extension touched two shared files on the objective/gradient
-path: ``Applications/Test Application2/gradient_test.py`` and
+path: ``Src/Objective/gradient_test.py`` (formerly
+``Applications/Test Application2/gradient_test.py``) and
 ``Src/Solvers/adv_diffusion_adjoint.py``.  Both were extended with an
 ``observation is None`` branch that must leave the boundary path untouched.
 
@@ -40,10 +41,14 @@ import run_optimization as app1
 
 APP_DIR = Path(_APP1_DIR)
 PROJECT_ROOT = APP_DIR.parents[1]
-LEGACY_FILES = (
+# The shared objective module moved from "Applications/Test Application2/" to
+# "Src/Objective/"; a revision may hold it at either path.
+LEGACY_GRADIENT_PATHS = (
+    "Src/Objective/gradient_test.py",
     "Applications/Test Application2/gradient_test.py",
-    "Src/Solvers/adv_diffusion_adjoint.py",
 )
+LEGACY_GRADIENT_DEST = "Src/Objective/gradient_test.py"
+LEGACY_FILES = ("Src/Solvers/adv_diffusion_adjoint.py",)
 MEASUREMENT_BOUNDARIES = ["left", "right", "bottom"]
 CONTROLS = (
     ("true control", np.array([162.0, 300.0, 1.40, 270.0, 600.0, 0.95])),
@@ -67,9 +72,7 @@ CONTROLS = (
 def materialize_legacy_tree(revision: str, destination: Path) -> Path:
     """Write the pre-change shared solver files into a mirrored temp tree."""
     (destination / "Src" / "Solvers").mkdir(parents=True, exist_ok=True)
-    (destination / "Applications" / "Test Application2").mkdir(
-        parents=True, exist_ok=True
-    )
+    (destination / "Src" / "Objective").mkdir(parents=True, exist_ok=True)
     for name in sorted((PROJECT_ROOT / "Src" / "Solvers").glob("*.py")):
         shutil.copy2(name, destination / "Src" / "Solvers" / name.name)
     for rel in LEGACY_FILES:
@@ -79,7 +82,17 @@ def materialize_legacy_tree(revision: str, destination: Path) -> Path:
             capture_output=True,
         ).stdout
         (destination / rel).write_bytes(blob)
-    return destination / "Applications" / "Test Application2" / "gradient_test.py"
+    for rel in LEGACY_GRADIENT_PATHS:
+        result = subprocess.run(
+            ["git", "-C", str(PROJECT_ROOT), "show", f"{revision}:{rel}"],
+            capture_output=True,
+        )
+        if result.returncode == 0:
+            (destination / LEGACY_GRADIENT_DEST).write_bytes(result.stdout)
+            return destination / LEGACY_GRADIENT_DEST
+    raise FileNotFoundError(
+        f"gradient_test.py not found at {LEGACY_GRADIENT_PATHS} in revision {revision}"
+    )
 
 
 def load_module(path: Path):

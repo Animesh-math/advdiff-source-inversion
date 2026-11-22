@@ -1,0 +1,84 @@
+{
+ "note": "Supplied inputs copied from the main research repository. Only embedded absolute paths in JSON text were rewritten repo-relative; every numerical array is byte-identical (see array_sha256). original_sha256 = hash of the file used by the paper runs.",
+ "files": [
+  {
+   "path": "Applications/Application1/supplied/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+   "install_to": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+   "original_sha256": "dcdb22e4771e560ec59c3b6c412585abc0c6b5dd397d052b8c9185878b2ba896",
+   "sha256": "dcdb22e4771e560ec59c3b6c412585abc0c6b5dd397d052b8c9185878b2ba896"
+  },
+  {
+   "path": "Applications/Application1/supplied/navier_stokes/application1_navier_stokes_run_metadata.json",
+   "install_to": "Applications/Application1/output/navier_stokes/application1_navier_stokes_run_metadata.json",
+   "original_sha256": "2ed3d4e29288e99dd0ab597d22b7623708253edaf6b64afce588b18d5ddf3e3d",
+   "sha256": "841dbdce23cf8db5149b642dfb87a94a4a559a8f6a0b270ca94de26ae1596626"
+  },
+  {
+   "path": "Applications/Application2/supplied/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.msh",
+   "install_to": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.msh",
+   "original_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+   "sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e"
+  },
+  {
+   "path": "Applications/Application2/supplied/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse_mesh_info.json",
+   "install_to": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse_mesh_info.json",
+   "original_sha256": "015074276693bd5409275b94a4d19d8af276ff600fe3370fa5d79e515c8e52bd",
+   "sha256": "617c43f2d261545a5e38e1b529895ed2fc0784385fb2f70bcc4a34a64f046911"
+  },
+  {
+   "path": "Applications/Application2/supplied/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+   "install_to": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+   "original_sha256": "b3f2062166617edab52008cdc0b1d2f4365b854c99ab10f05a9c05c092fb5192",
+   "array_sha256": {
+    "coords": "bb718883d061f760a95b12b893c9fe38361cff034a8cdb3eef7722c5f2a756f7",
+    "velocity_nodes": "e062ea48ed5d80c66d8002a6d803e34a275ff90d0eadca5a569939c5b0187073",
+    "pressure_nodes": "3c8c85d5096530940d3f079911cd4e8342f9ef925371d486a1532bf574984ea4",
+    "connections": "877be3494dee729e8be8503fceaa9bad78669c8f72314a91f3e8e2a9769c753f"
+   },
+   "sha256": "285ab33e1afa896c823851303f741476f9253b777314ac55adca739dc5a9966d"
+  },
+  {
+   "path": "Applications/Application2/supplied/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_run_metadata_coarse.json",
+   "install_to": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_run_metadata_coarse.json",
+   "original_sha256": "c4f81c535993bf1d3dbf345c91854876b2e77296a364165693fe4d6af321109b",
+   "sha256": "489917e29cfb0896dcc3ef7723f8058065fbb8542cea10af616b2531a5f57c2e"
+  },
+  {
+   "path": "Applications/Application2/supplied/v3_bathroom_topsupply_20261116/fine/mesh/application2_room_fine.msh",
+   "install_to": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/mesh/application2_room_fine.msh",
+   "original_sha256": "5309186742fc17e1627e169edb7d241568f4dced6f8055b5d0a1453642ed66b5",
+   "sha256": "5309186742fc17e1627e169edb7d241568f4dced6f8055b5d0a1453642ed66b5"
+  },
+  {
+   "path": "Applications/Application2/supplied/v3_bathroom_topsupply_20261116/fine/mesh/application2_room_fine_mesh_info.json",
+   "install_to": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/mesh/application2_room_fine_mesh_info.json",
+   "original_sha256": "42c652a9f707f33368d23692ee585d06b4ef51799f2153cf43edee62dc4f3ebc",
+   "sha256": "619c9813925bc9a15c20a4d9785b99614606160588b4cb32c19ec3e05cc3cdab"
+  },
+  {
+   "path": "Applications/Application2/supplied/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_navier_stokes_velocity_nodes_fine.npz",
+   "install_to": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_navier_stokes_velocity_nodes_fine.npz",
+   "original_sha256": "a4bd84897f73e6599fcb13838ee2d90dd7d3216cf66369a7d2f5d95a0110ed92",
+   "array_sha256": {
+    "coords": "0a576b7cafa445be96acd6546e55499cc6eb4b543efff49cd36beeda01b66172",
+    "velocity_nodes": "681682d430f2b373504a79339446bee0d901210b22b080c68048da82c2001bbe",
+    "pressure_nodes": "6638fb4ce1f986e433ee99edb8676191d410cc1a79025309fba9b5fee708aecd",
+    "connections": "cd2d83931c93e81203686756e743c332a86076f9817fccbf81335db175d3ce26"
+   },
+   "sha256": "e6ef91abe57d74fc3707105866ba78e968a7444ea4db24f2351049449b1a2525"
+  },
+  {
+   "path": "Applications/Application2/supplied/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_navier_stokes_run_metadata_fine.json",
+   "install_to": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_navier_stokes_run_metadata_fine.json",
+   "original_sha256": "6f27518bce76f2d5b5d44a8b8fdb537503394236bc911f64c012ea5bf3735ded",
+   "sha256": "8196f6eefde8b30d3bf25c1169e6501b2de41b937fe273bba613af4ea57282b4"
+  },
+  {
+   "path": "Applications/Application2/supplied/v3_bathroom_topsupply_20261116/RUN_STATE",
+   "install_to": "Applications/Application2/output/v3_bathroom_topsupply_20261116/RUN_STATE",
+   "original_sha256": "ec65fce9905629224195b8e85a9ace7772a69d491b1b48c883273ddf4eede781",
+   "sha256": "ec65fce9905629224195b8e85a9ace7772a69d491b1b48c883273ddf4eede781"
+  }
+ ],
+ "application2_flow_note": "RUN_STATE is the flow pipeline's completion marker (generate_observations.py requires DONE_CONVERGED). The flow folder's env/sha256_application2_sources.txt is NOT supplied: four Application2 files were edited for the public release in comments/docstrings/default interpreter paths only (mesh_data_config.py, report_application2_flow.py, Room_mesh/build_room_mesh.py, 'Navier Stokes Solve/solve_application2_navier_stokes.py', run_application2_setup.sh), so that optional source-unchanged check is skipped rather than failed."
+}

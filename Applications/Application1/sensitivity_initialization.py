@@ -17,7 +17,7 @@ forward/adjoint/objective machinery: it reuses
 
 Discrete formulas actually implemented (matching the optimizer's own discrete
 inner products; see ``source_insertion_sensitivity`` and
-``Test Application2/gradient_test.py``):
+``Src/Objective/gradient_test.py``):
 
   Insertion sensitivity (searched/plotted field), for a unit Gaussian phi_c at
   candidate center c and the current residual r = C u(q_current) - y_d:
@@ -112,7 +112,7 @@ from typing import Callable, Dict, List, Optional, Sequence
 
 import numpy as np
 
-import gradient_test as gt  # noqa: F401  (Test Application2 forward/objective; on path via run_optimization)
+import gradient_test as gt  # noqa: F401  (Src/Objective forward/objective; on path via run_optimization)
 import source_insertion_sensitivity as sis
 from mesh_admissibility import MeshAdmissibility
 

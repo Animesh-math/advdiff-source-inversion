@@ -1,0 +1,157 @@
+{
+  "generated_utc": "2026-07-15T22:28:43.919649+00:00",
+  "wind_velocity": [
+    2.07,
+    -0.36
+  ],
+  "wind_velocity_units": "m/s, +x=east, +y=north",
+  "wind_speed": 2.1010711553871753,
+  "flux_tolerance": 1e-09,
+  "outer_tag_cardinal_mapping": {
+    "11": {
+      "name": "bottom",
+      "cardinal": "south",
+      "outward_normal": [
+        0.0,
+        -1.0
+      ]
+    },
+    "12": {
+      "name": "top",
+      "cardinal": "north",
+      "outward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    "13": {
+      "name": "left",
+      "cardinal": "west",
+      "outward_normal": [
+        -1.0,
+        0.0
+      ]
+    },
+    "14": {
+      "name": "right",
+      "cardinal": "east",
+      "outward_normal": [
+        1.0,
+        0.0
+      ]
+    }
+  },
+  "inflow_boundaries": [
+    {
+      "tag": 12,
+      "name": "top",
+      "cardinal": "north",
+      "outward_normal": [
+        0.0,
+        1.0
+      ],
+      "flux": -0.36,
+      "class": "inflow"
+    },
+    {
+      "tag": 13,
+      "name": "left",
+      "cardinal": "west",
+      "outward_normal": [
+        -1.0,
+        0.0
+      ],
+      "flux": -2.07,
+      "class": "inflow"
+    }
+  ],
+  "outflow_boundaries": [
+    {
+      "tag": 11,
+      "name": "bottom",
+      "cardinal": "south",
+      "outward_normal": [
+        0.0,
+        -1.0
+      ],
+      "flux": 0.36,
+      "class": "outflow"
+    },
+    {
+      "tag": 14,
+      "name": "right",
+      "cardinal": "east",
+      "outward_normal": [
+        1.0,
+        0.0
+      ],
+      "flux": 2.07,
+      "class": "outflow"
+    }
+  ],
+  "tangential_boundaries": [],
+  "building_tags": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121
+  ],
+  "building_boundary_condition": "no-slip u=(0,0)",
+  "viscosity_nu_m2_per_s": 5.0,
+  "viscosity_note": "effective/eddy kinematic viscosity, not molecular air viscosity",
+  "density_rho_kg_per_m3": 1.225,
+  "density_note": "informational; solver uses incompressible kinematic form (no rho term)",
+  "numerical_method": "Taylor-Hood P2/P1, Picard fixed-point, PETSc MUMPS LU",
+  "picard_tol": 1e-08,
+  "picard_max_iter": 50,
+  "picard_iterations": 37,
+  "picard_converged": true,
+  "final_relative_residual": 8.023153413948243e-09,
+  "velocity_validation": {
+    "building_wall_max_velocity": 2.3499409946463977e-14,
+    "interior_max_velocity": 10.580957815647944,
+    "global_max_velocity": 10.580957815647944,
+    "global_min_velocity": 2.5643005027931998e-21
+  },
+  "dolfinx_mesh": {
+    "nodes": 2795,
+    "cells": 4936
+  },
+  "transport_mesh": {
+    "nodes": 2795,
+    "triangles": 4936
+  },
+  "mesh_file": "Applications/Application1/DC_mesh/dc_navy_yard_mesh.msh",
+  "npz_path": "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+  "npz_schema": {
+    "coords": "(num_nodes, 3)",
+    "velocity_nodes": "(num_nodes, 2)"
+  },
+  "output_files": [
+    "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity.bp",
+    "Applications/Application1/output/navier_stokes/application1_navier_stokes_pressure.bp",
+    "Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz",
+    "Applications/Application1/output/navier_stokes/application1_convergence_history.csv",
+    "Applications/Application1/output/navier_stokes/application1_velocity_magnitude.png",
+    "Applications/Application1/output/navier_stokes/application1_streamlines.png",
+    "Applications/Application1/output/navier_stokes/application1_boundary_conditions.png",
+    "Applications/Application1/output/navier_stokes/application1_convergence_history.png"
+  ]
+}

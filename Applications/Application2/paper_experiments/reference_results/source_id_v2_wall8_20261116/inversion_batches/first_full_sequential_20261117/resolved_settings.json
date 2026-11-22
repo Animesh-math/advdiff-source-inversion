@@ -1,0 +1,1585 @@
+{
+  "dataset_dir": "Applications/Application2/output/source_id_v2_wall8_20261116",
+  "expected_dataset_version": "source_id_v2_wall8_20261116",
+  "expected_layout": "wall_8",
+  "expected_num_sensors": 8,
+  "common_extra_arguments": [],
+  "runs": [
+    {
+      "run_id": "case_12_clean",
+      "case": "12",
+      "data": "clean",
+      "run_inversion_argv": [
+        "--dataset-dir",
+        "Applications/Application2/output/source_id_v2_wall8_20261116",
+        "--case",
+        "12",
+        "--data",
+        "clean",
+        "--stage",
+        "full",
+        "--out-dir",
+        "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/runs/case_12_clean"
+      ],
+      "resolved_arguments": {
+        "dataset_dir": "Applications/Application2/output/source_id_v2_wall8_20261116",
+        "case": "12",
+        "data": "clean",
+        "stage": "full",
+        "out_dir": "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/runs/case_12_clean",
+        "tag": null,
+        "initial_control": null,
+        "sensor_weight": null,
+        "sensor_weights_file": null,
+        "eta1": null,
+        "amplitude_solver": "osqp",
+        "sensitivity_top_k": 24,
+        "sensitivity_beam_width": 3,
+        "sensitivity_refine_max_fev": 60,
+        "sensitivity_pair_refine_max_fev": 60,
+        "sensitivity_coherence_cap": 0.3,
+        "sensitivity_min_separation": null,
+        "sensitivity_mask_boundary_buffer": 0.0,
+        "init_refine_xatol": null,
+        "init_refine_fatol_rel": 1e-06,
+        "init_dedup_floor": null,
+        "init_app1_literal_tolerances": false,
+        "post_init_scaling": "gn-diag",
+        "post_init_scaling_max_ratio": 10000.0,
+        "post_init_lbfgsb_maxcor": 30,
+        "max_iter": 200,
+        "check_gn_scaling": false
+      },
+      "inputs_read_by_optimization": {
+        "inversion_config": "Applications/Application2/output/source_id_v2_wall8_20261116/case_12/config/inversion_config.json",
+        "observations_file": "Applications/Application2/output/source_id_v2_wall8_20261116/case_12/data/observations_clean.npz",
+        "observations_file_sha256": "142c4d34a932710b4a8f32c352a45ef555461035f74cedcfaed036cd248c7ae9",
+        "observations_sha256": "553706243c87151dd29f1be0c90b2ea414960066f54048ca2ff79c475a3330b2"
+      },
+      "dataset_version": "source_id_v2_wall8_20261116",
+      "sensor_layout": "wall_8",
+      "num_sensors": 8,
+      "sensor_labels": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "sensor_node_ids": [
+        1331,
+        3741,
+        4234,
+        3743,
+        4231,
+        3833,
+        2663,
+        1382
+      ],
+      "sensor_coordinates": [
+        [
+          0.1591379370343268,
+          5.100000000005242
+        ],
+        [
+          2.830827318273924,
+          4.053130069092704
+        ],
+        [
+          3.160704287239835,
+          5.084495546739492
+        ],
+        [
+          5.830827318273931,
+          4.053130069092686
+        ],
+        [
+          6.15578773745208,
+          5.078374589255392
+        ],
+        [
+          8.84298063082124,
+          3.977251096959357
+        ],
+        [
+          1.907425199890157,
+          0.08974677487999244
+        ],
+        [
+          10.50859512247117,
+          1.788664463186837
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "eta1": 1.0,
+      "lambda_reg": 0.0,
+      "time_rule": "exclude_first",
+      "transport": {
+        "diffusivity_k": 0.01,
+        "sigma2": 0.04,
+        "tfinal": 300.0,
+        "dt": 0.015,
+        "jprint": 1,
+        "ngauss": 3,
+        "clean_air_dirichlet_boundaries": [
+          "inlet_1",
+          "inlet_2",
+          "inlet_3"
+        ]
+      },
+      "admissible_set": {
+        "amplitude_bounds": [
+          0.1,
+          2.0
+        ],
+        "center_box_bounds_xmin_xmax_ymin_ymax": [
+          0.0,
+          11.0,
+          0.0,
+          6.0
+        ],
+        "center_region": "any point inside a triangle of the coarse fluid mesh (beds, partitions, the bathroom wall and the exterior are not meshed); not restricted to any bay"
+      },
+      "num_sources": 2,
+      "mesh": {
+        "mesh_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.msh",
+        "mesh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+        "geometry_sha256": "4956131d35d27a7410be58ba3fe5c2af10e6c96e5656cec69974e8fb86b710ec"
+      },
+      "velocity": {
+        "velocity_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+        "velocity_sha256": "b3f2062166617edab52008cdc0b1d2f4365b854c99ab10f05a9c05c092fb5192"
+      },
+      "checks": [
+        {
+          "check": "dataset directory is the expected one",
+          "passed": true
+        },
+        {
+          "check": "dataset directory name == expected version",
+          "passed": true
+        },
+        {
+          "check": "config dataset_version == expected",
+          "passed": true
+        },
+        {
+          "check": "transport_config.DATASET_VERSION == expected",
+          "passed": true
+        },
+        {
+          "check": "sensor layout == wall_8",
+          "passed": true
+        },
+        {
+          "check": "transport_config.ACTIVE_SENSOR_LAYOUT == expected",
+          "passed": true
+        },
+        {
+          "check": "common/sensors.json is the active expected layout",
+          "passed": true
+        },
+        {
+          "check": "8 sensors in config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "observation array has 8 columns",
+          "passed": true
+        },
+        {
+          "check": "sensor node ids equal in data file, config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "sensor coordinates equal in data file, config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "configuration marked truth-free",
+          "passed": true
+        },
+        {
+          "check": "no optimization input lies under truth/",
+          "passed": true
+        },
+        {
+          "check": "observation file is observations_clean.npz",
+          "passed": true
+        },
+        {
+          "check": "W = I (no override)",
+          "passed": true
+        },
+        {
+          "check": "eta1 = 1 from the dataset",
+          "passed": true
+        },
+        {
+          "check": "amplitude bounds equal transport_config",
+          "passed": true
+        },
+        {
+          "check": "sensitivity initialization (no manual start)",
+          "passed": true
+        },
+        {
+          "check": "room-scale initializer tolerance shim enabled",
+          "passed": true
+        },
+        {
+          "check": "OSQP joint amplitude solver",
+          "passed": true
+        },
+        {
+          "check": "GN-diagonal scaling",
+          "passed": true
+        },
+        {
+          "check": "L-BFGS-B maxcor 30, max-iter 200",
+          "passed": true
+        },
+        {
+          "check": "run output folder does not exist yet",
+          "passed": true
+        }
+      ],
+      "noise": {
+        "seed": 2026111612,
+        "nominal_noise_level": 0.01,
+        "s_noise_absolute": 0.015439307195907605,
+        "s_noise_definition": "nominal_noise_level * sqrt(mean_{n=1..N, j} d_clean[n, j]^2)",
+        "generator": "numpy.random.default_rng(seed).normal(0, s_noise, size=(N, n_sensors)); rows = times n = 1..N",
+        "realized_relative_noise_norm": 0.009984213226296999,
+        "applies_to_this_run": false
+      },
+      "all_checks_passed": true
+    },
+    {
+      "run_id": "case_12_noisy",
+      "case": "12",
+      "data": "noisy",
+      "run_inversion_argv": [
+        "--dataset-dir",
+        "Applications/Application2/output/source_id_v2_wall8_20261116",
+        "--case",
+        "12",
+        "--data",
+        "noisy",
+        "--stage",
+        "full",
+        "--out-dir",
+        "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/runs/case_12_noisy"
+      ],
+      "resolved_arguments": {
+        "dataset_dir": "Applications/Application2/output/source_id_v2_wall8_20261116",
+        "case": "12",
+        "data": "noisy",
+        "stage": "full",
+        "out_dir": "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/runs/case_12_noisy",
+        "tag": null,
+        "initial_control": null,
+        "sensor_weight": null,
+        "sensor_weights_file": null,
+        "eta1": null,
+        "amplitude_solver": "osqp",
+        "sensitivity_top_k": 24,
+        "sensitivity_beam_width": 3,
+        "sensitivity_refine_max_fev": 60,
+        "sensitivity_pair_refine_max_fev": 60,
+        "sensitivity_coherence_cap": 0.3,
+        "sensitivity_min_separation": null,
+        "sensitivity_mask_boundary_buffer": 0.0,
+        "init_refine_xatol": null,
+        "init_refine_fatol_rel": 1e-06,
+        "init_dedup_floor": null,
+        "init_app1_literal_tolerances": false,
+        "post_init_scaling": "gn-diag",
+        "post_init_scaling_max_ratio": 10000.0,
+        "post_init_lbfgsb_maxcor": 30,
+        "max_iter": 200,
+        "check_gn_scaling": false
+      },
+      "inputs_read_by_optimization": {
+        "inversion_config": "Applications/Application2/output/source_id_v2_wall8_20261116/case_12/config/inversion_config.json",
+        "observations_file": "Applications/Application2/output/source_id_v2_wall8_20261116/case_12/data/observations_noisy.npz",
+        "observations_file_sha256": "fb46104e4f4a3e092ae3843b26b9a8c90a494228458fa4586f94c1006b8b78b3",
+        "observations_sha256": "9cb5d4415a8a539dbb10807342dbe795e500a30e2ab4263651b00ebcbce6847f"
+      },
+      "dataset_version": "source_id_v2_wall8_20261116",
+      "sensor_layout": "wall_8",
+      "num_sensors": 8,
+      "sensor_labels": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "sensor_node_ids": [
+        1331,
+        3741,
+        4234,
+        3743,
+        4231,
+        3833,
+        2663,
+        1382
+      ],
+      "sensor_coordinates": [
+        [
+          0.1591379370343268,
+          5.100000000005242
+        ],
+        [
+          2.830827318273924,
+          4.053130069092704
+        ],
+        [
+          3.160704287239835,
+          5.084495546739492
+        ],
+        [
+          5.830827318273931,
+          4.053130069092686
+        ],
+        [
+          6.15578773745208,
+          5.078374589255392
+        ],
+        [
+          8.84298063082124,
+          3.977251096959357
+        ],
+        [
+          1.907425199890157,
+          0.08974677487999244
+        ],
+        [
+          10.50859512247117,
+          1.788664463186837
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "eta1": 1.0,
+      "lambda_reg": 0.0,
+      "time_rule": "exclude_first",
+      "transport": {
+        "diffusivity_k": 0.01,
+        "sigma2": 0.04,
+        "tfinal": 300.0,
+        "dt": 0.015,
+        "jprint": 1,
+        "ngauss": 3,
+        "clean_air_dirichlet_boundaries": [
+          "inlet_1",
+          "inlet_2",
+          "inlet_3"
+        ]
+      },
+      "admissible_set": {
+        "amplitude_bounds": [
+          0.1,
+          2.0
+        ],
+        "center_box_bounds_xmin_xmax_ymin_ymax": [
+          0.0,
+          11.0,
+          0.0,
+          6.0
+        ],
+        "center_region": "any point inside a triangle of the coarse fluid mesh (beds, partitions, the bathroom wall and the exterior are not meshed); not restricted to any bay"
+      },
+      "num_sources": 2,
+      "mesh": {
+        "mesh_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.msh",
+        "mesh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+        "geometry_sha256": "4956131d35d27a7410be58ba3fe5c2af10e6c96e5656cec69974e8fb86b710ec"
+      },
+      "velocity": {
+        "velocity_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+        "velocity_sha256": "b3f2062166617edab52008cdc0b1d2f4365b854c99ab10f05a9c05c092fb5192"
+      },
+      "checks": [
+        {
+          "check": "dataset directory is the expected one",
+          "passed": true
+        },
+        {
+          "check": "dataset directory name == expected version",
+          "passed": true
+        },
+        {
+          "check": "config dataset_version == expected",
+          "passed": true
+        },
+        {
+          "check": "transport_config.DATASET_VERSION == expected",
+          "passed": true
+        },
+        {
+          "check": "sensor layout == wall_8",
+          "passed": true
+        },
+        {
+          "check": "transport_config.ACTIVE_SENSOR_LAYOUT == expected",
+          "passed": true
+        },
+        {
+          "check": "common/sensors.json is the active expected layout",
+          "passed": true
+        },
+        {
+          "check": "8 sensors in config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "observation array has 8 columns",
+          "passed": true
+        },
+        {
+          "check": "sensor node ids equal in data file, config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "sensor coordinates equal in data file, config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "configuration marked truth-free",
+          "passed": true
+        },
+        {
+          "check": "no optimization input lies under truth/",
+          "passed": true
+        },
+        {
+          "check": "observation file is observations_noisy.npz",
+          "passed": true
+        },
+        {
+          "check": "W = I (no override)",
+          "passed": true
+        },
+        {
+          "check": "eta1 = 1 from the dataset",
+          "passed": true
+        },
+        {
+          "check": "amplitude bounds equal transport_config",
+          "passed": true
+        },
+        {
+          "check": "sensitivity initialization (no manual start)",
+          "passed": true
+        },
+        {
+          "check": "room-scale initializer tolerance shim enabled",
+          "passed": true
+        },
+        {
+          "check": "OSQP joint amplitude solver",
+          "passed": true
+        },
+        {
+          "check": "GN-diagonal scaling",
+          "passed": true
+        },
+        {
+          "check": "L-BFGS-B maxcor 30, max-iter 200",
+          "passed": true
+        },
+        {
+          "check": "run output folder does not exist yet",
+          "passed": true
+        }
+      ],
+      "noise": {
+        "seed": 2026111612,
+        "nominal_noise_level": 0.01,
+        "s_noise_absolute": 0.015439307195907605,
+        "s_noise_definition": "nominal_noise_level * sqrt(mean_{n=1..N, j} d_clean[n, j]^2)",
+        "generator": "numpy.random.default_rng(seed).normal(0, s_noise, size=(N, n_sensors)); rows = times n = 1..N",
+        "realized_relative_noise_norm": 0.009984213226296999,
+        "applies_to_this_run": true
+      },
+      "all_checks_passed": true
+    },
+    {
+      "run_id": "case_13_clean",
+      "case": "13",
+      "data": "clean",
+      "run_inversion_argv": [
+        "--dataset-dir",
+        "Applications/Application2/output/source_id_v2_wall8_20261116",
+        "--case",
+        "13",
+        "--data",
+        "clean",
+        "--stage",
+        "full",
+        "--out-dir",
+        "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/runs/case_13_clean"
+      ],
+      "resolved_arguments": {
+        "dataset_dir": "Applications/Application2/output/source_id_v2_wall8_20261116",
+        "case": "13",
+        "data": "clean",
+        "stage": "full",
+        "out_dir": "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/runs/case_13_clean",
+        "tag": null,
+        "initial_control": null,
+        "sensor_weight": null,
+        "sensor_weights_file": null,
+        "eta1": null,
+        "amplitude_solver": "osqp",
+        "sensitivity_top_k": 24,
+        "sensitivity_beam_width": 3,
+        "sensitivity_refine_max_fev": 60,
+        "sensitivity_pair_refine_max_fev": 60,
+        "sensitivity_coherence_cap": 0.3,
+        "sensitivity_min_separation": null,
+        "sensitivity_mask_boundary_buffer": 0.0,
+        "init_refine_xatol": null,
+        "init_refine_fatol_rel": 1e-06,
+        "init_dedup_floor": null,
+        "init_app1_literal_tolerances": false,
+        "post_init_scaling": "gn-diag",
+        "post_init_scaling_max_ratio": 10000.0,
+        "post_init_lbfgsb_maxcor": 30,
+        "max_iter": 200,
+        "check_gn_scaling": false
+      },
+      "inputs_read_by_optimization": {
+        "inversion_config": "Applications/Application2/output/source_id_v2_wall8_20261116/case_13/config/inversion_config.json",
+        "observations_file": "Applications/Application2/output/source_id_v2_wall8_20261116/case_13/data/observations_clean.npz",
+        "observations_file_sha256": "67243f14a33395089fc9fb1f0bcb277602d5879546f45448f87ca4b34542278c",
+        "observations_sha256": "18fbad6084bd9248df8a44abb3e6015eecdfc866ba86087996164d094c8c1368"
+      },
+      "dataset_version": "source_id_v2_wall8_20261116",
+      "sensor_layout": "wall_8",
+      "num_sensors": 8,
+      "sensor_labels": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "sensor_node_ids": [
+        1331,
+        3741,
+        4234,
+        3743,
+        4231,
+        3833,
+        2663,
+        1382
+      ],
+      "sensor_coordinates": [
+        [
+          0.1591379370343268,
+          5.100000000005242
+        ],
+        [
+          2.830827318273924,
+          4.053130069092704
+        ],
+        [
+          3.160704287239835,
+          5.084495546739492
+        ],
+        [
+          5.830827318273931,
+          4.053130069092686
+        ],
+        [
+          6.15578773745208,
+          5.078374589255392
+        ],
+        [
+          8.84298063082124,
+          3.977251096959357
+        ],
+        [
+          1.907425199890157,
+          0.08974677487999244
+        ],
+        [
+          10.50859512247117,
+          1.788664463186837
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "eta1": 1.0,
+      "lambda_reg": 0.0,
+      "time_rule": "exclude_first",
+      "transport": {
+        "diffusivity_k": 0.01,
+        "sigma2": 0.04,
+        "tfinal": 300.0,
+        "dt": 0.015,
+        "jprint": 1,
+        "ngauss": 3,
+        "clean_air_dirichlet_boundaries": [
+          "inlet_1",
+          "inlet_2",
+          "inlet_3"
+        ]
+      },
+      "admissible_set": {
+        "amplitude_bounds": [
+          0.1,
+          2.0
+        ],
+        "center_box_bounds_xmin_xmax_ymin_ymax": [
+          0.0,
+          11.0,
+          0.0,
+          6.0
+        ],
+        "center_region": "any point inside a triangle of the coarse fluid mesh (beds, partitions, the bathroom wall and the exterior are not meshed); not restricted to any bay"
+      },
+      "num_sources": 2,
+      "mesh": {
+        "mesh_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.msh",
+        "mesh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+        "geometry_sha256": "4956131d35d27a7410be58ba3fe5c2af10e6c96e5656cec69974e8fb86b710ec"
+      },
+      "velocity": {
+        "velocity_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+        "velocity_sha256": "b3f2062166617edab52008cdc0b1d2f4365b854c99ab10f05a9c05c092fb5192"
+      },
+      "checks": [
+        {
+          "check": "dataset directory is the expected one",
+          "passed": true
+        },
+        {
+          "check": "dataset directory name == expected version",
+          "passed": true
+        },
+        {
+          "check": "config dataset_version == expected",
+          "passed": true
+        },
+        {
+          "check": "transport_config.DATASET_VERSION == expected",
+          "passed": true
+        },
+        {
+          "check": "sensor layout == wall_8",
+          "passed": true
+        },
+        {
+          "check": "transport_config.ACTIVE_SENSOR_LAYOUT == expected",
+          "passed": true
+        },
+        {
+          "check": "common/sensors.json is the active expected layout",
+          "passed": true
+        },
+        {
+          "check": "8 sensors in config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "observation array has 8 columns",
+          "passed": true
+        },
+        {
+          "check": "sensor node ids equal in data file, config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "sensor coordinates equal in data file, config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "configuration marked truth-free",
+          "passed": true
+        },
+        {
+          "check": "no optimization input lies under truth/",
+          "passed": true
+        },
+        {
+          "check": "observation file is observations_clean.npz",
+          "passed": true
+        },
+        {
+          "check": "W = I (no override)",
+          "passed": true
+        },
+        {
+          "check": "eta1 = 1 from the dataset",
+          "passed": true
+        },
+        {
+          "check": "amplitude bounds equal transport_config",
+          "passed": true
+        },
+        {
+          "check": "sensitivity initialization (no manual start)",
+          "passed": true
+        },
+        {
+          "check": "room-scale initializer tolerance shim enabled",
+          "passed": true
+        },
+        {
+          "check": "OSQP joint amplitude solver",
+          "passed": true
+        },
+        {
+          "check": "GN-diagonal scaling",
+          "passed": true
+        },
+        {
+          "check": "L-BFGS-B maxcor 30, max-iter 200",
+          "passed": true
+        },
+        {
+          "check": "run output folder does not exist yet",
+          "passed": true
+        }
+      ],
+      "noise": {
+        "seed": 2026111613,
+        "nominal_noise_level": 0.01,
+        "s_noise_absolute": 0.020532304923058135,
+        "s_noise_definition": "nominal_noise_level * sqrt(mean_{n=1..N, j} d_clean[n, j]^2)",
+        "generator": "numpy.random.default_rng(seed).normal(0, s_noise, size=(N, n_sensors)); rows = times n = 1..N",
+        "realized_relative_noise_norm": 0.00997999673127268,
+        "applies_to_this_run": false
+      },
+      "all_checks_passed": true
+    },
+    {
+      "run_id": "case_13_noisy",
+      "case": "13",
+      "data": "noisy",
+      "run_inversion_argv": [
+        "--dataset-dir",
+        "Applications/Application2/output/source_id_v2_wall8_20261116",
+        "--case",
+        "13",
+        "--data",
+        "noisy",
+        "--stage",
+        "full",
+        "--out-dir",
+        "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/runs/case_13_noisy"
+      ],
+      "resolved_arguments": {
+        "dataset_dir": "Applications/Application2/output/source_id_v2_wall8_20261116",
+        "case": "13",
+        "data": "noisy",
+        "stage": "full",
+        "out_dir": "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/runs/case_13_noisy",
+        "tag": null,
+        "initial_control": null,
+        "sensor_weight": null,
+        "sensor_weights_file": null,
+        "eta1": null,
+        "amplitude_solver": "osqp",
+        "sensitivity_top_k": 24,
+        "sensitivity_beam_width": 3,
+        "sensitivity_refine_max_fev": 60,
+        "sensitivity_pair_refine_max_fev": 60,
+        "sensitivity_coherence_cap": 0.3,
+        "sensitivity_min_separation": null,
+        "sensitivity_mask_boundary_buffer": 0.0,
+        "init_refine_xatol": null,
+        "init_refine_fatol_rel": 1e-06,
+        "init_dedup_floor": null,
+        "init_app1_literal_tolerances": false,
+        "post_init_scaling": "gn-diag",
+        "post_init_scaling_max_ratio": 10000.0,
+        "post_init_lbfgsb_maxcor": 30,
+        "max_iter": 200,
+        "check_gn_scaling": false
+      },
+      "inputs_read_by_optimization": {
+        "inversion_config": "Applications/Application2/output/source_id_v2_wall8_20261116/case_13/config/inversion_config.json",
+        "observations_file": "Applications/Application2/output/source_id_v2_wall8_20261116/case_13/data/observations_noisy.npz",
+        "observations_file_sha256": "60d5544cb915345519e1d697e956b619ccc7dbe41c6827f3c78d8faa8c994833",
+        "observations_sha256": "01720e95d5301488fde899a31e2361687ba07c616613d42f3d71373f5e0ac654"
+      },
+      "dataset_version": "source_id_v2_wall8_20261116",
+      "sensor_layout": "wall_8",
+      "num_sensors": 8,
+      "sensor_labels": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "sensor_node_ids": [
+        1331,
+        3741,
+        4234,
+        3743,
+        4231,
+        3833,
+        2663,
+        1382
+      ],
+      "sensor_coordinates": [
+        [
+          0.1591379370343268,
+          5.100000000005242
+        ],
+        [
+          2.830827318273924,
+          4.053130069092704
+        ],
+        [
+          3.160704287239835,
+          5.084495546739492
+        ],
+        [
+          5.830827318273931,
+          4.053130069092686
+        ],
+        [
+          6.15578773745208,
+          5.078374589255392
+        ],
+        [
+          8.84298063082124,
+          3.977251096959357
+        ],
+        [
+          1.907425199890157,
+          0.08974677487999244
+        ],
+        [
+          10.50859512247117,
+          1.788664463186837
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "eta1": 1.0,
+      "lambda_reg": 0.0,
+      "time_rule": "exclude_first",
+      "transport": {
+        "diffusivity_k": 0.01,
+        "sigma2": 0.04,
+        "tfinal": 300.0,
+        "dt": 0.015,
+        "jprint": 1,
+        "ngauss": 3,
+        "clean_air_dirichlet_boundaries": [
+          "inlet_1",
+          "inlet_2",
+          "inlet_3"
+        ]
+      },
+      "admissible_set": {
+        "amplitude_bounds": [
+          0.1,
+          2.0
+        ],
+        "center_box_bounds_xmin_xmax_ymin_ymax": [
+          0.0,
+          11.0,
+          0.0,
+          6.0
+        ],
+        "center_region": "any point inside a triangle of the coarse fluid mesh (beds, partitions, the bathroom wall and the exterior are not meshed); not restricted to any bay"
+      },
+      "num_sources": 2,
+      "mesh": {
+        "mesh_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.msh",
+        "mesh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+        "geometry_sha256": "4956131d35d27a7410be58ba3fe5c2af10e6c96e5656cec69974e8fb86b710ec"
+      },
+      "velocity": {
+        "velocity_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+        "velocity_sha256": "b3f2062166617edab52008cdc0b1d2f4365b854c99ab10f05a9c05c092fb5192"
+      },
+      "checks": [
+        {
+          "check": "dataset directory is the expected one",
+          "passed": true
+        },
+        {
+          "check": "dataset directory name == expected version",
+          "passed": true
+        },
+        {
+          "check": "config dataset_version == expected",
+          "passed": true
+        },
+        {
+          "check": "transport_config.DATASET_VERSION == expected",
+          "passed": true
+        },
+        {
+          "check": "sensor layout == wall_8",
+          "passed": true
+        },
+        {
+          "check": "transport_config.ACTIVE_SENSOR_LAYOUT == expected",
+          "passed": true
+        },
+        {
+          "check": "common/sensors.json is the active expected layout",
+          "passed": true
+        },
+        {
+          "check": "8 sensors in config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "observation array has 8 columns",
+          "passed": true
+        },
+        {
+          "check": "sensor node ids equal in data file, config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "sensor coordinates equal in data file, config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "configuration marked truth-free",
+          "passed": true
+        },
+        {
+          "check": "no optimization input lies under truth/",
+          "passed": true
+        },
+        {
+          "check": "observation file is observations_noisy.npz",
+          "passed": true
+        },
+        {
+          "check": "W = I (no override)",
+          "passed": true
+        },
+        {
+          "check": "eta1 = 1 from the dataset",
+          "passed": true
+        },
+        {
+          "check": "amplitude bounds equal transport_config",
+          "passed": true
+        },
+        {
+          "check": "sensitivity initialization (no manual start)",
+          "passed": true
+        },
+        {
+          "check": "room-scale initializer tolerance shim enabled",
+          "passed": true
+        },
+        {
+          "check": "OSQP joint amplitude solver",
+          "passed": true
+        },
+        {
+          "check": "GN-diagonal scaling",
+          "passed": true
+        },
+        {
+          "check": "L-BFGS-B maxcor 30, max-iter 200",
+          "passed": true
+        },
+        {
+          "check": "run output folder does not exist yet",
+          "passed": true
+        }
+      ],
+      "noise": {
+        "seed": 2026111613,
+        "nominal_noise_level": 0.01,
+        "s_noise_absolute": 0.020532304923058135,
+        "s_noise_definition": "nominal_noise_level * sqrt(mean_{n=1..N, j} d_clean[n, j]^2)",
+        "generator": "numpy.random.default_rng(seed).normal(0, s_noise, size=(N, n_sensors)); rows = times n = 1..N",
+        "realized_relative_noise_norm": 0.00997999673127268,
+        "applies_to_this_run": true
+      },
+      "all_checks_passed": true
+    },
+    {
+      "run_id": "case_23_clean",
+      "case": "23",
+      "data": "clean",
+      "run_inversion_argv": [
+        "--dataset-dir",
+        "Applications/Application2/output/source_id_v2_wall8_20261116",
+        "--case",
+        "23",
+        "--data",
+        "clean",
+        "--stage",
+        "full",
+        "--out-dir",
+        "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/runs/case_23_clean"
+      ],
+      "resolved_arguments": {
+        "dataset_dir": "Applications/Application2/output/source_id_v2_wall8_20261116",
+        "case": "23",
+        "data": "clean",
+        "stage": "full",
+        "out_dir": "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/runs/case_23_clean",
+        "tag": null,
+        "initial_control": null,
+        "sensor_weight": null,
+        "sensor_weights_file": null,
+        "eta1": null,
+        "amplitude_solver": "osqp",
+        "sensitivity_top_k": 24,
+        "sensitivity_beam_width": 3,
+        "sensitivity_refine_max_fev": 60,
+        "sensitivity_pair_refine_max_fev": 60,
+        "sensitivity_coherence_cap": 0.3,
+        "sensitivity_min_separation": null,
+        "sensitivity_mask_boundary_buffer": 0.0,
+        "init_refine_xatol": null,
+        "init_refine_fatol_rel": 1e-06,
+        "init_dedup_floor": null,
+        "init_app1_literal_tolerances": false,
+        "post_init_scaling": "gn-diag",
+        "post_init_scaling_max_ratio": 10000.0,
+        "post_init_lbfgsb_maxcor": 30,
+        "max_iter": 200,
+        "check_gn_scaling": false
+      },
+      "inputs_read_by_optimization": {
+        "inversion_config": "Applications/Application2/output/source_id_v2_wall8_20261116/case_23/config/inversion_config.json",
+        "observations_file": "Applications/Application2/output/source_id_v2_wall8_20261116/case_23/data/observations_clean.npz",
+        "observations_file_sha256": "55409474ed48c7b07c559f9215dff84d18b6704eb8fbb69c92a41fdbd1b253a4",
+        "observations_sha256": "bea130c76860645d2ce5fc750806ab71a1fd45cfc589709595a932092bad445a"
+      },
+      "dataset_version": "source_id_v2_wall8_20261116",
+      "sensor_layout": "wall_8",
+      "num_sensors": 8,
+      "sensor_labels": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "sensor_node_ids": [
+        1331,
+        3741,
+        4234,
+        3743,
+        4231,
+        3833,
+        2663,
+        1382
+      ],
+      "sensor_coordinates": [
+        [
+          0.1591379370343268,
+          5.100000000005242
+        ],
+        [
+          2.830827318273924,
+          4.053130069092704
+        ],
+        [
+          3.160704287239835,
+          5.084495546739492
+        ],
+        [
+          5.830827318273931,
+          4.053130069092686
+        ],
+        [
+          6.15578773745208,
+          5.078374589255392
+        ],
+        [
+          8.84298063082124,
+          3.977251096959357
+        ],
+        [
+          1.907425199890157,
+          0.08974677487999244
+        ],
+        [
+          10.50859512247117,
+          1.788664463186837
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "eta1": 1.0,
+      "lambda_reg": 0.0,
+      "time_rule": "exclude_first",
+      "transport": {
+        "diffusivity_k": 0.01,
+        "sigma2": 0.04,
+        "tfinal": 300.0,
+        "dt": 0.015,
+        "jprint": 1,
+        "ngauss": 3,
+        "clean_air_dirichlet_boundaries": [
+          "inlet_1",
+          "inlet_2",
+          "inlet_3"
+        ]
+      },
+      "admissible_set": {
+        "amplitude_bounds": [
+          0.1,
+          2.0
+        ],
+        "center_box_bounds_xmin_xmax_ymin_ymax": [
+          0.0,
+          11.0,
+          0.0,
+          6.0
+        ],
+        "center_region": "any point inside a triangle of the coarse fluid mesh (beds, partitions, the bathroom wall and the exterior are not meshed); not restricted to any bay"
+      },
+      "num_sources": 2,
+      "mesh": {
+        "mesh_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.msh",
+        "mesh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+        "geometry_sha256": "4956131d35d27a7410be58ba3fe5c2af10e6c96e5656cec69974e8fb86b710ec"
+      },
+      "velocity": {
+        "velocity_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+        "velocity_sha256": "b3f2062166617edab52008cdc0b1d2f4365b854c99ab10f05a9c05c092fb5192"
+      },
+      "checks": [
+        {
+          "check": "dataset directory is the expected one",
+          "passed": true
+        },
+        {
+          "check": "dataset directory name == expected version",
+          "passed": true
+        },
+        {
+          "check": "config dataset_version == expected",
+          "passed": true
+        },
+        {
+          "check": "transport_config.DATASET_VERSION == expected",
+          "passed": true
+        },
+        {
+          "check": "sensor layout == wall_8",
+          "passed": true
+        },
+        {
+          "check": "transport_config.ACTIVE_SENSOR_LAYOUT == expected",
+          "passed": true
+        },
+        {
+          "check": "common/sensors.json is the active expected layout",
+          "passed": true
+        },
+        {
+          "check": "8 sensors in config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "observation array has 8 columns",
+          "passed": true
+        },
+        {
+          "check": "sensor node ids equal in data file, config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "sensor coordinates equal in data file, config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "configuration marked truth-free",
+          "passed": true
+        },
+        {
+          "check": "no optimization input lies under truth/",
+          "passed": true
+        },
+        {
+          "check": "observation file is observations_clean.npz",
+          "passed": true
+        },
+        {
+          "check": "W = I (no override)",
+          "passed": true
+        },
+        {
+          "check": "eta1 = 1 from the dataset",
+          "passed": true
+        },
+        {
+          "check": "amplitude bounds equal transport_config",
+          "passed": true
+        },
+        {
+          "check": "sensitivity initialization (no manual start)",
+          "passed": true
+        },
+        {
+          "check": "room-scale initializer tolerance shim enabled",
+          "passed": true
+        },
+        {
+          "check": "OSQP joint amplitude solver",
+          "passed": true
+        },
+        {
+          "check": "GN-diagonal scaling",
+          "passed": true
+        },
+        {
+          "check": "L-BFGS-B maxcor 30, max-iter 200",
+          "passed": true
+        },
+        {
+          "check": "run output folder does not exist yet",
+          "passed": true
+        }
+      ],
+      "noise": {
+        "seed": 2026111623,
+        "nominal_noise_level": 0.01,
+        "s_noise_absolute": 0.018464187943188194,
+        "s_noise_definition": "nominal_noise_level * sqrt(mean_{n=1..N, j} d_clean[n, j]^2)",
+        "generator": "numpy.random.default_rng(seed).normal(0, s_noise, size=(N, n_sensors)); rows = times n = 1..N",
+        "realized_relative_noise_norm": 0.009996056005214065,
+        "applies_to_this_run": false
+      },
+      "all_checks_passed": true
+    },
+    {
+      "run_id": "case_23_noisy",
+      "case": "23",
+      "data": "noisy",
+      "run_inversion_argv": [
+        "--dataset-dir",
+        "Applications/Application2/output/source_id_v2_wall8_20261116",
+        "--case",
+        "23",
+        "--data",
+        "noisy",
+        "--stage",
+        "full",
+        "--out-dir",
+        "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/runs/case_23_noisy"
+      ],
+      "resolved_arguments": {
+        "dataset_dir": "Applications/Application2/output/source_id_v2_wall8_20261116",
+        "case": "23",
+        "data": "noisy",
+        "stage": "full",
+        "out_dir": "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/runs/case_23_noisy",
+        "tag": null,
+        "initial_control": null,
+        "sensor_weight": null,
+        "sensor_weights_file": null,
+        "eta1": null,
+        "amplitude_solver": "osqp",
+        "sensitivity_top_k": 24,
+        "sensitivity_beam_width": 3,
+        "sensitivity_refine_max_fev": 60,
+        "sensitivity_pair_refine_max_fev": 60,
+        "sensitivity_coherence_cap": 0.3,
+        "sensitivity_min_separation": null,
+        "sensitivity_mask_boundary_buffer": 0.0,
+        "init_refine_xatol": null,
+        "init_refine_fatol_rel": 1e-06,
+        "init_dedup_floor": null,
+        "init_app1_literal_tolerances": false,
+        "post_init_scaling": "gn-diag",
+        "post_init_scaling_max_ratio": 10000.0,
+        "post_init_lbfgsb_maxcor": 30,
+        "max_iter": 200,
+        "check_gn_scaling": false
+      },
+      "inputs_read_by_optimization": {
+        "inversion_config": "Applications/Application2/output/source_id_v2_wall8_20261116/case_23/config/inversion_config.json",
+        "observations_file": "Applications/Application2/output/source_id_v2_wall8_20261116/case_23/data/observations_noisy.npz",
+        "observations_file_sha256": "efc8793228df0e21ce337f08f39776cd94763bb88f9b5b3fcb6ee8f4178dfa12",
+        "observations_sha256": "41eb73b9fdd5286acf9160071940e07741ba8a63b5089f2775c756d9351db5d1"
+      },
+      "dataset_version": "source_id_v2_wall8_20261116",
+      "sensor_layout": "wall_8",
+      "num_sensors": 8,
+      "sensor_labels": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "sensor_node_ids": [
+        1331,
+        3741,
+        4234,
+        3743,
+        4231,
+        3833,
+        2663,
+        1382
+      ],
+      "sensor_coordinates": [
+        [
+          0.1591379370343268,
+          5.100000000005242
+        ],
+        [
+          2.830827318273924,
+          4.053130069092704
+        ],
+        [
+          3.160704287239835,
+          5.084495546739492
+        ],
+        [
+          5.830827318273931,
+          4.053130069092686
+        ],
+        [
+          6.15578773745208,
+          5.078374589255392
+        ],
+        [
+          8.84298063082124,
+          3.977251096959357
+        ],
+        [
+          1.907425199890157,
+          0.08974677487999244
+        ],
+        [
+          10.50859512247117,
+          1.788664463186837
+        ]
+      ],
+      "sensor_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "eta1": 1.0,
+      "lambda_reg": 0.0,
+      "time_rule": "exclude_first",
+      "transport": {
+        "diffusivity_k": 0.01,
+        "sigma2": 0.04,
+        "tfinal": 300.0,
+        "dt": 0.015,
+        "jprint": 1,
+        "ngauss": 3,
+        "clean_air_dirichlet_boundaries": [
+          "inlet_1",
+          "inlet_2",
+          "inlet_3"
+        ]
+      },
+      "admissible_set": {
+        "amplitude_bounds": [
+          0.1,
+          2.0
+        ],
+        "center_box_bounds_xmin_xmax_ymin_ymax": [
+          0.0,
+          11.0,
+          0.0,
+          6.0
+        ],
+        "center_region": "any point inside a triangle of the coarse fluid mesh (beds, partitions, the bathroom wall and the exterior are not meshed); not restricted to any bay"
+      },
+      "num_sources": 2,
+      "mesh": {
+        "mesh_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.msh",
+        "mesh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+        "geometry_sha256": "4956131d35d27a7410be58ba3fe5c2af10e6c96e5656cec69974e8fb86b710ec"
+      },
+      "velocity": {
+        "velocity_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+        "velocity_sha256": "b3f2062166617edab52008cdc0b1d2f4365b854c99ab10f05a9c05c092fb5192"
+      },
+      "checks": [
+        {
+          "check": "dataset directory is the expected one",
+          "passed": true
+        },
+        {
+          "check": "dataset directory name == expected version",
+          "passed": true
+        },
+        {
+          "check": "config dataset_version == expected",
+          "passed": true
+        },
+        {
+          "check": "transport_config.DATASET_VERSION == expected",
+          "passed": true
+        },
+        {
+          "check": "sensor layout == wall_8",
+          "passed": true
+        },
+        {
+          "check": "transport_config.ACTIVE_SENSOR_LAYOUT == expected",
+          "passed": true
+        },
+        {
+          "check": "common/sensors.json is the active expected layout",
+          "passed": true
+        },
+        {
+          "check": "8 sensors in config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "observation array has 8 columns",
+          "passed": true
+        },
+        {
+          "check": "sensor node ids equal in data file, config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "sensor coordinates equal in data file, config and common/sensors.json",
+          "passed": true
+        },
+        {
+          "check": "configuration marked truth-free",
+          "passed": true
+        },
+        {
+          "check": "no optimization input lies under truth/",
+          "passed": true
+        },
+        {
+          "check": "observation file is observations_noisy.npz",
+          "passed": true
+        },
+        {
+          "check": "W = I (no override)",
+          "passed": true
+        },
+        {
+          "check": "eta1 = 1 from the dataset",
+          "passed": true
+        },
+        {
+          "check": "amplitude bounds equal transport_config",
+          "passed": true
+        },
+        {
+          "check": "sensitivity initialization (no manual start)",
+          "passed": true
+        },
+        {
+          "check": "room-scale initializer tolerance shim enabled",
+          "passed": true
+        },
+        {
+          "check": "OSQP joint amplitude solver",
+          "passed": true
+        },
+        {
+          "check": "GN-diagonal scaling",
+          "passed": true
+        },
+        {
+          "check": "L-BFGS-B maxcor 30, max-iter 200",
+          "passed": true
+        },
+        {
+          "check": "run output folder does not exist yet",
+          "passed": true
+        }
+      ],
+      "noise": {
+        "seed": 2026111623,
+        "nominal_noise_level": 0.01,
+        "s_noise_absolute": 0.018464187943188194,
+        "s_noise_definition": "nominal_noise_level * sqrt(mean_{n=1..N, j} d_clean[n, j]^2)",
+        "generator": "numpy.random.default_rng(seed).normal(0, s_noise, size=(N, n_sensors)); rows = times n = 1..N",
+        "realized_relative_noise_norm": 0.009996056005214065,
+        "applies_to_this_run": true
+      },
+      "all_checks_passed": true
+    }
+  ],
+  "all_passed": true,
+  "failures": [],
+  "truth_accessed": false,
+  "determinism": "no random numbers in the initializer or optimizer; the only seeds are the saved noise seeds (recorded per run; the noise is read from disk, not regenerated)"
+}

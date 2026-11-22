@@ -1,0 +1,1436 @@
+{
+  "runs": [
+    {
+      "run_id": "case_12_clean",
+      "case": "12",
+      "data": "clean",
+      "exit": {
+        "rc": 0,
+        "start": "2026-11-17T12:23:21-05:00",
+        "end": "2026-11-17T15:57:31-05:00"
+      },
+      "outcome": "CONVERGED",
+      "true_control": [
+        2.475,
+        5.2,
+        1.0,
+        5.475,
+        5.2,
+        0.7
+      ],
+      "max_iter": 200,
+      "initial_control": [
+        2.2257544330214394,
+        5.021981540988175,
+        1.1048483878090147,
+        5.635198566507116,
+        5.23903159352421,
+        0.6833016907949078
+      ],
+      "initialization_cost": {
+        "forward_solves": 798,
+        "adjoint_solves": 4,
+        "seconds": 8239.205191143788
+      },
+      "initializer_reported": {
+        "zero_source_objective": 2860.4664802752523,
+        "initial_exact_objective": 0.04510679414768965,
+        "n_forward_solves": 798,
+        "n_adjoint_solves": 4,
+        "n_candidate_traces": 102
+      },
+      "initial_feasibility": [
+        {
+          "source": 1,
+          "center": [
+            2.2257544330214394,
+            5.021981540988175
+          ],
+          "amplitude": 1.1048483878090147,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.22575443302143938
+        },
+        {
+          "source": 2,
+          "center": [
+            5.635198566507116,
+            5.23903159352421
+          ],
+          "amplitude": 0.6833016907949078,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.31480143349288436
+        }
+      ],
+      "initial_match": {
+        "permutation": [
+          1,
+          2
+        ],
+        "sources": [
+          {
+            "true_source": 1,
+            "estimated_source": 1,
+            "true_center": [
+              2.475,
+              5.2
+            ],
+            "estimated_center": [
+              2.2257544330214394,
+              5.021981540988175
+            ],
+            "center_error_m": 0.3062905881796059,
+            "true_amplitude": 1.0,
+            "estimated_amplitude": 1.1048483878090147,
+            "amplitude_error": 0.10484838780901473,
+            "amplitude_rel_error": 0.10484838780901473
+          },
+          {
+            "true_source": 2,
+            "estimated_source": 2,
+            "true_center": [
+              5.475,
+              5.2
+            ],
+            "estimated_center": [
+              5.635198566507116,
+              5.23903159352421
+            ],
+            "center_error_m": 0.16488494777866797,
+            "true_amplitude": 0.7,
+            "estimated_amplitude": 0.6833016907949078,
+            "amplitude_error": -0.016698309205092188,
+            "amplitude_rel_error": -0.023854727435845983
+          }
+        ]
+      },
+      "final_control": [
+        2.4723923183537813,
+        5.175624647546817,
+        0.9876697661620104,
+        5.48260920420708,
+        5.181074462079581,
+        0.6901141235543816
+      ],
+      "objective_zero_source": 2860.4664802752523,
+      "objective_initial": 0.04510679414768973,
+      "objective_final": 0.00553441110712063,
+      "final_gradient_norm": 7.112690583099849e-08,
+      "termination_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "success_flag": true,
+      "iterations": 62,
+      "nfev": 71,
+      "njev": 71,
+      "solve_accounting": {
+        "initialization": {
+          "forward_solves": 798,
+          "adjoint_solves": 4,
+          "seconds": 8239.205191143788
+        },
+        "scaling_gn_diagonal": {
+          "forward_solves": 7,
+          "adjoint_solves": 6,
+          "seconds": 372.95774147985503
+        },
+        "optimization_lbfgsb": {
+          "forward_solves": 71,
+          "adjoint_solves": 71,
+          "seconds": 4237.199542774353
+        },
+        "total": {
+          "forward_solves": 876,
+          "adjoint_solves": 81
+        },
+        "definition": "actual gt.run_forward / gt.rk4_discrete_source_adjoint sweeps; optimization includes the objective/gradient at the initial control and the final re-evaluation (cache hits cost 0)"
+      },
+      "final_feasibility": [
+        {
+          "source": 1,
+          "center": [
+            2.4723923183537813,
+            5.175624647546817
+          ],
+          "amplitude": 0.9876697661620104,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.47239231835378126
+        },
+        {
+          "source": 2,
+          "center": [
+            5.48260920420708,
+            5.181074462079581
+          ],
+          "amplitude": 0.6901141235543816,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.4673907957929204
+        }
+      ],
+      "final_match": {
+        "permutation": [
+          1,
+          2
+        ],
+        "sources": [
+          {
+            "true_source": 1,
+            "estimated_source": 1,
+            "true_center": [
+              2.475,
+              5.2
+            ],
+            "estimated_center": [
+              2.4723923183537813,
+              5.175624647546817
+            ],
+            "center_error_m": 0.02451444086217197,
+            "true_amplitude": 1.0,
+            "estimated_amplitude": 0.9876697661620104,
+            "amplitude_error": -0.01233023383798959,
+            "amplitude_rel_error": -0.01233023383798959
+          },
+          {
+            "true_source": 2,
+            "estimated_source": 2,
+            "true_center": [
+              5.475,
+              5.2
+            ],
+            "estimated_center": [
+              5.48260920420708,
+              5.181074462079581
+            ],
+            "center_error_m": 0.02039794044118883,
+            "true_amplitude": 0.7,
+            "estimated_amplitude": 0.6901141235543816,
+            "amplitude_error": -0.009885876445618336,
+            "amplitude_rel_error": -0.014122680636597624
+          }
+        ]
+      },
+      "scaling": {
+        "scaling": "gn-diag",
+        "condition_number_unscaled": 8228.18152719484,
+        "condition_number_scaled": 8598.208531771696
+      },
+      "final_feasible": true,
+      "recovery": "RECOVERED",
+      "trace_fit": {
+        "relative_residual_all": 0.0013909684411533801,
+        "relative_residual_per_sensor": [
+          0.024729527635809143,
+          0.0013953674101151179,
+          0.01819712186937542,
+          0.0013906833020574806,
+          0.09384966789833933,
+          0.023809983642880332,
+          0.001166271178578379,
+          0.0017661273072331716
+        ],
+        "data_rms_per_sensor": [
+          0.0021563305695182413,
+          3.5561636459201287,
+          0.0019595901573981216,
+          2.478473628584117,
+          0.0005258354762201962,
+          0.0013913814659285624,
+          0.5278717952192804,
+          0.04456227809484904
+        ],
+        "note": "post-hoc coarse forward solves at the initial and final controls; not counted in the optimization solve accounting"
+      }
+    },
+    {
+      "run_id": "case_12_noisy",
+      "case": "12",
+      "data": "noisy",
+      "exit": {
+        "rc": 0,
+        "start": "2026-11-17T15:57:31-05:00",
+        "end": "2026-11-17T19:34:18-05:00"
+      },
+      "outcome": "CONVERGED",
+      "true_control": [
+        2.475,
+        5.2,
+        1.0,
+        5.475,
+        5.2,
+        0.7
+      ],
+      "max_iter": 200,
+      "initial_control": [
+        2.33947318261695,
+        5.092670855179593,
+        1.0237861407398838,
+        5.5837305127949435,
+        5.228884078918213,
+        0.6823113380350021
+      ],
+      "initialization_cost": {
+        "forward_solves": 919,
+        "adjoint_solves": 5,
+        "seconds": 9237.391727203969
+      },
+      "initializer_reported": {
+        "zero_source_objective": 2860.7414308263365,
+        "initial_exact_objective": 0.29759703410592914,
+        "n_forward_solves": 919,
+        "n_adjoint_solves": 5,
+        "n_candidate_traces": 126
+      },
+      "initial_feasibility": [
+        {
+          "source": 1,
+          "center": [
+            2.33947318261695,
+            5.092670855179593
+          ],
+          "amplitude": 1.0237861407398838,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.3394731826169499
+        },
+        {
+          "source": 2,
+          "center": [
+            5.5837305127949435,
+            5.228884078918213
+          ],
+          "amplitude": 0.6823113380350021,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.3662694872050567
+        }
+      ],
+      "initial_match": {
+        "permutation": [
+          1,
+          2
+        ],
+        "sources": [
+          {
+            "true_source": 1,
+            "estimated_source": 1,
+            "true_center": [
+              2.475,
+              5.2
+            ],
+            "estimated_center": [
+              2.33947318261695,
+              5.092670855179593
+            ],
+            "center_error_m": 0.1728787539226801,
+            "true_amplitude": 1.0,
+            "estimated_amplitude": 1.0237861407398838,
+            "amplitude_error": 0.023786140739883832,
+            "amplitude_rel_error": 0.023786140739883832
+          },
+          {
+            "true_source": 2,
+            "estimated_source": 2,
+            "true_center": [
+              5.475,
+              5.2
+            ],
+            "estimated_center": [
+              5.5837305127949435,
+              5.228884078918213
+            ],
+            "center_error_m": 0.11250161966658524,
+            "true_amplitude": 0.7,
+            "estimated_amplitude": 0.6823113380350021,
+            "amplitude_error": -0.017688661964997854,
+            "amplitude_rel_error": -0.025269517092854077
+          }
+        ]
+      },
+      "final_control": [
+        2.476379535862386,
+        5.177791636125436,
+        0.9869416254523017,
+        5.477068476825736,
+        5.178467528540743,
+        0.6908108357245654
+      ],
+      "objective_zero_source": 2860.7414308263365,
+      "objective_initial": 0.2975970341059298,
+      "objective_final": 0.29033033032563155,
+      "final_gradient_norm": 4.4512880420816175e-07,
+      "termination_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "success_flag": true,
+      "iterations": 45,
+      "nfev": 58,
+      "njev": 58,
+      "solve_accounting": {
+        "initialization": {
+          "forward_solves": 919,
+          "adjoint_solves": 5,
+          "seconds": 9237.391727203969
+        },
+        "scaling_gn_diagonal": {
+          "forward_solves": 7,
+          "adjoint_solves": 6,
+          "seconds": 369.9611310050823
+        },
+        "optimization_lbfgsb": {
+          "forward_solves": 58,
+          "adjoint_solves": 58,
+          "seconds": 3398.722876089625
+        },
+        "total": {
+          "forward_solves": 984,
+          "adjoint_solves": 69
+        },
+        "definition": "actual gt.run_forward / gt.rk4_discrete_source_adjoint sweeps; optimization includes the objective/gradient at the initial control and the final re-evaluation (cache hits cost 0)"
+      },
+      "final_feasibility": [
+        {
+          "source": 1,
+          "center": [
+            2.476379535862386,
+            5.177791636125436
+          ],
+          "amplitude": 0.9869416254523017,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.47362046413761405
+        },
+        {
+          "source": 2,
+          "center": [
+            5.477068476825736,
+            5.178467528540743
+          ],
+          "amplitude": 0.6908108357245654,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.4729315231742639
+        }
+      ],
+      "final_match": {
+        "permutation": [
+          1,
+          2
+        ],
+        "sources": [
+          {
+            "true_source": 1,
+            "estimated_source": 1,
+            "true_center": [
+              2.475,
+              5.2
+            ],
+            "estimated_center": [
+              2.476379535862386,
+              5.177791636125436
+            ],
+            "center_error_m": 0.02225116952388481,
+            "true_amplitude": 1.0,
+            "estimated_amplitude": 0.9869416254523017,
+            "amplitude_error": -0.013058374547698315,
+            "amplitude_rel_error": -0.013058374547698315
+          },
+          {
+            "true_source": 2,
+            "estimated_source": 2,
+            "true_center": [
+              5.475,
+              5.2
+            ],
+            "estimated_center": [
+              5.477068476825736,
+              5.178467528540743
+            ],
+            "center_error_m": 0.021631595491833928,
+            "true_amplitude": 0.7,
+            "estimated_amplitude": 0.6908108357245654,
+            "amplitude_error": -0.009189164275434591,
+            "amplitude_rel_error": -0.013127377536335132
+          }
+        ]
+      },
+      "scaling": {
+        "scaling": "gn-diag",
+        "condition_number_unscaled": 6738.815671034035,
+        "condition_number_scaled": 1706.0634397604913
+      },
+      "final_feasible": true,
+      "recovery": "RECOVERED",
+      "objective_noise_only": 0.28514421017916053,
+      "trace_fit": {
+        "relative_residual_all": 0.010074114931857732,
+        "relative_residual_per_sensor": [
+          0.9896835456946274,
+          0.004545007262052598,
+          0.9909087779295085,
+          0.006348201353934688,
+          1.0000472896907961,
+          0.9958510760731952,
+          0.02910980431104922,
+          0.32779700535107775
+        ],
+        "data_rms_per_sensor": [
+          0.015485834890437918,
+          3.5561589595601943,
+          0.015601791809633898,
+          2.4785489228517474,
+          0.015349235193249098,
+          0.01559402481937241,
+          0.5281530521757068,
+          0.04722905958122461
+        ],
+        "note": "post-hoc coarse forward solves at the initial and final controls; not counted in the optimization solve accounting"
+      }
+    },
+    {
+      "run_id": "case_13_clean",
+      "case": "13",
+      "data": "clean",
+      "exit": {
+        "rc": 0,
+        "start": "2026-11-17T19:34:18-05:00",
+        "end": "2026-11-17T21:33:14-05:00"
+      },
+      "outcome": "CONVERGED",
+      "true_control": [
+        2.475,
+        5.2,
+        1.0,
+        8.5,
+        5.2,
+        1.3
+      ],
+      "max_iter": 200,
+      "initial_control": [
+        8.460535811206768,
+        5.134992186075433,
+        1.283176439735492,
+        2.4940180558059337,
+        5.185609074144033,
+        0.9839276348413322
+      ],
+      "initialization_cost": {
+        "forward_solves": 510,
+        "adjoint_solves": 2,
+        "seconds": 5105.363807219081
+      },
+      "initializer_reported": {
+        "zero_source_objective": 5058.906545441249,
+        "initial_exact_objective": 0.015854717724259153,
+        "n_forward_solves": 510,
+        "n_adjoint_solves": 2,
+        "n_candidate_traces": 54
+      },
+      "initial_feasibility": [
+        {
+          "source": 1,
+          "center": [
+            8.460535811206768,
+            5.134992186075433
+          ],
+          "amplitude": 1.283176439735492,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.4605358112067677
+        },
+        {
+          "source": 2,
+          "center": [
+            2.4940180558059337,
+            5.185609074144033
+          ],
+          "amplitude": 0.9839276348413322,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.45598194419406646
+        }
+      ],
+      "initial_match": {
+        "permutation": [
+          2,
+          1
+        ],
+        "sources": [
+          {
+            "true_source": 1,
+            "estimated_source": 2,
+            "true_center": [
+              2.475,
+              5.2
+            ],
+            "estimated_center": [
+              2.4940180558059337,
+              5.185609074144033
+            ],
+            "center_error_m": 0.023849217882973898,
+            "true_amplitude": 1.0,
+            "estimated_amplitude": 0.9839276348413322,
+            "amplitude_error": -0.016072365158667834,
+            "amplitude_rel_error": -0.016072365158667834
+          },
+          {
+            "true_source": 2,
+            "estimated_source": 1,
+            "true_center": [
+              8.5,
+              5.2
+            ],
+            "estimated_center": [
+              8.460535811206768,
+              5.134992186075433
+            ],
+            "center_error_m": 0.07604891891643861,
+            "true_amplitude": 1.3,
+            "estimated_amplitude": 1.283176439735492,
+            "amplitude_error": -0.016823560264508153,
+            "amplitude_rel_error": -0.01294120020346781
+          }
+        ]
+      },
+      "final_control": [
+        8.462837452887369,
+        5.140755990036752,
+        1.2827444209846242,
+        2.5023587077208407,
+        5.190533380952025,
+        0.9826671764511181
+      ],
+      "objective_zero_source": 5058.906545441248,
+      "objective_initial": 0.01585471772425991,
+      "objective_final": 0.014054605509033275,
+      "final_gradient_norm": 1.4691855515392854e-06,
+      "termination_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "success_flag": true,
+      "iterations": 22,
+      "nfev": 27,
+      "njev": 27,
+      "solve_accounting": {
+        "initialization": {
+          "forward_solves": 510,
+          "adjoint_solves": 2,
+          "seconds": 5105.363807219081
+        },
+        "scaling_gn_diagonal": {
+          "forward_solves": 7,
+          "adjoint_solves": 6,
+          "seconds": 373.1377584277652
+        },
+        "optimization_lbfgsb": {
+          "forward_solves": 28,
+          "adjoint_solves": 28,
+          "seconds": 1657.4526690761559
+        },
+        "total": {
+          "forward_solves": 545,
+          "adjoint_solves": 36
+        },
+        "definition": "actual gt.run_forward / gt.rk4_discrete_source_adjoint sweeps; optimization includes the objective/gradient at the initial control and the final re-evaluation (cache hits cost 0)"
+      },
+      "final_feasibility": [
+        {
+          "source": 1,
+          "center": [
+            8.462837452887369,
+            5.140755990036752
+          ],
+          "amplitude": 1.2827444209846242,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.4628374528873689
+        },
+        {
+          "source": 2,
+          "center": [
+            2.5023587077208407,
+            5.190533380952025
+          ],
+          "amplitude": 0.9826671764511181,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.4476412922791595
+        }
+      ],
+      "final_match": {
+        "permutation": [
+          2,
+          1
+        ],
+        "sources": [
+          {
+            "true_source": 1,
+            "estimated_source": 2,
+            "true_center": [
+              2.475,
+              5.2
+            ],
+            "estimated_center": [
+              2.5023587077208407,
+              5.190533380952025
+            ],
+            "center_error_m": 0.02895022908983401,
+            "true_amplitude": 1.0,
+            "estimated_amplitude": 0.9826671764511181,
+            "amplitude_error": -0.01733282354888188,
+            "amplitude_rel_error": -0.01733282354888188
+          },
+          {
+            "true_source": 2,
+            "estimated_source": 1,
+            "true_center": [
+              8.5,
+              5.2
+            ],
+            "estimated_center": [
+              8.462837452887369,
+              5.140755990036752
+            ],
+            "center_error_m": 0.06993502430416405,
+            "true_amplitude": 1.3,
+            "estimated_amplitude": 1.2827444209846242,
+            "amplitude_error": -0.017255579015375888,
+            "amplitude_rel_error": -0.013273522319519913
+          }
+        ]
+      },
+      "scaling": {
+        "scaling": "gn-diag",
+        "condition_number_unscaled": 3854.4459798100706,
+        "condition_number_scaled": 435.5938235089297
+      },
+      "final_feasible": true,
+      "recovery": "RECOVERED",
+      "trace_fit": {
+        "relative_residual_all": 0.0016667904433994882,
+        "relative_residual_per_sensor": [
+          0.018742329938014623,
+          0.001426509570759311,
+          0.4037509168705217,
+          0.04778875575944518,
+          0.018192687390760395,
+          0.00180280874630293,
+          0.002629296495677169,
+          0.0013630083088406542
+        ],
+        "data_rms_per_sensor": [
+          0.0021519552254327433,
+          3.554680388688388,
+          0.000526041210898223,
+          0.0024051482456273828,
+          0.0024150689436098953,
+          4.503085689681126,
+          0.31698783206563985,
+          0.8438082906287783
+        ],
+        "note": "post-hoc coarse forward solves at the initial and final controls; not counted in the optimization solve accounting"
+      }
+    },
+    {
+      "run_id": "case_13_noisy",
+      "case": "13",
+      "data": "noisy",
+      "exit": {
+        "rc": 0,
+        "start": "2026-11-17T21:33:14-05:00",
+        "end": "2026-11-17T23:59:47-05:00"
+      },
+      "outcome": "CONVERGED",
+      "true_control": [
+        2.475,
+        5.2,
+        1.0,
+        8.5,
+        5.2,
+        1.3
+      ],
+      "max_iter": 200,
+      "initial_control": [
+        8.461614648769093,
+        5.136918759433893,
+        1.2829210276566032,
+        2.4940180558059337,
+        5.185609074144033,
+        0.9839062281548736
+      ],
+      "initialization_cost": {
+        "forward_solves": 638,
+        "adjoint_solves": 3,
+        "seconds": 6413.867242638022
+      },
+      "initializer_reported": {
+        "zero_source_objective": 5059.209434266214,
+        "initial_exact_objective": 0.5193278293610397,
+        "n_forward_solves": 638,
+        "n_adjoint_solves": 3,
+        "n_candidate_traces": 78
+      },
+      "initial_feasibility": [
+        {
+          "source": 1,
+          "center": [
+            8.461614648769093,
+            5.136918759433893
+          ],
+          "amplitude": 1.2829210276566032,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.46161464876909264
+        },
+        {
+          "source": 2,
+          "center": [
+            2.4940180558059337,
+            5.185609074144033
+          ],
+          "amplitude": 0.9839062281548736,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.45598194419406646
+        }
+      ],
+      "initial_match": {
+        "permutation": [
+          2,
+          1
+        ],
+        "sources": [
+          {
+            "true_source": 1,
+            "estimated_source": 2,
+            "true_center": [
+              2.475,
+              5.2
+            ],
+            "estimated_center": [
+              2.4940180558059337,
+              5.185609074144033
+            ],
+            "center_error_m": 0.023849217882973898,
+            "true_amplitude": 1.0,
+            "estimated_amplitude": 0.9839062281548736,
+            "amplitude_error": -0.016093771845126392,
+            "amplitude_rel_error": -0.016093771845126392
+          },
+          {
+            "true_source": 2,
+            "estimated_source": 1,
+            "true_center": [
+              8.5,
+              5.2
+            ],
+            "estimated_center": [
+              8.461614648769093,
+              5.136918759433893
+            ],
+            "center_error_m": 0.07384225145862755,
+            "true_amplitude": 1.3,
+            "estimated_amplitude": 1.2829210276566032,
+            "amplitude_error": -0.017078972343396837,
+            "amplitude_rel_error": -0.01313767103338218
+          }
+        ]
+      },
+      "final_control": [
+        8.463685597614566,
+        5.141749766290919,
+        1.2825271815551633,
+        2.5047177983901863,
+        5.191504725288335,
+        0.9822891802258561
+      ],
+      "objective_zero_source": 5059.209434266214,
+      "objective_initial": 0.5193278293610407,
+      "objective_final": 0.5180537087024879,
+      "final_gradient_norm": 4.860330718917872e-07,
+      "termination_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "success_flag": true,
+      "iterations": 23,
+      "nfev": 34,
+      "njev": 34,
+      "solve_accounting": {
+        "initialization": {
+          "forward_solves": 638,
+          "adjoint_solves": 3,
+          "seconds": 6413.867242638022
+        },
+        "scaling_gn_diagonal": {
+          "forward_solves": 7,
+          "adjoint_solves": 6,
+          "seconds": 369.9657358019613
+        },
+        "optimization_lbfgsb": {
+          "forward_solves": 34,
+          "adjoint_solves": 34,
+          "seconds": 2008.1734503139742
+        },
+        "total": {
+          "forward_solves": 679,
+          "adjoint_solves": 43
+        },
+        "definition": "actual gt.run_forward / gt.rk4_discrete_source_adjoint sweeps; optimization includes the objective/gradient at the initial control and the final re-evaluation (cache hits cost 0)"
+      },
+      "final_feasibility": [
+        {
+          "source": 1,
+          "center": [
+            8.463685597614566,
+            5.141749766290919
+          ],
+          "amplitude": 1.2825271815551633,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.46368559761456574
+        },
+        {
+          "source": 2,
+          "center": [
+            2.5047177983901863,
+            5.191504725288335
+          ],
+          "amplitude": 0.9822891802258561,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.4452822016098139
+        }
+      ],
+      "final_match": {
+        "permutation": [
+          2,
+          1
+        ],
+        "sources": [
+          {
+            "true_source": 1,
+            "estimated_source": 2,
+            "true_center": [
+              2.475,
+              5.2
+            ],
+            "estimated_center": [
+              2.5047177983901863,
+              5.191504725288335
+            ],
+            "center_error_m": 0.030908206573439442,
+            "true_amplitude": 1.0,
+            "estimated_amplitude": 0.9822891802258561,
+            "amplitude_error": -0.017710819774143904,
+            "amplitude_rel_error": -0.017710819774143904
+          },
+          {
+            "true_source": 2,
+            "estimated_source": 1,
+            "true_center": [
+              8.5,
+              5.2
+            ],
+            "estimated_center": [
+              8.463685597614566,
+              5.141749766290919
+            ],
+            "center_error_m": 0.06864273849267565,
+            "true_amplitude": 1.3,
+            "estimated_amplitude": 1.2825271815551633,
+            "amplitude_error": -0.017472818444836724,
+            "amplitude_rel_error": -0.013440629572951326
+          }
+        ]
+      },
+      "scaling": {
+        "scaling": "gn-diag",
+        "condition_number_unscaled": 3852.997527840511,
+        "condition_number_scaled": 435.59375055773086
+      },
+      "final_feasible": true,
+      "recovery": "RECOVERED",
+      "objective_noise_only": 0.503868785426347,
+      "trace_fit": {
+        "relative_residual_all": 0.010119197319072362,
+        "relative_residual_per_sensor": [
+          0.9941103286254541,
+          0.005908301265490322,
+          0.9998500829086575,
+          0.9924509513322305,
+          0.9941742880825761,
+          0.0048755410438687495,
+          0.06493235091771589,
+          0.024215114703308352
+        ],
+        "data_rms_per_sensor": [
+          0.02071829258722109,
+          3.5546789325825485,
+          0.020446745804421153,
+          0.02063858592696168,
+          0.020773848782208535,
+          4.503093939969676,
+          0.31743722897290994,
+          0.8437975668062981
+        ],
+        "note": "post-hoc coarse forward solves at the initial and final controls; not counted in the optimization solve accounting"
+      }
+    },
+    {
+      "run_id": "case_23_clean",
+      "case": "23",
+      "data": "clean",
+      "exit": {
+        "rc": 0,
+        "start": "2026-11-17T23:59:47-05:00",
+        "end": "2026-11-18T02:38:47-05:00"
+      },
+      "outcome": "CONVERGED",
+      "true_control": [
+        5.475,
+        5.2,
+        0.7,
+        8.5,
+        5.2,
+        1.3
+      ],
+      "max_iter": 200,
+      "initial_control": [
+        8.465570015105678,
+        5.143121003472984,
+        1.2820724378516841,
+        5.4509832812216095,
+        5.165650653821368,
+        0.6943179307841484
+      ],
+      "initialization_cost": {
+        "forward_solves": 761,
+        "adjoint_solves": 4,
+        "seconds": 7623.650256964844
+      },
+      "initializer_reported": {
+        "zero_source_objective": 4091.1148368165145,
+        "initial_exact_objective": 0.012061777333358765,
+        "n_forward_solves": 761,
+        "n_adjoint_solves": 4,
+        "n_candidate_traces": 102
+      },
+      "initial_feasibility": [
+        {
+          "source": 1,
+          "center": [
+            8.465570015105678,
+            5.143121003472984
+          ],
+          "amplitude": 1.2820724378516841,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.4655700151056781
+        },
+        {
+          "source": 2,
+          "center": [
+            5.4509832812216095,
+            5.165650653821368
+          ],
+          "amplitude": 0.6943179307841484,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.45098328122160947
+        }
+      ],
+      "initial_match": {
+        "permutation": [
+          2,
+          1
+        ],
+        "sources": [
+          {
+            "true_source": 1,
+            "estimated_source": 2,
+            "true_center": [
+              5.475,
+              5.2
+            ],
+            "estimated_center": [
+              5.4509832812216095,
+              5.165650653821368
+            ],
+            "center_error_m": 0.041912770891218726,
+            "true_amplitude": 0.7,
+            "estimated_amplitude": 0.6943179307841484,
+            "amplitude_error": -0.005682069215851571,
+            "amplitude_rel_error": -0.008117241736930816
+          },
+          {
+            "true_source": 2,
+            "estimated_source": 1,
+            "true_center": [
+              8.5,
+              5.2
+            ],
+            "estimated_center": [
+              8.465570015105678,
+              5.143121003472984
+            ],
+            "center_error_m": 0.0664879245107223,
+            "true_amplitude": 1.3,
+            "estimated_amplitude": 1.2820724378516841,
+            "amplitude_error": -0.017927562148315923,
+            "amplitude_rel_error": -0.01379043242178148
+          }
+        ]
+      },
+      "final_control": [
+        8.464337001201063,
+        5.141631726267759,
+        1.2823451740012122,
+        5.448956063250866,
+        5.162605193471546,
+        0.6945951508509056
+      ],
+      "objective_zero_source": 4091.1148368165145,
+      "objective_initial": 0.012061777333359428,
+      "objective_final": 0.011895601992721693,
+      "final_gradient_norm": 8.54702620600008e-10,
+      "termination_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "success_flag": true,
+      "iterations": 22,
+      "nfev": 25,
+      "njev": 25,
+      "solve_accounting": {
+        "initialization": {
+          "forward_solves": 761,
+          "adjoint_solves": 4,
+          "seconds": 7623.650256964844
+        },
+        "scaling_gn_diagonal": {
+          "forward_solves": 7,
+          "adjoint_solves": 6,
+          "seconds": 372.6327848969959
+        },
+        "optimization_lbfgsb": {
+          "forward_solves": 26,
+          "adjoint_solves": 26,
+          "seconds": 1543.3792212749831
+        },
+        "total": {
+          "forward_solves": 794,
+          "adjoint_solves": 36
+        },
+        "definition": "actual gt.run_forward / gt.rk4_discrete_source_adjoint sweeps; optimization includes the objective/gradient at the initial control and the final re-evaluation (cache hits cost 0)"
+      },
+      "final_feasibility": [
+        {
+          "source": 1,
+          "center": [
+            8.464337001201063,
+            5.141631726267759
+          ],
+          "amplitude": 1.2823451740012122,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.4643370012010628
+        },
+        {
+          "source": 2,
+          "center": [
+            5.448956063250866,
+            5.162605193471546
+          ],
+          "amplitude": 0.6945951508509056,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.4489560632508658
+        }
+      ],
+      "final_match": {
+        "permutation": [
+          2,
+          1
+        ],
+        "sources": [
+          {
+            "true_source": 1,
+            "estimated_source": 2,
+            "true_center": [
+              5.475,
+              5.2
+            ],
+            "estimated_center": [
+              5.448956063250866,
+              5.162605193471546
+            ],
+            "center_error_m": 0.04557036533421075,
+            "true_amplitude": 0.7,
+            "estimated_amplitude": 0.6945951508509056,
+            "amplitude_error": -0.005404849149094337,
+            "amplitude_rel_error": -0.007721213070134768
+          },
+          {
+            "true_source": 2,
+            "estimated_source": 1,
+            "true_center": [
+              8.5,
+              5.2
+            ],
+            "estimated_center": [
+              8.464337001201063,
+              5.141631726267759
+            ],
+            "center_error_m": 0.0684010589231981,
+            "true_amplitude": 1.3,
+            "estimated_amplitude": 1.2823451740012122,
+            "amplitude_error": -0.01765482599878787,
+            "amplitude_rel_error": -0.013580635383682977
+          }
+        ]
+      },
+      "scaling": {
+        "scaling": "gn-diag",
+        "condition_number_unscaled": 4484.783940047706,
+        "condition_number_scaled": 339.5657599238996
+      },
+      "final_feasible": true,
+      "recovery": "RECOVERED",
+      "trace_fit": {
+        "relative_residual_all": 0.001705188430592401,
+        "relative_residual_per_sensor": [
+          0.062488391783176264,
+          0.04592823718191755,
+          0.03509605111351403,
+          0.0013706421231926278,
+          0.018584471424482524,
+          0.0018059329420930014,
+          0.001433864165305989,
+          0.0013661440495441257
+        ],
+        "data_rms_per_sensor": [
+          5.639795573864518e-06,
+          0.0019022690501790378,
+          0.001442865808506404,
+          2.479379675382719,
+          0.0029340766007316427,
+          4.504168041867828,
+          0.23181910586453722,
+          0.8862794033797716
+        ],
+        "note": "post-hoc coarse forward solves at the initial and final controls; not counted in the optimization solve accounting"
+      }
+    },
+    {
+      "run_id": "case_23_noisy",
+      "case": "23",
+      "data": "noisy",
+      "exit": {
+        "rc": 0,
+        "start": "2026-11-18T02:38:47-05:00",
+        "end": "2026-11-18T05:19:27-05:00"
+      },
+      "outcome": "CONVERGED",
+      "true_control": [
+        5.475,
+        5.2,
+        0.7,
+        8.5,
+        5.2,
+        1.3
+      ],
+      "max_iter": 200,
+      "initial_control": [
+        8.465507909054548,
+        5.143137053134565,
+        1.2820586547285389,
+        5.450995677183127,
+        5.165646294550696,
+        0.6943375457682898
+      ],
+      "initialization_cost": {
+        "forward_solves": 761,
+        "adjoint_solves": 4,
+        "seconds": 7627.343001379166
+      },
+      "initializer_reported": {
+        "zero_source_objective": 4091.4290720190006,
+        "initial_exact_objective": 0.42077175172847764,
+        "n_forward_solves": 761,
+        "n_adjoint_solves": 4,
+        "n_candidate_traces": 102
+      },
+      "initial_feasibility": [
+        {
+          "source": 1,
+          "center": [
+            8.465507909054548,
+            5.143137053134565
+          ],
+          "amplitude": 1.2820586547285389,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.46550790905454775
+        },
+        {
+          "source": 2,
+          "center": [
+            5.450995677183127,
+            5.165646294550696
+          ],
+          "amplitude": 0.6943375457682898,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.45099567718312716
+        }
+      ],
+      "initial_match": {
+        "permutation": [
+          2,
+          1
+        ],
+        "sources": [
+          {
+            "true_source": 1,
+            "estimated_source": 2,
+            "true_center": [
+              5.475,
+              5.2
+            ],
+            "estimated_center": [
+              5.450995677183127,
+              5.165646294550696
+            ],
+            "center_error_m": 0.041909242321881764,
+            "true_amplitude": 0.7,
+            "estimated_amplitude": 0.6943375457682898,
+            "amplitude_error": -0.00566245423171019,
+            "amplitude_rel_error": -0.008089220331014557
+          },
+          {
+            "true_source": 2,
+            "estimated_source": 1,
+            "true_center": [
+              8.5,
+              5.2
+            ],
+            "estimated_center": [
+              8.465507909054548,
+              5.143137053134565
+            ],
+            "center_error_m": 0.06650638363353326,
+            "true_amplitude": 1.3,
+            "estimated_amplitude": 1.2820586547285389,
+            "amplitude_error": -0.017941345271461184,
+            "amplitude_rel_error": -0.01380103482420091
+          }
+        ]
+      },
+      "final_control": [
+        8.46394481214627,
+        5.141466601712265,
+        1.2824152785782579,
+        5.451214606363889,
+        5.163815104009157,
+        0.6942913672601647
+      ],
+      "objective_zero_source": 4091.4290720190006,
+      "objective_initial": 0.4207717517284759,
+      "objective_final": 0.4206025583977174,
+      "final_gradient_norm": 2.414384241420745e-07,
+      "termination_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "success_flag": true,
+      "iterations": 21,
+      "nfev": 28,
+      "njev": 28,
+      "solve_accounting": {
+        "initialization": {
+          "forward_solves": 761,
+          "adjoint_solves": 4,
+          "seconds": 7627.343001379166
+        },
+        "scaling_gn_diagonal": {
+          "forward_solves": 7,
+          "adjoint_solves": 6,
+          "seconds": 368.43766525387764
+        },
+        "optimization_lbfgsb": {
+          "forward_solves": 28,
+          "adjoint_solves": 28,
+          "seconds": 1643.8132869782858
+        },
+        "total": {
+          "forward_solves": 796,
+          "adjoint_solves": 38
+        },
+        "definition": "actual gt.run_forward / gt.rk4_discrete_source_adjoint sweeps; optimization includes the objective/gradient at the initial control and the final re-evaluation (cache hits cost 0)"
+      },
+      "final_feasibility": [
+        {
+          "source": 1,
+          "center": [
+            8.46394481214627,
+            5.141466601712265
+          ],
+          "amplitude": 1.2824152785782579,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.4639448121462699
+        },
+        {
+          "source": 2,
+          "center": [
+            5.451214606363889,
+            5.163815104009157
+          ],
+          "amplitude": 0.6942913672601647,
+          "in_fluid_mesh": true,
+          "signed_clearance_m": 0.4512146063638891
+        }
+      ],
+      "final_match": {
+        "permutation": [
+          2,
+          1
+        ],
+        "sources": [
+          {
+            "true_source": 1,
+            "estimated_source": 2,
+            "true_center": [
+              5.475,
+              5.2
+            ],
+            "estimated_center": [
+              5.451214606363889,
+              5.163815104009157
+            ],
+            "center_error_m": 0.04330232843962138,
+            "true_amplitude": 0.7,
+            "estimated_amplitude": 0.6942913672601647,
+            "amplitude_error": -0.00570863273983524,
+            "amplitude_rel_error": -0.008155189628336057
+          },
+          {
+            "true_source": 2,
+            "estimated_source": 1,
+            "true_center": [
+              8.5,
+              5.2
+            ],
+            "estimated_center": [
+              8.46394481214627,
+              5.141466601712265
+            ],
+            "center_error_m": 0.06874689292090501,
+            "true_amplitude": 1.3,
+            "estimated_amplitude": 1.2824152785782579,
+            "amplitude_error": -0.017584721421742167,
+            "amplitude_rel_error": -0.013526708785955513
+          }
+        ]
+      },
+      "scaling": {
+        "scaling": "gn-diag",
+        "condition_number_unscaled": 4484.35540512084,
+        "condition_number_scaled": 339.52812307320454
+      },
+      "final_feasible": true,
+      "recovery": "RECOVERED",
+      "objective_noise_only": 0.40878884060762966,
+      "trace_fit": {
+        "relative_residual_all": 0.010139077475713479,
+        "relative_residual_per_sensor": [
+          0.9999996052201356,
+          0.9952146177104906,
+          0.9967812676802004,
+          0.007601635896767491,
+          0.9895646150827617,
+          0.004469558993767791,
+          0.07942283029369798,
+          0.02093539072640258
+        ],
+        "data_rms_per_sensor": [
+          0.0184685229035472,
+          0.018447005544066527,
+          0.018462973925502137,
+          2.479540444496273,
+          0.01867653356087755,
+          4.504088223354591,
+          0.23238250042561925,
+          0.8865041312018106
+        ],
+        "note": "post-hoc coarse forward solves at the initial and final controls; not counted in the optimization solve accounting"
+      }
+    }
+  ],
+  "settings_file": "Applications/Application2/output/source_id_v2_wall8_20261116/inversion_batches/first_full_sequential_20261117/resolved_settings.json"
+}

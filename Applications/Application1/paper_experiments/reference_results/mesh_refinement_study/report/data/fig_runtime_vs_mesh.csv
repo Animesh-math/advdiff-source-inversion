@@ -1,0 +1,13 @@
+case,series,num_triangles,value,budget_limit_reached
+A_L1,post_init_total_seconds,4936,578.4507732659695,False
+A_L1,post_init_total_seconds,9975,2746.1294880040223,False
+A_L1,post_init_total_seconds,19648,28910.913576730993,False
+A_L1,gn_diag_seconds,4936,103.0368242910481,False
+A_L1,gn_diag_seconds,9975,564.1091382529703,False
+A_L1,gn_diag_seconds,19648,5830.044309988036,False
+B_L2,post_init_total_seconds,4936,590.5202025909675,False
+B_L2,post_init_total_seconds,9975,3018.0194183380227,False
+B_L2,post_init_total_seconds,19648,28384.89481470501,False
+B_L2,gn_diag_seconds,4936,116.4319087889744,False
+B_L2,gn_diag_seconds,9975,562.3024593050359,False
+B_L2,gn_diag_seconds,19648,5892.552535463998,False

@@ -1,0 +1,192 @@
+{
+  "case_id": "A_L1_boundary",
+  "source_config": "A",
+  "layout": "L1_boundary",
+  "true_control": [
+    162.0,
+    300.0,
+    1.4,
+    270.0,
+    600.0,
+    0.95
+  ],
+  "exit_status": 0,
+  "start_time": "2026-10-03T15:16:59-04:00",
+  "end_time": "2026-10-03T15:31:25-04:00",
+  "batch_wall_seconds": 866,
+  "error": null,
+  "log": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/A_L1_boundary/run.log",
+  "initialization": {
+    "selected_control": [
+      270.0042837605424,
+      600.051691697479,
+      0.9510994778671145,
+      161.8662190981801,
+      300.00986383727934,
+      1.394063613558722
+    ],
+    "objective_after_initialization_exact": 0.16391201326608118,
+    "zero_source_objective": 380038.1554853084,
+    "initializer_self_reported_forward_solves": 482,
+    "initializer_self_reported_adjoint_solves": 2,
+    "candidate_traces": 54,
+    "initializer_self_reported_wall_seconds": 499.73180704101105,
+    "amplitude_solver": "osqp"
+  },
+  "optimization": {
+    "objective_after_initialization": 0.163912013266087,
+    "objective_after_local_optimization": 4.237117711499075e-17,
+    "final_gradient_norm": 8.018117386580413e-07,
+    "iterations": 77,
+    "objective_evaluations_nfev": 89,
+    "gradient_evaluations_njev": 89,
+    "success_flag": true,
+    "stopping_reason": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "budget_limited": false,
+    "post_init_forward_solves_driver_counter": 89,
+    "post_init_adjoint_solves_driver_counter": 89,
+    "initial_control": [
+      270.0042837605424,
+      600.051691697479,
+      0.9510994778671145,
+      161.8662190981801,
+      300.00986383727934,
+      1.394063613558722
+    ],
+    "final_control": [
+      269.99999999791316,
+      600.0000000002685,
+      0.9500000000112044,
+      161.99999999848592,
+      300.00000000328293,
+      1.3999999998072545
+    ]
+  },
+  "recovery": {
+    "permutation": [
+      1,
+      0
+    ],
+    "position_errors_m": [
+      3.6152597670346946e-09,
+      2.1040414080450082e-09
+    ],
+    "amplitude_errors": [
+      1.9274537521596358e-10,
+      1.1204481786819542e-11
+    ],
+    "max_position_error_m": 3.6152597670346946e-09,
+    "max_amplitude_error": 1.9274537521596358e-10,
+    "init_position_errors_m": [
+      0.13414404562864526,
+      0.05186889426856777
+    ],
+    "init_amplitude_errors": [
+      0.005936386441277808,
+      0.0010994778671145067
+    ],
+    "init_max_position_error_m": 0.13414404562864526,
+    "terminal_sources": [
+      {
+        "x": 269.99999999791316,
+        "y": 600.0000000002685,
+        "A": 0.9500000000112044,
+        "fluid_admissible": true,
+        "wall_clearance_m": 25.94496760912384
+      },
+      {
+        "x": 161.99999999848592,
+        "y": 300.00000000328293,
+        "A": 1.3999999998072545,
+        "fluid_admissible": true,
+        "wall_clearance_m": 4.384149437723883
+      }
+    ],
+    "terminal_all_fluid_admissible": true,
+    "terminal_amplitude_at_bound": [
+      false,
+      false
+    ],
+    "raw_feasibility_record": {
+      "feasibility_mode": "raw",
+      "invalid_evaluations": 0,
+      "projected_evaluations": 0,
+      "penalized_evaluations": 0,
+      "projected_source_events": 0,
+      "max_projection_distance": 0.0,
+      "last_projection_distance": null,
+      "raw_infeasible_evaluations": 0,
+      "raw_infeasible_iterates": 0,
+      "raw_max_outside_distance": 0.0,
+      "raw_infeasible_iterate_log": []
+    }
+  },
+  "pde_solves": {
+    "synthetic_data_and_setup": {
+      "seconds": 1.4584080819913652,
+      "forward_solves": 1,
+      "adjoint_solves": 0
+    },
+    "initialization": {
+      "seconds": 499.74291680401075,
+      "forward_solves": 482,
+      "adjoint_solves": 2
+    },
+    "local_optimization": {
+      "seconds": 351.78905329998815,
+      "forward_solves": 89,
+      "adjoint_solves": 89
+    },
+    "driver_overhead_smoke_export_final_eval": {
+      "seconds": 11.983963750011753,
+      "forward_solves": 4,
+      "adjoint_solves": 2
+    },
+    "total_counted": {
+      "forward_solves": 576,
+      "adjoint_solves": 93
+    },
+    "note": "counts = actual gt.run_forward / gt.rk4_discrete_source_adjoint calls (cached evaluator responses excluded); 'seconds' = wall time of that phase"
+  },
+  "timing_seconds": {
+    "initialization": 499.74291680401075,
+    "local_optimization": 351.78905329998815,
+    "driver_process_total": 864.9750326999929,
+    "batch_wall_total": 866
+  },
+  "observation_signal": {
+    "both_sources": {
+      "J_zero_control": 380038.1554853084,
+      "peak_abs": 7.35238212614961,
+      "rms_over_sensors_and_time": 1.4232075800965514,
+      "time_integrated_sum_sq": 7600.763109706168,
+      "sensors_above_1e-3": 10,
+      "sensors_above_1e-6": 15
+    },
+    "source_1_only": {
+      "J_zero_control": 6111.682505155002,
+      "peak_abs": 1.931879231366899,
+      "rms_over_sensors_and_time": 0.18048247581997523,
+      "time_integrated_sum_sq": 122.23365010310006,
+      "sensors_above_1e-3": 6,
+      "sensors_above_1e-6": 9
+    },
+    "source_2_only": {
+      "J_zero_control": 373926.4018924226,
+      "peak_abs": 7.352382130294297,
+      "rms_over_sensors_and_time": 1.4117172213599285,
+      "time_integrated_sum_sq": 7478.528037848453,
+      "sensors_above_1e-3": 5,
+      "sensors_above_1e-6": 9
+    }
+  },
+  "figures": {
+    "reconstruction_map": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/A_L1_boundary/reconstruction_A_L1_boundary.png",
+    "convergence_history": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/A_L1_boundary/convergence_A_L1_boundary.png",
+    "sensitivity_init": [
+      "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/A_L1_boundary/full/sensitivity_init/sensitivity_init_source_01.png",
+      "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/A_L1_boundary/full/sensitivity_init/sensitivity_init_source_02.png"
+    ],
+    "layout": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/A_L1_boundary/layout_A_L1_boundary.png"
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "initial_control": [
+    8.460535811206768,
+    5.134992186075433,
+    1.283176439735492,
+    2.4940180558059337,
+    5.185609074144033,
+    0.9839276348413322
+  ],
+  "feasibility": [
+    {
+      "source": 1,
+      "center": [
+        8.460535811206768,
+        5.134992186075433
+      ],
+      "amplitude": 1.283176439735492,
+      "in_fluid_mesh": true,
+      "signed_clearance_m": 0.4605358112067677
+    },
+    {
+      "source": 2,
+      "center": [
+        2.4940180558059337,
+        5.185609074144033
+      ],
+      "amplitude": 0.9839276348413322,
+      "in_fluid_mesh": true,
+      "signed_clearance_m": 0.45598194419406646
+    }
+  ],
+  "tolerances": {
+    "application1_file": "Applications/Application1/sensitivity_initialization.py",
+    "application1_file_sha256": "40da4b881db1e3ec28a038a5b6e552a40f2bbff78f7691b258de2d5de17aa4f3",
+    "shim": true,
+    "nelder_mead_xatol": 0.005000000000000001,
+    "nelder_mead_fatol": 0.005058906545441248,
+    "dedup_floor": 0.020000000000000004,
+    "fatol_rule": "1e-06 * J(zero source)",
+    "replaced_literals": [
+      "options={\"xatol\": 0.5, \"fatol\": 1.0, \"maxfev\": ...  (2 occurrences)",
+      "dedup_radius = max(2.0, 0.25 * float(np.sqrt(sigma2)))"
+    ],
+    "rationale": "Application1 literals rescaled by the Gaussian-radius ratio 0.2 m / 20 m and by the objective scale; nothing else differs"
+  },
+  "cost": {
+    "forward_solves": 510,
+    "adjoint_solves": 2,
+    "seconds": 5105.363807219081
+  },
+  "initializer_reported": {
+    "zero_source_objective": 5058.906545441249,
+    "initial_exact_objective": 0.015854717724259153,
+    "n_forward_solves": 510,
+    "n_adjoint_solves": 2,
+    "n_candidate_traces": 54,
+    "wall_time_seconds": 5105.335518420208,
+    "source_levels": [
+      {
+        "level": 1,
+        "num_sources": 2,
+        "branches_in": 1,
+        "expansions_considered": 3,
+        "branches_surviving": 3,
+        "best_objective": 1909.9523352777592,
+        "n_forward_solves": 24,
+        "n_adjoint_solves": 1,
+        "n_candidate_traces": 27
+      },
+      {
+        "level": 2,
+        "num_sources": 2,
+        "branches_in": 3,
+        "expansions_considered": 3,
+        "branches_surviving": 3,
+        "best_objective": 0.25989984394498544,
+        "n_forward_solves": 120,
+        "n_adjoint_solves": 1,
+        "n_candidate_traces": 27
+      }
+    ],
+    "n_dedup_removed": 2,
+    "branch_controls": [
+      {
+        "branch_index": 1,
+        "control": [
+          8.460535811206768,
+          5.134992186075433,
+          1.283176439735492,
+          2.4940180558059337,
+          5.185609074144033,
+          0.9839276348413322
+        ],
+        "objective": 0.015854717724259153,
+        "centers": [
+          [
+            8.460535811206768,
+            5.134992186075433
+          ],
+          [
+            2.4940180558059337,
+            5.185609074144033
+          ]
+        ],
+        "amplitudes": [
+          1.283176439735492,
+          0.9839276348413322
+        ],
+        "wall_distances_m": [
+          0.4605358112067677,
+          0.45598194419406646
+        ]
+      },
+      {
+        "branch_index": 2,
+        "control": [
+          8.4641008644505,
+          5.14169330742107,
+          1.2824394383930662,
+          2.588079754612247,
+          5.22721841449297,
+          0.9748092285186748
+        ],
+        "objective": 0.020331202228135836,
+        "centers": [
+          [
+            8.4641008644505,
+            5.14169330742107
+          ],
+          [
+            2.588079754612247,
+            5.22721841449297
+          ]
+        ],
+        "amplitudes": [
+          1.2824394383930662,
+          0.9748092285186748
+        ],
+        "wall_distances_m": [
+          0.4641008644505007,
+          0.36192024538775325
+        ]
+      },
+      {
+        "branch_index": 3,
+        "control": [
+          8.439891338486966,
+          5.132092410777808,
+          1.288869175919336,
+          2.24499814599495,
+          5.034731220287311,
+          1.0837391044038176
+        ],
+        "objective": 0.08778353294660625,
+        "centers": [
+          [
+            8.439891338486966,
+            5.132092410777808
+          ],
+          [
+            2.24499814599495,
+            5.034731220287311
+          ]
+        ],
+        "amplitudes": [
+          1.288869175919336,
+          1.0837391044038176
+        ],
+        "wall_distances_m": [
+          0.4398913384869658,
+          0.24499814599495018
+        ]
+      }
+    ],
+    "pair_refinement": [
+      {
+        "branch_index": 1,
+        "accepted": true,
+        "n_forward_evaluations": 60,
+        "objective_before": 0.25989984394498544,
+        "objective_after": 0.020331202228135836,
+        "candidate_objective": 0.020331202228135836,
+        "centers_before": [
+          [
+            8.440981422609436,
+            5.12585997280082
+          ],
+          [
+            2.600953944527945,
+            5.16403480202775
+          ]
+        ],
+        "centers_after": [
+          [
+            8.4641008644505,
+            5.14169330742107
+          ],
+          [
+            2.588079754612247,
+            5.22721841449297
+          ]
+        ],
+        "amplitudes_before": [
+          1.2884458527478628,
+          0.9690665795506036
+        ],
+        "amplitudes_after": [
+          1.2824394383930662,
+          0.9748092285186748
+        ],
+        "moved_m": [
+          0.028021475268785973,
+          0.06448188621729826
+        ],
+        "wall_distance_before_m": [
+          0.4409814226094362,
+          0.34904605547205536
+        ],
+        "wall_distance_after_m": [
+          0.4641008644505007,
+          0.36192024538775325
+        ]
+      },
+      {
+        "branch_index": 2,
+        "accepted": true,
+        "n_forward_evaluations": 60,
+        "objective_before": 2.1622285975849938,
+        "objective_after": 0.015854717724259153,
+        "candidate_objective": 0.015854717724259153,
+        "centers_before": [
+          [
+            8.440981422609436,
+            5.12585997280082
+          ],
+          [
+            2.201259953366378,
+            5.240919728698537
+          ]
+        ],
+        "centers_after": [
+          [
+            8.460535811206768,
+            5.134992186075433
+          ],
+          [
+            2.4940180558059337,
+            5.185609074144033
+          ]
+        ],
+        "amplitudes_before": [
+          1.2884400635395437,
+          1.112460732976858
+        ],
+        "amplitudes_after": [
+          1.283176439735492,
+          0.9839276348413322
+        ],
+        "moved_m": [
+          0.021581738407933454,
+          0.2979371998446267
+        ],
+        "wall_distance_before_m": [
+          0.4409814226094362,
+          0.20125995336637814
+        ],
+        "wall_distance_after_m": [
+          0.4605358112067677,
+          0.45598194419406646
+        ]
+      },
+      {
+        "branch_index": 3,
+        "accepted": true,
+        "n_forward_evaluations": 60,
+        "objective_before": 4.2555138837058015,
+        "objective_after": 0.08778353294660625,
+        "candidate_objective": 0.08778353294660625,
+        "centers_before": [
+          [
+            8.440981422609436,
+            5.12585997280082
+          ],
+          [
+            2.227660678953574,
+            4.732002165161693
+          ]
+        ],
+        "centers_after": [
+          [
+            8.439891338486966,
+            5.132092410777808
+          ],
+          [
+            2.24499814599495,
+            5.034731220287311
+          ]
+        ],
+        "amplitudes_before": [
+          1.2884202500244943,
+          1.1560002808238563
+        ],
+        "amplitudes_after": [
+          1.288869175919336,
+          1.0837391044038176
+        ],
+        "moved_m": [
+          0.0063270503815816784,
+          0.3032251120548236
+        ],
+        "wall_distance_before_m": [
+          0.4409814226094362,
+          0.227660678953574
+        ],
+        "wall_distance_after_m": [
+          0.4398913384869658,
+          0.24499814599495018
+        ]
+      }
+    ],
+    "second_source_reselection": []
+  },
+  "keyword_arguments": {
+    "eta1": 1.0,
+    "lam": 0.0,
+    "objective_time_rule": "exclude_first",
+    "min_separation": null,
+    "min_value_tol": 0.0,
+    "boundary_buffer": 0.0,
+    "building_buffer": 0.0,
+    "save_plots": false,
+    "plot_dir": null,
+    "plot_context": null,
+    "score": "predicted_reduction",
+    "top_k": 24,
+    "beam_width": 3,
+    "refine_centers": true,
+    "coherence_cap": 0.3,
+    "refine_max_fev": 60,
+    "refine_pair": true,
+    "pair_refine_max_fev": 60,
+    "geometry_aware_branches": true,
+    "obstacle_aware_diversity": true,
+    "reselect_second": true,
+    "reselect_threshold": 0.25,
+    "reselect_max_passes": 2,
+    "amplitude_solver": "osqp",
+    "true_centers_for_plots": null
+  }
+}

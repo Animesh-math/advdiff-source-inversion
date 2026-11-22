@@ -1,0 +1,59 @@
+{
+  "case": "12",
+  "WARNING": "TRUTH RECORD - must never be passed to the inversion",
+  "occupied_bays": [
+    1,
+    2
+  ],
+  "true_control": [
+    2.475,
+    5.2,
+    1.0,
+    5.475,
+    5.2,
+    0.7
+  ],
+  "control_ordering": "[x1, y1, A1, x2, y2, A2]",
+  "sources": [
+    {
+      "bay": 1,
+      "center_xy": [
+        2.475,
+        5.2
+      ],
+      "amplitude": 1.0,
+      "distance_to_nearest_boundary_m": 0.4750000000000001,
+      "clearance_in_e_folding_radii": 2.3750000000000004,
+      "total_release_rate_per_m_depth": 0.12566370614359174
+    },
+    {
+      "bay": 2,
+      "center_xy": [
+        5.475,
+        5.2
+      ],
+      "amplitude": 0.7,
+      "distance_to_nearest_boundary_m": 0.47499999999999964,
+      "clearance_in_e_folding_radii": 2.3749999999999982,
+      "total_release_rate_per_m_depth": 0.0879645943005142
+    }
+  ],
+  "description": "stationary Gaussian tracer releases in the fluid beside the bed heads (not geometrically resolved patient mouths); beds are solid obstacles",
+  "data_mesh_level": "fine",
+  "fine_dt_s": 0.0025,
+  "fine_steps": 120000,
+  "fine_solve_seconds": 30.88313049497083,
+  "fine_state_snapshots": "truth/fine_state_snapshots.npz",
+  "observation_files": {
+    "clean": {
+      "file": "data/observations_clean.npz",
+      "file_sha256": "142c4d34a932710b4a8f32c352a45ef555461035f74cedcfaed036cd248c7ae9",
+      "observations_sha256": "553706243c87151dd29f1be0c90b2ea414960066f54048ca2ff79c475a3330b2"
+    },
+    "noisy": {
+      "file": "data/observations_noisy.npz",
+      "file_sha256": "fb46104e4f4a3e092ae3843b26b9a8c90a494228458fa4586f94c1006b8b78b3",
+      "observations_sha256": "9cb5d4415a8a539dbb10807342dbe795e500a30e2ab4263651b00ebcbce6847f"
+    }
+  }
+}

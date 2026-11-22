@@ -1,0 +1,5 @@
+# Application2 setup pipeline (2026-11-16T16:48:32-05:00); version v3_bathroom_topsupply_20261116; cwd .; OMP_NUM_THREADS=4
+<fenicsx-env python> Applications/Application2/Room_mesh/build_room_mesh.py --level all --out-root Applications/Application2/output/v3_bathroom_topsupply_20261116
+<fenicsx-env python> "Applications/Application2/Navier Stokes Solve/solve_application2_navier_stokes.py" --level coarse --out-root Applications/Application2/output/v3_bathroom_topsupply_20261116
+<fenicsx-env python> "Applications/Application2/Navier Stokes Solve/solve_application2_navier_stokes.py" --level fine --out-root Applications/Application2/output/v3_bathroom_topsupply_20261116
+<fenicsx-env python> Applications/Application2/report_application2_flow.py --out-root Applications/Application2/output/v3_bathroom_topsupply_20261116

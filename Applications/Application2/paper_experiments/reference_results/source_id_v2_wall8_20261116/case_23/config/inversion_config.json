@@ -1,0 +1,142 @@
+{
+  "case_label": "case_23",
+  "dataset_version": "source_id_v2_wall8_20261116",
+  "contains_truth": false,
+  "num_sources": 2,
+  "control_ordering": "[x1, y1, A1, x2, y2, A2]",
+  "admissible_set": {
+    "amplitude_bounds": [
+      0.1,
+      2.0
+    ],
+    "center_box_bounds_xmin_xmax_ymin_ymax": [
+      0.0,
+      11.0,
+      0.0,
+      6.0
+    ],
+    "center_region": "any point inside a triangle of the coarse fluid mesh (beds, partitions, the bathroom wall and the exterior are not meshed); not restricted to any bay"
+  },
+  "inversion_mesh_level": "coarse",
+  "mesh": {
+    "mesh_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.msh",
+    "mesh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+    "geometry_sha256": "4956131d35d27a7410be58ba3fe5c2af10e6c96e5656cec69974e8fb86b710ec"
+  },
+  "velocity": {
+    "velocity_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+    "velocity_sha256": "b3f2062166617edab52008cdc0b1d2f4365b854c99ab10f05a9c05c092fb5192"
+  },
+  "transport": {
+    "diffusivity_k": 0.01,
+    "sigma2": 0.04,
+    "tfinal": 300.0,
+    "dt": 0.015,
+    "jprint": 1,
+    "ngauss": 3,
+    "clean_air_dirichlet_boundaries": [
+      "inlet_1",
+      "inlet_2",
+      "inlet_3"
+    ]
+  },
+  "objective": {
+    "eta1": 1.0,
+    "lambda_reg": 0.0,
+    "time_rule": "exclude_first",
+    "sensor_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "sensor_weights_note": "diagonal of W; W = I for the equal-variance noise of this dataset"
+  },
+  "sensors": {
+    "node_ids": [
+      1331,
+      3741,
+      4234,
+      3743,
+      4231,
+      3833,
+      2663,
+      1382
+    ],
+    "coordinates": [
+      [
+        0.1591379370343268,
+        5.100000000005242
+      ],
+      [
+        2.830827318273924,
+        4.053130069092704
+      ],
+      [
+        3.160704287239835,
+        5.084495546739492
+      ],
+      [
+        5.830827318273931,
+        4.053130069092686
+      ],
+      [
+        6.15578773745208,
+        5.078374589255392
+      ],
+      [
+        8.84298063082124,
+        3.977251096959357
+      ],
+      [
+        1.907425199890157,
+        0.08974677487999244
+      ],
+      [
+        10.50859512247117,
+        1.788664463186837
+      ]
+    ],
+    "labels": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "names": [
+      "bay1_left_wall_upper",
+      "bay1_partition1_lower",
+      "bay2_partition1_upper",
+      "bay2_partition2_lower",
+      "bay3_partition2_upper",
+      "bay3_right_wall_lower",
+      "aisle_bottom_wall_right_of_door",
+      "bathroom_top_wall_near_exhaust"
+    ],
+    "layout": "wall_8"
+  },
+  "observations": {
+    "times": "t_n = n * 0.015 s, n = 0 .. 20000; n = 0 is not in the objective",
+    "observation_interval_s": 0.015,
+    "num_frames": 20001,
+    "clean": {
+      "file": "data/observations_clean.npz",
+      "file_sha256": "55409474ed48c7b07c559f9215dff84d18b6704eb8fbb69c92a41fdbd1b253a4",
+      "observations_sha256": "bea130c76860645d2ce5fc750806ab71a1fd45cfc589709595a932092bad445a"
+    },
+    "noisy": {
+      "file": "data/observations_noisy.npz",
+      "file_sha256": "efc8793228df0e21ce337f08f39776cd94763bb88f9b5b3fcb6ee8f4178dfa12",
+      "observations_sha256": "41eb73b9fdd5286acf9160071940e07741ba8a63b5089f2775c756d9351db5d1"
+    },
+    "noisy_nominal_noise_level": 0.01
+  }
+}

@@ -1,11 +1,8 @@
 # Application1 Navier-Stokes Velocity Solve (DC Navy Yard)
 
 Standalone FEniCSx steady incompressible Navier-Stokes solve that produces a
-geometry-aware ambient-wind velocity field on the real DC Navy Yard mesh. It is
-the Application1 analogue of
-`Test Application4/Navier Stokes Solve/solve_app4_navier_stokes.py` and reuses
-the same numerical strategy (Taylor-Hood P2/P1, Picard fixed-point iteration,
-PETSc MUMPS LU). It does not touch the inverse/optimization code.
+geometry-aware ambient-wind velocity field on the real DC Navy Yard mesh
+(Taylor-Hood P2/P1, Picard fixed-point iteration, PETSc MUMPS LU). It does not touch the inverse/optimization code.
 
 ## PDE
 
@@ -101,7 +98,7 @@ application1_streamlines.png                     streamlines
 application1_boundary_conditions.png            BC classification preview
 ```
 
-The NPZ matches the Test Application4 schema exactly so the advection-diffusion
+The NPZ uses the shared schema (`coords`, `velocity_nodes`) so the advection-diffusion
 velocity loader can consume it without a new format:
 
 ```text

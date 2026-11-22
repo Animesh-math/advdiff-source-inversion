@@ -1,19 +1,23 @@
 # Application1 — DC Navy Yard Source Identification
 
-Application1 solves the same deterministic transient advection–diffusion inverse
-source-identification problem as `Test Application4`, but on the **DC Navy Yard**
-domain and driven by the **Application1 Navier–Stokes velocity field**. The
-optimization pipeline (forward RK4 solver, fully-discrete RK4 adjoint gradient,
-reduced objective, L-BFGS-B, sigma-continuation, amplitude floor, and manual /
-mesh_random / smart / adaptive initialization) is ported unchanged in structure
-from Test Application4; only the geometry-dependent numeric defaults and the
-velocity source differ. The shared solvers in `Src/Solvers/` and the reduced
-objective/gradient in `Test Application2/gradient_test.py` are reused as-is
-(they are geometry-agnostic: the mesh supplies all geometry).
+Application1 solves a deterministic transient advection–diffusion inverse
+source-identification problem on the **DC Navy Yard** domain (building
+footprints are holes in the mesh), driven by a steady **Navier–Stokes wind
+field**. The pipeline: forward RK4 solver, fully-discrete RK4 adjoint gradient,
+reduced objective, adjoint-sensitivity initialization, L-BFGS-B (optionally
+GN-diagonal scaled), sigma-continuation, amplitude floor, and manual /
+mesh_random / smart / adaptive initialization. The shared solvers in
+`Src/Solvers/` and the reduced objective/gradient in
+`Src/Objective/gradient_test.py` are geometry-agnostic (the mesh supplies all
+geometry).
 
-The inverse problem: recover the centers and amplitudes of two Gaussian sources
-from the time-integrated concentration misfit on selected boundaries. Control
-ordering for two sources is `[x1, y1, A1, x2, y2, A2]`.
+The inverse problem: recover the centers and amplitudes of M Gaussian sources
+from the time-integrated concentration misfit at boundary segments or point
+sensors. Control ordering is `[x1, y1, A1, x2, y2, A2, ...]`.
+
+> **Paper experiments** (exact commands, settings, saved results):
+> [`paper_experiments/README.md`](paper_experiments/README.md). This file is the
+> full reference for the driver and its options.
 
 ## Coordinate units and scale (IMPORTANT)
 
@@ -27,19 +31,18 @@ recorded in `DC_mesh/dc_navy_yard_coordinate_origin.json` (and
 `mesh_data_config.ORIGIN_X/ORIGIN_Y`) for reference only. The entire numerical
 pipeline runs in local coordinates with no runtime origin subtraction.
 
-All geometry-dependent parameters are in **physical meters**, NOT the normalized
-`[0,1.4]×[0,1.0]` values of Test Application4:
+All geometry-dependent parameters are in **physical meters**:
 
-| Quantity | Application1 (local meters) | App4 (normalized) |
-|---|---|---|
-| Source center `x,y` | meters (`[0,302]×[0,700]`) | `[0,1.4]×[0,1.0]` |
-| Gaussian `sigma2` (r²) | `400 m²` (e-folding 20 m) | `0.003` |
-| Amplitude `A` | dimensionless `[0, 2]` | dimensionless `[0, 2]` |
-| Diffusivity `k` | `10 m²/s` (Pe ≈ 70) | `0.02` |
-| Time step `dt` | `0.1 s` | `1e-3` |
-| Final time `tfinal` | `60 s` | `2.0` |
-| Smart min separation | `40 m` | `0.25` |
-| Adaptive perturb radius | `15 m` | `0.08` |
+| Quantity | Application1 default (local meters) |
+|---|---|
+| Source center `x,y` | meters (`[0,302]×[0,700]`) |
+| Gaussian `sigma2` (r²) | `400 m²` (e-folding 20 m) |
+| Amplitude `A` | dimensionless `[0, 2]` (paper runs: `--amplitude-floor 0.1`) |
+| Diffusivity `k` | `10 m²/s` (Pe ≈ 70) |
+| Time step `dt` | `0.1 s` |
+| Final time `tfinal` | `150 s` (`PDE["tfinal"]`; `--tfinal` overrides) |
+| Smart min separation | `40 m` |
+| Adaptive perturb radius | `15 m` |
 
 The driver prints the runtime fluid-domain bounding box and every
 geometry-dependent default at the start of each run (`=== Geometry /
@@ -178,7 +181,7 @@ cd "Applications/Application1" && "$PY" run_optimization.py \
     --max-iter 150 --max-paraview-frames 50
 ```
 
-Robust global recovery (multistart + globalizers), analogous to App4:
+Robust global recovery (multistart + globalizers):
 ```
 cd "Applications/Application1" && "$PY" run_optimization.py \
     --mode location_and_intensity --case-name app1_recovery_adaptive \
@@ -679,13 +682,13 @@ A full reset that also removes the expensive velocity requires the explicit
 ## Notes and assumptions
 
 - The shared forward/adjoint solvers impose the homogeneous Dirichlet
-  (clean-inflow) condition on the **`left` (west)** wall only, matching the App4
-  single-inflow-Dirichlet convention. West is the dominant physical inflow. The
+  (clean-inflow) condition on the boundary named **`left`** only (here the west
+  wall; Application2 aliases its supply vents to this name). West is the dominant physical inflow. The
   north (`top`) inflow uses the natural do-nothing condition.
 - Admissibility is decided purely by mesh point-location: a source center is
   admissible iff it lies in some fluid triangle, which exactly excludes the 21
   polygonal building holes and the exterior. No analytic building geometry is
-  used (unlike App4's curved-building analytic guard).
+  used.
 - Sensor placement and `tfinal` strongly affect observability: with too short a
   `tfinal` the plume never reaches the outflow boundaries and sources become
   unobservable (every control collapses to the same zero-source misfit floor).

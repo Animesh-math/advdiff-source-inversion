@@ -1,0 +1,95 @@
+{
+  "B_L1": {
+    "source_run": "Applications/Application1/output/gn_diag_default_check_20261004_161718/cases/P_B_L1_boundary__gn-diag",
+    "J_z": 0.6412930722221233,
+    "gradient_norm": 3.0231605554815184,
+    "g_dot_q": 3.886541548601375,
+    "g_dot_q_centers": 3.8865414907945457,
+    "g_dot_q_amplitudes": 5.780682931207538e-08,
+    "seed": 0,
+    "analysis": {
+      "E1_resolved_eps_range": [
+        1.0,
+        1e-08
+      ],
+      "E1_resolved_num_points": 17,
+      "E1_fitted_slope_resolved": 1.989241966582502,
+      "E1_points_below_resolved_range": [],
+      "E1_points_above_resolved_range": [],
+      "cancellation_onset_eps": null,
+      "E0_first_order_eps_range": [
+        0.00031622776601683794,
+        1e-08
+      ],
+      "E0_fitted_slope": 1.007655785104849,
+      "roundoff_floor_estimate": 1.4239566686272093e-16,
+      "roundoff_floor_note": "machine eps * |J(z)|; E1 cannot resolve below a small multiple of this",
+      "second_order_observed": true,
+      "first_order_observed": true
+    }
+  },
+  "B_L2": {
+    "source_run": "Applications/Application1/output/gn_diag_default_check_20261004_161718/cases/P_B_L2_mixed__gn-diag",
+    "J_z": 0.5274343215019892,
+    "gradient_norm": 6.448310248699766,
+    "g_dot_q": 28.165537763557445,
+    "g_dot_q_centers": 28.165537871361437,
+    "g_dot_q_amplitudes": -1.0780398832075145e-07,
+    "seed": 0,
+    "analysis": {
+      "E1_resolved_eps_range": [
+        1.0,
+        1e-08
+      ],
+      "E1_resolved_num_points": 17,
+      "E1_fitted_slope_resolved": 1.9962905649920923,
+      "E1_points_below_resolved_range": [],
+      "E1_points_above_resolved_range": [],
+      "cancellation_onset_eps": null,
+      "E0_first_order_eps_range": [
+        0.0001,
+        1e-08
+      ],
+      "E0_fitted_slope": 1.004387880584258,
+      "roundoff_floor_estimate": 1.1711394554181114e-16,
+      "roundoff_floor_note": "machine eps * |J(z)|; E1 cannot resolve below a small multiple of this",
+      "second_order_observed": true,
+      "first_order_observed": true
+    }
+  },
+  "M5_S4": {
+    "source_run": "Applications/Application1/output/post_init_scaling_validation_20261004_125952/cases/M5_S4_gndiag",
+    "J_z": 843.4076596378235,
+    "gradient_norm": 820.1082093696511,
+    "g_dot_q": 3416.2470073599648,
+    "g_dot_q_centers": 3416.2470073608156,
+    "g_dot_q_amplitudes": -8.508505766145273e-10,
+    "seed": 2,
+    "analysis": {
+      "E1_resolved_eps_range": [
+        1.0,
+        3.162277660168379e-08
+      ],
+      "E1_resolved_num_points": 16,
+      "E1_fitted_slope_resolved": 1.994842848985958,
+      "E1_points_below_resolved_range": [
+        {
+          "eps": 1e-08,
+          "E1": 3.3383253708043834e-12,
+          "E1_rate": 2.842269316267925
+        }
+      ],
+      "E1_points_above_resolved_range": [],
+      "cancellation_onset_eps": 1e-08,
+      "E0_first_order_eps_range": [
+        0.0031622776601683794,
+        1e-08
+      ],
+      "E0_fitted_slope": 1.0030908869521167,
+      "roundoff_floor_estimate": 1.872741205750258e-13,
+      "roundoff_floor_note": "machine eps * |J(z)|; E1 cannot resolve below a small multiple of this",
+      "second_order_observed": true,
+      "first_order_observed": true
+    }
+  }
+}

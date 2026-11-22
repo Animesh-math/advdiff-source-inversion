@@ -1,0 +1,67 @@
+{
+  "experiment": "Application1 fixed-width study (B_L2, discrete sensors): five independent reconstructions at rho in [400.0, 300.0, 200.0, 100.0, 50.0] m^2, FIXED PEAK AMPLITUDES",
+  "created": "2026-10-03T22:29:00-0400",
+  "experiment_dir": "Applications/Application1/output/width_study_B_L2_20261003_222835",
+  "case_ids": [
+    "rho400",
+    "rho300",
+    "rho200",
+    "rho100",
+    "rho050"
+  ],
+  "rhos_m2": [
+    400.0,
+    300.0,
+    200.0,
+    100.0,
+    50.0
+  ],
+  "config_file": "Applications/Application1/output/width_study_B_L2_20261003_222835/experiment_config.json",
+  "commands_file": "Applications/Application1/output/width_study_B_L2_20261003_222835/commands.sh",
+  "commands": [
+    "<inverse-env python> Applications/Application1/test\\ scripts/width_study_run_case.py --rho 400 --exp-dir Applications/Application1/output/width_study_B_L2_20261003_222835 --case-id rho400 -- --mode location_and_intensity --stage full --num-sources 2 --bound-case mesh_domain --init-mode sensitivity --num-starts 1 --random-seed 0 --sensitivity-score predicted_reduction --sensitivity-top-k 24 --sensitivity-beam-width 3 --sensitivity-refine-centers --sensitivity-refine-max-fev 60 --sensitivity-coherence-cap 0.3 --sensitivity-geometry-aware-branches --sensitivity-obstacle-aware-diversity --sensitivity-refine-pair --sensitivity-pair-refine-max-fev 60 --sensitivity-reselect-second --sensitivity-reselect-threshold 0.25 --sensitivity-reselect-max-passes 2 --sensitivity-save-plots --amplitude-solver osqp --post-init-method lbfgsb --feasibility-mode raw --tfinal 150 --amplitude-floor 0.1 --max-iter 500 --max-paraview-frames 100 --observation-mode nodes --sensor-weights equal --sensor-equal-weight 1.0 --velocity-field-file Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz --true-control 100.0 210.0 1.3 270.0 60.0 0.85 --sensor-node-ids 641\\,647\\,653\\,662\\,671\\,677\\,588\\,596\\,690\\,684\\,1855\\,2771\\,2704\\,1279\\,789\\,1156\\,1677\\,2464\\,1137\\,827\\,1807\\,1332\\,1616\\,2790\\,1022 --case-name rho400 ",
+    "<inverse-env python> Applications/Application1/test\\ scripts/width_study_run_case.py --rho 300 --exp-dir Applications/Application1/output/width_study_B_L2_20261003_222835 --case-id rho300 -- --mode location_and_intensity --stage full --num-sources 2 --bound-case mesh_domain --init-mode sensitivity --num-starts 1 --random-seed 0 --sensitivity-score predicted_reduction --sensitivity-top-k 24 --sensitivity-beam-width 3 --sensitivity-refine-centers --sensitivity-refine-max-fev 60 --sensitivity-coherence-cap 0.3 --sensitivity-geometry-aware-branches --sensitivity-obstacle-aware-diversity --sensitivity-refine-pair --sensitivity-pair-refine-max-fev 60 --sensitivity-reselect-second --sensitivity-reselect-threshold 0.25 --sensitivity-reselect-max-passes 2 --sensitivity-save-plots --amplitude-solver osqp --post-init-method lbfgsb --feasibility-mode raw --tfinal 150 --amplitude-floor 0.1 --max-iter 500 --max-paraview-frames 100 --observation-mode nodes --sensor-weights equal --sensor-equal-weight 1.0 --velocity-field-file Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz --true-control 100.0 210.0 1.3 270.0 60.0 0.85 --sensor-node-ids 641\\,647\\,653\\,662\\,671\\,677\\,588\\,596\\,690\\,684\\,1855\\,2771\\,2704\\,1279\\,789\\,1156\\,1677\\,2464\\,1137\\,827\\,1807\\,1332\\,1616\\,2790\\,1022 --case-name rho300 ",
+    "<inverse-env python> Applications/Application1/test\\ scripts/width_study_run_case.py --rho 200 --exp-dir Applications/Application1/output/width_study_B_L2_20261003_222835 --case-id rho200 -- --mode location_and_intensity --stage full --num-sources 2 --bound-case mesh_domain --init-mode sensitivity --num-starts 1 --random-seed 0 --sensitivity-score predicted_reduction --sensitivity-top-k 24 --sensitivity-beam-width 3 --sensitivity-refine-centers --sensitivity-refine-max-fev 60 --sensitivity-coherence-cap 0.3 --sensitivity-geometry-aware-branches --sensitivity-obstacle-aware-diversity --sensitivity-refine-pair --sensitivity-pair-refine-max-fev 60 --sensitivity-reselect-second --sensitivity-reselect-threshold 0.25 --sensitivity-reselect-max-passes 2 --sensitivity-save-plots --amplitude-solver osqp --post-init-method lbfgsb --feasibility-mode raw --tfinal 150 --amplitude-floor 0.1 --max-iter 500 --max-paraview-frames 100 --observation-mode nodes --sensor-weights equal --sensor-equal-weight 1.0 --velocity-field-file Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz --true-control 100.0 210.0 1.3 270.0 60.0 0.85 --sensor-node-ids 641\\,647\\,653\\,662\\,671\\,677\\,588\\,596\\,690\\,684\\,1855\\,2771\\,2704\\,1279\\,789\\,1156\\,1677\\,2464\\,1137\\,827\\,1807\\,1332\\,1616\\,2790\\,1022 --case-name rho200 ",
+    "<inverse-env python> Applications/Application1/test\\ scripts/width_study_run_case.py --rho 100 --exp-dir Applications/Application1/output/width_study_B_L2_20261003_222835 --case-id rho100 -- --mode location_and_intensity --stage full --num-sources 2 --bound-case mesh_domain --init-mode sensitivity --num-starts 1 --random-seed 0 --sensitivity-score predicted_reduction --sensitivity-top-k 24 --sensitivity-beam-width 3 --sensitivity-refine-centers --sensitivity-refine-max-fev 60 --sensitivity-coherence-cap 0.3 --sensitivity-geometry-aware-branches --sensitivity-obstacle-aware-diversity --sensitivity-refine-pair --sensitivity-pair-refine-max-fev 60 --sensitivity-reselect-second --sensitivity-reselect-threshold 0.25 --sensitivity-reselect-max-passes 2 --sensitivity-save-plots --amplitude-solver osqp --post-init-method lbfgsb --feasibility-mode raw --tfinal 150 --amplitude-floor 0.1 --max-iter 500 --max-paraview-frames 100 --observation-mode nodes --sensor-weights equal --sensor-equal-weight 1.0 --velocity-field-file Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz --true-control 100.0 210.0 1.3 270.0 60.0 0.85 --sensor-node-ids 641\\,647\\,653\\,662\\,671\\,677\\,588\\,596\\,690\\,684\\,1855\\,2771\\,2704\\,1279\\,789\\,1156\\,1677\\,2464\\,1137\\,827\\,1807\\,1332\\,1616\\,2790\\,1022 --case-name rho100 ",
+    "<inverse-env python> Applications/Application1/test\\ scripts/width_study_run_case.py --rho 50 --exp-dir Applications/Application1/output/width_study_B_L2_20261003_222835 --case-id rho050 -- --mode location_and_intensity --stage full --num-sources 2 --bound-case mesh_domain --init-mode sensitivity --num-starts 1 --random-seed 0 --sensitivity-score predicted_reduction --sensitivity-top-k 24 --sensitivity-beam-width 3 --sensitivity-refine-centers --sensitivity-refine-max-fev 60 --sensitivity-coherence-cap 0.3 --sensitivity-geometry-aware-branches --sensitivity-obstacle-aware-diversity --sensitivity-refine-pair --sensitivity-pair-refine-max-fev 60 --sensitivity-reselect-second --sensitivity-reselect-threshold 0.25 --sensitivity-reselect-max-passes 2 --sensitivity-save-plots --amplitude-solver osqp --post-init-method lbfgsb --feasibility-mode raw --tfinal 150 --amplitude-floor 0.1 --max-iter 500 --max-paraview-frames 100 --observation-mode nodes --sensor-weights equal --sensor-equal-weight 1.0 --velocity-field-file Applications/Application1/output/navier_stokes/application1_navier_stokes_velocity_nodes.npz --true-control 100.0 210.0 1.3 270.0 60.0 0.85 --sensor-node-ids 641\\,647\\,653\\,662\\,671\\,677\\,588\\,596\\,690\\,684\\,1855\\,2771\\,2704\\,1279\\,789\\,1156\\,1677\\,2464\\,1137\\,827\\,1807\\,1332\\,1616\\,2790\\,1022 --case-name rho050 "
+  ],
+  "git": {
+    "commit": "cf1ec1dc284b4fc4ed28f04f1bf57b8cfcce424e",
+    "branch": "app1-osqp-amplitude-solver",
+    "status_porcelain": "?? Applications/Application1/run_five_source_experiment.sh\n?? Applications/Application1/run_m3_amplitude_solver_ab.sh\n?? Applications/Application1/run_width_study.sh\n?? \"Applications/Application1/test scripts/compare_m3_amplitude_solver_ab.py\"\n?? \"Applications/Application1/test scripts/five_source_prepare.py\"\n?? \"Applications/Application1/test scripts/five_source_report.py\"\n?? \"Applications/Application1/test scripts/width_study_prepare.py\"\n?? \"Applications/Application1/test scripts/width_study_report.py\"\n?? \"Applications/Application1/test scripts/width_study_run_case.py\"",
+    "tracked_diff_file": "Applications/Application1/output/width_study_B_L2_20261003_222835/git_diff_tracked.patch",
+    "note": "experiment scripts are untracked new files; copies in scripts/"
+  },
+  "environment": {
+    "hostname": "<host>",
+    "python": "<inverse-env python>",
+    "python_version": "3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0]",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "osqp": "1.1.3",
+      "matplotlib": "3.11.1",
+      "meshio": "5.3.5"
+    },
+    "pip_freeze_file": "Applications/Application1/output/width_study_B_L2_20261003_222835/pip_freeze.txt",
+    "nproc": 192,
+    "loadavg_at_launch": [
+      23.88134765625,
+      25.53759765625,
+      25.52783203125
+    ],
+    "thread_env": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "PYTHONUNBUFFERED": "1"
+    },
+    "thread_policy": "threads unset -> BLAS/OpenMP use all cores; widths run sequentially; other jobs on the host listed in hardware.txt (runtimes are wall clock on a shared machine)",
+    "hardware_file": "Applications/Application1/output/width_study_B_L2_20261003_222835/hardware.txt"
+  },
+  "launch": {
+    "mechanism": "setsid nohup, stdin </dev/null, output to files (no batch scheduler on host)",
+    "batch_pid": 32810
+  }
+}

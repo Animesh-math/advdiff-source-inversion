@@ -1,13 +1,13 @@
 """Steady Navier-Stokes ambient-wind velocity solve for Application1.
 
 This is the Application1 analogue of
-``Test Application4/Navier Stokes Solve/solve_app4_navier_stokes.py``.  It reads
+App4's ``Navier Stokes Solve/solve_app4_navier_stokes.py``.  It reads
 the DC Navy Yard Gmsh mesh, solves a steady incompressible Navier-Stokes problem
 with FEniCSx (Taylor-Hood P2/P1, Picard fixed-point iteration, MUMPS LU), writes
 ParaView files, and exports the computed velocity in the Application1 transport
 mesh node order for the future advection-diffusion driver.
 
-Differences from Test Application4, all driven by the single wind vector in
+Differences from App4, all driven by the single wind vector in
 ``navier_stokes_config.WIND_VELOCITY``:
 
   * the four outer rectangle boundaries are classified as inflow / outflow /

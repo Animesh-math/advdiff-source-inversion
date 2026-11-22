@@ -1,0 +1,9 @@
+{
+  "definition": "recovered = all final centers inside the fluid mesh (raw feasibility) AND max matched center error <= 1.0 m AND max matched amplitude error <= 0.01",
+  "max_position_error_m": 1.0,
+  "max_amplitude_error": 0.01,
+  "require_feasible_centers": true,
+  "matching": "run_optimization.match_sources_by_permutation: label permutation minimizing the TOTAL center position error; amplitude errors taken under that same permutation (the convention of optimization_summary.json recovery_permutation_matched)",
+  "recorded_before_launch": true,
+  "note": "used only for post-hoc reporting; it never stops or alters an optimization. Continuous errors are stored for every run so other thresholds can be applied."
+}

@@ -1,0 +1,309 @@
+{
+  "generated_utc": "2026-11-16T21:48:39.364692+00:00",
+  "status": "converged",
+  "level": "coarse",
+  "purpose": "intended for eventual optimization (inverse solves)",
+  "command": "<fenicsx-env python> Applications/Application2/Navier Stokes Solve/solve_application2_navier_stokes.py --level coarse --out-root Applications/Application2/output/v3_bathroom_topsupply_20261116",
+  "pde": "-nu Laplace(v) + (v.grad)v + grad p = 0, div v = 0 (kinematic, vector-Laplacian viscous term)",
+  "boundary_conditions": {
+    "inlets": "Dirichlet: parabolic upward profile, mean 0.1 m/s, peak 0.15000000000000002 m/s",
+    "inlets_location": "top wall y = 6, flow downward into the room",
+    "walls_partitions_beds_bathroom_wall": "no slip v = 0 (tags 41-47, 51-52, 61-63, 71-72)",
+    "beds": "idealized 2D impermeable obstacles: rectangular holes in the mesh",
+    "bathroom_doorway": "interior fluid passage (no boundary condition)",
+    "outlets": "outlet_door (y = 0) and outlet_exhaust (x = 11): natural (nu grad v - p I) n = 0; NO outlet pressure value, NO outlet velocity, NO pinning, NO mean constraint; flow split is computed"
+  },
+  "parameters": {
+    "inlet_mean_speed_m_per_s": 0.1,
+    "inlet_peak_speed_m_per_s": 0.15000000000000002,
+    "inlet_speed_convention": "INLET_MEAN_SPEED is the mean over each inlet; peak = 1.5 * mean",
+    "inlet_profile": "parabolic: v_y = -peak * 4 s (1 - s) (downward), v_x = 0, s in [0,1] along each top-wall supply",
+    "nu_m2_per_s": 0.0023244,
+    "nu_kind": "spatially constant effective kinematic viscosity (modelling parameter of an idealized 2D experiment); not molecular air viscosity, not a tracer diffusivity",
+    "rho_kg_per_m3_informational": 1.2,
+    "max_picard_iter": 100,
+    "picard_tol_relative_L2_update": 1e-08,
+    "reynolds_numbers": {
+      "Re_slot_mean_speed_vent_width": 25.81311306143521,
+      "Re_room_mean_speed_room_depth": 258.1311306143521,
+      "Re_slot_if_molecular_air": 3999.9999999999995,
+      "characteristic_lengths_m": {
+        "slot": 0.6,
+        "room": 6.0
+      }
+    },
+    "approx_ach_full_height_openings": 12.710867006669284,
+    "approx_ach_area_basis_m2": 50.980000000000004,
+    "approx_ach_gross_room_area": 11.17241379310345,
+    "approx_ach_assumptions": "plan-view field = height average; each opening spans the full room height; uniform supply/extract over the height; all air enters via the three inlets",
+    "model_statement": "The room experiment uses a steady, two-dimensional airflow with a spatially constant effective viscosity. It provides an idealized setting for evaluating source identification rather than a validated prediction of hospital ventilation.",
+    "layout_attribution": "Ventilation arrangement inspired by Fig. 24 and Sec. 7.1 of Lohner et al., arXiv:2006.13792; this three-bed room is an adaptation, not a reproduction, and the paper's bathroom ceiling exhaust is represented by a 2D boundary outlet. Not clinically validated.",
+    "outlet_condition": "natural (nu grad v - p I) n = 0 on outlet_door and outlet_exhaust; split not prescribed"
+  },
+  "discretization": "Taylor-Hood P2 (vector) / P1, Picard (iteration 1 = Stokes), PETSc MUMPS LU",
+  "petsc_options": {
+    "ksp_type": "preonly",
+    "pc_type": "lu",
+    "pc_factor_mat_solver_type": "mumps",
+    "ksp_error_if_not_converged": true
+  },
+  "mesh": {
+    "vertices": 4381,
+    "triangles": 7887,
+    "velocity_dofs": 33302,
+    "pressure_dofs": 4381,
+    "total_dofs": 37683,
+    "mesh_info_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse_mesh_info.json",
+    "sizes_m": {
+      "lc_bulk": 0.2,
+      "lc_vent": 0.05,
+      "lc_wall": 0.07,
+      "lc_corner": 0.025
+    },
+    "min_angle_deg": {
+      "min": 28.45743298329085,
+      "p01": 37.8892911315142,
+      "median": 53.32988738031014
+    }
+  },
+  "association": {
+    "application": "Application2",
+    "mesh_level": "coarse",
+    "mesh_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.msh",
+    "mesh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+    "geometry_sha256": "4956131d35d27a7410be58ba3fe5c2af10e6c96e5656cec69974e8fb86b710ec",
+    "transport_coords_sha256": "ddfc812068d49cd8014a27cc491e88806ca82e9bac5fad8f7774be8124279352",
+    "n_transport_nodes": 4381,
+    "n_triangles": 7887,
+    "rule": "use ONLY with mesh_data_config.build_mesh_data(level); verified by load_velocity_nodes()"
+  },
+  "picard": {
+    "converged": true,
+    "iterations": 52,
+    "final_relative_update": 9.803450360979917e-09,
+    "tolerance": 1e-08,
+    "max_iter": 100,
+    "seconds": 3.511093389708549,
+    "finite": true
+  },
+  "linear_system": {
+    "size": [
+      37683,
+      37683
+    ],
+    "last_relative_residual": 3.132737771048937e-16,
+    "mumps_INFOG1": 0,
+    "mumps_null_pivots_INFOG28": 0,
+    "velocity_dirichlet_dofs": 3388,
+    "pressure_dirichlet_dofs": 0
+  },
+  "nonlinear_residual_natural_outflow_check": {
+    "momentum_max_abs_on_outlet_dofs": 1.7672023698865396e-13,
+    "momentum_max_abs_on_interior_free_dofs": 1.5294766321505282e-12,
+    "momentum_max_abs_on_dirichlet_dofs_reaction": 0.0020205722025984666,
+    "continuity_max_abs": 5.59818633219148e-17,
+    "n_outlet_velocity_blocks_free": 70,
+    "note": "R(w) = int nu grad u:grad w + ((grad u) u).w - p div w for every P2 basis w at the final iterate. Natural outflow <=> R = 0 on the free outlet dofs (same level as interior dofs: Picard lag + round-off); inlet/wall rows hold the boundary reaction (traction) and are O(reaction).",
+    "outlet_over_reaction": 8.74604910239737e-11
+  },
+  "taylor_hood_diagnostics": {
+    "flux_by_tag": {
+      "inlet_1": -0.06,
+      "inlet_2": -0.05999999999999996,
+      "inlet_3": -0.05999999999999997,
+      "outlet_door": 0.11873054596979676,
+      "outlet_exhaust": 0.061269454030203,
+      "wall_bottom": 0.0,
+      "wall_right": 0.0,
+      "wall_top": 0.0,
+      "wall_left": 0.0,
+      "bath_bottom": 0.0,
+      "bath_right": 0.0,
+      "bath_top": 0.0,
+      "partition_1": 0.0,
+      "partition_2": 0.0,
+      "bed_1": 0.0,
+      "bed_2": 0.0,
+      "bed_3": 0.0,
+      "bath_wall_lower": 0.0,
+      "bath_wall_upper": 0.0
+    },
+    "inflow_total": -0.17999999999999994,
+    "outflow_total": 0.17999999999999977,
+    "net_boundary_flux": -1.6653345369377348e-16,
+    "normalized_imbalance_abs_net_over_abs_inflow": 9.251858538542974e-16,
+    "prescribed_inflow_per_inlet": -0.06,
+    "inlet_flux_error_vs_prescribed": {
+      "inlet_1": 0.0,
+      "inlet_2": 3.469446951953614e-17,
+      "inlet_3": 2.7755575615628914e-17
+    },
+    "wall_flux_total": 0.0,
+    "div_L2": 0.06838048311009942,
+    "grad_L2": 1.2082260196020214,
+    "div_L2_over_grad_L2": 0.056595770990450385,
+    "integral_div": -8.39773874896331e-17,
+    "velocity_L2": 0.26057454851835465,
+    "fluid_area_m2": 50.980000000000224,
+    "pressure_min": -0.0021647684145007025,
+    "pressure_max": 0.03347084125944305,
+    "outlets": {
+      "outlet_door": {
+        "length_m": 1.0,
+        "flux": 0.11873054596979676,
+        "share_of_total_inflow": 0.6596141442766489,
+        "share_of_total_outflow": 0.6596141442766495,
+        "mean_normal_velocity": 0.11873054596979676,
+        "mean_pressure": 0.00018407202169413084,
+        "mean_normal_traction": -6.727335938023842e-05,
+        "mean_abs_normal_traction": 7.179006858484169e-05,
+        "backflow_flux_inward": 0.0,
+        "backflow_length_m": 0.0,
+        "backflow_length_fraction": 0.0,
+        "min_normal_velocity_at_P2_dofs": 0.0,
+        "max_normal_velocity_at_P2_dofs": 0.15154475774224652,
+        "n_P2_dofs_with_inflow": 0
+      },
+      "outlet_exhaust": {
+        "length_m": 0.6000000000000001,
+        "flux": 0.061269454030203,
+        "share_of_total_inflow": 0.3403858557233501,
+        "share_of_total_outflow": 0.34038585572335045,
+        "mean_normal_velocity": 0.10211575671700499,
+        "mean_pressure": 0.00032821899473875997,
+        "mean_normal_traction": -0.00014624596783963974,
+        "mean_abs_normal_traction": 0.00015735642977160932,
+        "backflow_flux_inward": 0.0,
+        "backflow_length_m": 0.0,
+        "backflow_length_fraction": 0.0,
+        "min_normal_velocity_at_P2_dofs": 0.0,
+        "max_normal_velocity_at_P2_dofs": 0.12864573284639996,
+        "n_P2_dofs_with_inflow": 0
+      }
+    },
+    "sign_convention": "flux = int u.n ds with outward n: inflow negative, outflow positive"
+  },
+  "transport_P1_diagnostics": {
+    "flux_by_tag": {
+      "inlet_1": -0.05965172652244993,
+      "inlet_2": -0.05965172652245078,
+      "inlet_3": -0.05965172652245081,
+      "outlet_door": 0.11820252719692921,
+      "outlet_exhaust": 0.06066264276859483,
+      "wall_bottom": -4.443231113946299e-19,
+      "wall_right": -4.8547565042531736e-20,
+      "wall_top": 1.0097868554987901e-18,
+      "wall_left": -3.264372952237819e-20,
+      "bath_bottom": -4.049871250481035e-20,
+      "bath_right": -1.2867594409806255e-19,
+      "bath_top": -5.541593557261059e-21,
+      "partition_1": -3.451738688242848e-20,
+      "partition_2": -1.6969759871316853e-20,
+      "bed_1": -2.555423179309913e-19,
+      "bed_2": -2.823756936870177e-19,
+      "bed_3": -4.419576533082079e-19,
+      "bath_wall_lower": 5.4928757822091624e-21,
+      "bath_wall_upper": 9.465270502414017e-21
+    },
+    "inflow_total": -0.17895517956735152,
+    "outflow_total": 0.17886516996552404,
+    "net_boundary_flux": -9.000960182747945e-05,
+    "integral_div": -9.000960182745446e-05,
+    "normalized_imbalance_abs_net_over_abs_inflow": 0.0005029728787123676,
+    "div_L2": 0.1423268374140445,
+    "grad_L2": 1.19078381553569,
+    "div_L2_over_grad_L2": 0.11952365791100114,
+    "div_abs_max": 1.3568685770085038,
+    "wall_node_max_speed": 5.2332102906453656e-18,
+    "dof_to_node_map_max_distance": 1.9860273225978185e-15,
+    "note": "continuous P1 interpolant of the P2 field at mesh vertices; not exactly divergence-free"
+  },
+  "bay_flux_across_partition_tip_line_y3": {
+    "1": {
+      "x_range": [
+        0.0,
+        2.95
+      ],
+      "net_upward_flux_across_y3": -0.059983325109217216,
+      "upward_part": 0.0,
+      "downward_part": -0.059983325109217216,
+      "note": "per metre depth [m^2/s]; trapezoid on 5 mm samples of the P2 field; negative = net flow from the bay down into the aisle"
+    },
+    "2": {
+      "x_range": [
+        3.05,
+        5.95
+      ],
+      "net_upward_flux_across_y3": -0.059969314548408224,
+      "upward_part": 0.0,
+      "downward_part": -0.059969314548408224,
+      "note": "per metre depth [m^2/s]; trapezoid on 5 mm samples of the P2 field; negative = net flow from the bay down into the aisle"
+    },
+    "3": {
+      "x_range": [
+        6.05,
+        9.0
+      ],
+      "net_upward_flux_across_y3": -0.05998443905739617,
+      "upward_part": 0.0,
+      "downward_part": -0.05998443905739617,
+      "note": "per metre depth [m^2/s]; trapezoid on 5 mm samples of the P2 field; negative = net flow from the bay down into the aisle"
+    }
+  },
+  "bathroom_doorway_flux": {
+    "y_range": [
+      0.6,
+      1.4
+    ],
+    "net_flux_into_bathroom_+x": 0.06126971435083586,
+    "into_bathroom_part": 0.06126971435083586,
+    "back_into_room_part": 0.0,
+    "note": "flux of the P2 field across x = 9, 0.6 < y < 1.4 (interior doorway), trapezoid on 1 mm samples"
+  },
+  "probes": {
+    "file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_probes_coarse.npz",
+    "grid_spacing_m": 0.05,
+    "line_spacing_m": 0.005,
+    "grid_points": 20392,
+    "grid_missed": 0,
+    "line_missed": 0
+  },
+  "files": {
+    "velocity_nodes_npz": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+    "full_fields_npz": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_full_fields_coarse.npz",
+    "picard_history_csv": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_picard_history_coarse.csv",
+    "visualization": [
+      "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_velocity_P2_coarse.bp",
+      "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_pressure_P1_coarse.bp",
+      "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_velocity_pressure_P1_coarse.vtu",
+      "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_velocity_pressure_P1_coarse.xdmf"
+    ]
+  },
+  "npz_schema": {
+    "velocity_nodes_npz": {
+      "coords": "(N,3) transport node coords (meshio order)",
+      "velocity_nodes": "(N,2) P2 velocity at the vertices",
+      "pressure_nodes": "(N,) P1 pressure",
+      "connections": "(T,3)",
+      "association_json": "mesh/geometry hashes; checked by load_velocity_nodes"
+    },
+    "full_fields_npz": "P2 velocity / P1 pressure dof arrays + dof coordinates + cell dof maps + DOLFINx geometry (reload: read the .msh serially with dolfinx.io.gmsh, same version)"
+  },
+  "provenance": {
+    "git_commit": "b22a05a9353538d941d92d399942bc5c3580c910",
+    "git_branch": "app1-osqp-amplitude-solver",
+    "git_dirty_paths": "M \"Applications/Application2/Navier Stokes Solve/solve_application2_navier_stokes.py\"\n M Applications/Application2/README.md\n M Applications/Application2/Room_mesh/build_room_mesh.py\n M Applications/Application2/mesh_data_config.py\n M Applications/Application2/navier_stokes_config.py\n M Applications/Application2/report_application2_flow.py\n M Applications/Application2/room_geometry_config.py\n M Applications/Application2/run_application2_setup.sh\n M \"Applications/Application2/test scripts/diagnose_ns_newton_stability.py\"\n?? Applications/Application2/room_layout_reference.png",
+    "python": "3.14.6 | packaged by conda-forge | (main, Jul 24 2026, 16:09:24) [GCC 14.3.0]",
+    "platform": "Linux-6.12.111+deb13-amd64-x86_64-with-glibc2.41",
+    "dolfinx": "0.11.0",
+    "basix": "0.11.0",
+    "petsc4py": [
+      3,
+      25,
+      6
+    ],
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "wall_seconds_total": 4.306665726937354
+}

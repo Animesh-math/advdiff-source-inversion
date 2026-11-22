@@ -1,0 +1,6 @@
+case,sens_forward,sens_adjoint,sens_total,random_forward,random_adjoint,random_total,first_recovered_k,solves_through_k
+A-L1,521,40,561,733,717,1450,8,1244
+A-L2,545,122,667,940,924,1864,5,911
+B-L1,551,44,595,862,847,1709,8,1514
+B-L2,435,42,477,713,697,1410,,
+M5,3153,94,3247,4431,4412,8843,4,3409

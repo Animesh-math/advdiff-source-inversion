@@ -1,0 +1,238 @@
+{
+  "flow_version": "v3_bathroom_topsupply_20261116",
+  "flow_dir": "Applications/Application2/output/v3_bathroom_topsupply_20261116",
+  "levels": {
+    "coarse": {
+      "mesh_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/mesh/application2_room_coarse.msh",
+      "mesh_sha256": "3536cc16a57f9fafe1060657718bdbf131fa5a060be1fd86d22cd6d76c35313e",
+      "geometry_sha256": "4956131d35d27a7410be58ba3fe5c2af10e6c96e5656cec69974e8fb86b710ec",
+      "n_nodes": 4381,
+      "n_triangles": 7887,
+      "velocity_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_velocity_nodes_coarse.npz",
+      "velocity_sha256": "b3f2062166617edab52008cdc0b1d2f4365b854c99ab10f05a9c05c092fb5192",
+      "navier_stokes_metadata": "Applications/Application2/output/v3_bathroom_topsupply_20261116/coarse/navier_stokes/application2_navier_stokes_run_metadata_coarse.json",
+      "picard_iterations": 52,
+      "picard_final_relative_update": 9.803450360979917e-09,
+      "nu_m2_per_s": 0.0023244,
+      "inlet_mean_speed_m_per_s": 0.1,
+      "outlet_condition": "outlet_door (y = 0) and outlet_exhaust (x = 11): natural (nu grad v - p I) n = 0; NO outlet pressure value, NO outlet velocity, NO pinning, NO mean constraint; flow split is computed",
+      "flow_git_commit_at_generation": "b22a05a9353538d941d92d399942bc5c3580c910",
+      "note_metadata_wording": "the flow metadata string boundary_conditions.inlets says 'parabolic upward profile' (stale wording from the earlier bottom-supply versions); the nodal velocity itself is verified above to be the DOWNWARD top-wall supply profile"
+    },
+    "fine": {
+      "mesh_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/mesh/application2_room_fine.msh",
+      "mesh_sha256": "5309186742fc17e1627e169edb7d241568f4dced6f8055b5d0a1453642ed66b5",
+      "geometry_sha256": "4956131d35d27a7410be58ba3fe5c2af10e6c96e5656cec69974e8fb86b710ec",
+      "n_nodes": 15231,
+      "n_triangles": 28772,
+      "velocity_file": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_navier_stokes_velocity_nodes_fine.npz",
+      "velocity_sha256": "a4bd84897f73e6599fcb13838ee2d90dd7d3216cf66369a7d2f5d95a0110ed92",
+      "navier_stokes_metadata": "Applications/Application2/output/v3_bathroom_topsupply_20261116/fine/navier_stokes/application2_navier_stokes_run_metadata_fine.json",
+      "picard_iterations": 52,
+      "picard_final_relative_update": 9.644595886687681e-09,
+      "nu_m2_per_s": 0.0023244,
+      "inlet_mean_speed_m_per_s": 0.1,
+      "outlet_condition": "outlet_door (y = 0) and outlet_exhaust (x = 11): natural (nu grad v - p I) n = 0; NO outlet pressure value, NO outlet velocity, NO pinning, NO mean constraint; flow split is computed",
+      "flow_git_commit_at_generation": "b22a05a9353538d941d92d399942bc5c3580c910",
+      "note_metadata_wording": "the flow metadata string boundary_conditions.inlets says 'parabolic upward profile' (stale wording from the earlier bottom-supply versions); the nodal velocity itself is verified above to be the DOWNWARD top-wall supply profile"
+    }
+  },
+  "checks": [
+    {
+      "check": "flow output folder is the geometry's OUTPUT_VERSION",
+      "passed": true,
+      "detail": "v3_bathroom_topsupply_20261116"
+    },
+    {
+      "check": "flow pipeline state DONE_CONVERGED",
+      "passed": true,
+      "detail": "DONE_CONVERGED 2026-11-16T16:48:54-05:00"
+    },
+    {
+      "check": "geometry/mesh/flow sources unchanged since the flow fields were generated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "coarse: mesh file sha256 == mesh_info == velocity association",
+      "passed": true,
+      "detail": "3536cc16a57f9faf"
+    },
+    {
+      "check": "coarse: geometry hash == mesh_info == velocity association",
+      "passed": true,
+      "detail": "4956131d35d27a74"
+    },
+    {
+      "check": "coarse: velocity association level",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "coarse: transport node coordinates hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "coarse: Navier-Stokes converged",
+      "passed": true,
+      "detail": "52 Picard iterations, final update 9.80e-09"
+    },
+    {
+      "check": "coarse: approved flow parameters (nu, supply speed, Picard tolerance)",
+      "passed": true,
+      "detail": "nu=0.0023244, U_mean=0.1"
+    },
+    {
+      "check": "coarse: natural outlet conditions recorded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "coarse: no triangle inside a bed/partition/bathroom wall or outside room+annex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "coarse: one component, four boundary loops (outer + 3 beds)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "coarse: bed_1 boundary is the bed rectangle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "coarse: bed_2 boundary is the bed rectangle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "coarse: bed_3 boundary is the bed rectangle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "coarse: partition_1 present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "coarse: partition_2 present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "coarse: supplies on the top wall, nodal velocity = downward parabola (peak 0.150)",
+      "passed": true,
+      "detail": "min v_y per supply [-0.15000000000000005, -0.15000000000000005, -0.15000000000000005]"
+    },
+    {
+      "check": "coarse: outlets at the corridor door (y = 0) and bathroom exhaust (x = 11)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "coarse: no backflow at outlet nodes (min outward normal velocity >= 0)",
+      "passed": true,
+      "detail": "{'outlet_door': 0.15147290573012442, 'outlet_exhaust': -4.430626159882712e-19}"
+    },
+    {
+      "check": "coarse: no-slip velocity at wall/bed/partition nodes",
+      "passed": true,
+      "detail": "max |v| = 5.2e-18"
+    },
+    {
+      "check": "fine: mesh file sha256 == mesh_info == velocity association",
+      "passed": true,
+      "detail": "5309186742fc17e1"
+    },
+    {
+      "check": "fine: geometry hash == mesh_info == velocity association",
+      "passed": true,
+      "detail": "4956131d35d27a74"
+    },
+    {
+      "check": "fine: velocity association level",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fine: transport node coordinates hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fine: Navier-Stokes converged",
+      "passed": true,
+      "detail": "52 Picard iterations, final update 9.64e-09"
+    },
+    {
+      "check": "fine: approved flow parameters (nu, supply speed, Picard tolerance)",
+      "passed": true,
+      "detail": "nu=0.0023244, U_mean=0.1"
+    },
+    {
+      "check": "fine: natural outlet conditions recorded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fine: no triangle inside a bed/partition/bathroom wall or outside room+annex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fine: one component, four boundary loops (outer + 3 beds)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fine: bed_1 boundary is the bed rectangle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fine: bed_2 boundary is the bed rectangle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fine: bed_3 boundary is the bed rectangle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fine: partition_1 present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fine: partition_2 present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fine: supplies on the top wall, nodal velocity = downward parabola (peak 0.150)",
+      "passed": true,
+      "detail": "min v_y per supply [-0.15000000000000005, -0.15000000000000005, -0.15000000000000005]"
+    },
+    {
+      "check": "fine: outlets at the corridor door (y = 0) and bathroom exhaust (x = 11)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fine: no backflow at outlet nodes (min outward normal velocity >= 0)",
+      "passed": true,
+      "detail": "{'outlet_door': 0.15148449382697463, 'outlet_exhaust': -1.1223747276866586e-18}"
+    },
+    {
+      "check": "fine: no-slip velocity at wall/bed/partition nodes",
+      "passed": true,
+      "detail": "max |v| = 3.3e-18"
+    }
+  ],
+  "all_passed": true
+}

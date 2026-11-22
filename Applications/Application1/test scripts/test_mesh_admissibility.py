@@ -1,6 +1,6 @@
 """Standalone diagnostic for Application1 mesh-based source admissibility.
 
-Adapted from ``Test Application4/test_mesh_admissibility.py`` to the DC Navy Yard
+Adapted from App4's ``test_mesh_admissibility.py`` to the DC Navy Yard
 mesh (coordinates in meters).  Because the DC buildings are exact polygonal mesh
 holes, admissibility is decided purely by mesh point location: a point is
 admissible iff it lies inside some fluid triangle.  Negative tests therefore use

@@ -1,6 +1,6 @@
 """Mesh-based source-center admissibility and sampling for Application1.
 
-This mirrors the Test Application4 ``MeshAdmissibility`` API (point location,
+This mirrors the App4 ``MeshAdmissibility`` API (point location,
 area-weighted sampling, control sampling with amplitude bounds and minimum
 separation) but drops App4's analytic building/cutout exclusion.  App4 needed an
 analytic guard because its buildings were *circles*, whose curved boundaries can

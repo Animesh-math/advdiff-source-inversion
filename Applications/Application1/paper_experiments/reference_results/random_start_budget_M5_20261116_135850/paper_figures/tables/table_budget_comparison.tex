@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\centering
+\caption{Five-source case at a matched PDE-solve budget.}
+\label{tab:table_budget_comparison}
+\footnotesize
+\begin{tabular}{lrrrcccl}
+\toprule
+Method & F & A & Total & $J/J(0)$ & Centre err. [m] & Amp. err. & Stop \\
+\midrule
+Sensitivity init. + L-BFGS-B & 3153 & 94 & 3247 & $4.38\times 10^{-22}$ & $1.92\times 10^{-8}$ & $1.94\times 10^{-10}$ & converged \\
+Best random start (r05; solves of all 10) & 1629 & 1612 & 3241 & $4.04\times 10^{-3}$ & 314 & 1 & budget \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\parbox{0.92\linewidth}{\scriptsize The best random start is the one with the lowest objective; errors are evaluated afterwards.}
+\end{table}

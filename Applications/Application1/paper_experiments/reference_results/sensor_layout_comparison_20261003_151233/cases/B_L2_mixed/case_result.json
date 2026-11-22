@@ -1,0 +1,192 @@
+{
+  "case_id": "B_L2_mixed",
+  "source_config": "B",
+  "layout": "L2_mixed",
+  "true_control": [
+    100.0,
+    210.0,
+    1.3,
+    270.0,
+    60.0,
+    0.85
+  ],
+  "exit_status": 0,
+  "start_time": "2026-10-03T16:29:43-04:00",
+  "end_time": "2026-10-03T16:41:44-04:00",
+  "batch_wall_seconds": 721,
+  "error": null,
+  "log": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L2_mixed/run.log",
+  "initialization": {
+    "selected_control": [
+      100.08834882378963,
+      209.95083427163502,
+      1.2985632230142587,
+      269.6867899200351,
+      60.010972723866885,
+      0.8469266521345944
+    ],
+    "objective_after_initialization_exact": 0.5274343215020006,
+    "zero_source_objective": 1090233.8741833556,
+    "initializer_self_reported_forward_solves": 395,
+    "initializer_self_reported_adjoint_solves": 3,
+    "candidate_traces": 81,
+    "initializer_self_reported_wall_seconds": 401.83228151500225,
+    "amplitude_solver": "osqp"
+  },
+  "optimization": {
+    "objective_after_initialization": 0.527434321501965,
+    "objective_after_local_optimization": 5.125803933067322e-20,
+    "final_gradient_norm": 3.929013832389212e-08,
+    "iterations": 60,
+    "objective_evaluations_nfev": 71,
+    "gradient_evaluations_njev": 71,
+    "success_flag": true,
+    "stopping_reason": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "budget_limited": false,
+    "post_init_forward_solves_driver_counter": 71,
+    "post_init_adjoint_solves_driver_counter": 71,
+    "initial_control": [
+      100.08834882378963,
+      209.95083427163502,
+      1.2985632230142587,
+      269.6867899200351,
+      60.010972723866885,
+      0.8469266521345944
+    ],
+    "final_control": [
+      99.99999999998936,
+      210.0000000000079,
+      1.300000000000133,
+      269.99999999984385,
+      60.00000000005045,
+      0.8499999999963226
+    ]
+  },
+  "recovery": {
+    "permutation": [
+      0,
+      1
+    ],
+    "position_errors_m": [
+      1.3256046459653484e-11,
+      1.6409608378062e-10
+    ],
+    "amplitude_errors": [
+      1.3300471835009375e-13,
+      3.677391724465906e-12
+    ],
+    "max_position_error_m": 1.6409608378062e-10,
+    "max_amplitude_error": 3.677391724465906e-12,
+    "init_position_errors_m": [
+      0.101107781652405,
+      0.3134022253601278
+    ],
+    "init_amplitude_errors": [
+      0.0014367769857412949,
+      0.0030733478654055846
+    ],
+    "init_max_position_error_m": 0.3134022253601278,
+    "terminal_sources": [
+      {
+        "x": 99.99999999998936,
+        "y": 210.0000000000079,
+        "A": 1.300000000000133,
+        "fluid_admissible": true,
+        "wall_clearance_m": 7.747813319046954
+      },
+      {
+        "x": 269.99999999984385,
+        "y": 60.00000000005045,
+        "A": 0.8499999999963226,
+        "fluid_admissible": true,
+        "wall_clearance_m": 23.60618689831584
+      }
+    ],
+    "terminal_all_fluid_admissible": true,
+    "terminal_amplitude_at_bound": [
+      false,
+      false
+    ],
+    "raw_feasibility_record": {
+      "feasibility_mode": "raw",
+      "invalid_evaluations": 0,
+      "projected_evaluations": 0,
+      "penalized_evaluations": 0,
+      "projected_source_events": 0,
+      "max_projection_distance": 0.0,
+      "last_projection_distance": null,
+      "raw_infeasible_evaluations": 0,
+      "raw_infeasible_iterates": 0,
+      "raw_max_outside_distance": 0.0,
+      "raw_infeasible_iterate_log": []
+    }
+  },
+  "pde_solves": {
+    "synthetic_data_and_setup": {
+      "seconds": 1.4558158660074696,
+      "forward_solves": 1,
+      "adjoint_solves": 0
+    },
+    "initialization": {
+      "seconds": 401.8434313540056,
+      "forward_solves": 395,
+      "adjoint_solves": 3
+    },
+    "local_optimization": {
+      "seconds": 304.4970941270003,
+      "forward_solves": 71,
+      "adjoint_solves": 71
+    },
+    "driver_overhead_smoke_export_final_eval": {
+      "seconds": 12.893622203991981,
+      "forward_solves": 4,
+      "adjoint_solves": 2
+    },
+    "total_counted": {
+      "forward_solves": 471,
+      "adjoint_solves": 76
+    },
+    "note": "counts = actual gt.run_forward / gt.rk4_discrete_source_adjoint calls (cached evaluator responses excluded); 'seconds' = wall time of that phase"
+  },
+  "timing_seconds": {
+    "initialization": 401.8434313540056,
+    "local_optimization": 304.4970941270003,
+    "driver_process_total": 720.6907113759953,
+    "batch_wall_total": 721
+  },
+  "observation_signal": {
+    "both_sources": {
+      "J_zero_control": 1090233.8741833556,
+      "peak_abs": 16.92317741147359,
+      "rms_over_sensors_and_time": 2.4105407811815596,
+      "time_integrated_sum_sq": 21804.677483667107,
+      "sensors_above_1e-3": 16,
+      "sensors_above_1e-6": 19
+    },
+    "source_1_only": {
+      "J_zero_control": 923001.6370351734,
+      "peak_abs": 16.92316874871281,
+      "rms_over_sensors_and_time": 2.2179710999741884,
+      "time_integrated_sum_sq": 18460.032740703467,
+      "sensors_above_1e-3": 12,
+      "sensors_above_1e-6": 19
+    },
+    "source_2_only": {
+      "J_zero_control": 167054.53093121288,
+      "peak_abs": 7.717644878885893,
+      "rms_over_sensors_and_time": 0.9435909719531909,
+      "time_integrated_sum_sq": 3341.090618624257,
+      "sensors_above_1e-3": 9,
+      "sensors_above_1e-6": 13
+    }
+  },
+  "figures": {
+    "reconstruction_map": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L2_mixed/reconstruction_B_L2_mixed.png",
+    "convergence_history": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L2_mixed/convergence_B_L2_mixed.png",
+    "sensitivity_init": [
+      "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L2_mixed/full/sensitivity_init/sensitivity_init_source_01.png",
+      "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L2_mixed/full/sensitivity_init/sensitivity_init_source_02.png"
+    ],
+    "layout": "Applications/Application1/output/sensor_layout_comparison_20261003_151233/cases/B_L2_mixed/layout_B_L2_mixed.png"
+  }
+}

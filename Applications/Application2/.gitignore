@@ -1,0 +1,5 @@
+# Generated Application2 meshes, flow fields, reports and trial outputs
+# (regenerate with run_application2_setup.sh; see README).
+output/
+__pycache__/
+*.pyc

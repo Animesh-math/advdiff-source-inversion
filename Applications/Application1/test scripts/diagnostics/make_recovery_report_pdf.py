@@ -32,7 +32,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 from matplotlib.patches import FancyBboxPatch, Rectangle
 
 APP = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(APP.parents[1] / "Applications" / "Test Application2"))
+sys.path.insert(0, str(APP.parents[1] / "Src" / "Objective"))
 sys.path.insert(0, str(APP))
 import mesh_data_config as mdc  # noqa: E402
 from mesh_admissibility import MeshAdmissibility  # noqa: E402

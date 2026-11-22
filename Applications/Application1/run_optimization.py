@@ -1,10 +1,10 @@
 """Optimization driver for Application1 (DC Navy Yard advection-diffusion).
 
-Ported from ``Test Application4/run_optimization.py`` and adapted to the DC Navy
+Ported from App4's ``run_optimization.py`` and adapted to the DC Navy
 Yard mesh (coordinates in projected meters) and the Application1 Navier-Stokes
 nodal velocity field.  The inverse problem, discrete-adjoint gradient, L-BFGS-B
 optimizer, sigma-continuation, amplitude floor, and manual / mesh_random / smart
-/ adaptive initialization behaviors are preserved from Test Application4; only
+/ adaptive initialization behaviors are preserved from App4; only
 the geometry-dependent numeric defaults (coordinate bounds, Gaussian width,
 source separation, PDE parameters) and the velocity-field source differ.
 """
@@ -33,12 +33,12 @@ from mesh_data_config import (
 
 APP_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = APP_DIR.parents[1]
-APP2_DIR = PROJECT_ROOT / "Applications" / "Test Application2"
+OBJECTIVE_DIR = PROJECT_ROOT / "Src" / "Objective"  # shared gradient_test module
 OPTIMIZER_FILE = PROJECT_ROOT / "Src" / "Optimizers" / "optimizer.py"
 OUTPUT_ROOT = APP_DIR / "output"
 
-if str(APP2_DIR) not in sys.path:
-    sys.path.append(str(APP2_DIR))
+if str(OBJECTIVE_DIR) not in sys.path:
+    sys.path.append(str(OBJECTIVE_DIR))
 
 import gradient_test as gt
 import post_init_optimizers as pio
@@ -125,7 +125,7 @@ DEFAULT_VELOCITY_FIELD_FILE = (
 
 # PDE configuration in PHYSICAL DC UNITS (meters, seconds, m^2/s). The DC fluid
 # domain spans ~302 m (x) by ~700 m (y); mean triangle edge is ~8 m. These
-# values are the deliberate physical re-scaling of the Test Application4
+# values are the deliberate physical re-scaling of the App4
 # normalized configuration (see the port notes / README):
 #   * k = 10 m^2/s  -> urban effective/eddy diffusivity; Peclet U*L/k ~ 70,
 #                      matching App4's ~70 with U~2.4 m/s and L~300 m.
@@ -136,7 +136,7 @@ DEFAULT_VELOCITY_FIELD_FILE = (
 #   * tfinal = 60 s -> long enough for a source plume to advect to the outflow
 #                      (east/south) observation boundaries at U ~ 2.4 m/s.
 # lx/ly are ignored by the shared forward solver (geometry is the mesh); they
-# are kept only for API parity with the Test Application4 PDE signature.
+# are kept only for API parity with the App4 PDE signature.
 # vx/vy are the CONSTANT-velocity fallback (the ambient wind) used only when no
 # nodal velocity field is loaded; real runs use the Navier-Stokes field.
 PDE = {

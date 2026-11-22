@@ -1,0 +1,281 @@
+{
+  "purpose": "resolution/stability evidence for the transport settings; full-field forward metrics only",
+  "test_source": "all three bed releases active (transport_config.RELEASES), sigma2 = 0.04",
+  "tfinal": 300.0,
+  "rk4_stability_target_dt_rho": 2.5,
+  "adopted": {
+    "k": 0.01,
+    "dt": {
+      "coarse": 0.015,
+      "fine": 0.0025
+    },
+    "sigma2": 0.04,
+    "tfinal": 300.0
+  },
+  "candidates": [
+    {
+      "k": 0.0023244,
+      "peclet": {
+        "coarse": {
+          "k": 0.0023244,
+          "max": 4.170304631849984,
+          "area_median": 0.9183329226662017,
+          "area_q90": 1.943228941458601,
+          "area_q99": 3.1892260688747553,
+          "area_fraction_above_1": 0.4590015148363529,
+          "area_fraction_above_2": 0.08753635674434178,
+          "edge_min_m": 0.017250706178502995,
+          "edge_median_m": 0.08559260791293007,
+          "edge_max_m": 0.2670242000403634,
+          "speed_max_m_per_s": 0.1529006883178455
+        },
+        "fine": {
+          "k": 0.0023244,
+          "max": 2.3869047143089563,
+          "area_median": 0.45580973940887004,
+          "area_q90": 0.9994299136839095,
+          "area_q99": 1.607133206294836,
+          "area_fraction_above_1": 0.09978257073480765,
+          "area_fraction_above_2": 0.0013142212445222945,
+          "edge_min_m": 0.008688130239735314,
+          "edge_median_m": 0.04896794721593149,
+          "edge_max_m": 0.13467975806153865,
+          "speed_max_m_per_s": 0.15287132311127077
+        }
+      },
+      "spectral_radius": {
+        "coarse": 35.887961734093956,
+        "fine": 193.909066458263
+      },
+      "dt": {
+        "coarse": 0.06,
+        "fine": 0.012
+      },
+      "fine_substeps": 5,
+      "dt_rho": {
+        "coarse": 2.1532777040456375,
+        "fine": 2.326908797499156
+      },
+      "num_steps": {
+        "coarse": 5000,
+        "fine": 25000
+      },
+      "extrema_all_three_releases": {
+        "coarse": {
+          "min": -0.004975065834361304,
+          "max": 7.568908224321483,
+          "undershoot_min_over_max": -0.0006573029672066469
+        },
+        "fine": {
+          "min": -1.8484005602671159e-10,
+          "max": 7.4606003726567485,
+          "undershoot_min_over_max": -2.4775493498372348e-11
+        }
+      },
+      "coarse_vs_fine_field": [
+        {
+          "t": 60.0,
+          "rel_l2": 0.030110657571228244,
+          "max_abs_over_max": 0.045366196237909794
+        },
+        {
+          "t": 120.0,
+          "rel_l2": 0.02494603904275133,
+          "max_abs_over_max": 0.0434235213546562
+        },
+        {
+          "t": 180.0,
+          "rel_l2": 0.024258473643949133,
+          "max_abs_over_max": 0.04320963793175081
+        },
+        {
+          "t": 240.0,
+          "rel_l2": 0.024812899926025863,
+          "max_abs_over_max": 0.04318478950452088
+        },
+        {
+          "t": 300.0,
+          "rel_l2": 0.024969217862724158,
+          "max_abs_over_max": 0.04318187699989263
+        }
+      ],
+      "seconds": 13.97588874772191
+    },
+    {
+      "k": 0.005,
+      "peclet": {
+        "coarse": {
+          "k": 0.005,
+          "max": 1.9386912172544204,
+          "area_median": 0.4269146090890638,
+          "area_q90": 0.9033682703052743,
+          "area_q99": 1.482607414898496,
+          "area_fraction_above_1": 0.06719932012763853,
+          "area_fraction_above_2": 0.0,
+          "edge_min_m": 0.017250706178502995,
+          "edge_median_m": 0.08559260791293007,
+          "edge_max_m": 0.2670242000403634,
+          "speed_max_m_per_s": 0.1529006883178455
+        },
+        "fine": {
+          "k": 0.005,
+          "max": 1.1096242635879476,
+          "area_median": 0.21189683165639547,
+          "area_q90": 0.46461497827337583,
+          "area_q99": 0.7471240849423433,
+          "area_fraction_above_1": 0.0005037142529208677,
+          "area_fraction_above_2": 0.0,
+          "edge_min_m": 0.008688130239735314,
+          "edge_median_m": 0.04896794721593149,
+          "edge_max_m": 0.13467975806153865,
+          "speed_max_m_per_s": 0.15287132311127077
+        }
+      },
+      "spectral_radius": {
+        "coarse": 77.19831991560072,
+        "fine": 417.0672216883835
+      },
+      "dt": {
+        "coarse": 0.03,
+        "fine": 0.005
+      },
+      "fine_substeps": 6,
+      "dt_rho": {
+        "coarse": 2.3159495974680215,
+        "fine": 2.0853361084419175
+      },
+      "num_steps": {
+        "coarse": 10000,
+        "fine": 60000
+      },
+      "extrema_all_three_releases": {
+        "coarse": {
+          "min": -1.535974809665326e-10,
+          "max": 6.505056273010251,
+          "undershoot_min_over_max": -2.3612014181001774e-11
+        },
+        "fine": {
+          "min": 0.0,
+          "max": 6.508567410427895,
+          "undershoot_min_over_max": 0.0
+        }
+      },
+      "coarse_vs_fine_field": [
+        {
+          "t": 60.0,
+          "rel_l2": 0.022865486484196847,
+          "max_abs_over_max": 0.05117172431821983
+        },
+        {
+          "t": 120.0,
+          "rel_l2": 0.021298975016700278,
+          "max_abs_over_max": 0.049155721262435885
+        },
+        {
+          "t": 180.0,
+          "rel_l2": 0.021701996675113962,
+          "max_abs_over_max": 0.048994530196202014
+        },
+        {
+          "t": 240.0,
+          "rel_l2": 0.022476307509687547,
+          "max_abs_over_max": 0.04898048546903067
+        },
+        {
+          "t": 300.0,
+          "rel_l2": 0.022987736771771503,
+          "max_abs_over_max": 0.048979230045074665
+        }
+      ],
+      "seconds": 23.124541513156146
+    },
+    {
+      "k": 0.01,
+      "peclet": {
+        "coarse": {
+          "k": 0.01,
+          "max": 0.9693456086272102,
+          "area_median": 0.2134573045445319,
+          "area_q90": 0.45168413515263717,
+          "area_q99": 0.741303707449248,
+          "area_fraction_above_1": 0.0,
+          "area_fraction_above_2": 0.0,
+          "edge_min_m": 0.017250706178502995,
+          "edge_median_m": 0.08559260791293007,
+          "edge_max_m": 0.2670242000403634,
+          "speed_max_m_per_s": 0.1529006883178455
+        },
+        "fine": {
+          "k": 0.01,
+          "max": 0.5548121317939738,
+          "area_median": 0.10594841582819774,
+          "area_q90": 0.23230748913668792,
+          "area_q99": 0.37356204247117164,
+          "area_fraction_above_1": 0.0,
+          "area_fraction_above_2": 0.0,
+          "edge_min_m": 0.008688130239735314,
+          "edge_median_m": 0.04896794721593149,
+          "edge_max_m": 0.13467975806153865,
+          "speed_max_m_per_s": 0.15287132311127077
+        }
+      },
+      "spectral_radius": {
+        "coarse": 154.39662717284776,
+        "fine": 834.0877196804406
+      },
+      "dt": {
+        "coarse": 0.015,
+        "fine": 0.0025
+      },
+      "fine_substeps": 6,
+      "dt_rho": {
+        "coarse": 2.3159494075927163,
+        "fine": 2.0852192992011016
+      },
+      "num_steps": {
+        "coarse": 20000,
+        "fine": 120000
+      },
+      "extrema_all_three_releases": {
+        "coarse": {
+          "min": 0.0,
+          "max": 5.9607633425504005,
+          "undershoot_min_over_max": 0.0
+        },
+        "fine": {
+          "min": 0.0,
+          "max": 5.90497785767273,
+          "undershoot_min_over_max": 0.0
+        }
+      },
+      "coarse_vs_fine_field": [
+        {
+          "t": 60.0,
+          "rel_l2": 0.016099650751914992,
+          "max_abs_over_max": 0.039334487240042286
+        },
+        {
+          "t": 120.0,
+          "rel_l2": 0.01653899128281297,
+          "max_abs_over_max": 0.04003504623377464
+        },
+        {
+          "t": 180.0,
+          "rel_l2": 0.01735787317524133,
+          "max_abs_over_max": 0.04048510189872261
+        },
+        {
+          "t": 240.0,
+          "rel_l2": 0.018045316150391243,
+          "max_abs_over_max": 0.04064110469025
+        },
+        {
+          "t": 300.0,
+          "rel_l2": 0.018627421579680874,
+          "max_abs_over_max": 0.04068832915234592
+        }
+      ],
+      "seconds": 38.55136149562895
+    }
+  ]
+}

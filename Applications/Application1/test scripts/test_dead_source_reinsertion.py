@@ -28,7 +28,7 @@ _APP1_DIR = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
 if _APP1_DIR not in _sys.path:
     _sys.path.insert(0, _APP1_DIR)
 
-# Importing run_optimization appends Test Application2 to sys.path (shared
+# Importing run_optimization appends Src/Objective to sys.path (shared
 # gradient_test) and Application1 (mesh modules); it does not run argparse.
 import run_optimization as ro
 

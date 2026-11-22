@@ -1,0 +1,332 @@
+{
+  "rule": {
+    "default_dt_s": 0.1,
+    "candidates_s": [
+      0.1,
+      0.05,
+      0.04,
+      0.025,
+      0.02,
+      0.0125,
+      0.01
+    ],
+    "criterion": "largest candidate with dt * rho(M_L^-1 K) <= 2.5 (90 % of the RK4 real-axis limit 2.785) and max |R_RK4(-dt*lambda)| <= 1 over the computed extreme eigenvalues, on ALL refined meshes of the study (one common dt)"
+  },
+  "rk4_real_axis_limit": 2.785293563405282,
+  "meshes": [
+    {
+      "level": "original",
+      "num_nodes": 2795,
+      "num_free_nodes": 2749,
+      "num_dirichlet_nodes": 46,
+      "nnz": 17935,
+      "assembly_seconds": 0.6051748510217294,
+      "dense_matvec_seconds": 0.00013037970056757332,
+      "gershgorin_bound": 28.968711276137142,
+      "eig_LM": [
+        [
+          18.28860174606902,
+          0.0
+        ],
+        [
+          15.659241747565655,
+          0.0
+        ],
+        [
+          13.409861870621018,
+          0.0
+        ],
+        [
+          11.852259543129994,
+          0.0
+        ],
+        [
+          11.630400354626211,
+          0.0
+        ],
+        [
+          10.177125412059393,
+          0.0
+        ],
+        [
+          9.474019143802916,
+          0.0
+        ],
+        [
+          9.01090754167324,
+          0.0
+        ],
+        [
+          8.783328268913664,
+          0.0
+        ],
+        [
+          8.145628199245905,
+          0.0
+        ],
+        [
+          8.080214947739272,
+          0.0
+        ],
+        [
+          7.6235376626302855,
+          0.0
+        ]
+      ],
+      "spectral_radius": 18.28860174606902,
+      "eig_SR": [
+        [
+          0.0012989030174372954,
+          0.0
+        ],
+        [
+          0.0032851802624822906,
+          0.0
+        ],
+        [
+          0.004060028952763682,
+          0.0
+        ],
+        [
+          0.006663186179871317,
+          0.0
+        ],
+        [
+          0.00748786235861092,
+          0.0007083996054773779
+        ],
+        [
+          0.00748786235861092,
+          -0.0007083996054773779
+        ]
+      ],
+      "min_real_part": 0.0012989030174372954,
+      "max_abs_imag_LM": 0.0,
+      "wall_seconds": 1.040535013016779
+    },
+    {
+      "level": "refine_4x",
+      "num_nodes": 10638,
+      "num_free_nodes": 10516,
+      "num_dirichlet_nodes": 122,
+      "nnz": 70380,
+      "assembly_seconds": 2.6283281200448982,
+      "dense_matvec_seconds": 0.0030366974999196826,
+      "gershgorin_bound": 229.9976067004859,
+      "eig_LM": [
+        [
+          158.29162721542548,
+          0.0
+        ],
+        [
+          145.8267909060131,
+          0.0
+        ],
+        [
+          140.42053771594578,
+          0.0
+        ],
+        [
+          88.34190747281612,
+          0.0
+        ],
+        [
+          73.59118918088059,
+          0.0
+        ],
+        [
+          69.77551273420032,
+          0.0
+        ],
+        [
+          67.63036813687121,
+          0.0
+        ],
+        [
+          64.47053359178085,
+          0.0
+        ],
+        [
+          61.26424067048441,
+          0.0
+        ],
+        [
+          58.81312443724758,
+          0.0
+        ],
+        [
+          58.558319066502655,
+          0.0
+        ],
+        [
+          58.198816303608375,
+          0.0
+        ]
+      ],
+      "spectral_radius": 158.29162721542548,
+      "eig_SR": [
+        [
+          0.001300199267416229,
+          0.0
+        ],
+        [
+          0.003291740078072848,
+          0.0
+        ],
+        [
+          0.004051603326989725,
+          0.0
+        ],
+        [
+          0.006619365102656382,
+          0.0
+        ],
+        [
+          0.0074419931038379235,
+          0.0006523564892558099
+        ],
+        [
+          0.0074419931038379235,
+          -0.0006523564892558099
+        ]
+      ],
+      "min_real_part": 0.001300199267416229,
+      "max_abs_imag_LM": 0.0,
+      "wall_seconds": 7.64617838797858
+    }
+  ],
+  "candidate_table": [
+    {
+      "dt": 0.1,
+      "per_mesh": {
+        "original": {
+          "dt_times_rho": 1.828860174606902,
+          "max_abs_R": 0.9998701181336362,
+          "ok": true,
+          "dt_times_gershgorin": 2.8968711276137142
+        },
+        "refine_4x": {
+          "dt_times_rho": 15.829162721542549,
+          "max_abs_R": 2065.316241382093,
+          "ok": false,
+          "dt_times_gershgorin": 22.99976067004859
+        }
+      },
+      "ok_all_refined": false
+    },
+    {
+      "dt": 0.05,
+      "per_mesh": {
+        "original": {
+          "dt_times_rho": 0.914430087303451,
+          "max_abs_R": 0.9999350569580189,
+          "ok": true,
+          "dt_times_gershgorin": 1.4484355638068571
+        },
+        "refine_4x": {
+          "dt_times_rho": 7.914581360771274,
+          "max_abs_R": 105.27022149942484,
+          "ok": false,
+          "dt_times_gershgorin": 11.499880335024296
+        }
+      },
+      "ok_all_refined": false
+    },
+    {
+      "dt": 0.04,
+      "per_mesh": {
+        "original": {
+          "dt_times_rho": 0.7315440698427608,
+          "max_abs_R": 0.9999480452289983,
+          "ok": true,
+          "dt_times_gershgorin": 1.1587484510454857
+        },
+        "refine_4x": {
+          "dt_times_rho": 6.33166508861702,
+          "max_abs_R": 39.37421558382563,
+          "ok": false,
+          "dt_times_gershgorin": 9.199904268019436
+        }
+      },
+      "ok_all_refined": false
+    },
+    {
+      "dt": 0.025,
+      "per_mesh": {
+        "original": {
+          "dt_times_rho": 0.4572150436517255,
+          "max_abs_R": 0.9999675279517924,
+          "ok": true,
+          "dt_times_gershgorin": 0.7242177819034286
+        },
+        "refine_4x": {
+          "dt_times_rho": 3.957290680385637,
+          "max_abs_R": 4.762501923041549,
+          "ok": false,
+          "dt_times_gershgorin": 5.749940167512148
+        }
+      },
+      "ok_all_refined": false
+    },
+    {
+      "dt": 0.02,
+      "per_mesh": {
+        "original": {
+          "dt_times_rho": 0.3657720349213804,
+          "max_abs_R": 0.9999740222770782,
+          "ok": true,
+          "dt_times_gershgorin": 0.5793742255227429
+        },
+        "refine_4x": {
+          "dt_times_rho": 3.16583254430851,
+          "max_abs_R": 1.7425922965428167,
+          "ok": false,
+          "dt_times_gershgorin": 4.599952134009718
+        }
+      },
+      "ok_all_refined": false
+    },
+    {
+      "dt": 0.0125,
+      "per_mesh": {
+        "original": {
+          "dt_times_rho": 0.22860752182586275,
+          "max_abs_R": 0.9999837638440899,
+          "ok": true,
+          "dt_times_gershgorin": 0.3621088909517143
+        },
+        "refine_4x": {
+          "dt_times_rho": 1.9786453401928186,
+          "max_abs_R": 0.9999837476412283,
+          "ok": true,
+          "dt_times_gershgorin": 2.874970083756074
+        }
+      },
+      "ok_all_refined": true
+    },
+    {
+      "dt": 0.01,
+      "per_mesh": {
+        "original": {
+          "dt_times_rho": 0.1828860174606902,
+          "max_abs_R": 0.9999870110541828,
+          "ok": true,
+          "dt_times_gershgorin": 0.28968711276137143
+        },
+        "refine_4x": {
+          "dt_times_rho": 1.582916272154255,
+          "max_abs_R": 0.9999869980918514,
+          "ok": true,
+          "dt_times_gershgorin": 2.299976067004859
+        }
+      },
+      "ok_all_refined": true
+    }
+  ],
+  "chosen_common_dt_s": 0.0125,
+  "default_dt_s": 0.1,
+  "dt_changed_from_default": true,
+  "num_time_steps": 12000,
+  "num_saved_frames": 12001,
+  "note": "dt * rho <= 2.5 keeps 10 % margin below the RK4 real-axis limit; the original-mesh row is informational (dt = 0.1 there is the historical setting)"
+}
